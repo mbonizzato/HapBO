@@ -172,6 +172,8 @@ for each rho90 card of the synthetic panel, by two routes:
   Linux). A run counts when the session exits cleanly with a `prior.json`; tokens and list-price cost come from the
   session stream (`usage.json`).
 
+> **Warning:** the agentic route gives the coding agent unrestricted shell access (Claude Code with `bypassPermissions`, Qwen Code with `--yolo` unless `--bwrap` is set); run it in a container or VM.
+
 The documents used in the figure are in `experiments/psl_elicitor_priors/<elicitor>/{draw1,draw2,draw3,agentic}/`
 (`<elicitor>`: `qwen3.5`, `haiku-5.5`, `sonnet-5.5`, `opus-5.5`, `fable-5.1`).
 Fidelity to the card model on 100k fixed uniform points: `python scripts/score_fidelity.py <prior.json> <function>`

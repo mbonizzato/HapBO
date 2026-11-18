@@ -45,10 +45,6 @@ conda env create --file environment.yaml   # creates env "hapbo"
 conda activate hapbo
 ```
 
-On Windows, some prior paths exceed the default 260-character limit: enable long paths before
-cloning (`git config --system core.longpaths true`, plus the `LongPathsEnabled` system setting for
-Python) or clone into a short directory such as `C:\src`.
-
 Python 3.11. Core deps (conda-forge): `numpy>=2.0, scipy>=1.14, matplotlib>=3.9, pandas>=2.2,
 pyarrow>=16, pyyaml>=6, python-dotenv>=1.0, scikit-learn>=1.5, jsonschema>=4.18, pytest>=8`; via
 pip: `anthropic`, `openai` (for LLM elicitation and the `check_*` scripts). Pandas + PyArrow read
