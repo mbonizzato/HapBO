@@ -1,0 +1,248 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x0",
+        "region": [
+          0.0,
+          1.0
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x0",
+        "mode": 0.4942,
+        "ci": [
+          0.081952,
+          0.720413
+        ],
+        "skew": 0.3
+      },
+      "mode": "synergy",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "peak 3 factor for x0"
+    },
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x0",
+        "region": [
+          0.0,
+          1.0
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x1",
+        "mode": 0.98,
+        "ci": [
+          0.009849,
+          1.0
+        ],
+        "skew": 0.85
+      },
+      "mode": "synergy",
+      "weight": 0.99999999,
+      "provenance": "llm_domain",
+      "note": "peak 3 factor for x1"
+    },
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x0",
+        "region": [
+          0.0,
+          1.0
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x3",
+        "mode": 0.3985,
+        "ci": [
+          0.076095,
+          0.833757
+        ],
+        "skew": -0.15
+      },
+      "mode": "synergy",
+      "weight": 0.99999999,
+      "provenance": "llm_domain",
+      "note": "peak 3 factor for x3"
+    },
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x0",
+        "region": [
+          0.0,
+          1.0
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x5",
+        "mode": 0.03393,
+        "ci": [
+          0.0,
+          0.859216
+        ],
+        "skew": -1.0
+      },
+      "mode": "synergy",
+      "weight": 0.99999999,
+      "provenance": "llm_domain",
+      "note": "peak 3 factor for x5"
+    },
+    {
+      "token": "anchors",
+      "bandwidth": 0.5242,
+      "provenance": "llm_domain",
+      "points": [
+        {
+          "coords": {
+            "x0": 0.5937,
+            "x1": 0.3089,
+            "x2": 0.7835,
+            "x3": 0.2551,
+            "x4": 0.0004,
+            "x5": 0.9998
+          },
+          "value": 0.4887
+        },
+        {
+          "coords": {
+            "x0": 0.1648,
+            "x1": 0.5646,
+            "x2": 1.0,
+            "x3": 0.2712,
+            "x4": 0.2771,
+            "x5": 0.5507
+          },
+          "value": 0.2565
+        },
+        {
+          "coords": {
+            "x0": 0.9999,
+            "x1": 0.0003,
+            "x2": 0.5158,
+            "x3": 1.0,
+            "x4": 0.888,
+            "x5": 0.0097
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "x0": 0.3568,
+            "x1": 0.5601,
+            "x2": 0.3323,
+            "x3": 0.9999,
+            "x4": 0.0017,
+            "x5": 0.9999
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "x0": 0.4694,
+            "x1": 0.4118,
+            "x2": 0.0032,
+            "x3": 0.9469,
+            "x4": 0.4865,
+            "x5": 0.5718
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "x0": 0.3526,
+            "x1": 0.1695,
+            "x2": 0.4538,
+            "x3": 0.0,
+            "x4": 0.2309,
+            "x5": 0.7576
+          },
+          "value": 0.5967
+        },
+        {
+          "coords": {
+            "x0": 0.8872,
+            "x1": 0.9589,
+            "x2": 0.7476,
+            "x3": 0.8674,
+            "x4": 0.0178,
+            "x5": 0.903
+          },
+          "value": 0.0
+        }
+      ],
+      "note": "Sampled values of the approximate model (-F normalised to its best sampled value); shape is a product of Gaussian factors for the strongest model basin."
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Analytic model only approximately calibrated."
+  }
+}

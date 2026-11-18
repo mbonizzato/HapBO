@@ -1,0 +1,19 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: hypbo-llm
+label: HypBO + one-shot LLM box hypotheses (BORA S C.3)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: hypbo
+requires_prior: true
+prior_source: llm-hypotheses
+note: >-
+  HypBO (Ablatif6c/HypBO, pinned) run from its upstream checkout in its own environment
+  through the subprocess bridge. The LLM (local Qwen) is asked ONCE, offline, from the
+  SAME prompt card HapBO's elicitor receives, for any number of hypotheses, each a
+  predicted optimum location c with a confidence s in [0,1] (BORA supplement C.3). Each
+  hypothesis becomes a box centred at c with side (ub - lb) * (1 - s + 1e-6) in the
+  encoded space (the 1e-6 floor of BORA supplement C.2), clipped to the bounds; the study
+  prior_path points at the artifact under experiments/hypbo_llm_hypotheses/. n_init is 1
+  (upstream default 5). Deviations in external/PINNED_COMMITS.txt.

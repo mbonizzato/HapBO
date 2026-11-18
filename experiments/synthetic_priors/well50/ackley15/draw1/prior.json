@@ -1,0 +1,339 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x10",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x11",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x12",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x13",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x14",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 18.1,
+      "ci": [
+        10.6,
+        25.6
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -29.04,
+      "ci": [
+        -32.768,
+        -21.54
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -16.48,
+      "ci": [
+        -23.98,
+        -8.98
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 18.57,
+      "ci": [
+        11.07,
+        26.07
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -12.92,
+      "ci": [
+        -20.42,
+        -5.42
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -14.87,
+      "ci": [
+        -22.37,
+        -7.37
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 18.48,
+      "ci": [
+        10.98,
+        25.98
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 14.94,
+      "ci": [
+        7.44,
+        22.44
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -17.51,
+      "ci": [
+        -25.01,
+        -10.01
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": -17.88,
+      "ci": [
+        -25.38,
+        -10.38
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x10",
+      "mode": 7.261,
+      "ci": [
+        -0.239,
+        14.761
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x11",
+      "mode": -6.172,
+      "ci": [
+        -13.672,
+        1.328
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x12",
+      "mode": 11.69,
+      "ci": [
+        4.19,
+        19.19
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x13",
+      "mode": 15.58,
+      "ci": [
+        8.08,
+        23.08
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "bump",
+      "dim": "x14",
+      "mode": 14.39,
+      "ci": [
+        6.89,
+        21.89
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium"
+  }
+}

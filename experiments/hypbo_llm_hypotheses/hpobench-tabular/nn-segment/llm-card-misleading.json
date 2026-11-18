@@ -1,0 +1,186 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "nn-segment",
+  "modality": "llm-card-misleading",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "alpha": 0.1291549652814865,
+        "batch_size": 25,
+        "depth": 3,
+        "learning_rate_init": 1,
+        "width": 645
+      },
+      "c": {
+        "alpha": 0.1291549652814865,
+        "batch_size": 25,
+        "depth": 3,
+        "learning_rate_init": 1,
+        "width": 645
+      },
+      "s": 0.95,
+      "kept": true,
+      "side_encoded": 0.050001000000000045,
+      "center_encoded": [
+        0.8888888884127525,
+        0.44064269829578745,
+        1.0,
+        1.0,
+        0.8888592250517693
+      ],
+      "box_encoded": {
+        "lb": [
+          0.8638883884127525,
+          0.4156421982957874,
+          0.9749995,
+          0.9749995,
+          0.8638587250517693
+        ],
+        "ub": [
+          0.9138893884127525,
+          0.4656431982957875,
+          1.0,
+          1.0,
+          0.9138597250517693
+        ]
+      },
+      "box_native": {
+        "alpha": [
+          0.08149052334914296,
+          0.2046987106143969
+        ],
+        "batch_size": [
+          22.53121471287818,
+          27.739294483877433
+        ],
+        "depth": [
+          2.949999,
+          3.0
+        ],
+        "learning_rate_init": [
+          0.7498898921332059,
+          1.0
+        ],
+        "width": [
+          581.3053395922574,
+          715.6737976840375
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "alpha",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        9.99999993922529e-09,
+        7.74263710923151e-08,
+        5.994842240397702e-07,
+        4.641588930098806e-06,
+        3.5938137443736196e-05,
+        0.00027825593133457005,
+        0.002154434798285365,
+        0.01668100617825985,
+        0.1291549652814865,
+        1
+      ]
+    },
+    {
+      "name": "batch_size",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        4,
+        6,
+        10,
+        16,
+        25,
+        40,
+        64,
+        101,
+        161,
+        256
+      ]
+    },
+    {
+      "name": "depth",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "learning_rate_init",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        9.999999747378752e-06,
+        3.5938137443736196e-05,
+        0.00012915497063659132,
+        0.00046415888937190175,
+        0.0016681005945429206,
+        0.005994842387735844,
+        0.02154434658586979,
+        0.07742636650800705,
+        0.2782559394836426,
+        1
+      ]
+    },
+    {
+      "name": "width",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        16,
+        25,
+        40,
+        64,
+        101,
+        161,
+        256,
+        406,
+        645,
+        1024
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 1326,
+    "completion_tokens": 379
+  },
+  "source_prompt_card": "experiments/priors/hpobench-nn-segment/segment/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "eed879dc48d907d31e6a1e649a7eee5eb6da89ce100f0840f3e95ea69096e762",
+  "adversarial_hint": "experiments/misleading_descriptions/hpobench-tabular/nn-segment.txt",
+  "adversarial_hint_sha256": "4b61e65902457be1299f5e01b1e83feb9d69e97444992b1bef514287bca85500",
+  "prompt_sha256": "f352d43564427afc2ee17205958a9979e6fda625951b11f087605bdb7b70f66f",
+  "created_at_utc": "2026-11-07T20:07:23.134727+00:00"
+}

@@ -1,0 +1,165 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "alpha",
+        "type": "ordinal",
+        "values": [
+          9.99999993922529e-09,
+          7.74263710923151e-08,
+          5.994842240397702e-07,
+          4.641588930098806e-06,
+          3.5938137443736196e-05,
+          0.00027825593133457005,
+          0.002154434798285365,
+          0.01668100617825985,
+          0.1291549652814865,
+          1
+        ],
+        "meaning": "L2 penalty on the weights; values are log-spaced"
+      },
+      {
+        "name": "batch_size",
+        "type": "ordinal",
+        "values": [
+          4,
+          6,
+          10,
+          16,
+          25,
+          40,
+          64,
+          101,
+          161,
+          256
+        ],
+        "meaning": "samples per Adam update; values are log-spaced"
+      },
+      {
+        "name": "depth",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3
+        ],
+        "meaning": "number of hidden layers, all of equal width"
+      },
+      {
+        "name": "learning_rate_init",
+        "type": "ordinal",
+        "values": [
+          9.999999747378752e-06,
+          3.5938137443736196e-05,
+          0.00012915497063659132,
+          0.00046415888937190175,
+          0.0016681005945429206,
+          0.005994842387735844,
+          0.02154434658586979,
+          0.07742636650800705,
+          0.2782559394836426,
+          1
+        ],
+        "meaning": "initial Adam step size; values are log-spaced"
+      },
+      {
+        "name": "width",
+        "type": "ordinal",
+        "values": [
+          16,
+          25,
+          40,
+          64,
+          101,
+          161,
+          256,
+          406,
+          645,
+          1024
+        ],
+        "meaning": "neurons per hidden layer; values are log-spaced"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "depth",
+        "width"
+      ],
+      "mode": {
+        "depth": 2,
+        "width": 101
+      },
+      "ci": {
+        "depth": [
+          1,
+          3
+        ],
+        "width": [
+          64,
+          256
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "For small datasets (~1k records), moderate depth (2) and width (~100) typically balance capacity and overfitting better than very shallow or very deep/wide nets."
+    },
+    {
+      "token": "bump",
+      "dim": "learning_rate_init",
+      "mode": 0.0016681005945429206,
+      "ci": [
+        0.00046415888937190175,
+        0.005994842387735844
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Adam typically performs well with initial learning rates in the 1e-3 to 5e-3 range for standard classification tasks."
+    },
+    {
+      "token": "bump",
+      "dim": "alpha",
+      "mode": 0.00027825593133457005,
+      "ci": [
+        4.641588930098806e-06,
+        0.002154434798285365
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "Small to moderate L2 regularization is usually beneficial for small datasets to prevent overfitting, but too much hurts performance."
+    },
+    {
+      "token": "trend",
+      "dim": "batch_size",
+      "direction": "increase",
+      "knee": 64,
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Larger batch sizes often provide more stable gradients, but for small datasets, very large batches may not offer significant gains and can hurt generalization."
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "noise",
+      "level": "medium",
+      "repeats_recommended": true
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "General MLP tuning heuristics applied to a small, balanced credit application dataset. Specific optimal values may vary based on feature scaling and data distribution."
+  }
+}

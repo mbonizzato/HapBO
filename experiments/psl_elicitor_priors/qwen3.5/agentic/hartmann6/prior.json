@@ -1,0 +1,22 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {"name": "x0", "type": "continuous", "range": [0.0, 1.0], "scale": "linear"},
+      {"name": "x1", "type": "continuous", "range": [0.0, 1.0], "scale": "linear"},
+      {"name": "x2", "type": "continuous", "range": [0.0, 1.0], "scale": "linear"},
+      {"name": "x3", "type": "continuous", "range": [0.0, 1.0], "scale": "linear"},
+      {"name": "x4", "type": "continuous", "range": [0.0, 1.0], "scale": "linear"},
+      {"name": "x5", "type": "continuous", "range": [0.0, 1.0], "scale": "linear"}
+    ]
+  },
+  "beliefs": [
+    {"token": "baseline", "level": 0.1},
+    {"token": "joint_region", "dims": ["x0", "x3"], "mode": {"x0": 0.3935, "x3": 0.1901}, "ci": {"x0": [0.0, 1.0], "x3": [0.0, 0.5928]}, "weight": 1.0, "provenance": "llm_domain"},
+    {"token": "joint_region", "dims": ["x1", "x4"], "mode": {"x1": 0.2419, "x4": 0.2258}, "ci": {"x1": [0.0, 0.8993], "x4": [0.0, 0.5540]}, "weight": 0.6, "provenance": "llm_domain"},
+    {"token": "joint_region", "dims": ["x2", "x5"], "mode": {"x2": 0.6230, "x5": 0.7231}, "ci": {"x2": [0.0, 1.0], "x5": [0.2980, 1.0]}, "weight": 0.6, "provenance": "llm_domain"}
+  ],
+  "trust": {
+    "overall_confidence": "medium"
+  }
+}

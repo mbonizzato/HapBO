@@ -1,0 +1,314 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.0006
+    },
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x5",
+        "region": [
+          0.2504,
+          1.0
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x0",
+        "mode": 0.4341,
+        "ci": [
+          0.0,
+          1.0
+        ],
+        "skew": -0.15
+      },
+      "mode": "synergy",
+      "weight": 0.5796,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x5",
+        "region": [
+          0.0,
+          0.2504
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x0",
+        "mode": 0.4908,
+        "ci": [
+          0.2592,
+          0.9608
+        ],
+        "skew": -0.35
+      },
+      "mode": "synergy",
+      "weight": 0.9886,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x5",
+        "region": [
+          0.2504,
+          1.0
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x2",
+        "mode": 0.633,
+        "ci": [
+          0.0,
+          1.0
+        ],
+        "skew": 0.15
+      },
+      "mode": "synergy",
+      "weight": 0.3991,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x5",
+        "region": [
+          0.2504,
+          1.0
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x1",
+        "mode": 0.2105,
+        "ci": [
+          0.2105,
+          1.0
+        ],
+        "skew": -0.2
+      },
+      "mode": "synergy",
+      "weight": 0.8497,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x5",
+        "region": [
+          0.2504,
+          1.0
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x3",
+        "mode": 0.1952,
+        "ci": [
+          0.1952,
+          0.8274
+        ],
+        "skew": -0.4
+      },
+      "mode": "synergy",
+      "weight": 0.934,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "conditional",
+      "when": {
+        "dim": "x5",
+        "region": [
+          0.0,
+          0.2504
+        ]
+      },
+      "then": {
+        "token": "bump",
+        "dim": "x3",
+        "mode": 0.4043,
+        "ci": [
+          0.0515,
+          0.91
+        ],
+        "skew": -0.2
+      },
+      "mode": "synergy",
+      "weight": 0.984,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x4",
+        "x5"
+      ],
+      "mode": {
+        "x4": 0.1581,
+        "x5": 0.8053
+      },
+      "ci": {
+        "x4": [
+          0.1581,
+          0.5974
+        ],
+        "x5": [
+          0.2329,
+          0.8053
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.9953,
+        "x5": 0.0103
+      },
+      "ci": {
+        "x1": [
+          0.5343,
+          0.9953
+        ],
+        "x5": [
+          0.0103,
+          0.3717
+        ]
+      },
+      "weight": 0.9203,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "points": [
+        {
+          "coords": {
+            "x0": 0.3208,
+            "x1": 0.2741,
+            "x2": 0.6626,
+            "x3": 0.2089,
+            "x4": 0.7004,
+            "x5": 0.5168
+          },
+          "value": 0.5207
+        }
+      ],
+      "bandwidth": 0.386
+    },
+    {
+      "token": "plateau",
+      "region": {
+        "x1": [
+          0.265,
+          1.0
+        ],
+        "x2": [
+          0.2885,
+          0.4605
+        ],
+        "x4": [
+          0.2253,
+          0.5512
+        ],
+        "x5": [
+          0.2368,
+          0.4434
+        ]
+      },
+      "weight": 0.0072,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "points": [
+        {
+          "coords": {
+            "x0": 0.3384,
+            "x1": 0.4076,
+            "x2": 0.9602,
+            "x3": 0.2515,
+            "x4": 0.1036,
+            "x5": 0.8987
+          },
+          "value": 0.7535
+        }
+      ],
+      "bandwidth": 0.3524
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "approximate analytic model"
+  }
+}

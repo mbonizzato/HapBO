@@ -1,0 +1,13 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: alpha-pi-raw-ei-matched-alpha-0-1
+label: HapBO (alpha-pi shaping, EI), alpha fixed at 0.1
+role: ablation
+implementation_status: available
+isolated_worker: true
+strategy: alpha-pi
+requires_prior: true
+acquisition: expected-improvement
+alpha: 0.1
+note: >-
+  alpha-pi-raw-ei-matched with the trust weight alpha fixed at 0.1 instead of the
+  alpha compiled from the PSL document (fixed-alpha sweep).

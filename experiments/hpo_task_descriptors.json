@@ -1,0 +1,62 @@
+{
+  "_comment": "Single source of truth for every LLM-visible description of the tabular HPO tasks (cards, misleading descriptions, LLAMBO context, CALIPER). Facts are deliberately coarse: domain + rounded size + class structure only.",
+  "tasks": {
+    "australian": {
+      "descriptor": "a credit-application approval task",
+      "size": "under 1,000 records",
+      "features": "about 15 mixed numeric and categorical features",
+      "classes": "2 roughly balanced classes",
+      "llambo": {"num_samples": "under 1,000", "tot_feats": "about 15", "cat_feats": "some", "num_feats": "some", "n_classes": "2"}
+    },
+    "blood-transfusion": {
+      "descriptor": "a donor-return prediction task",
+      "size": "under 1,000 records",
+      "features": "a handful of numeric features",
+      "classes": "2 moderately imbalanced classes",
+      "llambo": {"num_samples": "under 1,000", "tot_feats": "a handful of", "cat_feats": "no", "num_feats": "all", "n_classes": "2"}
+    },
+    "car": {
+      "descriptor": "a product-acceptability rating task",
+      "size": "about 2,000 records",
+      "features": "a handful of categorical features",
+      "classes": "several ordered, strongly imbalanced classes",
+      "llambo": {"num_samples": "about 2,000", "tot_feats": "a handful of", "cat_feats": "all", "num_feats": "no", "n_classes": "several"}
+    },
+    "credit-g": {
+      "descriptor": "a credit-risk classification task",
+      "size": "about 1,000 records",
+      "features": "about 20 mixed numeric and categorical features",
+      "classes": "2 moderately imbalanced classes",
+      "llambo": {"num_samples": "about 1,000", "tot_feats": "about 20", "cat_feats": "some", "num_feats": "some", "n_classes": "2"}
+    },
+    "kc1": {
+      "descriptor": "a software-defect prediction task",
+      "size": "about 2,000 records",
+      "features": "about 20 numeric features",
+      "classes": "2 strongly imbalanced classes",
+      "llambo": {"num_samples": "about 2,000", "tot_feats": "about 20", "cat_feats": "no", "num_feats": "all", "n_classes": "2"}
+    },
+    "phoneme": {
+      "descriptor": "a speech-sound classification task",
+      "size": "about 5,000 records",
+      "features": "a handful of numeric features",
+      "classes": "2 moderately imbalanced classes",
+      "llambo": {"num_samples": "about 5,000", "tot_feats": "a handful of", "cat_feats": "no", "num_feats": "all", "n_classes": "2"}
+    },
+    "segment": {
+      "descriptor": "an image-region classification task",
+      "size": "about 2,000 records",
+      "features": "about 20 numeric features",
+      "classes": "several balanced classes",
+      "llambo": {"num_samples": "about 2,000", "tot_feats": "about 20", "cat_feats": "no", "num_feats": "all", "n_classes": "several"}
+    },
+    "vehicle": {
+      "descriptor": "an object-shape classification task from image-derived geometric features",
+      "size": "under 1,000 records",
+      "features": "about 20 numeric features",
+      "classes": "several roughly balanced classes",
+      "llambo": {"num_samples": "under 1,000", "tot_feats": "about 20", "cat_feats": "no", "num_feats": "all", "n_classes": "several"}
+    }
+  },
+  "objective_text": "mean validation accuracy (fraction correct) on a held-out split, averaged over several random seeds"
+}

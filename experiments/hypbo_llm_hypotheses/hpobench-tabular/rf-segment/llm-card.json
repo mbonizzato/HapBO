@@ -1,0 +1,272 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "rf-segment",
+  "modality": "llm-card",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "max_depth": 13,
+        "max_features": 0.5555555820465088,
+        "min_samples_leaf": 5,
+        "min_samples_split": 12
+      },
+      "c": {
+        "max_depth": 13,
+        "max_features": 0.5555555820465088,
+        "min_samples_leaf": 5,
+        "min_samples_split": 12
+      },
+      "s": 0.75,
+      "kept": true,
+      "side_encoded": 0.250001,
+      "center_encoded": [
+        0.6556580454415859,
+        0.5555555820465088,
+        0.21052631578947367,
+        0.43082708345352605
+      ],
+      "box_encoded": {
+        "lb": [
+          0.5306575454415859,
+          0.43055508204650883,
+          0.08552581578947369,
+          0.3058265834535261
+        ],
+        "ub": [
+          0.7806585454415859,
+          0.6805560820465087,
+          0.33552681578947363,
+          0.555827583453526
+        ]
+      },
+      "box_native": {
+        "max_depth": [
+          7.972072732243737,
+          21.19900378184771
+        ],
+        "max_features": [
+          0.43055508204650883,
+          0.6805560820465087
+        ],
+        "min_samples_leaf": [
+          2.6249905,
+          7.375009499999999
+        ],
+        "min_samples_split": [
+          7.135227852711694,
+          20.18155593241129
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "max_depth": 8,
+        "max_features": 0.4444444477558136,
+        "min_samples_leaf": 3,
+        "min_samples_split": 8
+      },
+      "c": {
+        "max_depth": 8,
+        "max_features": 0.4444444477558136,
+        "min_samples_leaf": 3,
+        "min_samples_split": 8
+      },
+      "s": 0.65,
+      "kept": true,
+      "side_encoded": 0.35000099999999995,
+      "center_encoded": [
+        0.5315514604066737,
+        0.4444444477558136,
+        0.10526315789473684,
+        0.3333333333333333
+      ],
+      "box_encoded": {
+        "lb": [
+          0.35655096040667367,
+          0.2694439477558136,
+          0.0,
+          0.15833283333333334
+        ],
+        "ub": [
+          0.7065519604066737,
+          0.6194449477558136,
+          0.28026365789473684,
+          0.5083338333333333
+        ]
+      },
+      "box_native": {
+        "max_depth": [
+          4.034311114828349,
+          15.863922780958607
+        ],
+        "max_features": [
+          0.2694439477558136,
+          0.6194449477558136
+        ],
+        "min_samples_leaf": [
+          1.0,
+          6.3250095
+        ],
+        "min_samples_split": [
+          3.863737281275219,
+          16.56427322586407
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "max_depth": 20,
+        "max_features": 0.6666666865348816,
+        "min_samples_leaf": 7,
+        "min_samples_split": 20
+      },
+      "c": {
+        "max_depth": 20,
+        "max_features": 0.6666666865348816,
+        "min_samples_leaf": 7,
+        "min_samples_split": 20
+      },
+      "s": 0.55,
+      "kept": true,
+      "side_encoded": 0.45000099999999993,
+      "center_encoded": [
+        0.7657757302033369,
+        0.6666666865348816,
+        0.3157894736842105,
+        0.5536546824812271
+      ],
+      "box_encoded": {
+        "lb": [
+          0.540775230203337,
+          0.44166618653488166,
+          0.09078897368421054,
+          0.32865418248122713
+        ],
+        "ub": [
+          0.9907762302033368,
+          0.8916671865348815,
+          0.5407899736842104,
+          0.778655182481227
+        ]
+      },
+      "box_native": {
+        "max_depth": [
+          8.293940113364043,
+          48.22798266356892
+        ],
+        "max_features": [
+          0.44166618653488166,
+          0.8916671865348815
+        ],
+        "min_samples_leaf": [
+          2.7249905000000005,
+          11.275009499999998
+        ],
+        "min_samples_split": [
+          7.845824664016811,
+          50.98253110785332
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "max_depth",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        20,
+        32,
+        50
+      ]
+    },
+    {
+      "name": "max_features",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        0,
+        0.1111111119389534,
+        0.2222222238779068,
+        0.3333333432674408,
+        0.4444444477558136,
+        0.5555555820465088,
+        0.6666666865348816,
+        0.7777777910232544,
+        0.8888888955116272,
+        1
+      ]
+    },
+    {
+      "name": "min_samples_leaf",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        20
+      ]
+    },
+    {
+      "name": "min_samples_split",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        2,
+        3,
+        5,
+        8,
+        12,
+        20,
+        32,
+        50,
+        80,
+        128
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 1008,
+    "completion_tokens": 773
+  },
+  "source_prompt_card": "experiments/priors/hpobench-rf-segment/segment/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "f72291ac5e067f3a051db63001bbd1d050496d46d2ffe9f67732982552d1800e",
+  "prompt_sha256": "e5a9133c53e163c87aa6cd5d5750e6f029bde7e965ea345fe0cd6e95f1986526",
+  "created_at_utc": "2026-11-07T20:04:48.818326+00:00"
+}

@@ -1,0 +1,29 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: cake
+label: CAKE Context-Aware Kernel Evolution (reimplemented from the paper)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: cake
+requires_prior: false
+note: >-
+  Native finite-candidate port of Context-Aware Kernel Evolution (CAKE, Suwandi
+  et al., NeurIPS 2025; upstream github.com/richardcsuwandi/cake, implemented in
+  src/baselines/cake.py following the released code). One evolutionary generation
+  runs IN-LOOP before every query: the population of kernel expressions over
+  {SE, PER, LIN, RQ, M3, M5} and {+, *} is scored by BIC, the local Qwen
+  (thinking disabled) performs ONE crossover and, with probability 0.7, ONE
+  mutation, and the fittest six survive. BAKER then selects the query by the
+  softmax-BIC-weighted expected improvement, evaluated exhaustively over the
+  finite candidate table rather than through optimize_acqf over a continuous box.
+  This is the one arm that refits its GP hyperparameters by marginal likelihood
+  every generation -- BIC is undefined otherwise -- so the study's shared fixed
+  isotropic Matern length_scale/noise_std do NOT apply to this arm. BIC follows
+  the paper's log-marginal-likelihood definition, not the released code's
+  eval-mode posterior-predictive quantity. requires_prior:false -- CAKE evolves
+  its kernel from observed data and consumes no compiled pi, so it is
+  prior-agnostic. Runs in-process. Defaults (overridable via the study
+  optimizer block): num_crossover=1, mutation_prob=0.7, num_population=6,
+  max_crossover_length=10, noise_init=1e-4, llm_call_budget=512. See
+  src/baselines/cake.py.

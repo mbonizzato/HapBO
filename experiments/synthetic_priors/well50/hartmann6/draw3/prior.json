@@ -1,0 +1,367 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4704,
+      "ci": [
+        0.0928,
+        0.848
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Min 1 (alpha=1.332), dim x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.2377,
+      "ci": [
+        0.0,
+        0.8598
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Min 1 (alpha=1.332), dim x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.5354,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Min 1 (alpha=1.332), dim x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.2771,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Min 1 (alpha=1.332), dim x3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.5081,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Min 1 (alpha=1.332), dim x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.4092,
+      "ci": [
+        0.0845,
+        0.7339
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Min 1 (alpha=1.332), dim x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4984,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 2 (alpha=2.115), dim x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.4457,
+      "ci": [
+        0.138,
+        0.7534
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Min 2 (alpha=2.115), dim x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.866,
+      "ci": [
+        0.4896,
+        1.0
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 2 (alpha=2.115), dim x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.106,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 2 (alpha=2.115), dim x3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.04525,
+      "ci": [
+        0.0,
+        0.4217
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 2 (alpha=2.115), dim x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.98,
+      "ci": [
+        0.7236,
+        1.0
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 2 (alpha=2.115), dim x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.5164,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.97,
+      "provenance": "llm_domain",
+      "note": "Min 3 (alpha=2.047), dim x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.4227,
+      "ci": [
+        0.0,
+        0.9251
+      ],
+      "weight": 0.97,
+      "provenance": "llm_domain",
+      "note": "Min 3 (alpha=2.047), dim x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.2563,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.97,
+      "provenance": "llm_domain",
+      "note": "Min 3 (alpha=2.047), dim x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.6663,
+      "ci": [
+        0.3289,
+        1.0
+      ],
+      "weight": 0.97,
+      "provenance": "llm_domain",
+      "note": "Min 3 (alpha=2.047), dim x3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.5327,
+      "ci": [
+        0.1831,
+        0.8823
+      ],
+      "weight": 0.97,
+      "provenance": "llm_domain",
+      "note": "Min 3 (alpha=2.047), dim x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.8223,
+      "ci": [
+        0.5127,
+        1.0
+      ],
+      "weight": 0.97,
+      "provenance": "llm_domain",
+      "note": "Min 3 (alpha=2.047), dim x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.3355,
+      "ci": [
+        0.0,
+        0.8214
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Min 4 (alpha=1.291), dim x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.98,
+      "ci": [
+        0.5498,
+        1.0
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Min 4 (alpha=1.291), dim x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.4912,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Min 4 (alpha=1.291), dim x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.2166,
+      "ci": [
+        0.0,
+        0.6195
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Min 4 (alpha=1.291), dim x3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.04525,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Min 4 (alpha=1.291), dim x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.03393,
+      "ci": [
+        0.0,
+        0.3181
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Min 4 (alpha=1.291), dim x5"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "n_optima": 4
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximate analytic model provided; weights scaled by alpha, widths by A matrix."
+  }
+}

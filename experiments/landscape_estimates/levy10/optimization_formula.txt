@@ -1,0 +1,9 @@
+Objective: a scalar black-box value, lower is better.
+Direction: minimize
+Evaluation budget: about 50 evaluations.
+Known constraints or prior observations: none; the only information available is the approximate analytic model in the domain description above.
+
+Questions to consider before writing the prior:
+- Where in the search box are the model's low (good) regions, how many are there, and how do their depths compare?
+- Which parameters does the model value depend on most strongly, and which interact?
+- How much should an approximately calibrated model's minimum locations be trusted?

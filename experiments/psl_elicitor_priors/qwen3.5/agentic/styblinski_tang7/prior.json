@@ -1,0 +1,222 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -2.995923527890688,
+      "ci": [
+        -4.295923527890688,
+        -1.695923527890688
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.8108468856966855,
+      "ci": [
+        1.5108468856966855,
+        4.110846885696685
+      ],
+      "weight": 0.261361775124846,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.289665818239685,
+      "ci": [
+        -2.589665818239685,
+        0.010334181760315087
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.369806229599455,
+      "ci": [
+        3.069806229599455,
+        5.0
+      ],
+      "weight": 0.24755224199381118,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.121361615949148,
+      "ci": [
+        -3.421361615949148,
+        -0.8213616159491479
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.29458529177758,
+      "ci": [
+        2.9945852917775806,
+        5.0
+      ],
+      "weight": 0.24517697444410141,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.398382286522753,
+      "ci": [
+        -4.698382286522753,
+        -2.098382286522753
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.259571784069119,
+      "ci": [
+        0.9595717840691191,
+        3.559571784069119
+      ],
+      "weight": 0.2617360900699485,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.4525518897080985,
+      "ci": [
+        -2.7525518897080987,
+        -0.1525518897080984
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 3.978526386483783,
+      "ci": [
+        2.6785263864837834,
+        5.0
+      ],
+      "weight": 0.22720088581771425,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.4640573634506953,
+      "ci": [
+        -4.7640573634506955,
+        -2.164057363450695
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.6144494358664967,
+      "ci": [
+        1.3144494358664967,
+        3.914449435866497
+      ],
+      "weight": 0.2569347516223246,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.1987803452469015,
+      "ci": [
+        -2.4987803452469013,
+        0.10121965475309858
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium"
+  }
+}

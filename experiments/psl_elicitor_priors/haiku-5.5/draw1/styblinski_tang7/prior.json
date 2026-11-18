@@ -1,0 +1,256 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -3.0,
+      "ci": [
+        -4.8,
+        -1.2
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.84,
+      "ci": [
+        1.04,
+        4.64
+      ],
+      "sign": "peak",
+      "weight": 0.83,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.29,
+      "ci": [
+        -3.09,
+        0.51
+      ],
+      "sign": "peak",
+      "weight": 0.93,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.41,
+      "ci": [
+        2.61,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.77,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.12,
+      "ci": [
+        -3.92,
+        -0.32
+      ],
+      "sign": "peak",
+      "weight": 0.93,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.34,
+      "ci": [
+        2.54,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.76,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.4,
+      "ci": [
+        -5.0,
+        -1.6
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.28,
+      "ci": [
+        0.48,
+        4.08
+      ],
+      "sign": "peak",
+      "weight": 0.84,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.45,
+      "ci": [
+        -3.25,
+        0.35
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.03,
+      "ci": [
+        2.23,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.72,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.46,
+      "ci": [
+        -5.0,
+        -1.66
+      ],
+      "sign": "peak",
+      "weight": 1.0,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.65,
+      "ci": [
+        0.85,
+        4.45
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.2,
+      "ci": [
+        -3.0,
+        0.6
+      ],
+      "sign": "peak",
+      "weight": 0.94,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.19,
+      "ci": [
+        2.39,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.84,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Model is separable: seven independent double-well quartics. Well locations and depth asymmetries are computed from the given constants; calibration is approximate, so the relative depths may differ from the true objective."
+  }
+}

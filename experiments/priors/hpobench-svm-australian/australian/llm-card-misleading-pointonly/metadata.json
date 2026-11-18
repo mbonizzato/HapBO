@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-card-misleading-pointonly",
+  "dataset_id": "hpobench-svm-australian",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "australian",
+    "target_slug": "australian",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-30T02:08:09.913660+00:00",
+    "generated_at": "2026-09-30T02:09:02.642350+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=False; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "ff720509b24c5df78551533139939de084d71c15cb12575d1c6041d2c9fa79ca"
+    },
+    "prior.json": {
+      "sha256": "241f6fb07084c67da5e52598701d84c649fa628d585a9627b38cf586fc14e18a"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-11-08T12:15:25.346168+00:00"
+}

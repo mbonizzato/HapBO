@@ -1,0 +1,14 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: alpha-pi-raw-ucb-matched
+label: HapBO (alpha-pi shaping, UCB)
+role: ablation
+implementation_status: available
+isolated_worker: true
+strategy: alpha-pi
+requires_prior: true
+acquisition: ucb
+ucb_center_incumbent: true
+note: >-
+  Incumbent-relative UCB shaped by the alpha-pi rule. The initial design is the
+  seeded random design shared with vanilla-bo-ucb. Used by the acquisition
+  studies (hpo/acquisition, cortical/acquisition).

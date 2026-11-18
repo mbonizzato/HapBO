@@ -1,0 +1,367 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.1905,
+      "ci": [
+        0.0,
+        0.403
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Well 2, dim 0 (deepest well)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.1908,
+      "ci": [
+        0.0,
+        0.385
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Well 2, dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.8044,
+      "ci": [
+        0.523,
+        1.0
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Well 2, dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.02272,
+      "ci": [
+        0.0,
+        0.142
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Well 2, dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.02791,
+      "ci": [
+        0.0,
+        0.125
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Well 2, dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.3005,
+      "ci": [
+        0.175,
+        0.427
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Well 2, dim 5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4942,
+      "ci": [
+        0.393,
+        0.595
+      ],
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Well 3, dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.98,
+      "ci": [
+        0.843,
+        1.0
+      ],
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Well 3, dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.896,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Well 3, dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.3985,
+      "ci": [
+        0.275,
+        0.523
+      ],
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Well 3, dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.04525,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Well 3, dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.03393,
+      "ci": [
+        0.0,
+        0.135
+      ],
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Well 3, dim 5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.3962,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Well 1, dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.4413,
+      "ci": [
+        0.325,
+        0.557
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Well 1, dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.9455,
+      "ci": [
+        0.847,
+        1.0
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Well 1, dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.2177,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Well 1, dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.06195,
+      "ci": [
+        0.0,
+        0.195
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Well 1, dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.98,
+      "ci": [
+        0.882,
+        1.0
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Well 1, dim 5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.3108,
+      "ci": [
+        0.189,
+        0.433
+      ],
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Well 0, dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.2053,
+      "ci": [
+        0.0,
+        0.423
+      ],
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Well 0, dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.6592,
+      "ci": [
+        0.556,
+        0.762
+      ],
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Well 0, dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.02,
+      "ci": [
+        0.0,
+        0.24
+      ],
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Well 0, dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.7774,
+      "ci": [
+        0.495,
+        1.0
+      ],
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Well 0, dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.5599,
+      "ci": [
+        0.432,
+        0.688
+      ],
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Well 0, dim 5"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximation of analytic model with 4 wells of varying depth and width."
+  }
+}

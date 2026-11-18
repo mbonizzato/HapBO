@@ -1,0 +1,258 @@
+{
+ "schema": {
+  "objective": "minimize",
+  "dimensions": [
+   {
+    "name": "x0",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x1",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x2",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x3",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x4",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x5",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x6",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   }
+  ]
+ },
+ "beliefs": [
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": 3.2627,
+   "ci": [
+    -4.5499,
+    5.0
+   ],
+   "skew": 0.5319,
+   "sign": "peak",
+   "weight": 0.8537,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": -3.464,
+   "ci": [
+    -5.0,
+    4.9977
+   ],
+   "skew": -0.6463,
+   "sign": "peak",
+   "weight": 0.8572,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": 5.0,
+   "ci": [
+    -3.9245,
+    5.0
+   ],
+   "skew": 0.8933,
+   "sign": "peak",
+   "weight": 0.7092,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": -1.643,
+   "ci": [
+    -4.8626,
+    2.7642
+   ],
+   "skew": 0.2233,
+   "sign": "peak",
+   "weight": 0.8639,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": 4.9629,
+   "ci": [
+    -5.0,
+    5.0
+   ],
+   "skew": 1.0,
+   "sign": "peak",
+   "weight": 0.5014,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": -2.4927,
+   "ci": [
+    -4.9998,
+    4.0327
+   ],
+   "skew": -0.0143,
+   "sign": "peak",
+   "weight": 0.635,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": -4.0847,
+   "ci": [
+    -5.0,
+    5.0
+   ],
+   "skew": -0.9139,
+   "sign": "peak",
+   "weight": 0.659,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": 2.6225,
+   "ci": [
+    -4.5867,
+    4.8182
+   ],
+   "skew": 0.206,
+   "sign": "peak",
+   "weight": 0.7992,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": 4.9631,
+   "ci": [
+    -4.29,
+    5.0
+   ],
+   "skew": 1.0,
+   "sign": "peak",
+   "weight": 0.6055,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": -1.8385,
+   "ci": [
+    -5.0,
+    5.0
+   ],
+   "skew": 0.0926,
+   "sign": "peak",
+   "weight": 1.0,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": -3.8677,
+   "ci": [
+    -5.0,
+    5.0
+   ],
+   "skew": -0.8082,
+   "sign": "peak",
+   "weight": 0.3613,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": 2.9532,
+   "ci": [
+    -3.2567,
+    4.8915
+   ],
+   "skew": 0.2615,
+   "sign": "peak",
+   "weight": 0.3713,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": 5.0,
+   "ci": [
+    -3.1667,
+    5.0
+   ],
+   "skew": 1.0,
+   "sign": "peak",
+   "weight": 0.458,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": -1.6165,
+   "ci": [
+    -5.0,
+    5.0
+   ],
+   "skew": 0.2483,
+   "sign": "peak",
+   "weight": 0.8956,
+   "provenance": "llm_domain"
+  }
+ ],
+ "trust": {
+  "overall_confidence": "medium",
+  "notes": "separable double-well analytic model from TASK.md, two shapes per parameter"
+ }
+}

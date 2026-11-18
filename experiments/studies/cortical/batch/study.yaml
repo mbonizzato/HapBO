@@ -1,0 +1,15 @@
+artifact_format: llm-bo-study-v1
+study_id: batch
+phase: cortical
+status: ready
+execution_mode: optimization
+research_question: "HapBO and vanilla BO with batches of 3 queries (Kriging believer), prior from the geometry facts plus the expert hint."
+design:
+  budgets: [12]
+  seeds: [1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010]
+  methods: [alpha-pi-raw-ei-matched, vanilla-bo-ei]
+  optimizer: {n_initial: 1, length_scale: 1.0, noise_std: 0.05, improvement_xi: 0.0, q_batch: 3}
+  benchmarks:
+    - benchmark_id: neuromosaic-dataset1-rat-all
+      include: all
+      prior_path: experiments/priors/neuromosaic-dataset1-rat/{muscle_slug}/llm-expert-hint/prior.json

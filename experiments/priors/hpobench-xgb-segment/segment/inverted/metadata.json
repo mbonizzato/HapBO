@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "inverted",
+  "dataset_id": "hpobench-xgb-segment",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "segment",
+    "target_slug": "segment",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": null,
+    "created_at_utc": "2026-09-29T04:01:25.120537+00:00",
+    "generated_at": "2026-09-29T04:01:52.527531+00:00",
+    "raw_llm_response_available": false,
+    "notes": "Inverted-map prior at the empirical anti-optimum; no LLM."
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "e605f81a0d04e35702da53ebf56f5a4500cf4295ad4fde0d80c8805fdef16816"
+    },
+    "prior.json": {
+      "sha256": "28c8f85a598c3f898983d547774c46e14dfa87077ddcd552beb65327422a71e2"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-29T04:01:52.529301+00:00"
+}

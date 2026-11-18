@@ -1,0 +1,172 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.79,
+      "ci": [
+        1.29,
+        4.29
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.34,
+      "ci": [
+        2.84,
+        5.0
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.25,
+      "ci": [
+        2.75,
+        5.0
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.24,
+      "ci": [
+        0.7400000000000002,
+        3.74
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 3.93,
+      "ci": [
+        2.43,
+        5.0
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.59,
+      "ci": [
+        1.0899999999999999,
+        4.09
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.15,
+      "ci": [
+        2.6500000000000004,
+        5.0
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on approximate analytic model with 7 separable quartic terms"
+  }
+}

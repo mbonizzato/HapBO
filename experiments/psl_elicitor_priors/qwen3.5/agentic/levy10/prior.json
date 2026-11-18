@@ -1,0 +1,236 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.065,
+      "ci": [
+        0.21500000000000075,
+        9.915
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "sin^2(pi*w0) minimized at integer w0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        0.2869999999999999,
+        9.986999999999998
+      ],
+      "weight": 0.86,
+      "provenance": "llm_domain",
+      "note": "(w_1-1)^2 minimized at w_1=1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.592,
+      "ci": [
+        -6.808,
+        9.992
+      ],
+      "weight": 0.9300000000000002,
+      "provenance": "llm_domain",
+      "note": "(w_2-1)^2 minimized at w_2=1"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.517,
+      "ci": [
+        -0.9329999999999998,
+        9.967
+      ],
+      "weight": 0.88,
+      "provenance": "llm_domain",
+      "note": "(w_3-1)^2 minimized at w_3=1"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.191,
+      "ci": [
+        -1.5590000000000002,
+        9.940999999999999
+      ],
+      "weight": 0.78,
+      "provenance": "llm_domain",
+      "note": "(w_4-1)^2 minimized at w_4=1"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 3.136,
+      "ci": [
+        -3.564,
+        9.836
+      ],
+      "weight": 0.7400000000000001,
+      "provenance": "llm_domain",
+      "note": "(w_5-1)^2 minimized at w_5=1"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        -1.4660000000000002,
+        9.934000000000001
+      ],
+      "weight": 0.83,
+      "provenance": "llm_domain",
+      "note": "(w_6-1)^2 minimized at w_6=1"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -9.936,
+        3.464
+      ],
+      "weight": 0.91,
+      "provenance": "llm_domain",
+      "note": "(w_7-1)^2 minimized at w_7=1"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -9.960999999999999,
+        1.6390000000000002
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "(w_8-1)^2 minimized at w_8=1"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.173,
+      "ci": [
+        -2.0269999999999992,
+        10.0
+      ],
+      "weight": 0.43,
+      "provenance": "llm_domain",
+      "note": "(w9-1)^2 minimized at w9=1"
+    },
+    {
+      "token": "modality",
+      "expectation": "many",
+      "n_optima": 10
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on analytic model from TASK.md"
+  }
+}

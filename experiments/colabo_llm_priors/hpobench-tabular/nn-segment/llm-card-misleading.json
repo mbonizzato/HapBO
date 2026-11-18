@@ -1,0 +1,115 @@
+{
+  "artifact_format": "colabo-llm-point-prior-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "nn-segment",
+  "modality": "llm-card-misleading",
+  "construction": "BORA supplement SC.2: pi(x) = N(c, sigma), sigma = 1 - s + 1e-6",
+  "c_raw": {
+    "alpha": 0.1291549652814865,
+    "batch_size": 25,
+    "depth": 3,
+    "learning_rate_init": 1,
+    "width": 645
+  },
+  "c": {
+    "alpha": 0.1291549652814865,
+    "batch_size": 25,
+    "depth": 3,
+    "learning_rate_init": 1,
+    "width": 645
+  },
+  "s": 0.95,
+  "sigma": 0.050001000000000045,
+  "dimensions": [
+    {
+      "name": "alpha",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        9.99999993922529e-09,
+        7.74263710923151e-08,
+        5.994842240397702e-07,
+        4.641588930098806e-06,
+        3.5938137443736196e-05,
+        0.00027825593133457005,
+        0.002154434798285365,
+        0.01668100617825985,
+        0.1291549652814865,
+        1
+      ]
+    },
+    {
+      "name": "batch_size",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        4,
+        6,
+        10,
+        16,
+        25,
+        40,
+        64,
+        101,
+        161,
+        256
+      ]
+    },
+    {
+      "name": "depth",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "learning_rate_init",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        9.999999747378752e-06,
+        3.5938137443736196e-05,
+        0.00012915497063659132,
+        0.00046415888937190175,
+        0.0016681005945429206,
+        0.005994842387735844,
+        0.02154434658586979,
+        0.07742636650800705,
+        0.2782559394836426,
+        1
+      ]
+    },
+    {
+      "name": "width",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        16,
+        25,
+        40,
+        64,
+        101,
+        161,
+        256,
+        406,
+        645,
+        1024
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "enable_thinking": false,
+  "attempts": 1,
+  "source_prompt_card": "experiments/priors/hpobench-nn-segment/segment/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "eed879dc48d907d31e6a1e649a7eee5eb6da89ce100f0840f3e95ea69096e762",
+  "schema_fallback": false,
+  "adversarial_hint": "experiments/misleading_descriptions/hpobench-tabular/nn-segment.txt",
+  "adversarial_hint_sha256": "4b61e65902457be1299f5e01b1e83feb9d69e97444992b1bef514287bca85500",
+  "prompt_sha256": "9c73a744d8b608dbfbcc7cc187f4bed4cd5f021731e2f60d2e2a348905e9c7bc",
+  "created_at_utc": "2026-09-29T21:59:57.289907+00:00"
+}

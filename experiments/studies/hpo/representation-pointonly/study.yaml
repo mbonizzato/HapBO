@@ -1,0 +1,132 @@
+artifact_format: llm-bo-study-v1
+study_id: representation-pointonly
+phase: hpo
+status: ready
+execution_mode: optimization
+research_question: "HapBO with the point-only representation of the card prior."
+design:
+  budgets: [16]
+  seeds: [1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010]
+  methods: [alpha-pi-raw-ei-matched]
+  optimizer: {n_initial: 1, length_scale: 0.2, noise_std: 0.001, improvement_xi: 0.0}
+  benchmarks:
+    - benchmark_id: hpobench-tabular
+      include: [lr-australian]
+      prior_path: experiments/priors/hpobench-lr-australian/australian/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-blood_transfusion]
+      prior_path: experiments/priors/hpobench-lr-blood-transfusion/blood-transfusion/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-car]
+      prior_path: experiments/priors/hpobench-lr-car/car/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-credit_g]
+      prior_path: experiments/priors/hpobench-lr-credit-g/credit-g/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-kc1]
+      prior_path: experiments/priors/hpobench-lr-kc1/kc1/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-phoneme]
+      prior_path: experiments/priors/hpobench-lr-phoneme/phoneme/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-segment]
+      prior_path: experiments/priors/hpobench-lr-segment/segment/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-vehicle]
+      prior_path: experiments/priors/hpobench-lr-vehicle/vehicle/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-australian]
+      prior_path: experiments/priors/hpobench-rf-australian/australian/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-blood_transfusion]
+      prior_path: experiments/priors/hpobench-rf-blood-transfusion/blood-transfusion/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-car]
+      prior_path: experiments/priors/hpobench-rf-car/car/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-credit_g]
+      prior_path: experiments/priors/hpobench-rf-credit-g/credit-g/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-kc1]
+      prior_path: experiments/priors/hpobench-rf-kc1/kc1/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-phoneme]
+      prior_path: experiments/priors/hpobench-rf-phoneme/phoneme/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-segment]
+      prior_path: experiments/priors/hpobench-rf-segment/segment/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-vehicle]
+      prior_path: experiments/priors/hpobench-rf-vehicle/vehicle/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-australian]
+      prior_path: experiments/priors/hpobench-xgb-australian/australian/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-blood_transfusion]
+      prior_path: experiments/priors/hpobench-xgb-blood-transfusion/blood-transfusion/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-car]
+      prior_path: experiments/priors/hpobench-xgb-car/car/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-credit_g]
+      prior_path: experiments/priors/hpobench-xgb-credit-g/credit-g/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-kc1]
+      prior_path: experiments/priors/hpobench-xgb-kc1/kc1/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-phoneme]
+      prior_path: experiments/priors/hpobench-xgb-phoneme/phoneme/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-segment]
+      prior_path: experiments/priors/hpobench-xgb-segment/segment/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-vehicle]
+      prior_path: experiments/priors/hpobench-xgb-vehicle/vehicle/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-australian]
+      prior_path: experiments/priors/hpobench-nn-australian/australian/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-blood_transfusion]
+      prior_path: experiments/priors/hpobench-nn-blood-transfusion/blood-transfusion/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-car]
+      prior_path: experiments/priors/hpobench-nn-car/car/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-credit_g]
+      prior_path: experiments/priors/hpobench-nn-credit-g/credit-g/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-kc1]
+      prior_path: experiments/priors/hpobench-nn-kc1/kc1/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-phoneme]
+      prior_path: experiments/priors/hpobench-nn-phoneme/phoneme/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-segment]
+      prior_path: experiments/priors/hpobench-nn-segment/segment/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-vehicle]
+      prior_path: experiments/priors/hpobench-nn-vehicle/vehicle/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-australian]
+      prior_path: experiments/priors/hpobench-svm-australian/australian/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-blood_transfusion]
+      prior_path: experiments/priors/hpobench-svm-blood-transfusion/blood-transfusion/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-car]
+      prior_path: experiments/priors/hpobench-svm-car/car/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-credit_g]
+      prior_path: experiments/priors/hpobench-svm-credit-g/credit-g/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-kc1]
+      prior_path: experiments/priors/hpobench-svm-kc1/kc1/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-phoneme]
+      prior_path: experiments/priors/hpobench-svm-phoneme/phoneme/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-segment]
+      prior_path: experiments/priors/hpobench-svm-segment/segment/llm-card-pointonly/prior.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-vehicle]
+      prior_path: experiments/priors/hpobench-svm-vehicle/vehicle/llm-card-pointonly/prior.json

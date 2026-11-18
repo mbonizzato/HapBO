@@ -1,0 +1,83 @@
+{
+  "artifact_format": "neps-point-prior-v1",
+  "model": "nn",
+  "task": "australian",
+  "card": "llm-card-misleading",
+  "parameters": {
+    "alpha": {
+      "card_name": "alpha",
+      "llm_value": 3.5938137443736196e-05,
+      "value": 3.5938137443736196e-05,
+      "index": 4,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "batch_size": {
+      "card_name": "batch_size",
+      "llm_value": 10,
+      "value": 10.0,
+      "index": 2,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "depth": {
+      "card_name": "depth",
+      "llm_value": 3,
+      "value": 3.0,
+      "index": 2,
+      "n_values": 3,
+      "on_grid": true,
+      "scale": "linear",
+      "confidence": "high"
+    },
+    "learning_rate_init": {
+      "card_name": "learning_rate_init",
+      "llm_value": 1,
+      "value": 1.0,
+      "index": 9,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "width": {
+      "card_name": "width",
+      "llm_value": 161,
+      "value": 161.0,
+      "index": 5,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    }
+  },
+  "provenance": {
+    "model": "nn",
+    "task": "australian",
+    "card": "llm-card-misleading",
+    "card_sha256": "05b52e91bf8dd19051a62fe481c8697048b24c2cbcbe849d87fdc86738c74abb",
+    "prompt_sha256": "afe8eb1e58f92b5e18b7d75c7d0df06d095c7a98e9c143993ee33b064b7125a3",
+    "llm": {
+      "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+      "provider": "openai",
+      "base_url": "http://localhost:8000/v1",
+      "temperature": 0.0,
+      "seed": 7,
+      "max_tokens": 4096,
+      "enable_thinking": false
+    },
+    "max_attempts": 4,
+    "created_at_utc": "2026-11-06T16:22:03.646081+00:00",
+    "attempts": 1,
+    "rejected": [],
+    "usage": {
+      "calls": 1,
+      "cached_calls": 0,
+      "tokens": 1342
+    }
+  }
+}

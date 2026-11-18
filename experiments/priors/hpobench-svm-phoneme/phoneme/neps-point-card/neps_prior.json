@@ -1,0 +1,53 @@
+{
+  "artifact_format": "neps-point-prior-v1",
+  "model": "svm",
+  "task": "phoneme",
+  "card": "llm-card",
+  "parameters": {
+    "C": {
+      "card_name": "c",
+      "llm_value": 1,
+      "value": 1.0,
+      "index": 10,
+      "n_values": 21,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "medium"
+    },
+    "gamma": {
+      "card_name": "gamma",
+      "llm_value": 0.0625,
+      "value": 0.0625,
+      "index": 6,
+      "n_values": 21,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "medium"
+    }
+  },
+  "provenance": {
+    "model": "svm",
+    "task": "phoneme",
+    "card": "llm-card",
+    "card_sha256": "071943fc45a24eb6d4960cd64dc78d96fec641cfbf3fb300572ddc5cc71a4563",
+    "prompt_sha256": "8aa38ff81d9a597e6aa6c44679e3d33f93c71837d4de46b2b88eae95b81aab20",
+    "llm": {
+      "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+      "provider": "openai",
+      "base_url": "http://localhost:8000/v1",
+      "temperature": 0.0,
+      "seed": 7,
+      "max_tokens": 4096,
+      "enable_thinking": false
+    },
+    "max_attempts": 4,
+    "created_at_utc": "2026-11-06T16:21:16.432314+00:00",
+    "attempts": 1,
+    "rejected": [],
+    "usage": {
+      "calls": 1,
+      "cached_calls": 0,
+      "tokens": 813
+    }
+  }
+}

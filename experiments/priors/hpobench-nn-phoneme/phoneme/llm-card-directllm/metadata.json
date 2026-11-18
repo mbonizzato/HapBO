@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-card-directllm",
+  "dataset_id": "hpobench-nn-phoneme",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "phoneme",
+    "target_slug": "phoneme",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-29T16:17:07.557674+00:00",
+    "generated_at": "2026-09-29T16:18:14.451652+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=False; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "6d807ca15413e1d49c113d1aa7d403f248046232238c3ebed208a95e1e504082"
+    },
+    "prior.json": {
+      "sha256": "fb8a992963ef291a813d5f46a06131b9b2c5d62255ba1bfb78a61034f2763997"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-30T13:54:02.011497+00:00"
+}

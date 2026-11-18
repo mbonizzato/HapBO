@@ -1,0 +1,142 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "alpha",
+        "type": "ordinal",
+        "values": [
+          9.999999747378752e-06,
+          1.6155980119947344e-05,
+          2.6101572075276636e-05,
+          4.2169649532297626e-05,
+          6.812920764787123e-05,
+          0.00011006941349478438,
+          0.00017782794020604342,
+          0.0002872984914574772,
+          0.00046415888937190175,
+          0.0007498941849917173,
+          0.0012115276185795665,
+          0.0019573417957872152,
+          0.003162277629598975,
+          0.005108969751745462,
+          0.008254041895270348,
+          0.013335213996469975,
+          0.02154434658586979,
+          0.034807004034519196,
+          0.05623413249850273,
+          0.09085175395011902,
+          0.14677992463111877,
+          0.23713737726211548,
+          0.3831186890602112,
+          0.6189658045768738,
+          1
+        ],
+        "meaning": "L2 regularization strength; values are log-spaced"
+      },
+      {
+        "name": "eta0",
+        "type": "ordinal",
+        "values": [
+          9.999999747378752e-06,
+          1.6155980119947344e-05,
+          2.6101572075276636e-05,
+          4.2169649532297626e-05,
+          6.812920764787123e-05,
+          0.00011006941349478438,
+          0.00017782794020604342,
+          0.0002872984914574772,
+          0.00046415888937190175,
+          0.0007498941849917173,
+          0.0012115276185795665,
+          0.0019573417957872152,
+          0.003162277629598975,
+          0.005108969751745462,
+          0.008254041895270348,
+          0.013335213996469975,
+          0.02154434658586979,
+          0.034807004034519196,
+          0.05623413249850273,
+          0.09085175395011902,
+          0.14677992463111877,
+          0.23713737726211548,
+          0.3831186890602112,
+          0.6189658045768738,
+          1
+        ],
+        "meaning": "initial SGD learning rate; values are log-spaced"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "alpha",
+        "eta0"
+      ],
+      "mode": {
+        "alpha": 0.0012115276185795665,
+        "eta0": 0.0012115276185795665
+      },
+      "ci": {
+        "alpha": [
+          0.00017782794020604342,
+          0.005108969751745462
+        ],
+        "eta0": [
+          0.00046415888937190175,
+          0.003162277629598975
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Standard SGD logistic regression on small, noisy geometric data typically peaks at moderate regularization (alpha ~1e-3) and moderate learning rates (eta0 ~1e-3). Very low alpha overfits; very high alpha underfits. Very low eta0 converges too slowly for small budgets; very high eta0 diverges or oscillates."
+    },
+    {
+      "token": "avoid",
+      "dim": "alpha",
+      "mode": 9.999999747378752e-06,
+      "ci": [
+        9.999999747378752e-06,
+        4.2169649532297626e-05
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Near-zero regularization on small datasets (<1k records) with geometric features likely leads to overfitting and poor validation accuracy."
+    },
+    {
+      "token": "avoid",
+      "dim": "eta0",
+      "mode": 1,
+      "ci": [
+        0.3831186890602112,
+        1
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Learning rates near 1.0 are typically too high for SGD convergence on logistic regression, causing instability or divergence."
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "noise",
+      "level": "medium",
+      "repeats_recommended": false
+    },
+    {
+      "token": "modality",
+      "expectation": "unimodal"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on general hyperparameter tuning heuristics for logistic regression with SGD. The specific dataset characteristics (object shapes, geometric features) suggest moderate regularization is key, but the exact peak location is an educated guess."
+  }
+}

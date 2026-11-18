@@ -1,0 +1,132 @@
+artifact_format: llm-bo-study-v1
+study_id: colabo
+phase: hpo
+status: ready
+execution_mode: optimization
+research_question: "ColaBO with the LLM (c, s) belief elicited from the task card."
+design:
+  budgets: [16]
+  seeds: [1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010]
+  methods: [colabo-llm]
+  optimizer: {n_initial: 1, length_scale: 1.0, noise_std: 0.05, improvement_xi: 0.0, colabo_max_internal_trials: 96}
+  benchmarks:
+    - benchmark_id: hpobench-tabular
+      include: [lr-australian]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/lr-australian/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-blood_transfusion]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/lr-blood_transfusion/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-car]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/lr-car/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-credit_g]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/lr-credit_g/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-kc1]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/lr-kc1/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-phoneme]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/lr-phoneme/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-segment]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/lr-segment/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [lr-vehicle]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/lr-vehicle/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-australian]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/rf-australian/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-blood_transfusion]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/rf-blood_transfusion/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-car]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/rf-car/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-credit_g]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/rf-credit_g/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-kc1]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/rf-kc1/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-phoneme]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/rf-phoneme/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-segment]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/rf-segment/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [rf-vehicle]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/rf-vehicle/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-australian]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/xgb-australian/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-blood_transfusion]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/xgb-blood_transfusion/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-car]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/xgb-car/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-credit_g]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/xgb-credit_g/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-kc1]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/xgb-kc1/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-phoneme]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/xgb-phoneme/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-segment]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/xgb-segment/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [xgb-vehicle]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/xgb-vehicle/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-australian]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/nn-australian/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-blood_transfusion]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/nn-blood_transfusion/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-car]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/nn-car/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-credit_g]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/nn-credit_g/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-kc1]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/nn-kc1/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-phoneme]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/nn-phoneme/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-segment]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/nn-segment/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [nn-vehicle]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/nn-vehicle/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-australian]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/svm-australian/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-blood_transfusion]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/svm-blood_transfusion/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-car]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/svm-car/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-credit_g]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/svm-credit_g/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-kc1]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/svm-kc1/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-phoneme]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/svm-phoneme/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-segment]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/svm-segment/llm-card.json
+    - benchmark_id: hpobench-tabular
+      include: [svm-vehicle]
+      prior_path: experiments/colabo_llm_priors/hpobench-tabular/svm-vehicle/llm-card.json

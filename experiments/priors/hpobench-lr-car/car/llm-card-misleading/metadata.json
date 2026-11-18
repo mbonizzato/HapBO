@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-card-misleading",
+  "dataset_id": "hpobench-lr-car",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "car",
+    "target_slug": "car",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-30T01:32:20.181175+00:00",
+    "generated_at": "2026-09-30T01:33:43.439025+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=False; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "5e44f14031dd8b4376ea72b8fa3418caa8858ef52f509a75c105a2f816f7986f"
+    },
+    "prior.json": {
+      "sha256": "078e798ccc7b379581535b8f396eaa73d6bae858cde7d0c8b67eb806450d6adc"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-30T01:33:43.440565+00:00"
+}

@@ -1,0 +1,179 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -2.99,
+      "ci": [
+        -4.5,
+        -1.5
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "deep well of model term 0: y=-3.0 with b>0 favours negative y"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.29,
+      "ci": [
+        -2.8,
+        0.2
+      ],
+      "sign": "peak",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "deep well of model term 1 (largest depth)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.12,
+      "ci": [
+        -3.6,
+        -0.6
+      ],
+      "sign": "peak",
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "deep well of model term 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.4,
+      "ci": [
+        -4.9,
+        -1.9
+      ],
+      "sign": "peak",
+      "weight": 0.88,
+      "provenance": "llm_domain",
+      "note": "deep well of model term 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.45,
+      "ci": [
+        -2.95,
+        0.05
+      ],
+      "sign": "peak",
+      "weight": 0.82,
+      "provenance": "llm_domain",
+      "note": "deep well of model term 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.47,
+      "ci": [
+        -4.97,
+        -1.97
+      ],
+      "sign": "peak",
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "deep well of model term 5 (shallowest)"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.2,
+      "ci": [
+        -2.7,
+        0.3
+      ],
+      "sign": "peak",
+      "weight": 0.74,
+      "provenance": "llm_domain",
+      "note": "deep well of model term 6"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Wells are derived from the approximate analytic model, whose calibration is only approximate, so minimum locations and relative depths may shift. The model is separable, so the belief is additive per-dimension bumps at the deep-well coordinates."
+  }
+}

@@ -1,0 +1,1 @@
+Domain guidance for tuning this multilayer-perceptron classifier: accuracy is MAXIMIZED near the configuration alpha=0.01668, batch_size=4, depth=3, learning_rate_init=0.2783, width=1024. Prefer that region; configurations far from it underperform.

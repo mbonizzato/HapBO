@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-card-directllm",
+  "dataset_id": "hpobench-lr-blood-transfusion",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "blood-transfusion",
+    "target_slug": "blood-transfusion",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-29T15:11:58.198880+00:00",
+    "generated_at": "2026-09-29T15:13:42.059797+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=False; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "0ae9627d379d46dc31caa3ae0f823bf52f5d59be1d8856e5bd7508ac08944bed"
+    },
+    "prior.json": {
+      "sha256": "ae48b3a98295ba5347b96cd8988d4e64ebdffa9b8837b5051d5c32e21d64704a"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-30T13:39:17.898655+00:00"
+}

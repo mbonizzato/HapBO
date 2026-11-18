@@ -1,0 +1,179 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -3.1,
+      "ci": [
+        -3.9,
+        -2.3
+      ],
+      "sign": "peak",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Global minimum estimate for x0 based on quartic model"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -2.06,
+      "ci": [
+        -2.86,
+        -1.26
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum estimate for x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -3.79,
+      "ci": [
+        -4.59,
+        -3.0
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum estimate for x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -4.46,
+      "ci": [
+        -5.0,
+        -3.92
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum estimate for x3 (near boundary)"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -2.19,
+      "ci": [
+        -2.99,
+        -1.39
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum estimate for x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -4.2
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum estimate for x5 (at boundary)"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -3.23,
+      "ci": [
+        -4.03,
+        -2.43
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum estimate for x6"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "unimodal"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Belief derived from approximate analytic model; locations calibrated but fidelity unknown."
+  }
+}

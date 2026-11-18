@@ -1,0 +1,73 @@
+{
+  "artifact_format": "neps-point-prior-v1",
+  "model": "rf",
+  "task": "australian",
+  "card": "llm-card-misleading",
+  "parameters": {
+    "max_depth": {
+      "card_name": "max_depth",
+      "llm_value": 1,
+      "value": 1.0,
+      "index": 0,
+      "n_values": 9,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "max_features": {
+      "card_name": "max_features",
+      "llm_value": 0,
+      "value": 0.0,
+      "index": 0,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "linear",
+      "confidence": "high"
+    },
+    "min_samples_leaf": {
+      "card_name": "min_samples_leaf",
+      "llm_value": 11,
+      "value": 11.0,
+      "index": 5,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "linear",
+      "confidence": "high"
+    },
+    "min_samples_split": {
+      "card_name": "min_samples_split",
+      "llm_value": 12,
+      "value": 12.0,
+      "index": 4,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    }
+  },
+  "provenance": {
+    "model": "rf",
+    "task": "australian",
+    "card": "llm-card-misleading",
+    "card_sha256": "f1e491a1efd7892fcc9f094a78ca4e315dc26e541d0ca7bc44349df1003f57e4",
+    "prompt_sha256": "4b6719d9388b797723b1f90bcb4815e69f3ae9c8d2f060e01e35af06405a95b2",
+    "llm": {
+      "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+      "provider": "openai",
+      "base_url": "http://localhost:8000/v1",
+      "temperature": 0.0,
+      "seed": 7,
+      "max_tokens": 4096,
+      "enable_thinking": false
+    },
+    "max_attempts": 4,
+    "created_at_utc": "2026-11-06T16:22:21.143478+00:00",
+    "attempts": 1,
+    "rejected": [],
+    "usage": {
+      "calls": 1,
+      "cached_calls": 0,
+      "tokens": 995
+    }
+  }
+}

@@ -1,0 +1,10 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: prior-to-mean
+label: Prior in GP mean
+role: ablation
+implementation_status: available
+isolated_worker: true
+strategy: prior-to-mean
+requires_prior: true
+acquisition: expected-improvement
+

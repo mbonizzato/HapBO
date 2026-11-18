@@ -1,0 +1,126 @@
+diff --git a/bora/assistant.py b/bora/assistant.py
+index 76b0046..87b5ecd 100644
+--- a/bora/assistant.py
++++ b/bora/assistant.py
+@@ -1180,7 +1180,15 @@ class Assistant:
+             # Check the constraint
+             if self._constraint:
+                 value = self._constraint.eval(**point)
+-                allowed = self._constraint.allowed(value)[0]
++                # ``ConstraintModel.allowed`` expects a batch dimension.  A
++                # single multi-constraint evaluation has shape
++                # ``(n_constraints,)``; without the extra dimension it
++                # reduces to a scalar, which cannot be indexed with ``[0]``.
++                batched_value = np.atleast_2d(value)
++                allowed = bool(
++                    np.asarray(self._constraint.allowed(batched_value))
++                    .reshape(-1)[0]
++                )
+                 if not allowed:
+                     invalid_points.append((point, value, "constraint"))
+ 
+diff --git a/bora/bora.py b/bora/bora.py
+index 3f154a9..7aff7f2 100644
+--- a/bora/bora.py
++++ b/bora/bora.py
+@@ -467,6 +467,13 @@ class Bora(Observable):
+         except StopIteration:
+             self._hypothesis_names = []
+             suggestions = []
++            # The policy has no uncertainty thresholds until it is
++            # initialized, and constrained EI has no incumbent until at least
++            # one feasible point exists.  Continue charged random exploration
++            # without consulting either component in that state.
++            if self.is_constrained and self.max is None:
++                self._hypothesis_names = ["None"]
++                return self.suggest(n=1)
+             action = self._policy.get_action()
+             if action == Action.ASSISTANT_SUGGESTS:
+                 suggestions = self._get_assistant_suggestions()
+@@ -652,8 +659,11 @@ class Bora(Observable):
+         --------
+         List[List[float]] : The suggested samples.
+         """
+-        # If the space is empty, suggest a random point
+-        if len(self._space) == 0:
++        # If the space is empty, suggest a random point.  Constrained EI also
++        # needs at least one feasible observation to define its incumbent;
++        # keep exploring randomly when the evaluated initial design contains
++        # no feasible point instead of dereferencing a missing maximum.
++        if len(self._space) == 0 or (self.is_constrained and self.max is None):
+             suggestions = self._space.random_points(n=n)
+             random_suggestions = [self._space.array_to_params(s) for s in suggestions]
+             return random_suggestions
+@@ -745,6 +755,7 @@ class Bora(Observable):
+         self._previous_best_value = -np.inf
+         self.budget = n_init_points + n_iter
+         iteration = 0
++        policy_initialized = False
+ 
+         # ----------------------- Start the optimization process --------------
+ 
+@@ -761,20 +772,29 @@ class Bora(Observable):
+                 if iteration == self.budget:
+                     break
+ 
+-            # Update the policy after the initialization
+-            if iteration == self.n_init_points:
++            # Initialize the policy once an incumbent exists.  For a
++            # constrained experiment the initial design may contain no
++            # feasible point, in which case ``self.max`` is None and random
++            # exploration continues until the first feasible observation.
++            current_max = self.max
++            if (
++                not policy_initialized
++                and iteration >= self.n_init_points
++                and current_max is not None
++            ):
+                 mean_uncertainty = self._get_mean_uncertainty()
+                 self._policy.initialize(
+                     iteration,
+-                    self.max["target"],
++                    current_max["target"],
+                     mean_uncertainty,
+                 )
+-            elif iteration > self.n_init_points:
++                policy_initialized = True
++            elif policy_initialized and iteration > self.n_init_points:
+                 last_targets = self._space.target[-len(x_probe_list) :]
+                 mean_uncertainty = self._get_mean_uncertainty()
+                 self._policy.update(
+                     last_targets,
+-                    self.max["target"],
++                    current_max["target"],
+                     iteration,
+                     mean_uncertainty,
+                 )
+diff --git a/bora/logger.py b/bora/logger.py
+index 6c6f555..3af13ed 100644
+--- a/bora/logger.py
++++ b/bora/logger.py
+@@ -278,7 +278,7 @@ class ScreenLogger(_Tracker):
+         elif event == Events.COMMENT_END:
+             colour = Fore.GREEN
+             comment = instance._assistant.last_comment
+-            line = colour + comment.comment + "\n" + Fore.BLACK
++            line = colour + (comment.comment or "") + "\n" + Fore.BLACK
+ 
+         if self._verbose:
+             print(line, end="")
+diff --git a/bora/target_space.py b/bora/target_space.py
+index 2005854..e03e690 100644
+--- a/bora/target_space.py
++++ b/bora/target_space.py
+@@ -717,7 +717,11 @@ class TargetSpace(Space):
+ 
+         if len(points) == 0:
+             raise ValueError("Failed to generate a random point.")
+-        return points
++        # Both constrained branches promise an ndarray, but the default
++        # rejection-sampling branch accumulates points in a Python list.
++        # Acquisition functions rely on ndarray reshaping and advanced
++        # indexing, so normalize the return type at this boundary.
++        return np.asarray(points, dtype=float)
+ 
+     def discretize_point(self, point: np.ndarray) -> np.ndarray:
+         """

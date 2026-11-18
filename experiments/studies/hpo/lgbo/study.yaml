@@ -1,0 +1,92 @@
+artifact_format: llm-bo-study-v1
+study_id: lgbo
+phase: hpo
+status: ready
+execution_mode: optimization
+research_question: "LGBO (paper equation) with the task text."
+design:
+  budgets: [16]
+  seeds: [1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010]
+  methods: [lgbo]
+  optimizer: {n_initial: 2, length_scale: 1.0, noise_std: 0.05, improvement_xi: 0.0, baseline_task_legend: true}
+  benchmarks:
+    - benchmark_id: hpobench-tabular
+      include: [lr-australian]
+    - benchmark_id: hpobench-tabular
+      include: [lr-blood_transfusion]
+    - benchmark_id: hpobench-tabular
+      include: [lr-car]
+    - benchmark_id: hpobench-tabular
+      include: [lr-credit_g]
+    - benchmark_id: hpobench-tabular
+      include: [lr-kc1]
+    - benchmark_id: hpobench-tabular
+      include: [lr-phoneme]
+    - benchmark_id: hpobench-tabular
+      include: [lr-segment]
+    - benchmark_id: hpobench-tabular
+      include: [lr-vehicle]
+    - benchmark_id: hpobench-tabular
+      include: [rf-australian]
+    - benchmark_id: hpobench-tabular
+      include: [rf-blood_transfusion]
+    - benchmark_id: hpobench-tabular
+      include: [rf-car]
+    - benchmark_id: hpobench-tabular
+      include: [rf-credit_g]
+    - benchmark_id: hpobench-tabular
+      include: [rf-kc1]
+    - benchmark_id: hpobench-tabular
+      include: [rf-phoneme]
+    - benchmark_id: hpobench-tabular
+      include: [rf-segment]
+    - benchmark_id: hpobench-tabular
+      include: [rf-vehicle]
+    - benchmark_id: hpobench-tabular
+      include: [xgb-australian]
+    - benchmark_id: hpobench-tabular
+      include: [xgb-blood_transfusion]
+    - benchmark_id: hpobench-tabular
+      include: [xgb-car]
+    - benchmark_id: hpobench-tabular
+      include: [xgb-credit_g]
+    - benchmark_id: hpobench-tabular
+      include: [xgb-kc1]
+    - benchmark_id: hpobench-tabular
+      include: [xgb-phoneme]
+    - benchmark_id: hpobench-tabular
+      include: [xgb-segment]
+    - benchmark_id: hpobench-tabular
+      include: [xgb-vehicle]
+    - benchmark_id: hpobench-tabular
+      include: [nn-australian]
+    - benchmark_id: hpobench-tabular
+      include: [nn-blood_transfusion]
+    - benchmark_id: hpobench-tabular
+      include: [nn-car]
+    - benchmark_id: hpobench-tabular
+      include: [nn-credit_g]
+    - benchmark_id: hpobench-tabular
+      include: [nn-kc1]
+    - benchmark_id: hpobench-tabular
+      include: [nn-phoneme]
+    - benchmark_id: hpobench-tabular
+      include: [nn-segment]
+    - benchmark_id: hpobench-tabular
+      include: [nn-vehicle]
+    - benchmark_id: hpobench-tabular
+      include: [svm-australian]
+    - benchmark_id: hpobench-tabular
+      include: [svm-blood_transfusion]
+    - benchmark_id: hpobench-tabular
+      include: [svm-car]
+    - benchmark_id: hpobench-tabular
+      include: [svm-credit_g]
+    - benchmark_id: hpobench-tabular
+      include: [svm-kc1]
+    - benchmark_id: hpobench-tabular
+      include: [svm-phoneme]
+    - benchmark_id: hpobench-tabular
+      include: [svm-segment]
+    - benchmark_id: hpobench-tabular
+      include: [svm-vehicle]

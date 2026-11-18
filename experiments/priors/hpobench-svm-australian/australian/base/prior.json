@@ -1,0 +1,129 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "c",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "SVM penalty parameter (larger means weaker regularization)"
+      },
+      {
+        "name": "gamma",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "RBF kernel coefficient (larger means narrower kernel)"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "c",
+        "gamma"
+      ],
+      "mode": {
+        "c": 1,
+        "gamma": 0.0625
+      },
+      "ci": {
+        "c": [
+          0.25,
+          8
+        ],
+        "gamma": [
+          0.015625,
+          0.25
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Standard RBF SVM sweet spot: moderate regularization (C~1) and kernel width matching feature scale (gamma ~ 1/num_features or slightly larger). For ~15 features, gamma ~ 0.06 is a strong prior."
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "c": [
+          256,
+          1024
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Very high C leads to overfitting on small datasets (n<1000), causing poor validation accuracy."
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "gamma": [
+          64,
+          1024
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Very high gamma creates a highly complex decision boundary that overfits noise in small datasets."
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on general SVM hyperparameter tuning heuristics for small-to-medium datasets. The exact optimum depends on the specific data distribution, but the log-scale center is a robust starting point."
+  }
+}

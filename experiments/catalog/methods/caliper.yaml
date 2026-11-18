@@ -1,0 +1,29 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: caliper
+label: CALIPER evidence-gated LLM priors (reimplemented from the paper, single-objective)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: caliper
+requires_prior: true
+prior_source: caliper-multirole
+note: >-
+  Single-objective adaptation of CALIPER (Chen & Ban, arXiv:2606.01730, 2026);
+  reimplemented from the paper (no public reference code exists). Three expert
+  personas (accuracy-optimist / regularization-robustness / capacity) are elicited
+  ONCE offline into caliper_prior.json -- per-role predicted objective mu(x) in
+  [0,1] and confidence c(x) over the candidate table (see
+  src/experiments/caliper_elicitation.py). At BO time NO LLM is called: a per-role
+  reputation market learns trust from observed feedback (softmax of discounted
+  capital), and a 3-armed counterfactual evidence gate {no_conf, conf, drop}
+  selects how the prior mean enters a residual GP each step -- a DISCRETE evidence
+  gate, in deliberate contrast to HapBO's continuous alpha-pi floor. Multi-objective
+  qLogNEHVI reduces to analytic EI; hypervolume, per-objective weights, and the
+  residual-UCB diagnostic acquisition are dropped; posterior variance is unchanged
+  (prior enters as a mean shift only). prior_source:caliper-multirole -> the worker
+  passes the raw per-role artifact JSON through and CALIPER aligns it to the finite
+  grid by config_key. Reputation/gate defaults follow Table 1 of the CALIPER paper
+  (reward_step 0.45, discount 0.015, softmax_temp 0.55, min_updates 4,
+  count_scale 4.0, delta_drop 0.05, gate_gp_noise 0.05). The elicitation needs the
+  LLM endpoint; the worker does not. See src/baselines/caliper.py.

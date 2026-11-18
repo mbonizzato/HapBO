@@ -1,0 +1,326 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x10",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x11",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x12",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x13",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x14",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 18.1,
+      "ci": [
+        4.0,
+        32.2
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Ackley centre c0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -12.57,
+      "ci": [
+        -26.67,
+        1.53
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -16.48,
+      "ci": [
+        -30.58,
+        -2.38
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 18.57,
+      "ci": [
+        4.47,
+        32.67
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -12.92,
+      "ci": [
+        -27.02,
+        1.18
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -14.87,
+      "ci": [
+        -28.97,
+        -0.77
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 18.48,
+      "ci": [
+        4.38,
+        32.58
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 14.94,
+      "ci": [
+        0.84,
+        29.04
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -17.51,
+      "ci": [
+        -31.61,
+        -3.41
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": -17.88,
+      "ci": [
+        -31.98,
+        -3.78
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x10",
+      "mode": 7.261,
+      "ci": [
+        -6.84,
+        21.36
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x11",
+      "mode": -6.172,
+      "ci": [
+        -20.27,
+        7.93
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x12",
+      "mode": 11.69,
+      "ci": [
+        -2.41,
+        25.79
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x13",
+      "mode": 15.58,
+      "ci": [
+        1.48,
+        29.68
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x14",
+      "mode": 14.39,
+      "ci": [
+        0.29,
+        28.49
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Shifted Ackley model: global funnel centred at c, approximated by one wide bump per coordinate at c_i; cosine ripples treated as roughness."
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.565,
+      "ci": [
+        2.5650000000000004,
+        8.565000000000001
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        2.1369999999999996,
+        8.137
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.292,
+      "ci": [
+        -1.708,
+        4.292
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.617,
+      "ci": [
+        1.617,
+        7.617
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.691,
+      "ci": [
+        1.6909999999999998,
+        7.691
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.936,
+      "ci": [
+        -0.06400000000000006,
+        5.936
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        1.234,
+        7.234
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -6.236000000000001,
+        -0.2360000000000002
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -7.161,
+        -1.1609999999999996
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.473,
+      "ci": [
+        4.473,
+        10.0
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximate analytic model provided; parameters may be uncalibrated."
+  }
+}

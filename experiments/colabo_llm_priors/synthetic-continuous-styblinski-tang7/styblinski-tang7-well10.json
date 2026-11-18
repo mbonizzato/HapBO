@@ -1,0 +1,54 @@
+{
+  "artifact_format": "colabo-llm-prior-v1",
+  "dataset_id": "synthetic-continuous-styblinski-tang7",
+  "target_name": "styblinski-tang7-well10",
+  "construction": "BORA supplement Sec. C.2: pi(x)=N(c, sigma=1-s+eps), eps=1e-6",
+  "dim": 7,
+  "bounds": [
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ],
+    [
+      -5.0,
+      5.0
+    ]
+  ],
+  "c": [
+    -1.9558,
+    -3.2454,
+    -4.2951,
+    -2.1275,
+    -3.3302,
+    -4.6601,
+    -3.5414
+  ],
+  "s": 0.6,
+  "sigma": 0.400001,
+  "eps": 1e-06,
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "enable_thinking": true,
+  "prompt_hash": "54a01e20df63da175c8452b76397706e8b17fe2b5e14015bb43f266f62bf0708"
+}

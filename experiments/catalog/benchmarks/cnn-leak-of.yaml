@@ -1,0 +1,19 @@
+artifact_format: llm-bo-benchmark-catalog-v1
+benchmark_id: cnn-leak-of
+family: offline-finite
+implementation_status: available
+adapter: cnn-leak
+problem_id_template: "{dataset}"
+axes:
+  dataset: [fashion-of]
+download: >-
+  Build the table (CPU): python leak_control_cnn/prepare_data.py --dataset fashion-of,
+  then python leak_control_cnn/sweep_cnn.py --dataset fashion-of, then
+  python leak_control_cnn/build_table.py --dataset fashion-of.
+note: >-
+  Leak-control benchmark: a bespoke convolutional encoder trained from scratch on a
+  Fashion-MNIST subsample, over a finite 4-D hyperparameter grid of 750 configurations
+  (learning rate, base channels, dropout, weight decay). Overfitting regime: 2,000
+  training images, 35 epochs, batch size 64, so moderate dropout and weight decay give
+  the best validation accuracy. The objective is the validation accuracy averaged over
+  3 training seeds. See leak_control_cnn/README.md.

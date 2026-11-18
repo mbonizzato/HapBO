@@ -1,0 +1,355 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x10",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x11",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x12",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x13",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x14",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 18.1,
+      "ci": [
+        13.1,
+        23.1
+      ],
+      "sign": "peak",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "global optimum x0 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -29.04,
+      "ci": [
+        -32.768,
+        -24.04
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x1 coordinate (clamped)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -16.48,
+      "ci": [
+        -21.48,
+        -11.48
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x2 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 18.57,
+      "ci": [
+        13.57,
+        23.57
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x3 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -12.92,
+      "ci": [
+        -17.92,
+        -7.92
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x4 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -14.87,
+      "ci": [
+        -19.87,
+        -9.87
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x5 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 18.48,
+      "ci": [
+        13.48,
+        23.48
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x6 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 14.94,
+      "ci": [
+        9.94,
+        19.94
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x7 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -17.51,
+      "ci": [
+        -22.51,
+        -12.51
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x8 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": -17.88,
+      "ci": [
+        -22.88,
+        -12.88
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x9 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x10",
+      "mode": 7.261,
+      "ci": [
+        2.261,
+        12.261
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x10 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x11",
+      "mode": -6.172,
+      "ci": [
+        -11.172,
+        -1.172
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x11 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x12",
+      "mode": 11.69,
+      "ci": [
+        6.69,
+        16.69
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x12 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x13",
+      "mode": 15.58,
+      "ci": [
+        10.58,
+        20.58
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x13 coordinate"
+    },
+    {
+      "token": "bump",
+      "dim": "x14",
+      "mode": 14.39,
+      "ci": [
+        9.39,
+        19.39
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "global optimum x14 coordinate"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximates shifted Ackley function global basin; local minima exist but global basin dominates preference."
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "receiver_aperture_height_m",
+        "type": "continuous",
+        "range": [
+          1,
+          30
+        ],
+        "scale": "linear",
+        "meaning": "vertical size of the rectangular cavity opening"
+      },
+      {
+        "name": "receiver_aperture_width_m",
+        "type": "continuous",
+        "range": [
+          1,
+          30
+        ],
+        "scale": "linear",
+        "meaning": "horizontal size of the cavity opening"
+      },
+      {
+        "name": "receiver_outlet_temperature_k",
+        "type": "continuous",
+        "range": [
+          793,
+          995
+        ],
+        "scale": "linear",
+        "meaning": "target temperature of the salt leaving the receiver"
+      },
+      {
+        "name": "receiver_tube_count",
+        "type": "continuous",
+        "range": [
+          1,
+          8567
+        ],
+        "scale": "log",
+        "meaning": "number of parallel salt tubes"
+      },
+      {
+        "name": "receiver_insulation_m",
+        "type": "continuous",
+        "range": [
+          0.01,
+          5
+        ],
+        "scale": "log",
+        "meaning": "thickness of the receiver-wall insulation"
+      },
+      {
+        "name": "receiver_tube_inner_diameter_m",
+        "type": "continuous",
+        "range": [
+          0.005,
+          0.1
+        ],
+        "scale": "log",
+        "meaning": "internal bore of the receiver tubes"
+      },
+      {
+        "name": "receiver_tube_outer_diameter_m",
+        "type": "continuous",
+        "range": [
+          0.0055,
+          0.1
+        ],
+        "scale": "log",
+        "meaning": "external diameter of the receiver tubes"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "receiver_aperture_height_m",
+        "receiver_aperture_width_m"
+      ],
+      "mode": {
+        "receiver_aperture_height_m": 12,
+        "receiver_aperture_width_m": 12
+      },
+      "ci": {
+        "receiver_aperture_height_m": [
+          8,
+          18
+        ],
+        "receiver_aperture_width_m": [
+          8,
+          18
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Optimal aperture balances spillage capture against re-radiation losses; typically square or near-square aspect ratios in the mid-range for 100MWth class towers."
+    },
+    {
+      "token": "trend",
+      "dim": "receiver_outlet_temperature_k",
+      "direction": "increase",
+      "knee": 950,
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Higher outlet temps improve cycle efficiency but increase re-radiation and material stress; optimum likely near the upper feasible limit before efficiency drops."
+    },
+    {
+      "token": "bump",
+      "dim": "receiver_tube_count",
+      "mode": 2500,
+      "ci": [
+        1000,
+        5000
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "Sufficient tubes needed for heat transfer area, but too many increase pressure drop and crowding; log-scale optimum in the mid-thousands."
+    },
+    {
+      "token": "bump",
+      "dim": "receiver_insulation_m",
+      "mode": 0.15,
+      "ci": [
+        0.05,
+        0.4
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Insulation reduces conduction losses but adds cost; diminishing returns set in quickly; optimum is a moderate thickness."
+    },
+    {
+      "token": "ridge",
+      "dims": [
+        "receiver_tube_inner_diameter_m",
+        "receiver_tube_outer_diameter_m"
+      ],
+      "relation": "positive",
+      "width": "narrow",
+      "through": {
+        "receiver_tube_inner_diameter_m": 0.02,
+        "receiver_tube_outer_diameter_m": 0.025
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Tube dimensions must maintain a specific wall thickness ratio for pressure containment while optimizing heat transfer; they scale together."
+    },
+    {
+      "token": "avoid",
+      "dim": "receiver_tube_inner_diameter_m",
+      "mode": 0.005,
+      "ci": [
+        0.005,
+        0.008
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Very small inner diameters cause excessive pressure drop and pumping parasitics, violating c6."
+    },
+    {
+      "token": "avoid",
+      "dim": "receiver_tube_outer_diameter_m",
+      "mode": 0.1,
+      "ci": [
+        0.08,
+        0.1
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Very large outer diameters crowd the aperture, violating c5 (bundle fit) and reducing effective flux capture."
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "noise",
+      "level": "medium",
+      "repeats_recommended": true
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on general CSP receiver physics and typical design trade-offs; specific optimum depends on heliostat field layout and cost constraints not fully detailed."
+  }
+}

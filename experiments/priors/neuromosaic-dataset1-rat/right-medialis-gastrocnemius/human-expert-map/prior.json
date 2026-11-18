@@ -1,0 +1,288 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "electrode_mediolateral_index",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "meaning": "medio-lateral array index; 1=most medial, 4=most lateral"
+      },
+      {
+        "name": "electrode_rostrocaudal_index",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "meaning": "rostro-caudal array index; 1=most rostral (top row: ch 8,15,31,24)"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "anchors",
+      "provenance": "user_stated",
+      "bandwidth": 0.05,
+      "points": [
+        {
+          "coords": {
+            "electrode_mediolateral_index": 1,
+            "electrode_rostrocaudal_index": 1
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 2,
+            "electrode_rostrocaudal_index": 1
+          },
+          "value": 0.728
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 3,
+            "electrode_rostrocaudal_index": 1
+          },
+          "value": 0.857
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 4,
+            "electrode_rostrocaudal_index": 1
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 1,
+            "electrode_rostrocaudal_index": 2
+          },
+          "value": 0.992
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 2,
+            "electrode_rostrocaudal_index": 2
+          },
+          "value": 0.451
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 3,
+            "electrode_rostrocaudal_index": 2
+          },
+          "value": 0.66
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 4,
+            "electrode_rostrocaudal_index": 2
+          },
+          "value": 0.742
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 1,
+            "electrode_rostrocaudal_index": 3
+          },
+          "value": 0.679
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 2,
+            "electrode_rostrocaudal_index": 3
+          },
+          "value": 0.37
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 3,
+            "electrode_rostrocaudal_index": 3
+          },
+          "value": 0.538
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 4,
+            "electrode_rostrocaudal_index": 3
+          },
+          "value": 0.561
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 1,
+            "electrode_rostrocaudal_index": 4
+          },
+          "value": 0.557
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 2,
+            "electrode_rostrocaudal_index": 4
+          },
+          "value": 0.299
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 3,
+            "electrode_rostrocaudal_index": 4
+          },
+          "value": 0.468
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 4,
+            "electrode_rostrocaudal_index": 4
+          },
+          "value": 0.521
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 1,
+            "electrode_rostrocaudal_index": 5
+          },
+          "value": 0.343
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 2,
+            "electrode_rostrocaudal_index": 5
+          },
+          "value": 0.082
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 3,
+            "electrode_rostrocaudal_index": 5
+          },
+          "value": 0.21
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 4,
+            "electrode_rostrocaudal_index": 5
+          },
+          "value": 0.326
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 1,
+            "electrode_rostrocaudal_index": 6
+          },
+          "value": 0.326
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 2,
+            "electrode_rostrocaudal_index": 6
+          },
+          "value": 0.137
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 3,
+            "electrode_rostrocaudal_index": 6
+          },
+          "value": 0.032
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 4,
+            "electrode_rostrocaudal_index": 6
+          },
+          "value": 0.233
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 1,
+            "electrode_rostrocaudal_index": 7
+          },
+          "value": 0.167
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 2,
+            "electrode_rostrocaudal_index": 7
+          },
+          "value": 0.051
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 3,
+            "electrode_rostrocaudal_index": 7
+          },
+          "value": 0.015
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 4,
+            "electrode_rostrocaudal_index": 7
+          },
+          "value": 0.384
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 1,
+            "electrode_rostrocaudal_index": 8
+          },
+          "value": 0.127
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 2,
+            "electrode_rostrocaudal_index": 8
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 3,
+            "electrode_rostrocaudal_index": 8
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "electrode_mediolateral_index": 4,
+            "electrode_rostrocaudal_index": 8
+          },
+          "value": 0.384
+        }
+      ],
+      "note": "Human expert per-electrode average response across previous animals (8x4 map)."
+    },
+    {
+      "token": "noise",
+      "level": "high",
+      "repeats_recommended": true
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "high",
+    "notes": "Full human-expert prior: a per-electrode map averaged across several previous animals, provided directly by the expert (modality c of the elicitation comparison)."
+  }
+}

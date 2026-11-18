@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-card-misleading-gaussian",
+  "dataset_id": "hpobench-svm-blood-transfusion",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "blood-transfusion",
+    "target_slug": "blood-transfusion",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-30T02:09:03.267233+00:00",
+    "generated_at": "2026-09-30T02:09:59.833413+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=False; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "f4b7cd43de3088c8cb414889f5850a8d03ae3119fd6282e44e6e4603a964f857"
+    },
+    "prior.json": {
+      "sha256": "a2e8754c806d6dd9384e6286e9b7c8a8cb28ecffdd6e5a638744328837b1b3ea"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-11-08T12:15:25.779827+00:00"
+}

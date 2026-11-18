@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "inverted",
+  "dataset_id": "hpobench-svm-australian",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "australian",
+    "target_slug": "australian",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": null,
+    "created_at_utc": "2026-09-29T04:06:57.330017+00:00",
+    "generated_at": "2026-09-29T04:07:22.061190+00:00",
+    "raw_llm_response_available": false,
+    "notes": "Inverted-map prior at the empirical anti-optimum; no LLM."
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "49a45e6678c73209e4bcb7cbeefa8283fd0b1c33af3be4441efca6b9d864f96b"
+    },
+    "prior.json": {
+      "sha256": "c0949eb1479da573e9ea91741fa67e51dfc0624eda9e65ccd46e0c18e26ea6ae"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-29T04:07:22.062572+00:00"
+}

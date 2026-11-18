@@ -1,0 +1,288 @@
+{
+ "schema": {
+  "objective": "minimize",
+  "dimensions": [
+   {
+    "name": "x0",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x1",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x2",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x3",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x4",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x5",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x6",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x7",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x8",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x9",
+    "type": "continuous",
+    "range": [
+     -10,
+     10
+    ],
+    "scale": "linear"
+   }
+  ]
+ },
+ "beliefs": [
+  {
+   "token": "baseline",
+   "level": 0.1
+  },
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": 5.565,
+   "ci": [
+    -2.215483582427286,
+    10.0
+   ],
+   "weight": 1.0,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": 5.137,
+   "ci": [
+    -2.8630000000000004,
+    10.0
+   ],
+   "weight": 0.99,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": 1.292,
+   "ci": [
+    -7.652467500412438,
+    10.0
+   ],
+   "weight": 0.99,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": 4.617,
+   "ci": [
+    -3.383,
+    10.0
+   ],
+   "weight": 0.99,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": 4.691,
+   "ci": [
+    -3.309,
+    10.0
+   ],
+   "weight": 0.99,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": 2.936,
+   "ci": [
+    -5.064,
+    10.0
+   ],
+   "weight": 0.99,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": 4.234,
+   "ci": [
+    -3.766,
+    10.0
+   ],
+   "weight": 0.99,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x7",
+   "mode": -3.236,
+   "ci": [
+    -10.0,
+    5.210667834085561
+   ],
+   "weight": 0.99,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x8",
+   "mode": -4.161,
+   "ci": [
+    -10.0,
+    3.8390000000000004
+   ],
+   "weight": 0.9820386269663851,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x9",
+   "mode": 7.473,
+   "ci": [
+    -5.626315869777353,
+    10.0
+   ],
+   "weight": 0.99,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x0",
+   "period": 4.236390595212878,
+   "phase": 4.452905587020586,
+   "weight": 0.6,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x1",
+   "period": 3.937007874015748,
+   "phase": 3.820819345733107,
+   "weight": 0.6,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x2",
+   "period": 3.8204393505253105,
+   "phase": -0.1036442643124762,
+   "weight": 0.6158623186013786,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x3",
+   "period": 4.134366925064599,
+   "phase": 3.435357059705258,
+   "weight": 0.6,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x4",
+   "period": 4.131377814501136,
+   "phase": 3.5073194125850415,
+   "weight": 0.6081646599130005,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x5",
+   "period": 3.784295175023652,
+   "phase": 1.515716608576005,
+   "weight": 0.5049744705038847,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x6",
+   "period": 4.008417677121956,
+   "phase": 2.966498702540172,
+   "weight": 0.6,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x7",
+   "period": 3.910068426197459,
+   "phase": -4.570545009516287,
+   "weight": 0.6,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x8",
+   "period": 4.132231404958678,
+   "phase": -5.344098703238805,
+   "weight": 0.6,
+   "provenance": "llm_domain"
+  }
+ ],
+ "trust": {
+  "overall_confidence": "medium"
+ }
+}

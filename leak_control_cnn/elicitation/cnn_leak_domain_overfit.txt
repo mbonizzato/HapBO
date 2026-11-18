@@ -1,0 +1,7 @@
+A small convolutional image classifier trained from scratch. The network has two
+convolutional blocks (each: Conv 3x3 -> batch-norm -> ReLU -> 2x2 max-pool),
+followed by adaptive average pooling, a dropout layer, and a single linear
+classification head. It is trained with the Adam optimizer for many epochs (until
+the training loss has largely converged) on a SMALL dataset of only a few thousand
+low-resolution grayscale images spanning roughly ten balanced classes. The
+objective is validation-set classification accuracy.

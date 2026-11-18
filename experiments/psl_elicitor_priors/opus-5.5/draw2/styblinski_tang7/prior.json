@@ -1,0 +1,410 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 1.0
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -2.997,
+      "ci": [
+        -4.89,
+        -1.1
+      ],
+      "sign": "peak",
+      "weight": 0.0579,
+      "provenance": "llm_domain",
+      "note": "deep well, F_i=-42.8"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.811,
+      "ci": [
+        0.92,
+        4.7
+      ],
+      "sign": "peak",
+      "weight": 0.0504,
+      "provenance": "llm_domain",
+      "note": "shallow well, F_i=-37.3"
+    },
+    {
+      "token": "avoid",
+      "dim": "x0",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.28
+      ],
+      "weight": 0.145,
+      "provenance": "llm_domain",
+      "note": "quartic wall, F_i(-5)=+98"
+    },
+    {
+      "token": "avoid",
+      "dim": "x0",
+      "mode": 5.0,
+      "ci": [
+        3.16,
+        5.0
+      ],
+      "weight": 0.187,
+      "provenance": "llm_domain",
+      "note": "quartic wall, F_i(5)=+132"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.29,
+      "ci": [
+        -3.14,
+        0.56
+      ],
+      "sign": "peak",
+      "weight": 0.0605,
+      "provenance": "llm_domain",
+      "note": "deep well, F_i=-44.7"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.371,
+      "ci": [
+        2.0,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.0499,
+      "provenance": "llm_domain",
+      "note": "shallow well, F_i=-36.9"
+    },
+    {
+      "token": "avoid",
+      "dim": "x1",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -1.53
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "quartic wall, F_i(-5)=+739"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.122,
+      "ci": [
+        -4.22,
+        -0.03
+      ],
+      "sign": "peak",
+      "weight": 0.0611,
+      "provenance": "llm_domain",
+      "note": "deep well, F_i=-45.1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.295,
+      "ci": [
+        1.6,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.0499,
+      "provenance": "llm_domain",
+      "note": "shallow well, F_i=-36.9"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -2.47
+      ],
+      "weight": 0.327,
+      "provenance": "llm_domain",
+      "note": "quartic wall, F_i(-5)=+239"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.398,
+      "ci": [
+        -5.0,
+        -1.8
+      ],
+      "sign": "peak",
+      "weight": 0.0531,
+      "provenance": "llm_domain",
+      "note": "deep well, F_i=-39.3"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.259,
+      "ci": [
+        0.41,
+        4.1
+      ],
+      "sign": "peak",
+      "weight": 0.0464,
+      "provenance": "llm_domain",
+      "note": "shallow well, F_i=-34.3"
+    },
+    {
+      "token": "avoid",
+      "dim": "x3",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.55
+      ],
+      "weight": 0.073,
+      "provenance": "llm_domain",
+      "note": "wall, F_i(-5)=+40"
+    },
+    {
+      "token": "avoid",
+      "dim": "x3",
+      "mode": 5.0,
+      "ci": [
+        2.77,
+        5.0
+      ],
+      "weight": 0.361,
+      "provenance": "llm_domain",
+      "note": "quartic wall, F_i(5)=+265"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.454,
+      "ci": [
+        -3.23,
+        0.32
+      ],
+      "sign": "peak",
+      "weight": 0.05,
+      "provenance": "llm_domain",
+      "note": "deep well, F_i=-37.0"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 3.98,
+      "ci": [
+        2.0,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.0379,
+      "provenance": "llm_domain",
+      "note": "shallow well, F_i=-28.0"
+    },
+    {
+      "token": "avoid",
+      "dim": "x4",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -1.68
+      ],
+      "weight": 0.792,
+      "provenance": "llm_domain",
+      "note": "quartic wall, F_i(-5)=+585"
+    },
+    {
+      "token": "avoid",
+      "dim": "x4",
+      "mode": 5.0,
+      "ci": [
+        4.24,
+        5.0
+      ],
+      "weight": 0.02,
+      "provenance": "llm_domain",
+      "note": "steep outer wall of shallow well"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.465,
+      "ci": [
+        -5.0,
+        -1.7
+      ],
+      "sign": "peak",
+      "weight": 0.0382,
+      "provenance": "llm_domain",
+      "note": "deep well, F_i=-28.2"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.615,
+      "ci": [
+        0.63,
+        4.6
+      ],
+      "sign": "peak",
+      "weight": 0.0327,
+      "provenance": "llm_domain",
+      "note": "shallow well, F_i=-24.2"
+    },
+    {
+      "token": "avoid",
+      "dim": "x5",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.68
+      ],
+      "weight": 0.037,
+      "provenance": "llm_domain",
+      "note": "wall, F_i(-5)=+15"
+    },
+    {
+      "token": "avoid",
+      "dim": "x5",
+      "mode": 5.0,
+      "ci": [
+        3.02,
+        5.0
+      ],
+      "weight": 0.138,
+      "provenance": "llm_domain",
+      "note": "quartic wall, F_i(5)=+99"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.199,
+      "ci": [
+        -2.95,
+        0.55
+      ],
+      "sign": "peak",
+      "weight": 0.0451,
+      "provenance": "llm_domain",
+      "note": "deep well, F_i=-33.4"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.167,
+      "ci": [
+        2.1,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.0388,
+      "provenance": "llm_domain",
+      "note": "shallow well, F_i=-28.7"
+    },
+    {
+      "token": "avoid",
+      "dim": "x6",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -1.62
+      ],
+      "weight": 0.952,
+      "provenance": "llm_domain",
+      "note": "quartic wall, F_i(-5)=+704"
+    },
+    {
+      "token": "avoid",
+      "dim": "x6",
+      "mode": 5.0,
+      "ci": [
+        4.26,
+        5.0
+      ],
+      "weight": 0.011,
+      "provenance": "llm_domain",
+      "note": "outer wall of shallow well"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Separable double-well quartic model: per-dimension wells as bumps (weights proportional to depth), steep quartic edge walls as avoids, all on one scale (739 -> 1.0)."
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-card",
+  "dataset_id": "hpobench-svm-kc1",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "kc1",
+    "target_slug": "kc1",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-29T16:23:39.387823+00:00",
+    "generated_at": "2026-09-29T16:24:21.370397+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=False; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "93e8bcd7452611b3a39dd65547a04adac120ab89c4a5ce6a6f3f4cb0df50974c"
+    },
+    "prior.json": {
+      "sha256": "04ab9b2516311a034bf28330007a41ed65b6d17cc5f10e823ed874ea86d7bc6d"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-29T16:24:21.371832+00:00"
+}

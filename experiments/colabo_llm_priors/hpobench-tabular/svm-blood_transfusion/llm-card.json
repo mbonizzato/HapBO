@@ -1,0 +1,85 @@
+{
+  "artifact_format": "colabo-llm-point-prior-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "svm-blood_transfusion",
+  "modality": "llm-card",
+  "construction": "BORA supplement SC.2: pi(x) = N(c, sigma), sigma = 1 - s + 1e-6",
+  "c_raw": {
+    "c": 4,
+    "gamma": 0.125
+  },
+  "c": {
+    "c": 4,
+    "gamma": 0.125
+  },
+  "s": 0.65,
+  "sigma": 0.35000099999999995,
+  "dimensions": [
+    {
+      "name": "c",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "name": "gamma",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "enable_thinking": false,
+  "attempts": 1,
+  "source_prompt_card": "experiments/priors/hpobench-svm-blood-transfusion/blood-transfusion/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "05e6d69c251b01849e7e5d3dba305d3f00827df2cb51c30cdc0b36c418a760c2",
+  "schema_fallback": false,
+  "prompt_sha256": "0ae679d19d19a8b783358db519f0b1394ce313c7fce688b80285efa84ddeb0de",
+  "created_at_utc": "2026-09-29T21:56:33.638034+00:00"
+}

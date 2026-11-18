@@ -1,0 +1,105 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "c",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "SVM penalty parameter (larger means weaker regularization)"
+      },
+      {
+        "name": "gamma",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "RBF kernel coefficient (larger means narrower kernel)"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "c",
+        "gamma"
+      ],
+      "mode": {
+        "c": 1024,
+        "gamma": 1
+      },
+      "ci": {
+        "c": [
+          256,
+          1024
+        ],
+        "gamma": [
+          0.25,
+          4
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Domain guidance: accuracy maximized near C=1024, gamma=1. High C reduces regularization (fitting noise risk if too high, but optimal here), gamma=1 balances kernel width for typical feature scales."
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "unimodal"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "high",
+    "notes": "Based on standard SVM hyperparameter tuning heuristics for RBF kernels on small-to-medium datasets."
+  }
+}

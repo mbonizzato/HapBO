@@ -1,0 +1,235 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.277,
+      "ci": [
+        3.277,
+        7.277
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.3,
+      "ci": [
+        3.3,
+        7.3
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -9.918,
+      "ci": [
+        -10.0,
+        -7.918
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 3.14,
+      "ci": [
+        1.14,
+        5.14
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.952,
+      "ci": [
+        2.952,
+        6.952
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 1.645,
+      "ci": [
+        -0.355,
+        3.645
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 2.763,
+      "ci": [
+        0.763,
+        4.763
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -2.927,
+      "ci": [
+        -4.927,
+        -0.927
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -2.965,
+      "ci": [
+        -4.965,
+        -0.965
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.639,
+      "ci": [
+        5.639,
+        9.639
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global min at x_i = o_i"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Prior derived from analytic model F(x)"
+  }
+}

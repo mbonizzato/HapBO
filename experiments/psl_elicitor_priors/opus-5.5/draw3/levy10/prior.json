@@ -1,0 +1,308 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.565,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.92,
+      "provenance": "llm_domain",
+      "note": "quadratic envelope around o_0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.292,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.98,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.617,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.691,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.87,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.936,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.97,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.473,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "weaker bracket (1..2)"
+    },
+    {
+      "token": "periodic",
+      "dim": "x0",
+      "period": 4.236,
+      "phase": 4.453,
+      "weight": 0.28,
+      "provenance": "llm_domain",
+      "note": "bracket minima of sin^2 modulation"
+    },
+    {
+      "token": "periodic",
+      "dim": "x1",
+      "period": 3.937,
+      "phase": 3.821,
+      "weight": 0.29,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x2",
+      "period": 3.82,
+      "phase": -0.104,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x3",
+      "period": 4.134,
+      "phase": 3.435,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x4",
+      "period": 4.131,
+      "phase": 3.507,
+      "weight": 0.27,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x5",
+      "period": 3.784,
+      "phase": 1.516,
+      "weight": 0.29,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x6",
+      "period": 4.008,
+      "phase": 2.967,
+      "weight": 0.29,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x7",
+      "period": 3.91,
+      "phase": -4.57,
+      "weight": 0.29,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x8",
+      "period": 4.132,
+      "phase": -5.344,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x9",
+      "period": 2.0,
+      "phase": 7.473,
+      "weight": 0.06,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    },
+    {
+      "token": "smoothness",
+      "level": "rough"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Separable Levy-type model: per-dimension quadratic wells at o_i with strong sin^2 modulation of period ~4/kap_i."
+  }
+}

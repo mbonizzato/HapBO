@@ -1,0 +1,15 @@
+artifact_format: llm-bo-study-v1
+study_id: cnn-leak-of-bora
+phase: cnn-leak
+status: ready
+execution_mode: optimization
+research_question: "BORA with the CNN task text on the CNN leak-control benchmark."
+design:
+  budgets: [30]
+  seeds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  methods:
+    - bora
+  optimizer: {n_initial: 3, length_scale: 1.0, noise_std: 0.05, improvement_xi: 0.0, baseline_task_legend: true}
+  benchmarks:
+    - benchmark_id: cnn-leak-of
+      include: all

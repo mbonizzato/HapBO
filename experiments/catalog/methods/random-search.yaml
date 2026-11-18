@@ -1,0 +1,9 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: random-search
+label: Random search
+role: sanity-baseline
+implementation_status: available
+isolated_worker: true
+strategy: random-search
+requires_prior: false
+

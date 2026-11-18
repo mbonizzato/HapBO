@@ -1,0 +1,10 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: prior-warm-start
+label: Prior-selected initial points
+role: ablation
+implementation_status: available
+isolated_worker: true
+strategy: prior-warm-start
+requires_prior: true
+acquisition: expected-improvement
+

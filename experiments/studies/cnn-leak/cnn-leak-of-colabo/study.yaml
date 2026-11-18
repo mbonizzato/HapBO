@@ -1,0 +1,16 @@
+artifact_format: llm-bo-study-v1
+study_id: cnn-leak-of-colabo
+phase: cnn-leak
+status: ready
+execution_mode: optimization
+research_question: "ColaBO with the LLM (c, s) belief elicited from the CNN card on the CNN leak-control benchmark."
+design:
+  budgets: [30]
+  seeds: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  methods:
+    - colabo-llm
+  optimizer: {n_initial: 1, length_scale: 1.0, noise_std: 0.05, improvement_xi: 0.0, colabo_max_internal_trials: 96}
+  benchmarks:
+    - benchmark_id: cnn-leak-of
+      include: all
+      prior_path: experiments/colabo_llm_priors/cnn-leak/fashion-of/card-overfit.json

@@ -1,0 +1,73 @@
+{
+  "artifact_format": "neps-point-prior-v1",
+  "model": "xgb",
+  "task": "credit_g",
+  "card": "llm-card-misleading",
+  "parameters": {
+    "colsample_bytree": {
+      "card_name": "colsample_bytree",
+      "llm_value": 0.4000000059604645,
+      "value": 0.4000000059604645,
+      "index": 3,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "linear",
+      "confidence": "high"
+    },
+    "eta": {
+      "card_name": "eta",
+      "llm_value": 0.0009765625,
+      "value": 0.0009765625,
+      "index": 0,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "max_depth": {
+      "card_name": "max_depth",
+      "llm_value": 1,
+      "value": 1.0,
+      "index": 0,
+      "n_values": 9,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "reg_lambda": {
+      "card_name": "reg_lambda",
+      "llm_value": 1024,
+      "value": 1024.0,
+      "index": 9,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    }
+  },
+  "provenance": {
+    "model": "xgb",
+    "task": "credit_g",
+    "card": "llm-card-misleading",
+    "card_sha256": "5949345dc1085085676a7b334fd1c684693e98c4637304162f8132997e624b96",
+    "prompt_sha256": "843f03e88d0baf98bfe7a767e418baa75655bc1b227d5bf25cb66d980b3486ed",
+    "llm": {
+      "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+      "provider": "openai",
+      "base_url": "http://localhost:8000/v1",
+      "temperature": 0.0,
+      "seed": 7,
+      "max_tokens": 4096,
+      "enable_thinking": false
+    },
+    "max_attempts": 4,
+    "created_at_utc": "2026-11-06T16:22:30.898139+00:00",
+    "attempts": 1,
+    "rejected": [],
+    "usage": {
+      "calls": 1,
+      "cached_calls": 0,
+      "tokens": 1290
+    }
+  }
+}

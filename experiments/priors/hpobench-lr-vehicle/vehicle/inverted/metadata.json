@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "inverted",
+  "dataset_id": "hpobench-lr-vehicle",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "vehicle",
+    "target_slug": "vehicle",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": null,
+    "created_at_utc": "2026-09-29T03:53:29.202918+00:00",
+    "generated_at": "2026-09-29T03:54:39.400431+00:00",
+    "raw_llm_response_available": false,
+    "notes": "Inverted-map prior at the empirical anti-optimum; no LLM."
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "0be1f80408404a259abc53c9fca41a77a964c99acfd653e88916a66298c3a7e8"
+    },
+    "prior.json": {
+      "sha256": "437f583828b50317638c4d07b94dc55f7985b0583f6a561fe05e17376405d185"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-29T03:54:39.401853+00:00"
+}

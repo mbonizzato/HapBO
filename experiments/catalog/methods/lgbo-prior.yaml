@@ -1,0 +1,15 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: lgbo-prior
+label: LGBO (with expert context in the loop)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: lgbo
+requires_prior: true
+prior_source: warmstart-card
+note: >-
+  Same implementation as lgbo, with the experiment's warmstart_context.md included in
+  each LLM prompt (worker.py fills objective_meta["warmstart_context"] from the prior
+  directory). This is the matched-knowledge variant for cortical comparisons; it does
+  not inject the compiled numerical prior into the GP or the initial design.

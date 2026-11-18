@@ -1,0 +1,105 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "c",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "SVM penalty parameter (larger means weaker regularization)"
+      },
+      {
+        "name": "gamma",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "RBF kernel coefficient (larger means narrower kernel)"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "c",
+      "mode": 1,
+      "ci": [
+        0.5,
+        2.0
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "gamma",
+      "mode": 0.25,
+      "ci": [
+        0.125,
+        0.5
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on general SVM theory and typical behavior on small-to-medium numeric datasets. Specific data distribution could shift the optimum."
+  }
+}

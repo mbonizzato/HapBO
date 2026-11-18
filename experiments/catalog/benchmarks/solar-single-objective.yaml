@@ -1,0 +1,15 @@
+artifact_format: llm-bo-benchmark-catalog-v1
+benchmark_id: solar-single-objective
+family: live-constrained
+implementation_status: available
+adapter: solar
+problem_id_template: "{instance}"
+axes:
+  instance:
+    - MAXEFF_RE
+defaults:
+  candidate_pool_size: 256
+  fidelity: 1.0
+  replications: 1
+setup: python scripts/setup_solar.py
+

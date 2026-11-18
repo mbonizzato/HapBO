@@ -1,0 +1,256 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -2.97,
+      "ci": [
+        -4.67,
+        -1.27
+      ],
+      "weight": 0.947,
+      "provenance": "llm_domain",
+      "note": "deeper well of double-well x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.84,
+      "ci": [
+        1.14,
+        4.54
+      ],
+      "weight": 0.825,
+      "provenance": "llm_domain",
+      "note": "shallower well x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.256,
+      "ci": [
+        -2.96,
+        0.44
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "deeper well x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.404,
+      "ci": [
+        2.7,
+        5.0
+      ],
+      "weight": 0.817,
+      "provenance": "llm_domain",
+      "note": "shallower well x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.082,
+      "ci": [
+        -3.78,
+        -0.38
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "deepest well, x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.336,
+      "ci": [
+        2.64,
+        5.0
+      ],
+      "weight": 0.817,
+      "provenance": "llm_domain",
+      "note": "shallower well x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.374,
+      "ci": [
+        -5.0,
+        -1.67
+      ],
+      "weight": 0.87,
+      "provenance": "llm_domain",
+      "note": "deeper well x3"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.284,
+      "ci": [
+        0.58,
+        3.98
+      ],
+      "weight": 0.759,
+      "provenance": "llm_domain",
+      "note": "shallower well x3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.407,
+      "ci": [
+        -3.11,
+        0.29
+      ],
+      "weight": 0.818,
+      "provenance": "llm_domain",
+      "note": "deeper well x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.027,
+      "ci": [
+        2.33,
+        5.0
+      ],
+      "weight": 0.62,
+      "provenance": "llm_domain",
+      "note": "shallower well x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.435,
+      "ci": [
+        -5.0,
+        -1.73
+      ],
+      "weight": 0.626,
+      "provenance": "llm_domain",
+      "note": "deeper well x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.645,
+      "ci": [
+        0.95,
+        4.35
+      ],
+      "weight": 0.535,
+      "provenance": "llm_domain",
+      "note": "shallower well x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.174,
+      "ci": [
+        -2.87,
+        0.53
+      ],
+      "weight": 0.739,
+      "provenance": "llm_domain",
+      "note": "deeper well x6"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.192,
+      "ci": [
+        2.5,
+        5.0
+      ],
+      "weight": 0.635,
+      "provenance": "llm_domain",
+      "note": "shallower well x6"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Separable double-well model: each dimension has two wells near s +/- sqrt(a/2)/lam, the negative-y well deeper. Weights proportional to well depth."
+  }
+}

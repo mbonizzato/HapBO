@@ -1,0 +1,13 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: alpha-pi-raw-pi-matched
+label: HapBO (alpha-pi shaping, probability of improvement)
+role: ablation
+implementation_status: available
+isolated_worker: true
+strategy: alpha-pi
+requires_prior: true
+acquisition: probability-of-improvement
+note: >-
+  Probability of improvement shaped by the alpha-pi rule. The initial design is
+  the seeded random design shared with vanilla-bo-pi. Used by the acquisition
+  studies (hpo/acquisition, cortical/acquisition).

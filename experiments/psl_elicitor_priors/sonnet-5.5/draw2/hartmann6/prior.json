@@ -1,0 +1,271 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4304,
+      "ci": [
+        0.0,
+        0.9
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "well 3 (alpha 2.766), broad in x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.2353,
+      "ci": [
+        0.0,
+        0.82
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "well 3, broad in x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.1975,
+      "ci": [
+        0.0,
+        0.56
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "well 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.2178,
+      "ci": [
+        0.0,
+        0.51
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "well 3, tight in x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.7382,
+      "ci": [
+        0.36,
+        1.0
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "well 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4942,
+      "ci": [
+        0.19,
+        0.8
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "well 4 (alpha 2.779), tight in x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.98,
+      "ci": [
+        0.57,
+        1.0
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "well 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.3985,
+      "ci": [
+        0.02,
+        0.77
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "well 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.03393,
+      "ci": [
+        0.0,
+        0.33
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "well 4, tight in x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.4413,
+      "ci": [
+        0.09,
+        0.79
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "well 2 (alpha 1.402)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.9455,
+      "ci": [
+        0.65,
+        1.0
+      ],
+      "weight": 0.55,
+      "provenance": "llm_domain",
+      "note": "well 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.06195,
+      "ci": [
+        0.0,
+        0.46
+      ],
+      "weight": 0.45,
+      "provenance": "llm_domain",
+      "note": "well 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.98,
+      "ci": [
+        0.69,
+        1.0
+      ],
+      "weight": 0.55,
+      "provenance": "llm_domain",
+      "note": "well 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.3108,
+      "ci": [
+        0.0,
+        0.68
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "well 1 (alpha 1.073)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.6592,
+      "ci": [
+        0.35,
+        0.97
+      ],
+      "weight": 0.45,
+      "provenance": "llm_domain",
+      "note": "well 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.5599,
+      "ci": [
+        0.17,
+        0.95
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "well 1"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Four Gaussian wells taken from the approximate analytic model; two deep ones (wells 3 and 4) and two shallower ones."
+  }
+}

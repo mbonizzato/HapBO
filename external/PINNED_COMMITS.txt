@@ -1,0 +1,231 @@
+# Pinned upstream baseline checkouts
+#
+# The repositories are not vendored (external/* checkouts are gitignored). Each is cloned into
+# external/<name>, run from an isolated environment and called through a subprocess bridge.
+# This file records the pinned commits and every deviation from upstream.
+
+LLAMBO   tennisonliu/LLAMBO            https://github.com/tennisonliu/LLAMBO.git
+  commit: 196fe237f60a3d3a2fa53cbf8f474ec20a01dd57
+  license: MIT
+  upstream python: 3.8.8
+  code: src/baselines/llambo_adapter.py, src/baselines/workers/llambo_worker.py,
+        scripts/llambo_continuous.py (synthetic panel), scripts/solar_externals.py (SOLAR)
+  modes: Mode 1 (method llambo: random initial design) and Mode 2 (method llambo-ws: zero-shot
+         warm start, the LLM proposes the 5 initial points from the task card).
+  Deviations (all wrapper-side; the checkout is unmodified):
+    - the asynchronous OpenAI 0.x call is adapted to the configured OpenAI-compatible endpoint;
+      thinking disabled. Only the synthetic-panel runner (scripts/llambo_continuous.py) retries
+      transport errors of the zero-shot call; the study worker (src/baselines/workers/
+      llambo_worker.py: HPOBench, cortical, SOLAR) does not;
+    - coordinates are printed with 4 decimals (acquisition and discriminative surrogate) and
+      2 decimals (generative surrogate); upstream derives the precision from the bound
+      literals, which prints 0 decimals for [0, 1] boxes;
+    - literal braces in card text are doubled by the synthetic-panel runner only (upstream
+      renders prompts with str.format, and the synthetic cards print formulas with braces); the
+      study worker does not double them, and none of the HPOBench, cortical or SOLAR texts it
+      receives contains a brace;
+    - continuous proposals are snapped to the nearest finite candidate (nearest row for the
+      non-grid SOLAR pool); candidate frames reach upstream unchanged, so a candidate key
+      outside the search space raises upstream's KeyError (the study worker and the SOLAR
+      external-baseline runner fail the run);
+    - non-tabular tasks use prompt_setting=partial_context; HPOBench tasks pass coarse
+      dataset facts (dataset_context) into the dataset slots;
+    - the Mode 2 initial design is generated at temperature 0 without a seed, with up to 4
+      attempts (a correction turn when the reply cannot be parsed or snaps to fewer than 5
+      distinct candidates); a remaining shortfall is filled from a permutation seeded by the
+      run seed. Queries 1-5 therefore differ across seeds when the fill is used or the server
+      is not deterministic at temperature 0: in the stored HPOBench runs they are identical
+      across the 10 seeds in 1 of 40 tasks (card) and 7 of 40 (card plus misleading hint).
+
+BORA     Ablatif6c/bora-the-explorer  https://github.com/Ablatif6c/bora-the-explorer.git
+  commit: 83b2ebf86f4f3dca0d65cd44c6c76f08ca9b0032
+  license: MIT
+  upstream python: 3.11.8
+  env: conda create -n bora python=3.11.8; pip install -r external/bora/requirements.txt; pip install tiktoken
+       (tiktoken is imported by bora/assistant.py but missing from requirements.txt)
+  source patch: external/patches/bora-local.patch (git apply inside external/bora):
+    - assistant.py: a single multi-constraint evaluation is batched before ConstraintModel.allowed;
+    - bora.py: constrained runs without a feasible point keep exploring at random; the policy is
+      initialized once an incumbent exists;
+    - logger.py: a missing assistant comment is printed as an empty string;
+    - target_space.py: random_points returns an ndarray.
+  code: src/baselines/bora.py, src/baselines/workers/bora_worker.py, scripts/bora_continuous.py
+        (synthetic panel, native continuous evaluation), scripts/bora_solar_cached.py (SOLAR on the
+        seed-specific 256-point pools frozen by scripts/cache_solar_pools.py)
+  Deviations:
+    - task text is routed through Experiment.description and Experiment.domain (upstream never
+      renders Target.description); the target name is the metric;
+    - default_precision 6 on finite candidate sets, 4 on the continuous synthetic panel;
+    - LLM assistant pointed at the configured endpoint (OPENAI_BASE_URL), model registered in
+      MODEL_INFOS, thinking disabled, non-leading system messages coerced to user, n>1 sampling
+      clamped to n=1, worker cwd set to the BORA root (relative prompt-template paths);
+    - finite benchmarks: proposals snapped to the nearest candidate in the encoded space;
+    - SOLAR: simulator constraints reach BORA only after a charged objective query;
+    - upstream failures are counted as failures and not rerun: KeyError 'iteration'
+      (assistant.py set_index("iteration") vs bora.py "Iteration"), repeated LLM-hypothesis points
+      (allow_duplicate_points=False charges the repeat; runs with fewer than `budget` real
+      evaluations are dropped), IndexError 'pop from empty list', and the dataset-to-correlation
+      prompt fallback on long Ackley-15 prompts. Synthetic panel seed counts (of 10):
+      well50 Ackley-15 8; well10 Levy-10 8; well10 Ackley-15 9; all other cells 10.
+
+ColaBO   hvarfner/colabo              https://github.com/hvarfner/colabo.git
+  commit: 435121e0d3b0980ac04e08b8cfbf4473593a2342
+  license: NOT DECLARED -- do not vendor or redistribute the code; run it only as an external
+           checkout through the subprocess bridge.
+  upstream python: 3.9 (BoTorch); env pins in external/colabo_requirements.txt
+  code: src/baselines/colabo_adapter.py, src/baselines/workers/colabo_worker.py,
+        scripts/colabo_llm_continuous.py
+  notes: reconstructs upstream's colabo_logei Ax GenerationStrategy directly, bypassing only the
+         benchmark mapping module whose unconditional mf-prior-bench import cannot be satisfied
+         from the public checkout. DefaultPrior, the PRIOR initializer, the GP setup and
+         qPriorLogExpectedImprovement are imported from the pinned checkout. Method colabo-llm
+         uses a one-shot LLM (c, s) belief, pi(x) = N(c, 1 - s + 1e-6) (BORA supplement C.2),
+         elicited by scripts/elicit_colabo_llm_priors.py / scripts/elicit_colabo_llm.py
+         (experiments/colabo_llm_priors/). Peak memory on SOLAR and Ackley-15 is about 75 GB.
+
+HypBO    Ablatif6c/HypBO               https://github.com/Ablatif6c/HypBO.git
+  commit: c3293fe8041c6d312e2476a6a93d0465f5f79981
+  license: MIT
+  upstream python: 3.8 (Dockerfile python:3.8-slim)
+  env:  conda create -n hypbo python=3.8; pip install -r external/hypbo/requirements/requirements.txt
+  code: src/baselines/hypbo.py, src/baselines/workers/hypbo_worker.py,
+        src/baselines/workers/box_hypotheses.py, scripts/elicit_hypbo_llm.py
+  notes: method hypbo-llm (BORA supplement C.3). The LLM is asked once per task and card, from the
+         colabo-llm prompt card with the answer changed to a list, for any number of hypotheses, each
+         a guessed optimum c with a confidence s in [0, 1] (experiments/hypbo_llm_hypotheses/). Each
+         hypothesis becomes a box centred at c with side (ub - lb) * (1 - s + 1e-6), clipped to
+         [lb, ub]. scripts/check_hypbo_hypotheses.py gates the artifacts before the runs.
+  Deviations (all wrapper-side; the checkout is unmodified):
+    - configuration of upstream's synthetic-function experiments (main_continuous.py): DBO
+      BayesianOptimization over the continuous encoded box, discretization=False, model_kwargs
+      {pbounds, random_seed}, failure limits global 5 / local 2, gamma 0, batch 1. Every point HypBO
+      evaluates is snapped to the nearest finite candidate in the encoded space; HypBO keeps its
+      continuous point with the snapped candidate's value;
+    - n_processes=1 (the docstring default; the code default is the CPU count and main_continuous.py
+      uses 10): hypothesis initialization, local sampling and the 250 L-BFGS-B restarts of the
+      acquisition maximizer each run in one process, so a seed reproduces its trace and the objective
+      callback is served by one process. Paper runs: Linux, Python 3.8.20, numpy 1.20.3, scipy 1.10.1,
+      scikit-learn 1.3.2, torch 1.10.2, gpytorch 1.8.1. On another platform or BLAS a run receives the
+      same hypotheses and initial design but can diverge a few model-based steps later (L-BFGS-B
+      restarts of the acquisition maximizer); traces are reproducible within one environment;
+    - boxes use upstream's box form (utils.get_good_hypothesis: hypothesis bounds = the box, inequality
+      rows x_j <= hi_j and -x_j <= -lo_j) with the C.3 centre and side, clipped to the bounds
+      (get_good_hypothesis does not clip). lb and ub are the bounds of the encoded space HypBO searches
+      (per-dimension min-max over the grid, log-scaled dimensions in log space), the space in which
+      colabo-llm applies sigma = 1 - s + 1e-6;
+    - the side carries the 1e-6 floor of BORA's ColaBO construction (supplement C.2,
+      sigma = 1 - s + 1e-6): L = (ub - lb) * (1 - s + 1e-6). With s = 1 the C.3 box has zero width and
+      upstream's acquisition maximizer gets no candidate point (ValueError, empty x_tries);
+    - a later hypothesis is dropped only when its box and an already kept box with the same snapped
+      centre c are both narrower than 1e-4 in the encoded space (largest side of the clipped box); it is
+      listed in the run's hypbo_hypotheses.json. HypBO redraws a hypothesis's initial sample until it
+      differs (np.allclose) from those already drawn, and all its local models share the run seed, so
+      two same-centre boxes narrower than that tolerance (s within about 1e-5 of 1, including exact
+      duplicates) never yield a sample and the run loops without end before its first charged query.
+      All other hypotheses, same-centre ones included, are passed as given;
+    - boxes narrower than the grid spacing (high s) snap to one candidate, so in-box proposals repeat
+      and are charged as repeats;
+    - n_init is the study's n_initial, 1 (as for BORA), instead of 5, the default of upstream's
+      main_continuous.py (--n_init 5). HypBO counts its per-hypothesis initial samples
+      (one per hypothesis at batch 1) toward n_init and adds max(1, n_init - H) global samples, so the
+      initial design is H + 1 points; all are charged. With H + 1 >= budget the initial design uses the
+      whole budget and no BO step is reached (the gate stops such artifacts);
+    - search(budget) runs past the charged budget; the bridge stops the worker at the budget;
+    - upstream failures are counted as failures and not rerun.
+
+TuRBO    uber-research/TuRBO          https://github.com/uber-research/TuRBO.git
+  commit: de0db39f481d9505bb3610b7b7aa0ebf7702e4a5
+  license: Apache-2.0
+  code: src/baselines/turbo_continuous.py (arm of scripts/run_synthetic_arms.py), continuous
+        synthetic panel only
+  env:  torch + gpytorch (any recent version); the upstream requirements.txt pins are not needed.
+  Deviations: none to the algorithm. numpy and torch are both seeded (Thompson sampling and GP
+        training use torch's global RNG); fX is trimmed to `budget`.
+
+LGBO (method lgbo): from-paper implementation of the LGBO update (ICLR 2026, arXiv 2605.17976);
+  no upstream checkout. Posterior lift c * Sigma(X,G) a / sqrt(a^T Sigma(G,G) a) with posterior
+  covariances, Matern-5/2 GP with per-iteration marginal-likelihood refit, two LLM-chosen initial
+  points, log-EI on the shifted posterior.
+  code: src/baselines/lgbo.py, src/baselines/workers/lgbo_worker.py (+ lgbo_common.py),
+        scripts/lgbo_continuous.py
+  env:  runs in the LLAMBO environment (numpy, scipy, aiohttp); LGBO_PYTHON or LGBO_ENV.
+
+official-lgbo  Xinzhe309/LGBO           https://github.com/Xinzhe309/LGBO.git
+  commit: 01e56e1165a030ac74961f14d407bcc188f66ce6
+  license: MIT
+  role: baseline-implementation sensitivity arm. Ports the public release's region-lift operator
+        (delta = 3 * Phi^-1(c), sum-normalized box mask on a 512-point Sobol grid, soft regions for
+        points); everything else is shared with `lgbo`. The repository is not vendored.
+  code: src/baselines/official_lgbo.py, src/baselines/workers/official_lgbo_worker.py
+
+CAKE     richardcsuwandi/cake          https://github.com/richardcsuwandi/cake.git
+  commit: ece5cbc04b3e1d14d22a4fe80f38e7d16ff7c809
+  license: MIT
+  role: reference source of the finite-candidate port in src/baselines/cake.py (not vendored).
+  env:  torch, gpytorch and botorch in the interpreter that runs the study (upstream pins
+        torch 2.0.1, gpytorch 1.11, botorch 0.9.2); LLM calls go to the configured
+        OpenAI-compatible endpoint (LLM_BASE_URL, LLM_MODEL), thinking disabled.
+  Deviations: candidate table scored exhaustively instead of optimize_acqf over a box; no
+        per-GP input normalization (the candidate encoding is already unit-scaled over the full
+        table); seeded generator; BIC from the training marginal likelihood (see the module
+        docstring of src/baselines/cake.py).
+
+LLM-EI (method llm-ei): from-paper implementation of LLM-EI (Patel et al., Digital Discovery 5,
+  2042-2051, 2026, doi:10.1039/D6DD00052E; arXiv:2504.08874); no upstream checkout.
+  reference: Sanofi-Public/Pref-BO      https://github.com/Sanofi-Public/Pref-BO
+        commit 12f36959001391425a727567146184abf6066cf1, read only (not run, not vendored, no code
+        taken); license: Sanofi non-commercial licence (academic research and non-commercial use only).
+        It holds the survey prompt, a PairwiseGP and a BO loop, but not the LLM-EI percentile gate or
+        its schedule p(n).
+  code: src/experiments/llm_ei_survey.py (survey), src/experiments/llm_ei_utility.py (preference GP,
+        llm_ei_utility.json.gz), src/experiments/llm_ei.py (run-time gate), candidate_gate in
+        src/bayesian_optimization/bo.py, strategy llm-ei in src/experiments/worker.py
+  env:  the runs need only the main environment; refitting the utilities from the shipped survey
+        answers needs torch and botorch (shipped utilities: botorch 0.18.1, torch 2.14.0+cpu).
+  Deviations (experiments/catalog/methods/llm-ei.yaml (a)-(h)):
+    - LLM: the local Qwen model at temperature 0 (seed 7, thinking off) instead of Claude 3.5 Sonnet;
+    - the paper's A/B prompt with reasoning, but generation is stopped after 32 tokens, inside the
+      reasoning field after the answer; the model writes the answer first, and every answer is
+      checked (valid at the first attempt, answer field first) before a utility is fitted;
+    - grids above 800 candidates (rf, xgb, nn) are surveyed on a seeded random subset of 800 (the
+      paper's dataset size); g is predicted on the full grid;
+    - one survey per task and card (L = 10 rounds), as in the paper;
+    - the BO part is the vanilla-bo-ei arm (fixed-hyperparameter GP, finite-candidate EI, one initial
+      point, the same seeds), shared with vanilla BO, instead of the paper's GP with
+      kernel-hyperparameter priors; the preference GP and the BO GP use the task's shared input
+      encoding;
+    - p(n) is not re-tuned: it keeps the 85th percentile up to 30 observations, so at budget 16 the
+      gate never relaxes;
+    - where the repository differs from the paper (5 labelled in-context examples in the survey, a
+      second LLM call that extracts the JSON answer, sampling at the API default temperature or 0.7,
+      a pi-BO-style acquisition) the paper is followed.
+
+NePS     automl/neps                   https://github.com/automl/neps
+  release: neural-pipeline-search==0.17.0 (PyPI package, installed unmodified; no checkout)
+  license: Apache-2.0
+  role: official PriorBand and PriMO implementations (methods priorband, primo), driven through
+        neps.AskAndTell; the study worker evaluates every proposal and owns the cost ledger.
+  env:  Python 3.12, pip install neural-pipeline-search==0.17.0 (pulls botorch 0.12.0, gpytorch 1.13;
+        the CPU torch wheel is enough); NEPS_PYTHON or NEPS_ENV. Tested environment of the paper
+        runs: Python 3.12.13, neural-pipeline-search 0.17.0, torch 2.15.0+cpu, botorch 0.12.0,
+        gpytorch 1.13.
+  code: src/baselines/neps_mf.py, src/baselines/workers/neps_worker.py, src/datasets/hpobench_mf.py,
+        src/experiments/neps_point_elicitation.py
+  settings: PriorBand sample_prior_first="highest_fidelity" (NePS default False); PriMO
+        initial_design_size=5 (NePS default: the number of hyperparameters); all others NePS defaults
+        (eta 3; PriMO epsilon 0.25). PriMO runs with one objective passed as a one-element vector.
+  Deviations (all wrapper-side):
+    - search space: each hyperparameter is a NePS Integer over the index of its sorted grid values,
+      so every proposal is one table row;
+    - fidelity: the HPOBench tables' own lower fidelities (lr / nn iter, rf / xgb n_estimators,
+      svm subsample; the other fidelity columns at their maximum); the eta=3 rungs coincide with them;
+    - cost: an evaluation at fidelity z costs z / z_max full-fidelity units, a promotion is a fresh
+      evaluation, a repeated (configuration, fidelity) proposal is charged and served from the cache,
+      and a run stops at cumulative cost = budget (the first proposal that would exceed it is not
+      evaluated);
+    - objective reported as 1 - validation accuracy; Python, NumPy and torch RNGs seeded from the run seed.
+  NePS 0.17.0 behaviours used as shipped: the PriorBand prior mode is evaluated but never used by a
+        later proposal; PriorBand's incumbent mutation can return the incumbent itself; PriMO's piBO
+        weight is added in log space (log a + log pi + gamma, so the prior enters with exponent 1
+        until gamma < 1e-4) instead of a * pi^gamma; prior confidence low / medium / high maps to a
+        truncated normal with standard deviation 0.75 / 0.5 / 0.25 on the unit index scale.

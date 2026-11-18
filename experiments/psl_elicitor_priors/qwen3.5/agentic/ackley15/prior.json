@@ -1,0 +1,348 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x10",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x11",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x12",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x13",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x14",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1,
+      "tilt": {
+        "x0": 0.9746903607969845,
+        "x1": -0.6768982229402262,
+        "x2": -0.8874528809908454,
+        "x3": 1.0,
+        "x4": -0.6957458266020463,
+        "x5": -0.8007539041464727,
+        "x6": 0.9951534733441034,
+        "x7": 0.8045234248788368,
+        "x8": -0.9429186860527734,
+        "x9": -0.962843295638126,
+        "x10": 0.39100700053850296,
+        "x11": -0.332364028002154,
+        "x12": 0.6295099623047926,
+        "x13": 0.8389876144318794,
+        "x14": 0.7749057619816909
+      }
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 18.1,
+      "ci": [
+        -11.899999999999999,
+        32.768
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[0] = 18.1"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -12.57,
+      "ci": [
+        -32.768,
+        17.43
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[1] = -12.57"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -16.48,
+      "ci": [
+        -32.768,
+        13.52
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[2] = -16.48"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 18.57,
+      "ci": [
+        -11.43,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[3] = 18.57"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -12.92,
+      "ci": [
+        -32.768,
+        17.08
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[4] = -12.92"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -14.87,
+      "ci": [
+        -32.768,
+        15.13
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[5] = -14.87"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 18.48,
+      "ci": [
+        -11.52,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[6] = 18.48"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 14.94,
+      "ci": [
+        -15.06,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[7] = 14.94"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -17.51,
+      "ci": [
+        -32.768,
+        12.489999999999998
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[8] = -17.51"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": -17.88,
+      "ci": [
+        -32.768,
+        12.120000000000001
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[9] = -17.88"
+    },
+    {
+      "token": "bump",
+      "dim": "x10",
+      "mode": 7.261,
+      "ci": [
+        -22.739,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[10] = 7.261"
+    },
+    {
+      "token": "bump",
+      "dim": "x11",
+      "mode": -6.172,
+      "ci": [
+        -32.768,
+        23.828
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[11] = -6.172"
+    },
+    {
+      "token": "bump",
+      "dim": "x12",
+      "mode": 11.69,
+      "ci": [
+        -18.310000000000002,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[12] = 11.69"
+    },
+    {
+      "token": "bump",
+      "dim": "x13",
+      "mode": 15.58,
+      "ci": [
+        -14.42,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[13] = 15.58"
+    },
+    {
+      "token": "bump",
+      "dim": "x14",
+      "mode": 14.39,
+      "ci": [
+        -15.61,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at c[14] = 14.39"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium"
+  }
+}

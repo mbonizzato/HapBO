@@ -1,0 +1,367 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "modality",
+      "n_optima": 4
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4704,
+      "ci": [
+        0.08,
+        0.86
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Optimum 0, dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.2377,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Optimum 0, dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.5354,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Optimum 0, dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.2771,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Optimum 0, dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.5081,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Optimum 0, dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.4092,
+      "ci": [
+        0.07,
+        0.75
+      ],
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "Optimum 0, dim 5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4984,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Optimum 1 (Global), dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.4457,
+      "ci": [
+        0.12,
+        0.77
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Optimum 1, dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.866,
+      "ci": [
+        0.48,
+        1.0
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Optimum 1, dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.106,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Optimum 1, dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.04525,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Optimum 1, dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.98,
+      "ci": [
+        0.72,
+        1.0
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Optimum 1, dim 5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.5164,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.96,
+      "provenance": "llm_domain",
+      "note": "Optimum 2, dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.4227,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.96,
+      "provenance": "llm_domain",
+      "note": "Optimum 2, dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.2563,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.96,
+      "provenance": "llm_domain",
+      "note": "Optimum 2, dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.6663,
+      "ci": [
+        0.32,
+        1.0
+      ],
+      "weight": 0.96,
+      "provenance": "llm_domain",
+      "note": "Optimum 2, dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.5327,
+      "ci": [
+        0.17,
+        0.9
+      ],
+      "weight": 0.96,
+      "provenance": "llm_domain",
+      "note": "Optimum 2, dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.8223,
+      "ci": [
+        0.5,
+        1.0
+      ],
+      "weight": 0.96,
+      "provenance": "llm_domain",
+      "note": "Optimum 2, dim 5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.3355,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Optimum 3, dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.98,
+      "ci": [
+        0.54,
+        1.0
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Optimum 3, dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.4912,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Optimum 3, dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.2166,
+      "ci": [
+        0.0,
+        0.64
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Optimum 3, dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.04525,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Optimum 3, dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.03393,
+      "ci": [
+        0.0,
+        0.32
+      ],
+      "weight": 0.61,
+      "provenance": "llm_domain",
+      "note": "Optimum 3, dim 5"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Belief derived from approximate analytic model; depths and widths reflect provided parameters."
+  }
+}

@@ -1,0 +1,10 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: vanilla-bo-ei
+label: Vanilla BO (EI)
+role: internal-baseline
+implementation_status: available
+isolated_worker: true
+strategy: vanilla-bo
+requires_prior: false
+acquisition: expected-improvement
+

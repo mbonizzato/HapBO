@@ -1,0 +1,19 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: lgbo
+label: LGBO region-lifted LLM-guided BO (reimplemented from the paper)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: lgbo
+requires_prior: false
+note: >-
+  From-paper implementation of LGBO (ICLR 2026, arXiv 2605.17976). Each BO iteration
+  the local LLM (thinking disabled) returns a point or region preference with a
+  confidence c; the region is discretized on a Sobol grid and the current GP posterior
+  mean is shifted by shift(X) = c*Sigma_XG*a/sqrt(a^T*Sigma_GG*a) with posterior
+  covariances, leaving the covariance unchanged; log-EI is maximized on the shifted
+  posterior. The GP is Matern-5/2 with hyperparameters re-estimated by marginal
+  likelihood each iteration; two initial locations are requested from the LLM.
+  requires_prior:false -- LGBO makes its own guidance in the loop and does not consume
+  the compiled prior. See src/baselines/workers/lgbo_worker.py.

@@ -1,0 +1,205 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "svm-blood_transfusion",
+  "modality": "llm-card-misleading",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "c": 1024,
+        "gamma": 1
+      },
+      "c": {
+        "c": 1024,
+        "gamma": 1
+      },
+      "s": 0.95,
+      "kept": true,
+      "side_encoded": 0.050001000000000045,
+      "center_encoded": [
+        1.0,
+        0.5
+      ],
+      "box_encoded": {
+        "lb": [
+          0.9749995,
+          0.47499949999999996
+        ],
+        "ub": [
+          1.0,
+          0.5250005
+        ]
+      },
+      "box_native": {
+        "c": [
+          724.0723250307251,
+          1024.0
+        ],
+        "gamma": [
+          0.7071018799128161,
+          1.4142233649885028
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "c": 512,
+        "gamma": 1
+      },
+      "c": {
+        "c": 512,
+        "gamma": 1
+      },
+      "s": 0.6,
+      "kept": true,
+      "side_encoded": 0.400001,
+      "center_encoded": [
+        0.95,
+        0.5
+      ],
+      "box_encoded": {
+        "lb": [
+          0.7499994999999999,
+          0.2999995
+        ],
+        "ub": [
+          1.0,
+          0.7000005
+        ]
+      },
+      "box_native": {
+        "c": [
+          31.999778193670934,
+          1024.0
+        ],
+        "gamma": [
+          0.06249956678451355,
+          16.00011090393327
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "c": 1024,
+        "gamma": 0.5
+      },
+      "c": {
+        "c": 1024,
+        "gamma": 0.5
+      },
+      "s": 0.55,
+      "kept": true,
+      "side_encoded": 0.45000099999999993,
+      "center_encoded": [
+        1.0,
+        0.45
+      ],
+      "box_encoded": {
+        "lb": [
+          0.7749995000000001,
+          0.22499950000000005
+        ],
+        "ub": [
+          1.0,
+          0.6750005
+        ]
+      },
+      "box_native": {
+        "c": [
+          45.2545203144203,
+          1024.0
+        ],
+        "gamma": [
+          0.022096933747275536,
+          11.313786919908026
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "c",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "name": "gamma",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 934,
+    "completion_tokens": 439
+  },
+  "source_prompt_card": "experiments/priors/hpobench-svm-blood-transfusion/blood-transfusion/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "05e6d69c251b01849e7e5d3dba305d3f00827df2cb51c30cdc0b36c418a760c2",
+  "adversarial_hint": "experiments/misleading_descriptions/hpobench-tabular/svm-blood_transfusion.txt",
+  "adversarial_hint_sha256": "bfd2f1e2bad251f067ee923ed45064f8d7a5cacf6c382bff0323ae431a5119b3",
+  "prompt_sha256": "b82d68618af7d90f6b02f49d494882560224f805051cb9ab8bf3a64e405e2c09",
+  "created_at_utc": "2026-11-07T20:07:31.511288+00:00"
+}

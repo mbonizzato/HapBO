@@ -1,0 +1,240 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "svm-vehicle",
+  "modality": "llm-card",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "c": 4,
+        "gamma": 4
+      },
+      "c": {
+        "c": 4,
+        "gamma": 4
+      },
+      "s": 0.75,
+      "kept": true,
+      "side_encoded": 0.250001,
+      "center_encoded": [
+        0.6,
+        0.6
+      ],
+      "box_encoded": {
+        "lb": [
+          0.4749995,
+          0.4749995
+        ],
+        "ub": [
+          0.7250004999999999,
+          0.7250004999999999
+        ]
+      },
+      "box_native": {
+        "c": [
+          0.7071018799128168,
+          22.627573839816012
+        ],
+        "gamma": [
+          0.7071018799128168,
+          22.627573839816012
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "c": 8,
+        "gamma": 2
+      },
+      "c": {
+        "c": 8,
+        "gamma": 2
+      },
+      "s": 0.65,
+      "kept": true,
+      "side_encoded": 0.35000099999999995,
+      "center_encoded": [
+        0.6499999999999999,
+        0.55
+      ],
+      "box_encoded": {
+        "lb": [
+          0.4749994999999999,
+          0.37499950000000004
+        ],
+        "ub": [
+          0.8250004999999999,
+          0.7250005
+        ]
+      },
+      "box_native": {
+        "c": [
+          0.7071018799128156,
+          90.51029535926406
+        ],
+        "gamma": [
+          0.17677546997820434,
+          22.62757383981605
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "c": 2,
+        "gamma": 8
+      },
+      "c": {
+        "c": 2,
+        "gamma": 8
+      },
+      "s": 0.6,
+      "kept": true,
+      "side_encoded": 0.400001,
+      "center_encoded": [
+        0.55,
+        0.6499999999999999
+      ],
+      "box_encoded": {
+        "lb": [
+          0.3499995,
+          0.4499994999999999
+        ],
+        "ub": [
+          0.7500005000000001,
+          0.8500004999999999
+        ]
+      },
+      "box_native": {
+        "c": [
+          0.12499913356902712,
+          32.000221807866545
+        ],
+        "gamma": [
+          0.4999965342761077,
+          128.00088723146595
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "c": 16,
+        "gamma": 1
+      },
+      "c": {
+        "c": 16,
+        "gamma": 1
+      },
+      "s": 0.55,
+      "kept": true,
+      "side_encoded": 0.45000099999999993,
+      "center_encoded": [
+        0.7,
+        0.5
+      ],
+      "box_encoded": {
+        "lb": [
+          0.4749995,
+          0.27499950000000006
+        ],
+        "ub": [
+          0.9250004999999999,
+          0.7250004999999999
+        ]
+      },
+      "box_native": {
+        "c": [
+          0.7071018799128168,
+          362.0411814370563
+        ],
+        "gamma": [
+          0.04419386749455108,
+          22.627573839816012
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "c",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "name": "gamma",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 896,
+    "completion_tokens": 659
+  },
+  "source_prompt_card": "experiments/priors/hpobench-svm-vehicle/vehicle/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "0f7b9b42c54fa299099a15b2ececccc4b4bc39d93e32808cce42718c92fb3f2a",
+  "prompt_sha256": "5c6166f264e4efff9e1dc7aece124e26c9c257a00df71cf05d0a49fa3315d851",
+  "created_at_utc": "2026-11-07T20:06:15.763183+00:00"
+}

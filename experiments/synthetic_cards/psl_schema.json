@@ -1,0 +1,730 @@
+{
+  "$defs": {
+    "belief": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "level": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "tilt": {
+              "additionalProperties": {
+                "maximum": 1,
+                "minimum": -1,
+                "type": "number"
+              },
+              "type": "object"
+            },
+            "token": {
+              "const": "baseline"
+            }
+          },
+          "title": "baseline"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "ci": {
+              "$ref": "#/$defs/ci"
+            },
+            "dim": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "number"
+            },
+            "note": {
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "sign": {
+              "enum": [
+                "peak",
+                "trough"
+              ]
+            },
+            "skew": {
+              "maximum": 1,
+              "minimum": -1,
+              "type": "number"
+            },
+            "token": {
+              "const": "bump"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            }
+          },
+          "required": [
+            "token",
+            "dim",
+            "mode",
+            "weight",
+            "provenance"
+          ],
+          "title": "bump"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "dim": {
+              "type": "string"
+            },
+            "direction": {
+              "enum": [
+                "increase",
+                "decrease"
+              ]
+            },
+            "knee": {
+              "type": "number"
+            },
+            "note": {
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "token": {
+              "const": "trend"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            }
+          },
+          "required": [
+            "token",
+            "dim",
+            "direction",
+            "weight",
+            "provenance"
+          ],
+          "title": "trend"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "active": {
+              "enum": [
+                "above",
+                "below"
+              ]
+            },
+            "at": {
+              "type": "number"
+            },
+            "dim": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "sharpness": {
+              "enum": [
+                "soft",
+                "sharp"
+              ]
+            },
+            "token": {
+              "const": "threshold"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            }
+          },
+          "required": [
+            "token",
+            "dim",
+            "at",
+            "active",
+            "weight",
+            "provenance"
+          ],
+          "title": "threshold"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "dim": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "period": {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            "phase": {
+              "type": "number"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "token": {
+              "const": "periodic"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            }
+          },
+          "required": [
+            "token",
+            "dim",
+            "period",
+            "weight",
+            "provenance"
+          ],
+          "title": "periodic"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "dim": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "preferences": {
+              "additionalProperties": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              },
+              "type": "object"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "token": {
+              "const": "categorical"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            }
+          },
+          "required": [
+            "token",
+            "dim",
+            "preferences",
+            "weight",
+            "provenance"
+          ],
+          "title": "categorical"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "ci": {
+              "additionalProperties": {
+                "$ref": "#/$defs/ci"
+              },
+              "type": "object"
+            },
+            "dims": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 2,
+              "type": "array"
+            },
+            "mode": {
+              "additionalProperties": {
+                "type": "number"
+              },
+              "type": "object"
+            },
+            "note": {
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "token": {
+              "const": "joint_region"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            }
+          },
+          "required": [
+            "token",
+            "dims",
+            "mode",
+            "weight",
+            "provenance"
+          ],
+          "title": "joint_region"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "dims": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "note": {
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "relation": {
+              "enum": [
+                "negative",
+                "positive"
+              ]
+            },
+            "through": {
+              "additionalProperties": {
+                "type": "number"
+              },
+              "type": "object"
+            },
+            "token": {
+              "const": "ridge"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            },
+            "width": {
+              "enum": [
+                "narrow",
+                "medium",
+                "wide"
+              ]
+            }
+          },
+          "required": [
+            "token",
+            "dims",
+            "relation",
+            "weight",
+            "provenance"
+          ],
+          "title": "ridge"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "mode": {
+              "enum": [
+                "gate",
+                "synergy"
+              ]
+            },
+            "note": {
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "then": {
+              "type": "object"
+            },
+            "token": {
+              "const": "conditional"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            },
+            "when": {
+              "additionalProperties": false,
+              "properties": {
+                "dim": {
+                  "type": "string"
+                },
+                "region": {
+                  "$ref": "#/$defs/ci"
+                }
+              },
+              "required": [
+                "dim",
+                "region"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "token",
+            "when",
+            "then",
+            "weight",
+            "provenance"
+          ],
+          "title": "conditional"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "note": {
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "region": {
+              "additionalProperties": {
+                "$ref": "#/$defs/ci"
+              },
+              "type": "object"
+            },
+            "token": {
+              "const": "plateau"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            }
+          },
+          "required": [
+            "token",
+            "region",
+            "weight",
+            "provenance"
+          ],
+          "title": "plateau"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "ci": {
+              "$ref": "#/$defs/ci"
+            },
+            "dim": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "number"
+            },
+            "note": {
+              "type": "string"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "region": {
+              "additionalProperties": {
+                "$ref": "#/$defs/ci"
+              },
+              "type": "object"
+            },
+            "token": {
+              "const": "avoid"
+            },
+            "weight": {
+              "$ref": "#/$defs/weight"
+            }
+          },
+          "required": [
+            "token",
+            "weight",
+            "provenance"
+          ],
+          "title": "avoid"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "bandwidth": {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            "note": {
+              "type": "string"
+            },
+            "points": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "coords": {
+                    "type": "object"
+                  },
+                  "value": {
+                    "maximum": 1,
+                    "minimum": 0,
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "coords",
+                  "value"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "provenance": {
+              "$ref": "#/$defs/provenance"
+            },
+            "token": {
+              "const": "anchors"
+            }
+          },
+          "required": [
+            "token",
+            "points"
+          ],
+          "title": "anchors"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "level": {
+              "enum": [
+                "very_smooth",
+                "smooth",
+                "medium",
+                "rough",
+                "very_rough"
+              ]
+            },
+            "per_dim": {
+              "additionalProperties": {
+                "enum": [
+                  "very_smooth",
+                  "smooth",
+                  "medium",
+                  "rough",
+                  "very_rough"
+                ]
+              },
+              "type": "object"
+            },
+            "token": {
+              "const": "smoothness"
+            }
+          },
+          "required": [
+            "token"
+          ],
+          "title": "smoothness"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "level": {
+              "enum": [
+                "low",
+                "medium",
+                "high",
+                "very_high"
+              ]
+            },
+            "repeats_recommended": {
+              "type": "boolean"
+            },
+            "token": {
+              "const": "noise"
+            }
+          },
+          "required": [
+            "token",
+            "level"
+          ],
+          "title": "noise"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "expectation": {
+              "enum": [
+                "unimodal",
+                "few",
+                "many"
+              ]
+            },
+            "n_optima": {
+              "minimum": 1,
+              "type": "integer"
+            },
+            "token": {
+              "const": "modality"
+            }
+          },
+          "required": [
+            "token"
+          ],
+          "title": "modality"
+        }
+      ],
+      "properties": {
+        "token": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "token"
+      ],
+      "type": "object"
+    },
+    "ci": {
+      "items": {
+        "type": "number"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "type": "array"
+    },
+    "provenance": {
+      "enum": [
+        "user_stated",
+        "user_confirmed",
+        "literature",
+        "llm_domain",
+        "llm_default"
+      ]
+    },
+    "weight": {
+      "maximum": 1,
+      "minimum": 0,
+      "type": "number"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "beliefs": {
+      "items": {
+        "$ref": "#/$defs/belief"
+      },
+      "type": "array"
+    },
+    "schema": {
+      "additionalProperties": false,
+      "properties": {
+        "dimensions": {
+          "items": {
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "const": "continuous"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "range"
+                  ]
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "ordinal",
+                        "categorical"
+                      ]
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "values"
+                  ]
+                }
+              }
+            ],
+            "properties": {
+              "meaning": {
+                "type": "string"
+              },
+              "name": {
+                "pattern": "^[a-z][a-z0-9_]*$",
+                "type": "string"
+              },
+              "range": {
+                "items": {
+                  "type": "number"
+                },
+                "maxItems": 2,
+                "minItems": 2,
+                "type": "array"
+              },
+              "scale": {
+                "enum": [
+                  "linear",
+                  "log"
+                ]
+              },
+              "type": {
+                "enum": [
+                  "continuous",
+                  "ordinal",
+                  "categorical"
+                ]
+              },
+              "values": {
+                "minItems": 1,
+                "type": "array"
+              }
+            },
+            "required": [
+              "name",
+              "type"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "objective": {
+          "enum": [
+            "maximize",
+            "minimize"
+          ]
+        }
+      },
+      "required": [
+        "objective",
+        "dimensions"
+      ],
+      "type": "object"
+    },
+    "trust": {
+      "additionalProperties": false,
+      "properties": {
+        "notes": {
+          "type": "string"
+        },
+        "overall_confidence": {
+          "enum": [
+            "very_low",
+            "low",
+            "medium",
+            "high",
+            "very_high"
+          ]
+        }
+      },
+      "required": [
+        "overall_confidence"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema",
+    "beliefs",
+    "trust"
+  ],
+  "title": "HapBO PSL belief document",
+  "type": "object"
+}

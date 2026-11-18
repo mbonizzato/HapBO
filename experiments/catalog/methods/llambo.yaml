@@ -1,0 +1,15 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: llambo
+label: LLAMBO-discriminative (pinned upstream)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: llambo
+requires_prior: false
+note: >-
+  Pinned LLAMBO discriminative optimizer run through its native init_f and
+  bbox_eval_f loop. Continuous encoded proposals are snapped to the nearest
+  finite candidate; the OpenAI 0.x calls go to a locally served
+  OpenAI-compatible endpoint (Qwen) with thinking disabled. See
+  external/PINNED_COMMITS.txt.

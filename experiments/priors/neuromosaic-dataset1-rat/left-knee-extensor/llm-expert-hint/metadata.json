@@ -1,0 +1,37 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-expert-hint",
+  "dataset_id": "neuromosaic-dataset1-rat",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "cortical MEP: LeftKneeExtensor",
+    "target_name": "LeftKneeExtensor",
+    "target_slug": "left-knee-extensor",
+    "uses_observed_objective_values": false
+  },
+  "card": {
+    "human_statement": true
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-10-08T04:10:29.342305+00:00",
+    "generated_at": "2026-10-08T04:12:02.987213+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=True; api_calls=2; replicated from left-knee-flexor (one prior per condition)"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "9262f801c5ae1015b7addaa42bcbdd3caf1073109157fd08ee91d2c4b144534b"
+    },
+    "prior.json": {
+      "sha256": "063d081508b52bbdc5b1ed84b6dcc215ec8db3f04acf4fb679c5c703429cbb49"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card_neutral_example.md",
+    "sha256": "b98d5cbfe419115a1fe656a79724df473ac0caa8025ed531665e8f0c07bb181c"
+  },
+  "finalized_at_utc": "2026-11-16T01:37:32.765212+00:00"
+}

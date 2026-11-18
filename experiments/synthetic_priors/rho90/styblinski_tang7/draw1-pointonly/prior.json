@@ -1,0 +1,172 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -3.0,
+      "ci": [
+        -4.5,
+        -1.5
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.29,
+      "ci": [
+        -2.79,
+        0.20999999999999996
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.12,
+      "ci": [
+        -3.62,
+        -0.6200000000000001
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.4,
+      "ci": [
+        -4.9,
+        -1.9
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.45,
+      "ci": [
+        -2.95,
+        0.050000000000000044
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.46,
+      "ci": [
+        -4.96,
+        -1.96
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.2,
+      "ci": [
+        -2.7,
+        0.30000000000000004
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Prior based on approximate analytic model; global minima locations calculated from derivative roots."
+  }
+}

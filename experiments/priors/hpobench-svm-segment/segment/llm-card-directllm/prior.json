@@ -1,0 +1,985 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "c",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "SVM penalty parameter (larger means weaker regularization)"
+      },
+      {
+        "name": "gamma",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "RBF kernel coefficient (larger means narrower kernel)"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "bandwidth": 0.12,
+      "points": [
+        {
+          "coords": {
+            "c": 128,
+            "gamma": 512
+          },
+          "value": 0.058
+        },
+        {
+          "coords": {
+            "c": 0.5,
+            "gamma": 0.0078125
+          },
+          "value": 0.2029
+        },
+        {
+          "coords": {
+            "c": 0.03125,
+            "gamma": 4
+          },
+          "value": 0.1014
+        },
+        {
+          "coords": {
+            "c": 4,
+            "gamma": 0.0625
+          },
+          "value": 0.6377
+        },
+        {
+          "coords": {
+            "c": 8,
+            "gamma": 16
+          },
+          "value": 0.1594
+        },
+        {
+          "coords": {
+            "c": 0.0009765625,
+            "gamma": 0.5
+          },
+          "value": 0.0145
+        },
+        {
+          "coords": {
+            "c": 0.0625,
+            "gamma": 64
+          },
+          "value": 0.0725
+        },
+        {
+          "coords": {
+            "c": 256,
+            "gamma": 0.0009765625
+          },
+          "value": 0.029
+        },
+        {
+          "coords": {
+            "c": 1024,
+            "gamma": 1
+          },
+          "value": 0.0435
+        },
+        {
+          "coords": {
+            "c": 0.125,
+            "gamma": 0.03125
+          },
+          "value": 0.3478
+        },
+        {
+          "coords": {
+            "c": 0.00390625,
+            "gamma": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "c": 16,
+            "gamma": 0.03125
+          },
+          "value": 0.4928
+        },
+        {
+          "coords": {
+            "c": 2,
+            "gamma": 128
+          },
+          "value": 0.087
+        },
+        {
+          "coords": {
+            "c": 0.0078125,
+            "gamma": 0.00390625
+          },
+          "value": 0.0145
+        },
+        {
+          "coords": {
+            "c": 0.25,
+            "gamma": 8
+          },
+          "value": 0.4203
+        },
+        {
+          "coords": {
+            "c": 32,
+            "gamma": 0.25
+          },
+          "value": 0.5652
+        },
+        {
+          "coords": {
+            "c": 64,
+            "gamma": 8
+          },
+          "value": 0.2464
+        },
+        {
+          "coords": {
+            "c": 0.25,
+            "gamma": 0.5
+          },
+          "value": 0.3043
+        },
+        {
+          "coords": {
+            "c": 0.0078125,
+            "gamma": 128
+          },
+          "value": 0.029
+        },
+        {
+          "coords": {
+            "c": 2,
+            "gamma": 0.001953125
+          },
+          "value": 0.0435
+        },
+        {
+          "coords": {
+            "c": 32,
+            "gamma": 512
+          },
+          "value": 0.058
+        },
+        {
+          "coords": {
+            "c": 0.001953125,
+            "gamma": 0.015625
+          },
+          "value": 0.0145
+        },
+        {
+          "coords": {
+            "c": 0.125,
+            "gamma": 2
+          },
+          "value": 0.3913
+        },
+        {
+          "coords": {
+            "c": 1024,
+            "gamma": 0.0625
+          },
+          "value": 0.0435
+        },
+        {
+          "coords": {
+            "c": 512,
+            "gamma": 64
+          },
+          "value": 0.0725
+        },
+        {
+          "coords": {
+            "c": 0.03125,
+            "gamma": 0.0009765625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "c": 0.0009765625,
+            "gamma": 32
+          },
+          "value": 0.0145
+        },
+        {
+          "coords": {
+            "c": 8,
+            "gamma": 1
+          },
+          "value": 0.7826
+        },
+        {
+          "coords": {
+            "c": 8,
+            "gamma": 8
+          },
+          "value": 0.7101
+        },
+        {
+          "coords": {
+            "c": 0.015625,
+            "gamma": 0.125
+          },
+          "value": 0.2754
+        },
+        {
+          "coords": {
+            "c": 0.5,
+            "gamma": 512
+          },
+          "value": 0.029
+        },
+        {
+          "coords": {
+            "c": 128,
+            "gamma": 0.00390625
+          },
+          "value": 0.0725
+        },
+        {
+          "coords": {
+            "c": 128,
+            "gamma": 4
+          },
+          "value": 0.1304
+        },
+        {
+          "coords": {
+            "c": 1,
+            "gamma": 0.125
+          },
+          "value": 0.5362
+        },
+        {
+          "coords": {
+            "c": 0.015625,
+            "gamma": 512
+          },
+          "value": 0.0145
+        },
+        {
+          "coords": {
+            "c": 4,
+            "gamma": 0.0078125
+          },
+          "value": 0.2029
+        },
+        {
+          "coords": {
+            "c": 8,
+            "gamma": 64
+          },
+          "value": 0.1884
+        },
+        {
+          "coords": {
+            "c": 0.001953125,
+            "gamma": 0.001953125
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "c": 0.03125,
+            "gamma": 16
+          },
+          "value": 0.2174
+        },
+        {
+          "coords": {
+            "c": 512,
+            "gamma": 0.5
+          },
+          "value": 0.058
+        },
+        {
+          "coords": {
+            "c": 512,
+            "gamma": 1024
+          },
+          "value": 0.0435
+        },
+        {
+          "coords": {
+            "c": 0.125,
+            "gamma": 0.015625
+          },
+          "value": 0.2464
+        },
+        {
+          "coords": {
+            "c": 0.001953125,
+            "gamma": 1
+          },
+          "value": 0.029
+        },
+        {
+          "coords": {
+            "c": 32,
+            "gamma": 0.03125
+          },
+          "value": 0.2754
+        },
+        {
+          "coords": {
+            "c": 1,
+            "gamma": 8
+          },
+          "value": 0.5942
+        },
+        {
+          "coords": {
+            "c": 0.0078125,
+            "gamma": 0.25
+          },
+          "value": 0.1594
+        },
+        {
+          "coords": {
+            "c": 0.25,
+            "gamma": 256
+          },
+          "value": 0.0145
+        },
+        {
+          "coords": {
+            "c": 64,
+            "gamma": 0.00390625
+          },
+          "value": 0.087
+        },
+        {
+          "coords": {
+            "c": 64,
+            "gamma": 128
+          },
+          "value": 0.1014
+        },
+        {
+          "coords": {
+            "c": 0.5,
+            "gamma": 0.001953125
+          },
+          "value": 0.029
+        },
+        {
+          "coords": {
+            "c": 0.00390625,
+            "gamma": 16
+          },
+          "value": 0.4493
+        },
+        {
+          "coords": {
+            "c": 2,
+            "gamma": 0.25
+          },
+          "value": 0.6812
+        },
+        {
+          "coords": {
+            "c": 32,
+            "gamma": 2
+          },
+          "value": 0.0725
+        },
+        {
+          "coords": {
+            "c": 0.00390625,
+            "gamma": 0.0625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "c": 0.0625,
+            "gamma": 1024
+          },
+          "value": 0.0145
+        },
+        {
+          "coords": {
+            "c": 1024,
+            "gamma": 0.015625
+          },
+          "value": 0.029
+        },
+        {
+          "coords": {
+            "c": 256,
+            "gamma": 32
+          },
+          "value": 0.0435
+        },
+        {
+          "coords": {
+            "c": 0.03125,
+            "gamma": 1
+          },
+          "value": 0.0145
+        },
+        {
+          "coords": {
+            "c": 0.0009765625,
+            "gamma": 32
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "c": 16,
+            "gamma": 0.0009765625
+          },
+          "value": 0.0145
+        },
+        {
+          "coords": {
+            "c": 4,
+            "gamma": 256
+          },
+          "value": 0.029
+        },
+        {
+          "coords": {
+            "c": 0.015625,
+            "gamma": 0.0078125
+          },
+          "value": 0.0435
+        },
+        {
+          "coords": {
+            "c": 0.5,
+            "gamma": 4
+          },
+          "value": 0.058
+        },
+        {
+          "coords": {
+            "c": 256,
+            "gamma": 0.125
+          },
+          "value": 0.0725
+        },
+        {
+          "coords": {
+            "c": 256,
+            "gamma": 16
+          },
+          "value": 0.087
+        },
+        {
+          "coords": {
+            "c": 0.5,
+            "gamma": 0.5
+          },
+          "value": 0.1014
+        },
+        {
+          "coords": {
+            "c": 0.015625,
+            "gamma": 64
+          },
+          "value": 0.1159
+        },
+        {
+          "coords": {
+            "c": 2,
+            "gamma": 0.001953125
+          },
+          "value": 0.1304
+        },
+        {
+          "coords": {
+            "c": 16,
+            "gamma": 512
+          },
+          "value": 0.1449
+        },
+        {
+          "coords": {
+            "c": 0.0009765625,
+            "gamma": 0.0078125
+          },
+          "value": 0.1594
+        },
+        {
+          "coords": {
+            "c": 0.0625,
+            "gamma": 2
+          },
+          "value": 0.1739
+        },
+        {
+          "coords": {
+            "c": 256,
+            "gamma": 0.125
+          },
+          "value": 0.1884
+        },
+        {
+          "coords": {
+            "c": 1024,
+            "gamma": 256
+          },
+          "value": 0.2029
+        },
+        {
+          "coords": {
+            "c": 0.0625,
+            "gamma": 0.00390625
+          },
+          "value": 0.2174
+        },
+        {
+          "coords": {
+            "c": 0.00390625,
+            "gamma": 8
+          },
+          "value": 0.2319
+        },
+        {
+          "coords": {
+            "c": 16,
+            "gamma": 0.25
+          },
+          "value": 0.2464
+        },
+        {
+          "coords": {
+            "c": 2,
+            "gamma": 1
+          },
+          "value": 0.2609
+        },
+        {
+          "coords": {
+            "c": 0.00390625,
+            "gamma": 0.03125
+          },
+          "value": 0.2754
+        },
+        {
+          "coords": {
+            "c": 0.5,
+            "gamma": 1024
+          },
+          "value": 0.2899
+        },
+        {
+          "coords": {
+            "c": 64,
+            "gamma": 0.015625
+          },
+          "value": 0.3043
+        },
+        {
+          "coords": {
+            "c": 128,
+            "gamma": 1024
+          },
+          "value": 0.3188
+        },
+        {
+          "coords": {
+            "c": 0.25,
+            "gamma": 0.0078125
+          },
+          "value": 0.3333
+        },
+        {
+          "coords": {
+            "c": 0.0078125,
+            "gamma": 2
+          },
+          "value": 0.3478
+        },
+        {
+          "coords": {
+            "c": 1,
+            "gamma": 0.0625
+          },
+          "value": 0.3623
+        },
+        {
+          "coords": {
+            "c": 32,
+            "gamma": 16
+          },
+          "value": 0.3768
+        },
+        {
+          "coords": {
+            "c": 0.001953125,
+            "gamma": 0.25
+          },
+          "value": 0.3913
+        },
+        {
+          "coords": {
+            "c": 0.125,
+            "gamma": 128
+          },
+          "value": 0.4058
+        },
+        {
+          "coords": {
+            "c": 512,
+            "gamma": 0.001953125
+          },
+          "value": 0.4203
+        },
+        {
+          "coords": {
+            "c": 512,
+            "gamma": 4
+          },
+          "value": 0.4348
+        },
+        {
+          "coords": {
+            "c": 0.03125,
+            "gamma": 0.125
+          },
+          "value": 0.4493
+        },
+        {
+          "coords": {
+            "c": 0.001953125,
+            "gamma": 256
+          },
+          "value": 0.4638
+        },
+        {
+          "coords": {
+            "c": 8,
+            "gamma": 0.0078125
+          },
+          "value": 0.4783
+        },
+        {
+          "coords": {
+            "c": 4,
+            "gamma": 32
+          },
+          "value": 0.4928
+        },
+        {
+          "coords": {
+            "c": 0.015625,
+            "gamma": 0.0009765625
+          },
+          "value": 0.5072
+        },
+        {
+          "coords": {
+            "c": 1,
+            "gamma": 32
+          },
+          "value": 0.5217
+        },
+        {
+          "coords": {
+            "c": 128,
+            "gamma": 1
+          },
+          "value": 0.5362
+        },
+        {
+          "coords": {
+            "c": 128,
+            "gamma": 64
+          },
+          "value": 0.5507
+        },
+        {
+          "coords": {
+            "c": 1,
+            "gamma": 0.0009765625
+          },
+          "value": 0.5652
+        },
+        {
+          "coords": {
+            "c": 0.015625,
+            "gamma": 16
+          },
+          "value": 0.5797
+        },
+        {
+          "coords": {
+            "c": 4,
+            "gamma": 0.5
+          },
+          "value": 0.5942
+        },
+        {
+          "coords": {
+            "c": 8,
+            "gamma": 4
+          },
+          "value": 0.6087
+        },
+        {
+          "coords": {
+            "c": 0.0009765625,
+            "gamma": 0.0625
+          },
+          "value": 0.6232
+        },
+        {
+          "coords": {
+            "c": 0.03125,
+            "gamma": 512
+          },
+          "value": 0.6377
+        },
+        {
+          "coords": {
+            "c": 512,
+            "gamma": 0.0078125
+          },
+          "value": 0.6522
+        },
+        {
+          "coords": {
+            "c": 1024,
+            "gamma": 8
+          },
+          "value": 0.6667
+        },
+        {
+          "coords": {
+            "c": 0.125,
+            "gamma": 0.25
+          },
+          "value": 0.6812
+        },
+        {
+          "coords": {
+            "c": 0.001953125,
+            "gamma": 128
+          },
+          "value": 0.6957
+        },
+        {
+          "coords": {
+            "c": 32,
+            "gamma": 0.00390625
+          },
+          "value": 0.7101
+        },
+        {
+          "coords": {
+            "c": 1,
+            "gamma": 1024
+          },
+          "value": 0.7246
+        },
+        {
+          "coords": {
+            "c": 0.0078125,
+            "gamma": 0.03125
+          },
+          "value": 0.7391
+        },
+        {
+          "coords": {
+            "c": 0.25,
+            "gamma": 1
+          },
+          "value": 0.7536
+        },
+        {
+          "coords": {
+            "c": 64,
+            "gamma": 0.03125
+          },
+          "value": 0.7681
+        },
+        {
+          "coords": {
+            "c": 64,
+            "gamma": 2
+          },
+          "value": 0.7826
+        },
+        {
+          "coords": {
+            "c": 0.25,
+            "gamma": 0.0625
+          },
+          "value": 0.7971
+        },
+        {
+          "coords": {
+            "c": 0.0078125,
+            "gamma": 512
+          },
+          "value": 0.8116
+        },
+        {
+          "coords": {
+            "c": 2,
+            "gamma": 0.015625
+          },
+          "value": 0.8261
+        },
+        {
+          "coords": {
+            "c": 16,
+            "gamma": 128
+          },
+          "value": 0.8406
+        },
+        {
+          "coords": {
+            "c": 0.00390625,
+            "gamma": 0.001953125
+          },
+          "value": 0.8551
+        },
+        {
+          "coords": {
+            "c": 0.125,
+            "gamma": 8
+          },
+          "value": 0.8696
+        },
+        {
+          "coords": {
+            "c": 1024,
+            "gamma": 0.25
+          },
+          "value": 0.8841
+        },
+        {
+          "coords": {
+            "c": 256,
+            "gamma": 256
+          },
+          "value": 0.8986
+        },
+        {
+          "coords": {
+            "c": 0.0625,
+            "gamma": 0.00390625
+          },
+          "value": 0.913
+        },
+        {
+          "coords": {
+            "c": 0.0009765625,
+            "gamma": 4
+          },
+          "value": 0.9275
+        },
+        {
+          "coords": {
+            "c": 16,
+            "gamma": 0.125
+          },
+          "value": 0.942
+        },
+        {
+          "coords": {
+            "c": 4,
+            "gamma": 32
+          },
+          "value": 0.9565
+        },
+        {
+          "coords": {
+            "c": 0.03125,
+            "gamma": 0.5
+          },
+          "value": 0.971
+        },
+        {
+          "coords": {
+            "c": 0.5,
+            "gamma": 64
+          },
+          "value": 0.9855
+        },
+        {
+          "coords": {
+            "c": 128,
+            "gamma": 0.0009765625
+          },
+          "value": 1.0
+        }
+      ],
+      "note": "direct-LLM: raw one-shot LLM grid scores (no PSL compiler)"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on general SVM theory and typical behavior on medium-sized numeric datasets. The exact optimum depends on the specific data distribution, but the log-log sweet spot is usually central."
+  }
+}

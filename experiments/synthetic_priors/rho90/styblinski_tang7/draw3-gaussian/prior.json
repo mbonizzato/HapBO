@@ -1,0 +1,256 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -3.02,
+      "ci": [
+        -3.22,
+        -2.82
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Global minimum of dimension 0 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.79,
+      "ci": [
+        2.59,
+        2.99
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Secondary minimum of dimension 0 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.33,
+      "ci": [
+        -1.53,
+        -1.13
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum of dimension 1 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.34,
+      "ci": [
+        4.14,
+        4.54
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Secondary minimum of dimension 1 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.17,
+      "ci": [
+        -2.37,
+        -1.97
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum of dimension 2 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.25,
+      "ci": [
+        4.05,
+        4.45
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Secondary minimum of dimension 2 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.42,
+      "ci": [
+        -3.62,
+        -3.22
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum of dimension 3 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.24,
+      "ci": [
+        2.04,
+        2.44
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Secondary minimum of dimension 3 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.5,
+      "ci": [
+        -1.7,
+        -1.3
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum of dimension 4 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 3.93,
+      "ci": [
+        3.73,
+        4.13
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Secondary minimum of dimension 4 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.49,
+      "ci": [
+        -3.69,
+        -3.29
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum of dimension 5 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.59,
+      "ci": [
+        2.39,
+        2.79
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Secondary minimum of dimension 5 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.23,
+      "ci": [
+        -1.43,
+        -1.03
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global minimum of dimension 6 term"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.15,
+      "ci": [
+        3.95,
+        4.35
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Secondary minimum of dimension 6 term"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on approximate analytic model with 7 separable quartic terms"
+  }
+}

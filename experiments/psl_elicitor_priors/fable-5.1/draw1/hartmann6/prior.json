@@ -1,0 +1,557 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05,
+      "tilt": {
+        "x3": -0.15,
+        "x4": -0.15,
+        "x2": 0.1
+      }
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x4"
+      ],
+      "mode": {
+        "x3": 0.1975,
+        "x4": 0.2178
+      },
+      "ci": {
+        "x3": [
+          0.0,
+          0.64
+        ],
+        "x4": [
+          0.0,
+          0.55
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "component 3 (alpha 2.766, largest in-box mass): narrow dims x3,x4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x4",
+        "x5"
+      ],
+      "mode": {
+        "x4": 0.2178,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x4": [
+          0.0,
+          0.55
+        ],
+        "x5": [
+          0.3,
+          1.0
+        ]
+      },
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "component 3: narrow dims x4,x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x5"
+      ],
+      "mode": {
+        "x3": 0.1975,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x3": [
+          0.0,
+          0.64
+        ],
+        "x5": [
+          0.3,
+          1.0
+        ]
+      },
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "component 3: narrow dims x3,x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.2353,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x1": [
+          0.0,
+          0.82
+        ],
+        "x5": [
+          0.3,
+          1.0
+        ]
+      },
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "component 3: low x1 with high x5 (separates it from component 4)"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4304,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.35,
+      "provenance": "llm_domain",
+      "note": "component 3 broad x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.2353,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.35,
+      "provenance": "llm_domain",
+      "note": "components 3 and 1 broad x1 (both low)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.5308,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.2,
+      "provenance": "llm_domain",
+      "note": "component 3 very broad x2"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x1"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x1": 0.98
+      },
+      "ci": {
+        "x0": [
+          0.19,
+          0.8
+        ],
+        "x1": [
+          0.37,
+          1.0
+        ]
+      },
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "component 4 (alpha 2.779, deepest): narrow dims x0,x1; x2,x4 flat"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x5"
+      ],
+      "mode": {
+        "x3": 0.3985,
+        "x5": 0.0339
+      },
+      "ci": {
+        "x3": [
+          0.02,
+          0.77
+        ],
+        "x5": [
+          0.0,
+          0.47
+        ]
+      },
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "component 4: narrow dims x3,x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x5"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x5": 0.0339
+      },
+      "ci": {
+        "x0": [
+          0.19,
+          0.8
+        ],
+        "x5": [
+          0.0,
+          0.47
+        ]
+      },
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "component 4: narrow dims x0,x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x3"
+      ],
+      "mode": {
+        "x1": 0.98,
+        "x3": 0.3985
+      },
+      "ci": {
+        "x1": [
+          0.37,
+          1.0
+        ],
+        "x3": [
+          0.02,
+          0.77
+        ]
+      },
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "component 4: narrow dims x1,x3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.98,
+        "x5": 0.0339
+      },
+      "ci": {
+        "x1": [
+          0.37,
+          1.0
+        ],
+        "x5": [
+          0.0,
+          0.47
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "component 4: high x1 with low x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x3"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x3": 0.3985
+      },
+      "ci": {
+        "x0": [
+          0.19,
+          0.8
+        ],
+        "x3": [
+          0.02,
+          0.77
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "component 4: narrow dims x0,x3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x5"
+      ],
+      "mode": {
+        "x2": 0.9455,
+        "x5": 0.98
+      },
+      "ci": {
+        "x2": [
+          0.53,
+          1.0
+        ],
+        "x5": [
+          0.55,
+          1.0
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "component 2 (alpha 1.402): narrow dims x2,x5; x0,x3 flat"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x4"
+      ],
+      "mode": {
+        "x1": 0.4413,
+        "x4": 0.062
+      },
+      "ci": {
+        "x1": [
+          0.09,
+          0.79
+        ],
+        "x4": [
+          0.0,
+          0.63
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "component 2: narrow dims x1,x4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x4"
+      ],
+      "mode": {
+        "x2": 0.9455,
+        "x4": 0.062
+      },
+      "ci": {
+        "x2": [
+          0.53,
+          1.0
+        ],
+        "x4": [
+          0.0,
+          0.63
+        ]
+      },
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "component 2: narrow dims x2,x4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.4413,
+        "x5": 0.98
+      },
+      "ci": {
+        "x1": [
+          0.09,
+          0.79
+        ],
+        "x5": [
+          0.55,
+          1.0
+        ]
+      },
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "component 2: narrow dims x1,x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x2"
+      ],
+      "mode": {
+        "x0": 0.3108,
+        "x2": 0.6592
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          0.71
+        ],
+        "x2": [
+          0.35,
+          0.97
+        ]
+      },
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "component 1 (alpha 1.073, shallowest): narrow dims x0,x2"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x5"
+      ],
+      "mode": {
+        "x2": 0.6592,
+        "x5": 0.5599
+      },
+      "ci": {
+        "x2": [
+          0.35,
+          0.97
+        ],
+        "x5": [
+          0.17,
+          0.95
+        ]
+      },
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "component 1: narrow dims x2,x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x5"
+      ],
+      "mode": {
+        "x0": 0.3108,
+        "x5": 0.5599
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          0.71
+        ],
+        "x5": [
+          0.17,
+          0.95
+        ]
+      },
+      "weight": 0.25,
+      "provenance": "llm_domain",
+      "note": "component 1: narrow dims x0,x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.7774,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.1,
+      "provenance": "llm_domain",
+      "note": "component 1 very broad x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.02,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.1,
+      "provenance": "llm_domain",
+      "note": "component 1 very broad x3 at low end"
+    },
+    {
+      "token": "modality",
+      "expectation": "few",
+      "n_optima": 4
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "noise",
+      "level": "low"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Sum of four separable Gaussian wells from the approximate analytic model; components 3 and 4 are the deepest (~-2.77/-2.78), component 2 ~-2.1 (helped by component 3 overlap), component 1 ~-1.07. Narrow-dimension pairs encoded as joint_regions, flat/broad dimensions as broad bumps; model calibration is approximate."
+  }
+}

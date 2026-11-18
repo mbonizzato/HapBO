@@ -1,0 +1,852 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.02
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x4"
+      ],
+      "mode": {
+        "x3": 0.1975,
+        "x4": 0.2178
+      },
+      "ci": {
+        "x3": [
+          0.0,
+          0.64
+        ],
+        "x4": [
+          0.0,
+          0.55
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "comp3 (alpha 2.766): sharpest pair x3/x4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x4",
+        "x5"
+      ],
+      "mode": {
+        "x4": 0.2178,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x4": [
+          0.0,
+          0.55
+        ],
+        "x5": [
+          0.3,
+          1.0
+        ]
+      },
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "comp3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x5"
+      ],
+      "mode": {
+        "x3": 0.1975,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x3": [
+          0.0,
+          0.64
+        ],
+        "x5": [
+          0.3,
+          1.0
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "comp3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x4"
+      ],
+      "mode": {
+        "x1": 0.2353,
+        "x4": 0.2178
+      },
+      "ci": {
+        "x1": [
+          0.0,
+          1.0
+        ],
+        "x4": [
+          0.0,
+          0.55
+        ]
+      },
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "comp3, broad x1 gated by x4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x4"
+      ],
+      "mode": {
+        "x0": 0.4304,
+        "x4": 0.2178
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          1.0
+        ],
+        "x4": [
+          0.0,
+          0.55
+        ]
+      },
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "comp3, broad x0 gated by x4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.2353,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x1": [
+          0.0,
+          1.0
+        ],
+        "x5": [
+          0.3,
+          1.0
+        ]
+      },
+      "weight": 0.35,
+      "provenance": "llm_domain",
+      "note": "comp3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x3"
+      ],
+      "mode": {
+        "x0": 0.4304,
+        "x3": 0.1975
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          1.0
+        ],
+        "x3": [
+          0.0,
+          0.64
+        ]
+      },
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "comp3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x5"
+      ],
+      "mode": {
+        "x2": 0.5308,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x2": [
+          0.0,
+          1.0
+        ],
+        "x5": [
+          0.3,
+          1.0
+        ]
+      },
+      "weight": 0.2,
+      "provenance": "llm_domain",
+      "note": "comp3, very broad x2"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x4"
+      ],
+      "mode": {
+        "x2": 0.5308,
+        "x4": 0.2178
+      },
+      "ci": {
+        "x2": [
+          0.0,
+          1.0
+        ],
+        "x4": [
+          0.0,
+          0.55
+        ]
+      },
+      "weight": 0.15,
+      "provenance": "llm_domain",
+      "note": "comp3, very broad x2"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.98,
+        "x5": 0.03393
+      },
+      "ci": {
+        "x1": [
+          0.365,
+          1.0
+        ],
+        "x5": [
+          0.0,
+          0.47
+        ]
+      },
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "comp4 (alpha 2.779): x1 high, x5 low; flat in x2/x4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x5"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x5": 0.03393
+      },
+      "ci": {
+        "x0": [
+          0.19,
+          0.8
+        ],
+        "x5": [
+          0.0,
+          0.47
+        ]
+      },
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "comp4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x1"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x1": 0.98
+      },
+      "ci": {
+        "x0": [
+          0.19,
+          0.8
+        ],
+        "x1": [
+          0.365,
+          1.0
+        ]
+      },
+      "weight": 0.75,
+      "provenance": "llm_domain",
+      "note": "comp4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x5"
+      ],
+      "mode": {
+        "x3": 0.3985,
+        "x5": 0.03393
+      },
+      "ci": {
+        "x3": [
+          0.02,
+          0.77
+        ],
+        "x5": [
+          0.0,
+          0.47
+        ]
+      },
+      "weight": 0.72,
+      "provenance": "llm_domain",
+      "note": "comp4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x3"
+      ],
+      "mode": {
+        "x1": 0.98,
+        "x3": 0.3985
+      },
+      "ci": {
+        "x1": [
+          0.365,
+          1.0
+        ],
+        "x3": [
+          0.02,
+          0.77
+        ]
+      },
+      "weight": 0.65,
+      "provenance": "llm_domain",
+      "note": "comp4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x3"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x3": 0.3985
+      },
+      "ci": {
+        "x0": [
+          0.19,
+          0.8
+        ],
+        "x3": [
+          0.02,
+          0.77
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "comp4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x5"
+      ],
+      "mode": {
+        "x2": 0.9455,
+        "x5": 0.98
+      },
+      "ci": {
+        "x2": [
+          0.53,
+          1.0
+        ],
+        "x5": [
+          0.546,
+          1.0
+        ]
+      },
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "comp2 (alpha 1.402): x2, x5 high; flat in x0/x3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x2"
+      ],
+      "mode": {
+        "x1": 0.4413,
+        "x2": 0.9455
+      },
+      "ci": {
+        "x1": [
+          0.09,
+          0.79
+        ],
+        "x2": [
+          0.53,
+          1.0
+        ]
+      },
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "comp2"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x4",
+        "x5"
+      ],
+      "mode": {
+        "x4": 0.06195,
+        "x5": 0.98
+      },
+      "ci": {
+        "x4": [
+          0.0,
+          0.635
+        ],
+        "x5": [
+          0.546,
+          1.0
+        ]
+      },
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "comp2"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.4413,
+        "x5": 0.98
+      },
+      "ci": {
+        "x1": [
+          0.09,
+          0.79
+        ],
+        "x5": [
+          0.546,
+          1.0
+        ]
+      },
+      "weight": 0.35,
+      "provenance": "llm_domain",
+      "note": "comp2"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x4"
+      ],
+      "mode": {
+        "x2": 0.9455,
+        "x4": 0.06195
+      },
+      "ci": {
+        "x2": [
+          0.53,
+          1.0
+        ],
+        "x4": [
+          0.0,
+          0.635
+        ]
+      },
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "comp2"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x4"
+      ],
+      "mode": {
+        "x1": 0.4413,
+        "x4": 0.06195
+      },
+      "ci": {
+        "x1": [
+          0.09,
+          0.79
+        ],
+        "x4": [
+          0.0,
+          0.635
+        ]
+      },
+      "weight": 0.28,
+      "provenance": "llm_domain",
+      "note": "comp2"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x2"
+      ],
+      "mode": {
+        "x0": 0.3108,
+        "x2": 0.6592
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          0.71
+        ],
+        "x2": [
+          0.348,
+          0.97
+        ]
+      },
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "comp1 (alpha 1.073): sharp in x0, x2, x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x5"
+      ],
+      "mode": {
+        "x2": 0.6592,
+        "x5": 0.5599
+      },
+      "ci": {
+        "x2": [
+          0.348,
+          0.97
+        ],
+        "x5": [
+          0.174,
+          0.946
+        ]
+      },
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "comp1"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x5"
+      ],
+      "mode": {
+        "x0": 0.3108,
+        "x5": 0.5599
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          0.71
+        ],
+        "x5": [
+          0.174,
+          0.946
+        ]
+      },
+      "weight": 0.35,
+      "provenance": "llm_domain",
+      "note": "comp1"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x3"
+      ],
+      "mode": {
+        "x2": 0.6592,
+        "x3": 0.02
+      },
+      "ci": {
+        "x2": [
+          0.348,
+          0.97
+        ],
+        "x3": [
+          0.0,
+          1.0
+        ]
+      },
+      "weight": 0.2,
+      "provenance": "llm_domain",
+      "note": "comp1, broad x3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.2053,
+        "x5": 0.5599
+      },
+      "ci": {
+        "x1": [
+          0.0,
+          1.0
+        ],
+        "x5": [
+          0.174,
+          0.946
+        ]
+      },
+      "weight": 0.2,
+      "provenance": "llm_domain",
+      "note": "comp1, broad x1"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x4"
+      ],
+      "mode": {
+        "x0": 0.3108,
+        "x4": 0.7774
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          0.71
+        ],
+        "x4": [
+          0.0,
+          1.0
+        ]
+      },
+      "weight": 0.16,
+      "provenance": "llm_domain",
+      "note": "comp1, very broad x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.2178,
+      "ci": [
+        0.0,
+        0.55
+      ],
+      "weight": 0.15,
+      "provenance": "llm_domain",
+      "note": "marginal: comp3 dominates mass"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.7382,
+      "ci": [
+        0.3,
+        1.0
+      ],
+      "weight": 0.15,
+      "provenance": "llm_domain",
+      "note": "marginal: comp3"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.03393,
+      "ci": [
+        0.0,
+        0.47
+      ],
+      "weight": 0.12,
+      "provenance": "llm_domain",
+      "note": "marginal: comp4"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.98,
+      "ci": [
+        0.365,
+        1.0
+      ],
+      "weight": 0.12,
+      "provenance": "llm_domain",
+      "note": "marginal: comp4"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.27,
+      "ci": [
+        0.0,
+        0.72
+      ],
+      "weight": 0.12,
+      "provenance": "llm_domain",
+      "note": "marginal: comp3 (0.20) + comp4 (0.40)"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.45,
+      "ci": [
+        0.1,
+        0.8
+      ],
+      "weight": 0.1,
+      "provenance": "llm_domain",
+      "note": "marginal: all x0-structured components sit in 0.31-0.49"
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "bandwidth": 0.15,
+      "note": "the four model minima at their relative depths (alpha_k / max alpha)",
+      "points": [
+        {
+          "coords": {
+            "x0": 0.4942,
+            "x1": 0.98,
+            "x2": 0.896,
+            "x3": 0.3985,
+            "x4": 0.04525,
+            "x5": 0.03393
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "x0": 0.4304,
+            "x1": 0.2353,
+            "x2": 0.5308,
+            "x3": 0.1975,
+            "x4": 0.2178,
+            "x5": 0.7382
+          },
+          "value": 0.995
+        },
+        {
+          "coords": {
+            "x0": 0.3962,
+            "x1": 0.4413,
+            "x2": 0.9455,
+            "x3": 0.2177,
+            "x4": 0.06195,
+            "x5": 0.98
+          },
+          "value": 0.5
+        },
+        {
+          "coords": {
+            "x0": 0.3108,
+            "x1": 0.2053,
+            "x2": 0.6592,
+            "x3": 0.02,
+            "x4": 0.7774,
+            "x5": 0.5599
+          },
+          "value": 0.39
+        }
+      ]
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "few",
+      "n_optima": 4
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Built from the approximate analytic model only: four Gaussian basins, two deep (comp3 broad, comp4 flat in x2/x4), two shallow; calibration fidelity unknown."
+  }
+}

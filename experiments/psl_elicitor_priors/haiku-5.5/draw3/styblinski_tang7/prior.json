@@ -1,0 +1,179 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear",
+        "meaning": "model parameter 0 (quartic well, global well near -3.0)"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear",
+        "meaning": "model parameter 1 (global well near -1.29)"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear",
+        "meaning": "model parameter 2 (global well near -2.12)"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear",
+        "meaning": "model parameter 3 (global well near -3.40)"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear",
+        "meaning": "model parameter 4 (global well near -1.45)"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear",
+        "meaning": "model parameter 5 (global well near -3.47)"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear",
+        "meaning": "model parameter 6 (global well near -1.20)"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -3.0,
+      "ci": [
+        -4.2,
+        -1.8
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "global quartic well of separable model, y=-sqrt(a/2) branch"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.29,
+      "ci": [
+        -2.5,
+        -0.1
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "global well of separable model; b=2.60"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.12,
+      "ci": [
+        -3.3,
+        -0.9
+      ],
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "global well of separable model; b=2.74"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.4,
+      "ci": [
+        -4.6,
+        -2.2
+      ],
+      "weight": 0.55,
+      "provenance": "llm_domain",
+      "note": "global well of separable model; b=1.71"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.45,
+      "ci": [
+        -2.65,
+        -0.25
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "strongest tilt (b=3.16): deepest global well contrast"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.47,
+      "ci": [
+        -4.67,
+        -2.27
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "global well of separable model; b=1.51"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.2,
+      "ci": [
+        -2.4,
+        0.0
+      ],
+      "weight": 0.55,
+      "provenance": "llm_domain",
+      "note": "global well of separable model; b=1.67"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Locations derived by inverting the stated quartic model; the model is only approximately calibrated, so widths are kept moderate."
+  }
+}

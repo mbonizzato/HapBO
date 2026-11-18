@@ -1,0 +1,688 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 1.0
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.565,
+      "ci": [
+        1.2,
+        9.93
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "quadratic bowl centred at o_0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        0.3,
+        9.974
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.292,
+      "ci": [
+        -3.708,
+        6.292
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.617,
+      "ci": [
+        -0.383,
+        9.617
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.691,
+      "ci": [
+        -0.309,
+        9.691
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.936,
+      "ci": [
+        -2.064,
+        7.936
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        -0.766,
+        9.234
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -8.236,
+        1.764
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -9.161,
+        0.839
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.473,
+      "ci": [
+        4.973,
+        9.973
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "x9 term is ~1/4 the strength of the others"
+    },
+    {
+      "token": "periodic",
+      "dim": "x0",
+      "period": 4.236,
+      "phase": 4.453,
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "sin^2 modulation, period 4/kap, trough nearest o"
+    },
+    {
+      "token": "periodic",
+      "dim": "x1",
+      "period": 3.937,
+      "phase": 3.821,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x2",
+      "period": 3.82,
+      "phase": -0.104,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x3",
+      "period": 4.134,
+      "phase": 3.435,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x4",
+      "period": 4.131,
+      "phase": 3.507,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x5",
+      "period": 3.784,
+      "phase": 1.516,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x6",
+      "period": 4.008,
+      "phase": 2.966,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x7",
+      "period": 3.91,
+      "phase": -4.57,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x8",
+      "period": 4.132,
+      "phase": -5.344,
+      "weight": 0.3,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "periodic",
+      "dim": "x9",
+      "period": 2.0,
+      "phase": 7.473,
+      "weight": 0.08,
+      "provenance": "llm_domain",
+      "note": "sin^2(2 pi w9): weak, period 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x9",
+      "direction": "increase",
+      "knee": 7.473,
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "long quadratic rise toward o_9 from the low side"
+    },
+    {
+      "token": "avoid",
+      "dim": "x0",
+      "mode": -1.902,
+      "ci": [
+        -3.402,
+        -0.402
+      ],
+      "weight": 0.45,
+      "provenance": "llm_domain",
+      "note": "sine peak, d~-7.5, f~38"
+    },
+    {
+      "token": "avoid",
+      "dim": "x0",
+      "mode": -6.138,
+      "ci": [
+        -7.738,
+        -4.538
+      ],
+      "weight": 0.75,
+      "provenance": "llm_domain",
+      "note": "sine peak, d~-11.7, f~94"
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "x0": [
+          -10.0,
+          -9.2
+        ]
+      },
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "low edge, f~150"
+    },
+    {
+      "token": "avoid",
+      "dim": "x1",
+      "mode": 9.727,
+      "ci": [
+        8.227,
+        10.0
+      ],
+      "weight": 0.25,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x1",
+      "mode": -2.085,
+      "ci": [
+        -3.585,
+        -0.585
+      ],
+      "weight": 0.45,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x1",
+      "mode": -6.022,
+      "ci": [
+        -7.622,
+        -4.422
+      ],
+      "weight": 0.75,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "x1": [
+          -10.0,
+          -9.0
+        ]
+      },
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "sine peak at -9.96, f~157"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": 5.627,
+      "ci": [
+        4.227,
+        7.027
+      ],
+      "weight": 0.25,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": 9.448,
+      "ci": [
+        7.948,
+        10.0
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": -5.834,
+      "ci": [
+        -7.334,
+        -4.334
+      ],
+      "weight": 0.45,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": -9.655,
+      "ci": [
+        -10.0,
+        -8.055
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x3",
+      "mode": 9.637,
+      "ci": [
+        8.137,
+        10.0
+      ],
+      "weight": 0.28,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x3",
+      "mode": -2.766,
+      "ci": [
+        -4.266,
+        -1.266
+      ],
+      "weight": 0.45,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x3",
+      "mode": -6.901,
+      "ci": [
+        -8.501,
+        -5.301
+      ],
+      "weight": 0.75,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "x3": [
+          -10.0,
+          -9.3
+        ]
+      },
+      "weight": 0.55,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x4",
+      "mode": 9.704,
+      "ci": [
+        8.204,
+        10.0
+      ],
+      "weight": 0.28,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x4",
+      "mode": -2.69,
+      "ci": [
+        -4.19,
+        -1.19
+      ],
+      "weight": 0.45,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x4",
+      "mode": -6.821,
+      "ci": [
+        -8.421,
+        -5.221
+      ],
+      "weight": 0.75,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "x4": [
+          -10.0,
+          -9.3
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x5",
+      "mode": 7.192,
+      "ci": [
+        5.792,
+        8.592
+      ],
+      "weight": 0.25,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x5",
+      "mode": -4.161,
+      "ci": [
+        -5.661,
+        -2.661
+      ],
+      "weight": 0.45,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x5",
+      "mode": -7.945,
+      "ci": [
+        -9.545,
+        -6.345
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x6",
+      "mode": 8.979,
+      "ci": [
+        7.579,
+        10.0
+      ],
+      "weight": 0.25,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x6",
+      "mode": -3.046,
+      "ci": [
+        -4.546,
+        -1.546
+      ],
+      "weight": 0.45,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x6",
+      "mode": -7.054,
+      "ci": [
+        -8.654,
+        -5.454
+      ],
+      "weight": 0.75,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "x6": [
+          -10.0,
+          -9.3
+        ]
+      },
+      "weight": 0.55,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x7",
+      "mode": 1.294,
+      "ci": [
+        -0.106,
+        2.694
+      ],
+      "weight": 0.25,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x7",
+      "mode": 5.205,
+      "ci": [
+        3.705,
+        6.705
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x7",
+      "mode": 9.115,
+      "ci": [
+        7.515,
+        10.0
+      ],
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "d~12.4, f~105"
+    },
+    {
+      "token": "avoid",
+      "dim": "x8",
+      "mode": 0.854,
+      "ci": [
+        -0.546,
+        2.254
+      ],
+      "weight": 0.28,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x8",
+      "mode": 4.987,
+      "ci": [
+        3.487,
+        6.487
+      ],
+      "weight": 0.55,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "avoid",
+      "dim": "x8",
+      "mode": 9.119,
+      "ci": [
+        7.519,
+        10.0
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "deepest in-range sine peak, d~13.3, f~120"
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "x9": [
+          -10.0,
+          -2.5
+        ]
+      },
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "x9 far from o_9: f from ~9 to ~29"
+    },
+    {
+      "token": "smoothness",
+      "level": "rough"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Separable Levy-type model: quadratic bowls at o_i, period-4/kap_i sine modulation with d^2-scaled penalties at sine peaks; constants only approximately calibrated."
+  }
+}

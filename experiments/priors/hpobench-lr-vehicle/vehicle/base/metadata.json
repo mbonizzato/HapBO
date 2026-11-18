@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "base",
+  "dataset_id": "hpobench-lr-vehicle",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "vehicle",
+    "target_slug": "vehicle",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-29T03:53:29.202918+00:00",
+    "generated_at": "2026-09-29T03:54:39.400431+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; api_calls=2"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "0be1f80408404a259abc53c9fca41a77a964c99acfd653e88916a66298c3a7e8"
+    },
+    "prior.json": {
+      "sha256": "e7418e6ff8253764a47bf5af7ea2808dad5f4dd880b168632101ca51116c4fe5"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-29T03:54:39.401853+00:00"
+}

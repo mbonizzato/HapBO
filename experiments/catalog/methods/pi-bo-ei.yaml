@@ -1,0 +1,16 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: pi-bo-ei
+label: pi-BO (EI; Hvarfner et al., 2022)
+role: ablation
+implementation_status: available
+isolated_worker: true
+strategy: pi-bo
+requires_prior: true
+acquisition: expected-improvement
+note: >-
+  piBO as in Hvarfner et al. (2022), Sec. 3.2, Algorithm 1 and Sec. 4, with the
+  compiled prior pi as the user belief: the prior p = max(pi, 0) / max(pi) +
+  1e-12 (Appendix F.1); initial design: the mode of p, then n_initial - 1
+  points sampled from p (finite grid, without replacement, seeded by the run
+  seed); then EI weighted by p ** (beta / n), with n = 1 at the first BO query
+  and beta = N / 10, N = budget - n_initial BO iterations.

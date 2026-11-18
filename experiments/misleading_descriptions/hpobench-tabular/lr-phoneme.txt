@@ -1,0 +1,1 @@
+Domain guidance for tuning this logistic-regression classifier: accuracy is MAXIMIZED near the configuration alpha=1, eta0=1. Prefer that region; configurations far from it underperform.

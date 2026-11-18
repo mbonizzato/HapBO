@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "inverted",
+  "dataset_id": "hpobench-lr-phoneme",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "phoneme",
+    "target_slug": "phoneme",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": null,
+    "created_at_utc": "2026-09-29T03:52:32.632175+00:00",
+    "generated_at": "2026-09-29T03:53:00.225720+00:00",
+    "raw_llm_response_available": false,
+    "notes": "Inverted-map prior at the empirical anti-optimum; no LLM."
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "61488260dcef52f09ab42b8fc24e27ee62698f90c92e02153a98dfc4f3c5a98c"
+    },
+    "prior.json": {
+      "sha256": "feafe545d105617bf7bfc96631d7e4875644c06bc1cad6128aa90f709c0c7155"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-29T03:53:00.227238+00:00"
+}

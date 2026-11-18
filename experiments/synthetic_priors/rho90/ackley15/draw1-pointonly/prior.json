@@ -1,0 +1,344 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x10",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x11",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x12",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x13",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x14",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 18.1,
+      "ci": [
+        8.269600000000002,
+        27.9304
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -12.57,
+      "ci": [
+        -22.400399999999998,
+        -2.739600000000001
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -16.48,
+      "ci": [
+        -26.3104,
+        -6.649600000000001
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 18.57,
+      "ci": [
+        8.739600000000001,
+        28.400399999999998
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -12.92,
+      "ci": [
+        -22.7504,
+        -3.089600000000001
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -14.87,
+      "ci": [
+        -24.7004,
+        -5.0396
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 18.48,
+      "ci": [
+        8.649600000000001,
+        28.3104
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 14.94,
+      "ci": [
+        5.1096,
+        24.7704
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -17.51,
+      "ci": [
+        -27.340400000000002,
+        -7.679600000000002
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": -17.88,
+      "ci": [
+        -27.7104,
+        -8.0496
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x10",
+      "mode": 7.261,
+      "ci": [
+        -2.569399999999999,
+        17.0914
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x11",
+      "mode": -6.172,
+      "ci": [
+        -16.002399999999998,
+        3.6583999999999994
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x12",
+      "mode": 11.69,
+      "ci": [
+        1.8596000000000004,
+        21.5204
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x13",
+      "mode": 15.58,
+      "ci": [
+        5.749600000000001,
+        25.4104
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "x14",
+      "mode": 14.39,
+      "ci": [
+        4.559600000000001,
+        24.220399999999998
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "noise",
+      "level": "low"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximating shifted Ackley function based on provided constants"
+  }
+}

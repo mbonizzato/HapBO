@@ -1,0 +1,16 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: colabo-llm
+label: ColaBO-LogEI + one-shot LLM point prior (BORA S C.2)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: colabo
+requires_prior: true
+prior_source: llm-point-gaussian
+note: >-
+  The LLM (local Qwen) is asked
+  ONCE, offline, for a guessed optimum location c and a confidence s in [0,1] from
+  the SAME prompt card HapBO's elicitor receives (BORA supplement C.2).
+  The prior is pi(x) = N(c, sigma) with sigma = 1 - s + 1e-6; the study prior_path
+  points at the (c, s) artifact under experiments/colabo_llm_priors/.

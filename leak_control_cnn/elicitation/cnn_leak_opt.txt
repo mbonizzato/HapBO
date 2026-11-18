@@ -1,0 +1,3 @@
+Objective: validation-set classification accuracy (higher is better).
+Direction: maximize.
+Evaluation budget: approximately 30 configurations.

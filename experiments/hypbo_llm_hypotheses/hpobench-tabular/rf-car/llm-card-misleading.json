@@ -1,0 +1,329 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "rf-car",
+  "modality": "llm-card-misleading",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "max_depth": 1,
+        "max_features": 0,
+        "min_samples_leaf": 1,
+        "min_samples_split": 12
+      },
+      "c": {
+        "max_depth": 1,
+        "max_features": 0,
+        "min_samples_leaf": 1,
+        "min_samples_split": 12
+      },
+      "s": 0.95,
+      "kept": true,
+      "side_encoded": 0.050001000000000045,
+      "center_encoded": [
+        0.0,
+        0.0,
+        0.0,
+        0.43082708345352605
+      ],
+      "box_encoded": {
+        "lb": [
+          0.0,
+          0.0,
+          0.0,
+          0.405826583453526
+        ],
+        "ub": [
+          0.025000500000000023,
+          0.025000500000000023,
+          0.025000500000000023,
+          0.4558275834535261
+        ]
+      },
+      "box_native": {
+        "max_depth": [
+          1.0,
+          1.1027450058156796
+        ],
+        "max_features": [
+          0.0,
+          0.025000500000000023
+        ],
+        "min_samples_leaf": [
+          1.0,
+          1.4750095000000005
+        ],
+        "min_samples_split": [
+          10.814983062181524,
+          13.31486135226117
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "max_depth": 1,
+        "max_features": 0.1111111119389534,
+        "min_samples_leaf": 1,
+        "min_samples_split": 12
+      },
+      "c": {
+        "max_depth": 1,
+        "max_features": 0.1111111119389534,
+        "min_samples_leaf": 1,
+        "min_samples_split": 12
+      },
+      "s": 0.75,
+      "kept": true,
+      "side_encoded": 0.250001,
+      "center_encoded": [
+        0.0,
+        0.1111111119389534,
+        0.0,
+        0.43082708345352605
+      ],
+      "box_encoded": {
+        "lb": [
+          0.0,
+          0.0,
+          0.0,
+          0.3058265834535261
+        ],
+        "ub": [
+          0.1250005,
+          0.2361116119389534,
+          0.1250005,
+          0.555827583453526
+        ]
+      },
+      "box_native": {
+        "max_depth": [
+          1.0,
+          1.6306925986036702
+        ],
+        "max_features": [
+          0.0,
+          0.2361116119389534
+        ],
+        "min_samples_leaf": [
+          1.0,
+          3.3750094999999996
+        ],
+        "min_samples_split": [
+          7.135227852711694,
+          20.18155593241129
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "max_depth": 2,
+        "max_features": 0,
+        "min_samples_leaf": 1,
+        "min_samples_split": 12
+      },
+      "c": {
+        "max_depth": 2,
+        "max_features": 0,
+        "min_samples_leaf": 1,
+        "min_samples_split": 12
+      },
+      "s": 0.65,
+      "kept": true,
+      "side_encoded": 0.35000099999999995,
+      "center_encoded": [
+        0.17718382013555792,
+        0.0,
+        0.0,
+        0.43082708345352605
+      ],
+      "box_encoded": {
+        "lb": [
+          0.0021833201355579424,
+          0.0,
+          0.0,
+          0.25582658345352605
+        ],
+        "ub": [
+          0.3521843201355579,
+          0.17500049999999998,
+          0.17500049999999998,
+          0.605827583453526
+        ]
+      },
+      "box_native": {
+        "max_depth": [
+          1.0085777787070878,
+          3.9659806952396526
+        ],
+        "max_features": [
+          0.0,
+          0.17500049999999998
+        ],
+        "min_samples_leaf": [
+          1.0,
+          4.3250095
+        ],
+        "min_samples_split": [
+          5.79560592191283,
+          24.846409838796124
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "max_depth": 1,
+        "max_features": 0,
+        "min_samples_leaf": 3,
+        "min_samples_split": 12
+      },
+      "c": {
+        "max_depth": 1,
+        "max_features": 0,
+        "min_samples_leaf": 3,
+        "min_samples_split": 12
+      },
+      "s": 0.6,
+      "kept": true,
+      "side_encoded": 0.400001,
+      "center_encoded": [
+        0.0,
+        0.0,
+        0.10526315789473684,
+        0.43082708345352605
+      ],
+      "box_encoded": {
+        "lb": [
+          0.0,
+          0.0,
+          0.0,
+          0.23082658345352605
+        ],
+        "ub": [
+          0.2000005,
+          0.2000005,
+          0.30526365789473686,
+          0.6308275834535261
+        ]
+      },
+      "box_native": {
+        "max_depth": [
+          1.0,
+          2.186728425148326
+        ],
+        "max_features": [
+          0.0,
+          0.2000005
+        ],
+        "min_samples_leaf": [
+          1.0,
+          6.800009500000001
+        ],
+        "min_samples_split": [
+          5.223292518234005,
+          27.568817847614326
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "max_depth",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        20,
+        32,
+        50
+      ]
+    },
+    {
+      "name": "max_features",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        0,
+        0.1111111119389534,
+        0.2222222238779068,
+        0.3333333432674408,
+        0.4444444477558136,
+        0.5555555820465088,
+        0.6666666865348816,
+        0.7777777910232544,
+        0.8888888955116272,
+        1
+      ]
+    },
+    {
+      "name": "min_samples_leaf",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        20
+      ]
+    },
+    {
+      "name": "min_samples_split",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        2,
+        3,
+        5,
+        8,
+        12,
+        20,
+        32,
+        50,
+        80,
+        128
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 1070,
+    "completion_tokens": 510
+  },
+  "source_prompt_card": "experiments/priors/hpobench-rf-car/car/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "979415cd5eef66fb86cd886d85b995a72c9eb5b4e9a0b3091cc62b83558d5530",
+  "adversarial_hint": "experiments/misleading_descriptions/hpobench-tabular/rf-car.txt",
+  "adversarial_hint_sha256": "b2fa07d717c281367744f5891af1c81be56c5afdb003f994674956801c05ed7d",
+  "prompt_sha256": "cfe0643199c0a8f80a569f1ac0cd53861c803964c3d43d6b8c2d7142769ee3d0",
+  "created_at_utc": "2026-11-07T20:06:44.790161+00:00"
+}

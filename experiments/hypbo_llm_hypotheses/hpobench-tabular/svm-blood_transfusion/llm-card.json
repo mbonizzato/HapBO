@@ -1,0 +1,203 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "svm-blood_transfusion",
+  "modality": "llm-card",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "c": 8,
+        "gamma": 0.125
+      },
+      "c": {
+        "c": 8,
+        "gamma": 0.125
+      },
+      "s": 0.75,
+      "kept": true,
+      "side_encoded": 0.250001,
+      "center_encoded": [
+        0.6499999999999999,
+        0.35000000000000003
+      ],
+      "box_encoded": {
+        "lb": [
+          0.5249995,
+          0.22499950000000005
+        ],
+        "ub": [
+          0.7750004999999999,
+          0.47500050000000005
+        ]
+      },
+      "box_native": {
+        "c": [
+          1.4142037598256325,
+          45.25514767963203
+        ],
+        "gamma": [
+          0.022096933747275536,
+          0.7071116824942519
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "c": 4,
+        "gamma": 0.25
+      },
+      "c": {
+        "c": 4,
+        "gamma": 0.25
+      },
+      "s": 0.65,
+      "kept": true,
+      "side_encoded": 0.35000099999999995,
+      "center_encoded": [
+        0.6,
+        0.39999999999999997
+      ],
+      "box_encoded": {
+        "lb": [
+          0.4249995,
+          0.2249995
+        ],
+        "ub": [
+          0.7750005,
+          0.5750004999999999
+        ]
+      },
+      "box_native": {
+        "c": [
+          0.3535509399564084,
+          45.25514767963211
+        ],
+        "gamma": [
+          0.022096933747275515,
+          2.8284467299770033
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "c": 16,
+        "gamma": 0.0625
+      },
+      "c": {
+        "c": 16,
+        "gamma": 0.0625
+      },
+      "s": 0.55,
+      "kept": true,
+      "side_encoded": 0.45000099999999993,
+      "center_encoded": [
+        0.7,
+        0.30000000000000004
+      ],
+      "box_encoded": {
+        "lb": [
+          0.4749995,
+          0.07499950000000008
+        ],
+        "ub": [
+          0.9250004999999999,
+          0.5250005
+        ]
+      },
+      "box_native": {
+        "c": [
+          0.7071018799128168,
+          362.0411814370563
+        ],
+        "gamma": [
+          0.0027621167184094437,
+          1.4142233649885028
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "c",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "name": "gamma",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 891,
+    "completion_tokens": 601
+  },
+  "source_prompt_card": "experiments/priors/hpobench-svm-blood-transfusion/blood-transfusion/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "05e6d69c251b01849e7e5d3dba305d3f00827df2cb51c30cdc0b36c418a760c2",
+  "prompt_sha256": "34b0ca70b262c4bcb7796a3a5b632983197347be066f0a40d5f220bb0f98b7c7",
+  "created_at_utc": "2026-11-07T20:05:56.943949+00:00"
+}

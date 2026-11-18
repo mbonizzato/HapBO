@@ -1,0 +1,244 @@
+{
+ "schema": {
+  "objective": "minimize",
+  "dimensions": [
+   {
+    "name": "x0",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x1",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x2",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x3",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x4",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x5",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x6",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   }
+  ]
+ },
+ "beliefs": [
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": -3.416946163346609,
+   "ci": [
+    -5.0,
+    -0.9873918061642377
+   ],
+   "weight": 0.9278071206169165,
+   "provenance": "llm_domain",
+   "skew": 0.3847140265462363
+  },
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": 3.226706731693185,
+   "ci": [
+    1.2391523299796785,
+    5.0
+   ],
+   "weight": 0.8807652332708132,
+   "provenance": "llm_domain",
+   "skew": -0.5119202238839885
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": -1.63413264962709,
+   "ci": [
+    -3.406901062018343,
+    1.2869980582801817
+   ],
+   "weight": 1.0,
+   "provenance": "llm_domain",
+   "skew": 0.3139363175487423
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": 4.57819105630684,
+   "ci": [
+    -2.1391086587074772,
+    5.0
+   ],
+   "weight": 0.8997164942259912,
+   "provenance": "llm_domain",
+   "skew": 0.9534030699960339
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": -2.611013968778641,
+   "ci": [
+    -4.1879163466745855,
+    0.48731554276726996
+   ],
+   "weight": 0.9363423366502714,
+   "provenance": "llm_domain",
+   "skew": 0.32002989097895784
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": 4.51263279267488,
+   "ci": [
+    -3.6456331101044253,
+    5.0
+   ],
+   "weight": 0.8359638773801601,
+   "provenance": "llm_domain",
+   "skew": 0.9810181891779952
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": -3.703067013910358,
+   "ci": [
+    -5.0,
+    -0.6112026962879504
+   ],
+   "weight": 0.8929238236581157,
+   "provenance": "llm_domain",
+   "skew": 0.03378884064813205
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": 2.6762520551473123,
+   "ci": [
+    0.28317526488284717,
+    4.2931796335158445
+   ],
+   "weight": 0.8594695061424649,
+   "provenance": "llm_domain",
+   "skew": -0.3930151933435945
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": -1.8782573143807024,
+   "ci": [
+    -3.3847019634902598,
+    0.8581187454997874
+   ],
+   "weight": 0.8780378863186549,
+   "provenance": "llm_domain",
+   "skew": 0.3440084431275445
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": 4.11290010682869,
+   "ci": [
+    -0.9781213681782361,
+    5.0
+   ],
+   "weight": 0.7437923248239113,
+   "provenance": "llm_domain",
+   "skew": 0.6547563069823028
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": -3.7492219480381337,
+   "ci": [
+    -5.0,
+    1.7181856813607048
+   ],
+   "weight": 0.8874561434220034,
+   "provenance": "llm_domain",
+   "skew": -0.43652727238761013
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": 3.0368581581877,
+   "ci": [
+    -0.43395517742476564,
+    5.0
+   ],
+   "weight": 0.8822096425826016,
+   "provenance": "llm_domain",
+   "skew": -0.21988616370518244
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": -1.6087491710335906,
+   "ci": [
+    -3.0210987700477148,
+    1.5038208399237363
+   ],
+   "weight": 0.8396713052089859,
+   "provenance": "llm_domain",
+   "skew": 0.25890779982713447
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": 4.311765827429086,
+   "ci": [
+    -2.054832157148928,
+    5.0
+   ],
+   "weight": 0.7375144428650584,
+   "provenance": "llm_domain",
+   "skew": 0.9418833150692271
+  }
+ ],
+ "trust": {
+  "overall_confidence": "medium",
+  "notes": "approximate analytic model: sum of tilted double-well quartics"
+ }
+}

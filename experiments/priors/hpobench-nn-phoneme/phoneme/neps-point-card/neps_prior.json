@@ -1,0 +1,83 @@
+{
+  "artifact_format": "neps-point-prior-v1",
+  "model": "nn",
+  "task": "phoneme",
+  "card": "llm-card",
+  "parameters": {
+    "alpha": {
+      "card_name": "alpha",
+      "llm_value": 0.00027825593133457005,
+      "value": 0.00027825593133457005,
+      "index": 5,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "medium"
+    },
+    "batch_size": {
+      "card_name": "batch_size",
+      "llm_value": 64,
+      "value": 64.0,
+      "index": 6,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "medium"
+    },
+    "depth": {
+      "card_name": "depth",
+      "llm_value": 2,
+      "value": 2.0,
+      "index": 1,
+      "n_values": 3,
+      "on_grid": true,
+      "scale": "linear",
+      "confidence": "high"
+    },
+    "learning_rate_init": {
+      "card_name": "learning_rate_init",
+      "llm_value": 0.0016681005945429206,
+      "value": 0.0016681005945429206,
+      "index": 4,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "width": {
+      "card_name": "width",
+      "llm_value": 101,
+      "value": 101.0,
+      "index": 4,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "medium"
+    }
+  },
+  "provenance": {
+    "model": "nn",
+    "task": "phoneme",
+    "card": "llm-card",
+    "card_sha256": "6d807ca15413e1d49c113d1aa7d403f248046232238c3ebed208a95e1e504082",
+    "prompt_sha256": "bb6eb15db90e5af2ae25a2b605646c81976b55ef6ef79436c37b0eac5883feb3",
+    "llm": {
+      "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+      "provider": "openai",
+      "base_url": "http://localhost:8000/v1",
+      "temperature": 0.0,
+      "seed": 7,
+      "max_tokens": 4096,
+      "enable_thinking": false
+    },
+    "max_attempts": 4,
+    "created_at_utc": "2026-11-06T16:20:37.111893+00:00",
+    "attempts": 1,
+    "rejected": [],
+    "usage": {
+      "calls": 1,
+      "cached_calls": 0,
+      "tokens": 1289
+    }
+  }
+}

@@ -1,0 +1,364 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.02
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x4"
+      ],
+      "mode": {
+        "x3": 0.1975,
+        "x4": 0.2178
+      },
+      "ci": {
+        "x3": [
+          0.0,
+          0.58
+        ],
+        "x4": [
+          0.0,
+          0.52
+        ]
+      },
+      "weight": 0.916,
+      "provenance": "llm_domain",
+      "note": "Gaussian 3 (alpha 2.766, global minimum): narrow x3/x4 pair, A=10.42/15.69"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.2353,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x1": [
+          0.0,
+          0.82
+        ],
+        "x5": [
+          0.36,
+          1.0
+        ]
+      },
+      "weight": 0.496,
+      "provenance": "llm_domain",
+      "note": "Gaussian 3: x1/x5 pair, A=3.91/9.35"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x2"
+      ],
+      "mode": {
+        "x0": 0.4304,
+        "x2": 0.5308
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          1.0
+        ],
+        "x2": [
+          0.0,
+          1.0
+        ]
+      },
+      "weight": 0.244,
+      "provenance": "llm_domain",
+      "note": "Gaussian 3: wide x0/x2 pair, A=3.28/1.87"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.98,
+        "x5": 0.0339
+      },
+      "ci": {
+        "x1": [
+          0.52,
+          1.0
+        ],
+        "x5": [
+          0.0,
+          0.4
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Gaussian 4 (alpha 2.779, second minimum): corner x1 high / x5 low, A=7.85/14.61"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x3"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x3": 0.3985
+      },
+      "ci": {
+        "x0": [
+          0.19,
+          0.8
+        ],
+        "x3": [
+          0.02,
+          0.77
+        ]
+      },
+      "weight": 0.354,
+      "provenance": "llm_domain",
+      "note": "Gaussian 4: x0/x3 pair, A=14.51/9.63; x2 and x4 essentially flat for this component"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x2"
+      ],
+      "mode": {
+        "x0": 0.3108,
+        "x2": 0.6592
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          0.68
+        ],
+        "x2": [
+          0.35,
+          0.97
+        ]
+      },
+      "weight": 0.247,
+      "provenance": "llm_domain",
+      "note": "Gaussian 1 (alpha 1.073): x0/x2 pair, A=9.89/14.01"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.2053,
+        "x5": 0.5599
+      },
+      "ci": {
+        "x1": [
+          0.0,
+          0.87
+        ],
+        "x5": [
+          0.17,
+          0.95
+        ]
+      },
+      "weight": 0.153,
+      "provenance": "llm_domain",
+      "note": "Gaussian 1: x1/x5 pair, A=3.11/9.07"
+    },
+    {
+      "token": "trend",
+      "dim": "x3",
+      "direction": "decrease",
+      "weight": 0.112,
+      "provenance": "llm_domain",
+      "note": "Gaussian 1: centre 0.02 with sigma 0.40 -> near-linear decay 1 -> 0.05 across the box"
+    },
+    {
+      "token": "trend",
+      "dim": "x4",
+      "direction": "increase",
+      "knee": 0.78,
+      "weight": 0.051,
+      "provenance": "llm_domain",
+      "note": "Gaussian 1: centre 0.78 with sigma 0.52 -> gentle rise 0.32 -> 1 then flat"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x5"
+      ],
+      "mode": {
+        "x2": 0.9455,
+        "x5": 0.98
+      },
+      "ci": {
+        "x2": [
+          0.6,
+          1.0
+        ],
+        "x5": [
+          0.62,
+          1.0
+        ]
+      },
+      "weight": 0.393,
+      "provenance": "llm_domain",
+      "note": "Gaussian 2 (alpha 1.402): corner x2/x5 both high, A=15.36/15.45"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x4"
+      ],
+      "mode": {
+        "x1": 0.4413,
+        "x4": 0.062
+      },
+      "ci": {
+        "x1": [
+          0.09,
+          0.79
+        ],
+        "x4": [
+          0.0,
+          0.5
+        ]
+      },
+      "weight": 0.14,
+      "provenance": "llm_domain",
+      "note": "Gaussian 2: x1/x4 pair, A=10.95/8.34; x0 and x3 essentially flat for this component"
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "note": "model centres; values proportional to -F there (F(P3)=-3.07 is the global minimum)",
+      "points": [
+        {
+          "coords": {
+            "x0": 0.4304,
+            "x1": 0.2353,
+            "x2": 0.5308,
+            "x3": 0.1975,
+            "x4": 0.2178,
+            "x5": 0.7382
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "x0": 0.4942,
+            "x1": 0.98,
+            "x2": 0.896,
+            "x3": 0.3985,
+            "x4": 0.04525,
+            "x5": 0.03393
+          },
+          "value": 0.91
+        },
+        {
+          "coords": {
+            "x0": 0.3962,
+            "x1": 0.4413,
+            "x2": 0.9455,
+            "x3": 0.2177,
+            "x4": 0.06195,
+            "x5": 0.98
+          },
+          "value": 0.68
+        },
+        {
+          "coords": {
+            "x0": 0.3108,
+            "x1": 0.2053,
+            "x2": 0.6592,
+            "x3": 0.02,
+            "x4": 0.7774,
+            "x5": 0.5599
+          },
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "few",
+      "n_optima": 4
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Derived solely from the approximate analytic 4-Gaussian model; each component encoded as its disjoint-pair ANOVA projection with weights alpha_k times the box-integrated mass of the remaining dimensions. Minimum locations and depths may deviate from the true objective."
+  }
+}

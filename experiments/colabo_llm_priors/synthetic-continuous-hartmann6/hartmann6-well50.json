@@ -1,0 +1,49 @@
+{
+  "artifact_format": "colabo-llm-prior-v1",
+  "dataset_id": "synthetic-continuous-hartmann6",
+  "target_name": "hartmann6-well50",
+  "construction": "BORA supplement Sec. C.2: pi(x)=N(c, sigma=1-s+eps), eps=1e-6",
+  "dim": 6,
+  "bounds": [
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "c": [
+    0.4984,
+    0.4457,
+    0.866,
+    0.106,
+    0.04525,
+    0.98
+  ],
+  "s": 0.6,
+  "sigma": 0.400001,
+  "eps": 1e-06,
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "enable_thinking": true,
+  "prompt_hash": "846b2a3a8109b79490ce9c11ad0bb2cafe59c16e6b982b86ea22f644b99d9885"
+}

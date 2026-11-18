@@ -1,0 +1,178 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -1.96,
+      "ci": [
+        -2.16,
+        -1.76
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "sign": "peak",
+      "note": "global minimum for dim 0 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -3.25,
+      "ci": [
+        -3.45,
+        -3.05
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak",
+      "note": "global minimum for dim 1 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -4.3,
+      "ci": [
+        -4.5,
+        -4.1
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak",
+      "note": "global minimum for dim 2 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -2.13,
+      "ci": [
+        -2.33,
+        -1.93
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak",
+      "note": "global minimum for dim 3 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -3.33,
+      "ci": [
+        -3.53,
+        -3.13
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak",
+      "note": "global minimum for dim 4 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -4.66,
+      "ci": [
+        -4.86,
+        -4.46
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak",
+      "note": "global minimum for dim 5 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -3.54,
+      "ci": [
+        -3.74,
+        -3.34
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "sign": "peak",
+      "note": "global minimum for dim 6 based on model"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium"
+  }
+}

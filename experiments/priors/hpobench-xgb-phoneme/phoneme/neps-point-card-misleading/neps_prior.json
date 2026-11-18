@@ -1,0 +1,73 @@
+{
+  "artifact_format": "neps-point-prior-v1",
+  "model": "xgb",
+  "task": "phoneme",
+  "card": "llm-card-misleading",
+  "parameters": {
+    "colsample_bytree": {
+      "card_name": "colsample_bytree",
+      "llm_value": 0.10000000149011612,
+      "value": 0.10000000149011612,
+      "index": 0,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "linear",
+      "confidence": "high"
+    },
+    "eta": {
+      "card_name": "eta",
+      "llm_value": 0.0009765625,
+      "value": 0.0009765625,
+      "index": 0,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "max_depth": {
+      "card_name": "max_depth",
+      "llm_value": 1,
+      "value": 1.0,
+      "index": 0,
+      "n_values": 9,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "reg_lambda": {
+      "card_name": "reg_lambda",
+      "llm_value": 1024,
+      "value": 1024.0,
+      "index": 9,
+      "n_values": 10,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    }
+  },
+  "provenance": {
+    "model": "xgb",
+    "task": "phoneme",
+    "card": "llm-card-misleading",
+    "card_sha256": "60e3846325f55d265c0e9519a63a4eff94a285383ae067f0306e3884af37f2a7",
+    "prompt_sha256": "6f536cea8e13f8a8279088021f01b171eaac5f4c1f50741977e62b1ab13efe47",
+    "llm": {
+      "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+      "provider": "openai",
+      "base_url": "http://localhost:8000/v1",
+      "temperature": 0.0,
+      "seed": 7,
+      "max_tokens": 4096,
+      "enable_thinking": false
+    },
+    "max_attempts": 4,
+    "created_at_utc": "2026-11-06T16:22:34.795118+00:00",
+    "attempts": 1,
+    "rejected": [],
+    "usage": {
+      "calls": 1,
+      "cached_calls": 0,
+      "tokens": 1288
+    }
+  }
+}

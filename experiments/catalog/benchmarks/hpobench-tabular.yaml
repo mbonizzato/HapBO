@@ -1,0 +1,11 @@
+artifact_format: llm-bo-benchmark-catalog-v1
+benchmark_id: hpobench-tabular
+family: offline-finite
+implementation_status: available
+adapter: hpobench
+problem_id_template: "{model}-{task}"
+axes:
+  model: [lr, nn, rf, svm, xgb]
+  task: [credit_g, vehicle, kc1, phoneme, blood_transfusion, australian, car, segment]
+download: python scripts/download_hpobench.py  # all five models and eight tasks; --model / --task select a subset
+

@@ -1,0 +1,239 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.182,
+      "ci": [
+        -1.818,
+        2.182
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o0=0.182"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.8299,
+      "ci": [
+        -1.1701,
+        2.8299
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o1=0.8299"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -9.533,
+      "ci": [
+        -10.0,
+        -7.533
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o2=-9.533"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -0.042,
+      "ci": [
+        -2.042,
+        1.958
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o3=-0.042"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.03906,
+      "ci": [
+        -1.96094,
+        2.03906
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o4=0.03906"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.1158,
+      "ci": [
+        -1.8842,
+        2.1158
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o5=0.1158"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -0.07893,
+      "ci": [
+        -2.07893,
+        1.92107
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o6=-0.07893"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 1.644,
+      "ci": [
+        -0.356,
+        3.644
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o7=1.644"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": 0.6852,
+      "ci": [
+        -1.3148,
+        2.6852
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o8=0.6852"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 6.693,
+      "ci": [
+        4.693,
+        8.693
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum at o9=6.693"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    },
+    {
+      "token": "smoothness",
+      "level": "rough"
+    },
+    {
+      "token": "noise",
+      "level": "medium"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximate analytic model provided; locations calibrated but fidelity unknown."
+  }
+}

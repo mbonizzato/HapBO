@@ -1,0 +1,15 @@
+A 10-parameter black-box objective, to be MINIMIZED; each input ranges [-10, 10]. No expert intuition about the location of the optimum is available. An approximate analytic model of the objective is available. Its functional form is believed to describe the objective's general shape, but its parameter values are only approximately calibrated (fidelity unknown), so the locations and relative depths of its minima may differ from those of the true objective. The model is:
+
+F(x) = sin^2(pi*w_0) + sum_{i=0..8} (w_i - 1)^2 * [1 + amp_i * sin^2(kap_i*pi*w_i + 1)] + (w_9 - 1)^2 * [1 + sin^2(2*pi*w_9)],   where w_i = 1 + (x_i - o_i)/4
+per-parameter constants (amp/kap unused for i=9):
+o_i  amp_i  kap_i
+5.565  9.773  0.9442
+5.137  10.19  1.016
+1.292  10.64  1.047
+4.617  10.83  0.9675
+4.691  9.213  0.9682
+2.936  10.3  1.057
+4.234  10.32  0.9979
+-3.236  10.53  1.023
+-4.161  10.9  0.968
+7.473  -  -

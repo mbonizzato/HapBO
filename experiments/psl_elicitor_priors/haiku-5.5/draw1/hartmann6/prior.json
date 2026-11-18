@@ -1,0 +1,281 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear",
+        "meaning": "model input x0"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear",
+        "meaning": "model input x1"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear",
+        "meaning": "model input x2"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear",
+        "meaning": "model input x3"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear",
+        "meaning": "model input x4"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear",
+        "meaning": "model input x5"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x5"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x5": 0.0339
+      },
+      "ci": {
+        "x0": [
+          0.189,
+          0.799
+        ],
+        "x5": [
+          0.0,
+          0.338
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "approximate-model well 3 (deepest, 2.779): narrow in x0 and x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x3"
+      ],
+      "mode": {
+        "x1": 0.98,
+        "x3": 0.3985
+      },
+      "ci": {
+        "x1": [
+          0.565,
+          1.0
+        ],
+        "x3": [
+          0.024,
+          0.773
+        ]
+      },
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "approximate-model well 3: narrow in x1 and x3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x4",
+        "x5"
+      ],
+      "mode": {
+        "x4": 0.2178,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x4": [
+          0.0,
+          0.512
+        ],
+        "x5": [
+          0.358,
+          1.0
+        ]
+      },
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "approximate-model well 2 (2.766): narrow in x4 and x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x4"
+      ],
+      "mode": {
+        "x3": 0.1975,
+        "x4": 0.2178
+      },
+      "ci": {
+        "x3": [
+          0.0,
+          0.558
+        ],
+        "x4": [
+          0.0,
+          0.512
+        ]
+      },
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "approximate-model well 2: narrow in x3 and x4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x5"
+      ],
+      "mode": {
+        "x2": 0.9455,
+        "x5": 0.98
+      },
+      "ci": {
+        "x2": [
+          0.649,
+          1.0
+        ],
+        "x5": [
+          0.684,
+          1.0
+        ]
+      },
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "approximate-model well 1 (1.402): narrow in x2 and x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x2"
+      ],
+      "mode": {
+        "x0": 0.3108,
+        "x2": 0.6592
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          0.681
+        ],
+        "x2": [
+          0.348,
+          0.97
+        ]
+      },
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "approximate-model well 0 (1.073): narrow in x0 and x2"
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "note": "well centres of the approximate model, normalised by the deepest well (about 2.78)",
+      "points": [
+        {
+          "coords": {
+            "x0": 0.4942,
+            "x1": 0.98,
+            "x2": 0.896,
+            "x3": 0.3985,
+            "x4": 0.04525,
+            "x5": 0.03393
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "x0": 0.4304,
+            "x1": 0.2353,
+            "x2": 0.5308,
+            "x3": 0.1975,
+            "x4": 0.2178,
+            "x5": 0.7382
+          },
+          "value": 0.99
+        },
+        {
+          "coords": {
+            "x0": 0.3962,
+            "x1": 0.4413,
+            "x2": 0.9455,
+            "x3": 0.2177,
+            "x4": 0.06195,
+            "x5": 0.98
+          },
+          "value": 0.74
+        },
+        {
+          "coords": {
+            "x0": 0.3108,
+            "x1": 0.2053,
+            "x2": 0.6592,
+            "x3": 0.02,
+            "x4": 0.7774,
+            "x5": 0.5599
+          },
+          "value": 0.39
+        }
+      ]
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few",
+      "n_optima": 4
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximate analytic model with uncertain calibration; the four wells, their depths and their widths are taken as given, and the joint regions approximate each well's 6-D Gaussian by pairs of its narrowest dimensions."
+  }
+}

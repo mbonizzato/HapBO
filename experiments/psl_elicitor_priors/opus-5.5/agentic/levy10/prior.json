@@ -1,0 +1,363 @@
+{
+ "schema": {
+  "objective": "minimize",
+  "dimensions": [
+   {
+    "name": "x0",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x1",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x2",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x3",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x4",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x5",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x6",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x7",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x8",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x9",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   }
+  ]
+ },
+ "beliefs": [
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": -5.318317302222548,
+   "ci": [
+    -9.999308429045255,
+    10.0
+   ],
+   "skew": 0.3559482573358781,
+   "sign": "trough",
+   "weight": 0.9999320036904311,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": -5.31814134998449,
+   "ci": [
+    -10.0,
+    10.0
+   ],
+   "skew": 0.3560063689714711,
+   "sign": "peak",
+   "weight": 1.0,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": -9.93989270588605,
+   "ci": [
+    -10.0,
+    -6.590705740711756
+   ],
+   "skew": -1.0,
+   "sign": "trough",
+   "weight": 4.452993611456016e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": -6.20686676656057,
+   "ci": [
+    -8.108407350042926,
+    -5.363222665233348
+   ],
+   "skew": 0.4811465187267176,
+   "sign": "trough",
+   "weight": 2.4448283560693447e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": 7.467595778287183,
+   "ci": [
+    -10.0,
+    10.0
+   ],
+   "skew": 0.06651092594507592,
+   "sign": "peak",
+   "weight": 1.7293397978039262e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": -8.263117028945295,
+   "ci": [
+    -9.637661612487706,
+    8.770830309167014
+   ],
+   "skew": 0.3613363798277127,
+   "sign": "peak",
+   "weight": 1.9589719472601872e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": -5.442982439250175,
+   "ci": [
+    -7.268106555523778,
+    4.784107565386028
+   ],
+   "skew": 0.5501689610041542,
+   "sign": "peak",
+   "weight": 2.2156338648216148e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": -7.282520971300982,
+   "ci": [
+    -8.348530526705892,
+    1.074238411166096
+   ],
+   "skew": 0.34497826424361067,
+   "sign": "trough",
+   "weight": 2.0819780964748936e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": 7.364375800203369,
+   "ci": [
+    -10.0,
+    10.0
+   ],
+   "skew": 0.17951060672992913,
+   "sign": "peak",
+   "weight": 1.1274218777185122e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": -6.947603657115955,
+   "ci": [
+    -7.346828629711691,
+    -4.386787313972733
+   ],
+   "skew": -0.9040775194722772,
+   "sign": "trough",
+   "weight": 1.9052826731340684e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": -6.44847309199019,
+   "ci": [
+    -7.5279171342304405,
+    -2.2091995033701917
+   ],
+   "skew": -1.0,
+   "sign": "peak",
+   "weight": 4.0853335894178055e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": -7.759952886124481,
+   "ci": [
+    -9.534192401942725,
+    -4.494999539734634
+   ],
+   "skew": 0.0018082446386469145,
+   "sign": "trough",
+   "weight": 5.3372407867661476e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": -5.690296440438237,
+   "ci": [
+    -7.703082017666899,
+    1.484836730339449
+   ],
+   "skew": 0.8554469848022689,
+   "sign": "peak",
+   "weight": 1.8540884251682285e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": -7.482063924746325,
+   "ci": [
+    -8.293321365488575,
+    2.7155902492290878
+   ],
+   "skew": 0.07752539827223703,
+   "sign": "trough",
+   "weight": 1.8545320908324764e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x7",
+   "mode": 7.348514888092225,
+   "ci": [
+    5.707857397373068,
+    9.998955047930036
+   ],
+   "skew": -0.19387841543348877,
+   "sign": "peak",
+   "weight": 0.0005939733465845403,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x7",
+   "mode": 7.361342986911808,
+   "ci": [
+    3.3515445564703974,
+    8.562357101283041
+   ],
+   "skew": 0.6611225157457488,
+   "sign": "trough",
+   "weight": 0.000594422165780402,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x8",
+   "mode": 5.178369700575214,
+   "ci": [
+    2.4467328390298384,
+    5.762174839980265
+   ],
+   "skew": 0.769296982195079,
+   "sign": "trough",
+   "weight": 1.833944943420843e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x8",
+   "mode": 9.127104513461678,
+   "ci": [
+    6.340142095088261,
+    10.0
+   ],
+   "skew": 0.7647349958461549,
+   "sign": "trough",
+   "weight": 3.769831405653826e-05,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x9",
+   "mode": -8.73562672462926,
+   "ci": [
+    -9.092059681953295,
+    6.575180119100178
+   ],
+   "skew": -0.6383829599947397,
+   "sign": "peak",
+   "weight": 5.831206256459799e-06,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x9",
+   "mode": -9.033560761142313,
+   "ci": [
+    -10.0,
+    10.0
+   ],
+   "skew": -0.8326989162319455,
+   "sign": "trough",
+   "weight": 1.2103868283001338e-05,
+   "provenance": "llm_domain"
+  }
+ ],
+ "trust": {
+  "overall_confidence": "medium",
+  "notes": ""
+ }
+}

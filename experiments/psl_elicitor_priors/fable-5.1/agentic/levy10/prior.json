@@ -1,0 +1,365 @@
+{
+ "schema": {
+  "objective": "minimize",
+  "dimensions": [
+   {
+    "name": "x0",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x1",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x2",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x3",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x4",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x5",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x6",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x7",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x8",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x9",
+    "type": "continuous",
+    "range": [
+     -10.0,
+     10.0
+    ],
+    "scale": "linear"
+   }
+  ]
+ },
+ "beliefs": [
+  {
+   "token": "baseline",
+   "level": 1.0,
+   "tilt": {
+    "x0": 0.5608,
+    "x1": 0.59039,
+    "x2": 0.16179,
+    "x3": 0.07046,
+    "x4": -0.14532,
+    "x5": -0.07624,
+    "x6": 0.02199,
+    "x7": -0.39876,
+    "x8": -0.29604,
+    "x9": 0.18477
+   }
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": -8.47253,
+   "ci": [
+    -10.0,
+    10.0
+   ],
+   "weight": 1.0,
+   "provenance": "llm_domain",
+   "skew": 0.60667
+  },
+  {
+   "token": "bump",
+   "dim": "x8",
+   "mode": 7.42829,
+   "ci": [
+    -10.0,
+    10.0
+   ],
+   "weight": 0.88839,
+   "provenance": "llm_domain",
+   "skew": -0.94848
+  },
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": -8.83257,
+   "ci": [
+    -10.0,
+    10.0
+   ],
+   "weight": 0.83296,
+   "provenance": "llm_domain",
+   "skew": 0.62587
+  },
+  {
+   "token": "bump",
+   "dim": "x7",
+   "mode": 7.39562,
+   "ci": [
+    5.86354,
+    8.87443
+   ],
+   "weight": 0.77253,
+   "provenance": "llm_domain",
+   "skew": -0.34966
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": -8.06224,
+   "ci": [
+    -8.75444,
+    -5.32165
+   ],
+   "weight": 0.73453,
+   "provenance": "llm_domain",
+   "skew": -0.71122,
+   "sign": "trough"
+  },
+  {
+   "token": "bump",
+   "dim": "x7",
+   "mode": 3.61049,
+   "ci": [
+    -6.52962,
+    6.98202
+   ],
+   "weight": 0.67775,
+   "provenance": "llm_domain",
+   "skew": -0.78275
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": -7.06373,
+   "ci": [
+    -8.46748,
+    -6.26325
+   ],
+   "weight": 0.65138,
+   "provenance": "llm_domain",
+   "skew": 0.30938,
+   "sign": "trough"
+  },
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": -6.32168,
+   "ci": [
+    -7.32482,
+    -5.04398
+   ],
+   "weight": 0.62553,
+   "provenance": "llm_domain",
+   "skew": -0.02777,
+   "sign": "trough"
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": -7.20801,
+   "ci": [
+    -7.8322,
+    -5.46778
+   ],
+   "weight": 0.60416,
+   "provenance": "llm_domain",
+   "skew": -0.49443,
+   "sign": "trough"
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": -6.19104,
+   "ci": [
+    -6.76903,
+    -4.2743
+   ],
+   "weight": 0.60007,
+   "provenance": "llm_domain",
+   "skew": -0.50458,
+   "sign": "trough"
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": -8.24088,
+   "ci": [
+    -9.77742,
+    7.11025
+   ],
+   "weight": 0.55483,
+   "provenance": "llm_domain",
+   "skew": 0.41673
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": -5.33479,
+   "ci": [
+    -7.50263,
+    6.94562
+   ],
+   "weight": 0.545,
+   "provenance": "llm_domain",
+   "skew": 0.72659
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": -7.17364,
+   "ci": [
+    -8.60501,
+    -1.37697
+   ],
+   "weight": 0.46855,
+   "provenance": "llm_domain",
+   "skew": 0.62057,
+   "sign": "trough"
+  },
+  {
+   "token": "bump",
+   "dim": "x8",
+   "mode": 5.20257,
+   "ci": [
+    2.86753,
+    5.80123
+   ],
+   "weight": 0.46351,
+   "provenance": "llm_domain",
+   "skew": 0.59916,
+   "sign": "trough"
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": 7.78354,
+   "ci": [
+    -7.44999,
+    9.3622
+   ],
+   "weight": 0.36792,
+   "provenance": "llm_domain",
+   "skew": -0.1177
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": -4.42624,
+   "ci": [
+    -5.14709,
+    -2.16103
+   ],
+   "weight": 0.31367,
+   "provenance": "llm_domain",
+   "skew": -0.49224,
+   "sign": "trough"
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": -1.08895,
+   "ci": [
+    -2.97064,
+    5.39626
+   ],
+   "weight": 0.18564,
+   "provenance": "llm_domain",
+   "skew": 0.9919
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": -1.35272,
+   "ci": [
+    -2.58034,
+    9.71975
+   ],
+   "weight": 0.184,
+   "provenance": "llm_domain",
+   "skew": 0.51707
+  },
+  {
+   "token": "anchors",
+   "bandwidth": 0.45,
+   "provenance": "llm_domain",
+   "points": [
+    {
+     "coords": {
+      "x0": 5.565,
+      "x1": 5.137,
+      "x2": 1.292,
+      "x3": 4.617,
+      "x4": 4.691,
+      "x5": 2.936,
+      "x6": 4.234,
+      "x7": -3.236,
+      "x8": -4.161,
+      "x9": 7.473
+     },
+     "value": 1.0
+    }
+   ]
+  }
+ ],
+ "trust": {
+  "overall_confidence": "medium",
+  "notes": "Approximate analytic (Levy-type) model from the task description."
+ }
+}

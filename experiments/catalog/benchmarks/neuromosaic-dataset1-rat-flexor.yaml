@@ -1,0 +1,29 @@
+artifact_format: llm-bo-benchmark-catalog-v1
+benchmark_id: neuromosaic-dataset1-rat-flexor
+family: offline-finite
+implementation_status: available
+adapter: neuromosaic-dataset1-rat
+problem_id_template: "{subject}-{muscle}"
+# Noisy emulator (OptimizeNeurostim): each query returns a random valid single
+# trial from sorted_resp; regret is measured on the true means (sorted_respMean).
+noisy: true
+# Cortical flexor targets: knee flexor and tibialis anterior (ankle dorsiflexor).
+# muscle_slug fills the {muscle_slug} placeholder of a prior_path template.
+cases:
+  - {subject: rat1, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat2, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat3, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat4, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat5, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat6, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat1, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat2, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat3, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat4, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat5, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat6, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat1, muscle: RightTibialisAnterioris, muscle_slug: right-tibialis-anterioris}
+  - {subject: rat2, muscle: RightTibialisAnterioris, muscle_slug: right-tibialis-anterioris}
+  - {subject: rat3, muscle: RightTibialisAnterioris, muscle_slug: right-tibialis-anterioris}
+  - {subject: rat6, muscle: RightTibialisAnterioris, muscle_slug: right-tibialis-anterioris}
+download: stage the published NeuroMOSAIC Dataset 1 rat .mat files under benchmark/NeuroMOSAIC/dataset1/rat (see benchmark README)

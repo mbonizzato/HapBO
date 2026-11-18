@@ -1,0 +1,1257 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "colsample_bytree",
+        "type": "ordinal",
+        "values": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896,
+          0.4000000059604645,
+          0.5,
+          0.6000000238418579,
+          0.699999988079071,
+          0.800000011920929,
+          0.8999999761581421,
+          1
+        ],
+        "meaning": "per-tree feature-subsampling fraction"
+      },
+      {
+        "name": "eta",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.0021094917319715023,
+          0.004556754138320684,
+          0.009843133389949799,
+          0.02126234397292137,
+          0.045929204672575,
+          0.09921256452798843,
+          0.21431098878383636,
+          0.4629373550415039,
+          1
+        ],
+        "meaning": "boosting learning rate; values are log-spaced"
+      },
+      {
+        "name": "max_depth",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3,
+          5,
+          8,
+          13,
+          20,
+          32,
+          50
+        ],
+        "meaning": "maximum tree depth; values are log-spaced"
+      },
+      {
+        "name": "reg_lambda",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.004556754138320684,
+          0.02126234397292137,
+          0.09921256452798843,
+          0.4629373550415039,
+          2.1601195335388184,
+          10.079368591308594,
+          47.0315055847168,
+          219.45445251464844,
+          1024
+        ],
+        "meaning": "L2 leaf regularization; values are log-spaced"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "bandwidth": 0.12,
+      "points": [
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 1,
+            "max_depth": 5,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.02126234397292137,
+            "max_depth": 13,
+            "reg_lambda": 1024
+          },
+          "value": 0.2187
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.045929204672575,
+            "max_depth": 2,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0625
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.0009765625,
+            "max_depth": 32,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.09921256452798843,
+            "max_depth": 13,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.8437
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.004556754138320684,
+            "max_depth": 5,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.1094
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.21431098878383636,
+            "max_depth": 50,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.009843133389949799,
+            "max_depth": 1,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.1719
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.09921256452798843,
+            "max_depth": 50,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.0312
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.0009765625,
+            "max_depth": 1,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.1406
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 1,
+            "max_depth": 8,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0469
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.02126234397292137,
+            "max_depth": 8,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.6875
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.4629373550415039,
+            "max_depth": 3,
+            "reg_lambda": 1024
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.009843133389949799,
+            "max_depth": 20,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0781
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.21431098878383636,
+            "max_depth": 3,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.5312
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.0021094917319715023,
+            "max_depth": 20,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.375
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.21431098878383636,
+            "max_depth": 1,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.0021094917319715023,
+            "max_depth": 50,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0312
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.4629373550415039,
+            "max_depth": 8,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.004556754138320684,
+            "max_depth": 8,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.6094
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 1,
+            "max_depth": 32,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.009843133389949799,
+            "max_depth": 2,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.2656
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.045929204672575,
+            "max_depth": 20,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.4531
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.0009765625,
+            "max_depth": 3,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.21431098878383636,
+            "max_depth": 20,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0625
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.009843133389949799,
+            "max_depth": 3,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.2969
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.09921256452798843,
+            "max_depth": 32,
+            "reg_lambda": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.004556754138320684,
+            "max_depth": 2,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.5781
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.045929204672575,
+            "max_depth": 5,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.6406
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.0009765625,
+            "max_depth": 13,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.4629373550415039,
+            "max_depth": 1,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.02126234397292137,
+            "max_depth": 50,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.0469
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.045929204672575,
+            "max_depth": 8,
+            "reg_lambda": 1024
+          },
+          "value": 0.0312
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.0021094917319715023,
+            "max_depth": 8,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.3281
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 1,
+            "max_depth": 50,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.02126234397292137,
+            "max_depth": 1,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.2187
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.4629373550415039,
+            "max_depth": 3,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.009843133389949799,
+            "max_depth": 20,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0469
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.09921256452798843,
+            "max_depth": 3,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.4844
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.004556754138320684,
+            "max_depth": 20,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 1,
+            "max_depth": 2,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.02126234397292137,
+            "max_depth": 32,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0625
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.09921256452798843,
+            "max_depth": 5,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.0009765625,
+            "max_depth": 13,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.5312
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.21431098878383636,
+            "max_depth": 50,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.0021094917319715023,
+            "max_depth": 1,
+            "reg_lambda": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.4629373550415039,
+            "max_depth": 13,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.4219
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.004556754138320684,
+            "max_depth": 5,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.5
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.4629373550415039,
+            "max_depth": 32,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.004556754138320684,
+            "max_depth": 2,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.09921256452798843,
+            "max_depth": 20,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.0021094917319715023,
+            "max_depth": 3,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.045929204672575,
+            "max_depth": 2,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.5469
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.0009765625,
+            "max_depth": 32,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 1,
+            "max_depth": 5,
+            "reg_lambda": 1024
+          },
+          "value": 0.2031
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.009843133389949799,
+            "max_depth": 13,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.09921256452798843,
+            "max_depth": 8,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.3594
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.004556754138320684,
+            "max_depth": 8,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.21431098878383636,
+            "max_depth": 1,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.009843133389949799,
+            "max_depth": 50,
+            "reg_lambda": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 1,
+            "max_depth": 20,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.02126234397292137,
+            "max_depth": 3,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0312
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.045929204672575,
+            "max_depth": 32,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.0009765625,
+            "max_depth": 2,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.09921256452798843,
+            "max_depth": 20,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.004556754138320684,
+            "max_depth": 3,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.0156
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.4629373550415039,
+            "max_depth": 20,
+            "reg_lambda": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.009843133389949799,
+            "max_depth": 3,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 1,
+            "max_depth": 1,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.02126234397292137,
+            "max_depth": 50,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.045929204672575,
+            "max_depth": 8,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.0021094917319715023,
+            "max_depth": 8,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.4629373550415039,
+            "max_depth": 5,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.004556754138320684,
+            "max_depth": 13,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.21431098878383636,
+            "max_depth": 1,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.0021094917319715023,
+            "max_depth": 50,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.045929204672575,
+            "max_depth": 13,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.0009765625,
+            "max_depth": 5,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 1,
+            "max_depth": 32,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.02126234397292137,
+            "max_depth": 2,
+            "reg_lambda": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 1,
+            "max_depth": 13,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.009843133389949799,
+            "max_depth": 5,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.045929204672575,
+            "max_depth": 50,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.0009765625,
+            "max_depth": 1,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.09921256452798843,
+            "max_depth": 3,
+            "reg_lambda": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.0021094917319715023,
+            "max_depth": 20,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.4629373550415039,
+            "max_depth": 2,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.004556754138320684,
+            "max_depth": 32,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.045929204672575,
+            "max_depth": 2,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.0009765625,
+            "max_depth": 32,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.4629373550415039,
+            "max_depth": 3,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.02126234397292137,
+            "max_depth": 20,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.21431098878383636,
+            "max_depth": 50,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.009843133389949799,
+            "max_depth": 1,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.09921256452798843,
+            "max_depth": 8,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.004556754138320684,
+            "max_depth": 8,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.21431098878383636,
+            "max_depth": 1,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.009843133389949799,
+            "max_depth": 50,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.09921256452798843,
+            "max_depth": 5,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.004556754138320684,
+            "max_depth": 13,
+            "reg_lambda": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.045929204672575,
+            "max_depth": 32,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.0021094917319715023,
+            "max_depth": 2,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 1,
+            "max_depth": 13,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.02126234397292137,
+            "max_depth": 5,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.21431098878383636,
+            "max_depth": 20,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.0021094917319715023,
+            "max_depth": 3,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.4629373550415039,
+            "max_depth": 20,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.004556754138320684,
+            "max_depth": 2,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 1,
+            "max_depth": 5,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.02126234397292137,
+            "max_depth": 13,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.09921256452798843,
+            "max_depth": 1,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.0009765625,
+            "max_depth": 50,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.045929204672575,
+            "max_depth": 3,
+            "reg_lambda": 10.079368591308594
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.0009765625,
+            "max_depth": 20,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 1,
+            "max_depth": 2,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.800000011920929,
+            "eta": 0.009843133389949799,
+            "max_depth": 32,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.6000000238418579,
+            "eta": 0.4629373550415039,
+            "max_depth": 8,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.004556754138320684,
+            "max_depth": 8,
+            "reg_lambda": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.4000000059604645,
+            "eta": 0.21431098878383636,
+            "max_depth": 50,
+            "reg_lambda": 0.004556754138320684
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.0021094917319715023,
+            "max_depth": 1,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 1,
+            "eta": 0.4629373550415039,
+            "max_depth": 32,
+            "reg_lambda": 1024
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.30000001192092896,
+            "eta": 0.02126234397292137,
+            "max_depth": 2,
+            "reg_lambda": 0.09921256452798843
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.20000000298023224,
+            "eta": 0.045929204672575,
+            "max_depth": 13,
+            "reg_lambda": 2.1601195335388184
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.0009765625,
+            "max_depth": 5,
+            "reg_lambda": 0.02126234397292137
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.699999988079071,
+            "eta": 0.09921256452798843,
+            "max_depth": 2,
+            "reg_lambda": 0.0009765625
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.10000000149011612,
+            "eta": 0.0021094917319715023,
+            "max_depth": 32,
+            "reg_lambda": 47.0315055847168
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.5,
+            "eta": 0.21431098878383636,
+            "max_depth": 5,
+            "reg_lambda": 0.4629373550415039
+          },
+          "value": 0.0
+        },
+        {
+          "coords": {
+            "colsample_bytree": 0.8999999761581421,
+            "eta": 0.009843133389949799,
+            "max_depth": 13,
+            "reg_lambda": 219.45445251464844
+          },
+          "value": 0.0
+        }
+      ],
+      "note": "direct-LLM: raw one-shot LLM grid scores (no PSL compiler)"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "noise",
+      "level": "medium",
+      "repeats_recommended": true
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on general XGBoost heuristics for small, imbalanced datasets; specific feature interactions may shift the optimum."
+  }
+}

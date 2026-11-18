@@ -1,0 +1,159 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "alpha",
+        "type": "ordinal",
+        "values": [
+          9.99999993922529e-09,
+          7.74263710923151e-08,
+          5.994842240397702e-07,
+          4.641588930098806e-06,
+          3.5938137443736196e-05,
+          0.00027825593133457005,
+          0.002154434798285365,
+          0.01668100617825985,
+          0.1291549652814865,
+          1
+        ],
+        "meaning": "L2 penalty on the weights; values are log-spaced"
+      },
+      {
+        "name": "batch_size",
+        "type": "ordinal",
+        "values": [
+          4,
+          6,
+          10,
+          16,
+          25,
+          40,
+          64,
+          101,
+          161,
+          256
+        ],
+        "meaning": "samples per Adam update; values are log-spaced"
+      },
+      {
+        "name": "depth",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3
+        ],
+        "meaning": "number of hidden layers, all of equal width"
+      },
+      {
+        "name": "learning_rate_init",
+        "type": "ordinal",
+        "values": [
+          9.999999747378752e-06,
+          3.5938137443736196e-05,
+          0.00012915497063659132,
+          0.00046415888937190175,
+          0.0016681005945429206,
+          0.005994842387735844,
+          0.02154434658586979,
+          0.07742636650800705,
+          0.2782559394836426,
+          1
+        ],
+        "meaning": "initial Adam step size; values are log-spaced"
+      },
+      {
+        "name": "width",
+        "type": "ordinal",
+        "values": [
+          16,
+          25,
+          40,
+          64,
+          101,
+          161,
+          256,
+          406,
+          645,
+          1024
+        ],
+        "meaning": "neurons per hidden layer; values are log-spaced"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "learning_rate_init",
+        "alpha"
+      ],
+      "mode": {
+        "learning_rate_init": 0.0016681005945429206,
+        "alpha": 0.00027825593133457005
+      },
+      "ci": {
+        "learning_rate_init": [
+          0.00046415888937190175,
+          0.005994842387735844
+        ],
+        "alpha": [
+          4.641588930098806e-06,
+          0.002154434798285365
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Standard Adam LR ~1e-3 and moderate L2 regularization are robust defaults for small tabular data to prevent overfitting without underfitting."
+    },
+    {
+      "token": "bump",
+      "dim": "width",
+      "mode": 101,
+      "ci": [
+        40,
+        256
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "For <1k records, very wide networks (>256) risk overfitting; 64-161 is the sweet spot."
+    },
+    {
+      "token": "trend",
+      "dim": "depth",
+      "direction": "increase",
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Shallow networks (depth=1) often lack capacity for complex interactions; depth=2 or 3 is preferred, but depth=3 may overfit on small data."
+    },
+    {
+      "token": "bump",
+      "dim": "batch_size",
+      "mode": 40,
+      "ci": [
+        16,
+        101
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Moderate batch sizes provide stable gradients for Adam on small datasets; very small batches add noise, very large batches reduce update frequency."
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on general MLP tuning heuristics for small tabular datasets; specific feature interactions may shift the optimum."
+  }
+}

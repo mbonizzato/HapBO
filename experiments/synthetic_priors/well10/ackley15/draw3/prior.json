@@ -1,0 +1,354 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x10",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x11",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x12",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x13",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x14",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 18.41,
+      "ci": [
+        16.41,
+        20.41
+      ],
+      "sign": "peak",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -32.27,
+      "ci": [
+        -32.768,
+        -30.27
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -13.99,
+      "ci": [
+        -15.99,
+        -11.99
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 30.64,
+      "ci": [
+        28.64,
+        32.768
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -30.13,
+      "ci": [
+        -32.768,
+        -28.13
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -24.35,
+      "ci": [
+        -26.35,
+        -22.35
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -5.012,
+      "ci": [
+        -7.012,
+        -3.012
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 15.68,
+      "ci": [
+        13.68,
+        17.68
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -11.84,
+      "ci": [
+        -13.84,
+        -9.84
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 4.693,
+      "ci": [
+        2.693,
+        6.693
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x10",
+      "mode": 10.45,
+      "ci": [
+        8.45,
+        12.45
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x11",
+      "mode": -18.44,
+      "ci": [
+        -20.44,
+        -16.44
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x12",
+      "mode": 9.261,
+      "ci": [
+        7.261,
+        11.261
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x13",
+      "mode": -4.679,
+      "ci": [
+        -6.679,
+        -2.679
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "bump",
+      "dim": "x14",
+      "mode": -19.54,
+      "ci": [
+        -21.54,
+        -17.54
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "Model global minimum location"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium"
+  }
+}

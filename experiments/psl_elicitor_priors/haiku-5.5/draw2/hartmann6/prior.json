@@ -1,0 +1,300 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x5"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x5": 0.0339
+      },
+      "ci": {
+        "x0": [
+          0.189,
+          0.799
+        ],
+        "x5": [
+          0.0,
+          0.34
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "deepest well (alpha 2.779), sharp in x0 and x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x3"
+      ],
+      "mode": {
+        "x1": 0.98,
+        "x3": 0.3985
+      },
+      "ci": {
+        "x1": [
+          0.564,
+          1.0
+        ],
+        "x3": [
+          0.023,
+          0.774
+        ]
+      },
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "same well (alpha 2.779), sharp in x1 and x3"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x4"
+      ],
+      "mode": {
+        "x3": 0.1975,
+        "x4": 0.2178
+      },
+      "ci": {
+        "x3": [
+          0.0,
+          0.5705
+        ],
+        "x4": [
+          0.0,
+          0.512
+        ]
+      },
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "second deep well (alpha 2.766), sharp in x3 and x4"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x4",
+        "x5"
+      ],
+      "mode": {
+        "x4": 0.2178,
+        "x5": 0.7382
+      },
+      "ci": {
+        "x4": [
+          0.0,
+          0.512
+        ],
+        "x5": [
+          0.358,
+          1.0
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "second deep well, secondary pair in x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x4",
+        "x5"
+      ],
+      "mode": {
+        "x4": 0.06195,
+        "x5": 0.98
+      },
+      "ci": {
+        "x4": [
+          0.0,
+          0.465
+        ],
+        "x5": [
+          0.562,
+          1.0
+        ]
+      },
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "well alpha 1.402, sharp in x4 and x5"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x2"
+      ],
+      "mode": {
+        "x1": 0.4413,
+        "x2": 0.9455
+      },
+      "ci": {
+        "x1": [
+          0.0,
+          0.938
+        ],
+        "x2": [
+          0.524,
+          1.0
+        ]
+      },
+      "weight": 0.35,
+      "provenance": "llm_domain",
+      "note": "well alpha 1.402, weaker pair"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x2"
+      ],
+      "mode": {
+        "x0": 0.3108,
+        "x2": 0.6592
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          0.683
+        ],
+        "x2": [
+          0.348,
+          0.97
+        ]
+      },
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "well alpha 1.073, sharp in x2"
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "bandwidth": 0.15,
+      "note": "well centers scaled by relative depth",
+      "points": [
+        {
+          "coords": {
+            "x0": 0.4942,
+            "x1": 0.98,
+            "x2": 0.896,
+            "x3": 0.3985,
+            "x4": 0.04525,
+            "x5": 0.03393
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "x0": 0.4304,
+            "x1": 0.2353,
+            "x2": 0.5308,
+            "x3": 0.1975,
+            "x4": 0.2178,
+            "x5": 0.7382
+          },
+          "value": 0.97
+        },
+        {
+          "coords": {
+            "x0": 0.3962,
+            "x1": 0.4413,
+            "x2": 0.9455,
+            "x3": 0.2177,
+            "x4": 0.06195,
+            "x5": 0.98
+          },
+          "value": 0.5
+        },
+        {
+          "coords": {
+            "x0": 0.3108,
+            "x1": 0.2053,
+            "x2": 0.6592,
+            "x3": 0.02,
+            "x4": 0.7774,
+            "x5": 0.5599
+          },
+          "value": 0.4
+        }
+      ]
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few",
+      "n_optima": 4
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Built from the approximate analytic model in TASK.md; the calibration fidelity is unknown, so the well locations and depths are only approximate."
+  }
+}

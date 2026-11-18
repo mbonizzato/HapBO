@@ -1,0 +1,670 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.3
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.565,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.913,
+      "provenance": "llm_domain",
+      "note": "quadratic bowl (w0-1)^2 centred at o_0, mean factor 1+amp/2"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.945,
+      "provenance": "llm_domain",
+      "note": "bowl centred at o_1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.292,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "bowl centred at o_2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.617,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.995,
+      "provenance": "llm_domain",
+      "note": "bowl centred at o_3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.691,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.869,
+      "provenance": "llm_domain",
+      "note": "bowl centred at o_4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.936,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.953,
+      "provenance": "llm_domain",
+      "note": "bowl centred at o_5"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.955,
+      "provenance": "llm_domain",
+      "note": "bowl centred at o_6"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.971,
+      "provenance": "llm_domain",
+      "note": "bowl centred at o_7"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "bowl centred at o_8 (largest amp, strongest term)"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.473,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.233,
+      "provenance": "llm_domain",
+      "note": "weak bowl: factor 1+sin^2 averages 1.5 vs ~6 for other dims"
+    },
+    {
+      "token": "periodic",
+      "dim": "x0",
+      "period": 4.2364,
+      "phase": 4.453,
+      "weight": 0.269,
+      "provenance": "llm_domain",
+      "note": "sin^2(kap*pi*w+1) ripple, troughs at o+4((n-1/pi)/kap-1)"
+    },
+    {
+      "token": "periodic",
+      "dim": "x1",
+      "period": 3.937,
+      "phase": 3.821,
+      "weight": 0.28,
+      "provenance": "llm_domain",
+      "note": "ripple of f_1"
+    },
+    {
+      "token": "periodic",
+      "dim": "x2",
+      "period": 3.8204,
+      "phase": -0.104,
+      "weight": 0.293,
+      "provenance": "llm_domain",
+      "note": "ripple of f_2"
+    },
+    {
+      "token": "periodic",
+      "dim": "x3",
+      "period": 4.1344,
+      "phase": 3.435,
+      "weight": 0.298,
+      "provenance": "llm_domain",
+      "note": "ripple of f_3"
+    },
+    {
+      "token": "periodic",
+      "dim": "x4",
+      "period": 4.1314,
+      "phase": 3.507,
+      "weight": 0.254,
+      "provenance": "llm_domain",
+      "note": "ripple of f_4"
+    },
+    {
+      "token": "periodic",
+      "dim": "x5",
+      "period": 3.7843,
+      "phase": 1.516,
+      "weight": 0.283,
+      "provenance": "llm_domain",
+      "note": "ripple of f_5"
+    },
+    {
+      "token": "periodic",
+      "dim": "x6",
+      "period": 4.0084,
+      "phase": 2.9665,
+      "weight": 0.284,
+      "provenance": "llm_domain",
+      "note": "ripple of f_6"
+    },
+    {
+      "token": "periodic",
+      "dim": "x7",
+      "period": 3.9101,
+      "phase": -4.571,
+      "weight": 0.29,
+      "provenance": "llm_domain",
+      "note": "ripple of f_7"
+    },
+    {
+      "token": "periodic",
+      "dim": "x8",
+      "period": 4.1322,
+      "phase": -5.344,
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "ripple of f_8"
+    },
+    {
+      "token": "periodic",
+      "dim": "x9",
+      "period": 2.0,
+      "phase": 7.473,
+      "weight": 0.03,
+      "provenance": "llm_domain",
+      "note": "sin^2(2*pi*w9) ripple, amplitude 1 (small)"
+    },
+    {
+      "token": "periodic",
+      "dim": "x0",
+      "period": 4.0,
+      "phase": 5.565,
+      "weight": 0.03,
+      "provenance": "llm_domain",
+      "note": "extra sin^2(pi*w0) term, zero at x0=o_0+4n"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.565,
+      "ci": [
+        3.565,
+        7.565
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "true minimum at o_0; cancels spurious ripple penalty at the centre"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        3.137,
+        7.137
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "true minimum at o_1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.292,
+      "ci": [
+        -0.708,
+        3.292
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "true minimum at o_2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.617,
+      "ci": [
+        2.617,
+        6.617
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "true minimum at o_3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.691,
+      "ci": [
+        2.691,
+        6.691
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "true minimum at o_4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.936,
+      "ci": [
+        0.936,
+        4.936
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "true minimum at o_5"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        2.234,
+        6.234
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "true minimum at o_6"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -5.236,
+        -1.236
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "true minimum at o_7"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -6.161,
+        -2.161
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "true minimum at o_8"
+    },
+    {
+      "token": "avoid",
+      "dim": "x0",
+      "mode": -1.902,
+      "ci": [
+        -3.302,
+        -0.502
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "ridge sin^2=1 at d=-7.5, f~38"
+    },
+    {
+      "token": "avoid",
+      "dim": "x0",
+      "mode": -6.138,
+      "ci": [
+        -7.538,
+        -4.738
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-11.7, f~94"
+    },
+    {
+      "token": "avoid",
+      "dim": "x1",
+      "mode": -2.085,
+      "ci": [
+        -3.485,
+        -0.685
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-7.2"
+    },
+    {
+      "token": "avoid",
+      "dim": "x1",
+      "mode": -6.022,
+      "ci": [
+        -7.422,
+        -4.622
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-11.2"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": -5.835,
+      "ci": [
+        -7.235,
+        -4.435
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-7.1"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": 9.447,
+      "ci": [
+        8.047,
+        10.0
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "ridge at d=+8.2, f~46"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": -9.655,
+      "ci": [
+        -10.0,
+        -8.255
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-10.9, f~82"
+    },
+    {
+      "token": "avoid",
+      "dim": "x3",
+      "mode": -2.767,
+      "ci": [
+        -4.167,
+        -1.367
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-7.4"
+    },
+    {
+      "token": "avoid",
+      "dim": "x3",
+      "mode": -6.901,
+      "ci": [
+        -8.301,
+        -5.501
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-11.5"
+    },
+    {
+      "token": "avoid",
+      "dim": "x4",
+      "mode": -2.69,
+      "ci": [
+        -4.09,
+        -1.29
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-7.4"
+    },
+    {
+      "token": "avoid",
+      "dim": "x4",
+      "mode": -6.821,
+      "ci": [
+        -8.221,
+        -5.421
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-11.5"
+    },
+    {
+      "token": "avoid",
+      "dim": "x5",
+      "mode": -4.16,
+      "ci": [
+        -5.56,
+        -2.76
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-7.1"
+    },
+    {
+      "token": "avoid",
+      "dim": "x5",
+      "mode": -7.945,
+      "ci": [
+        -9.345,
+        -6.545
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-10.9"
+    },
+    {
+      "token": "avoid",
+      "dim": "x6",
+      "mode": -3.046,
+      "ci": [
+        -4.446,
+        -1.646
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-7.3"
+    },
+    {
+      "token": "avoid",
+      "dim": "x6",
+      "mode": -7.055,
+      "ci": [
+        -8.455,
+        -5.655
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "ridge at d=-11.3"
+    },
+    {
+      "token": "avoid",
+      "dim": "x7",
+      "mode": 5.204,
+      "ci": [
+        3.804,
+        6.604
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "ridge at d=+8.4, f~49"
+    },
+    {
+      "token": "avoid",
+      "dim": "x7",
+      "mode": 9.114,
+      "ci": [
+        7.714,
+        10.0
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "ridge at d=+12.4, f~105"
+    },
+    {
+      "token": "avoid",
+      "dim": "x8",
+      "mode": 4.987,
+      "ci": [
+        3.587,
+        6.387
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "ridge at d=+9.1, f~58"
+    },
+    {
+      "token": "avoid",
+      "dim": "x8",
+      "mode": 9.119,
+      "ci": [
+        7.719,
+        10.0
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "ridge at d=+13.3, f~120"
+    },
+    {
+      "token": "smoothness",
+      "level": "rough"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Prior transcribed from the approximate shifted-Levy analytic model: separable per-dimension bowls at o_i with period-4/kap_i ripples; model calibration fidelity unknown."
+  }
+}

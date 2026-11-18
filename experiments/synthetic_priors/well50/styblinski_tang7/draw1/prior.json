@@ -1,0 +1,344 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -3.17,
+      "ci": [
+        -3.67,
+        -2.67
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "global min of dim 0 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.63,
+      "ci": [
+        2.13,
+        3.13
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "local min of dim 0 quartic"
+    },
+    {
+      "token": "avoid",
+      "dim": "x0",
+      "mode": -0.24,
+      "ci": [
+        -0.74,
+        0.26
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "local max of dim 0 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -2.15,
+      "ci": [
+        -2.65,
+        -1.65
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "global min of dim 1 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 3.51,
+      "ci": [
+        3.01,
+        4.01
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "local min of dim 1 quartic"
+    },
+    {
+      "token": "avoid",
+      "dim": "x1",
+      "mode": 0.71,
+      "ci": [
+        0.21,
+        1.21
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "local max of dim 1 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -3.91,
+      "ci": [
+        -4.41,
+        -3.41
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "global min of dim 2 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 2.51,
+      "ci": [
+        2.01,
+        3.01
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "local min of dim 2 quartic"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": -0.66,
+      "ci": [
+        -1.16,
+        -0.16
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "local max of dim 2 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -4.47,
+      "ci": [
+        -4.97,
+        -3.97
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "global min of dim 3 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 1.19,
+      "ci": [
+        0.69,
+        1.69
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "local min of dim 3 quartic"
+    },
+    {
+      "token": "avoid",
+      "dim": "x3",
+      "mode": -1.62,
+      "ci": [
+        -2.12,
+        -1.12
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "local max of dim 3 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -2.14,
+      "ci": [
+        -2.64,
+        -1.64
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "global min of dim 4 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 3.29,
+      "ci": [
+        2.79,
+        3.79
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "local min of dim 4 quartic"
+    },
+    {
+      "token": "avoid",
+      "dim": "x4",
+      "mode": 0.62,
+      "ci": [
+        0.12,
+        1.12
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "local max of dim 4 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -4.92,
+      "ci": [
+        -5.0,
+        -4.42
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "global min of dim 5 quartic (clamped)"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 1.16,
+      "ci": [
+        0.66,
+        1.66
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "local min of dim 5 quartic"
+    },
+    {
+      "token": "avoid",
+      "dim": "x5",
+      "mode": -1.85,
+      "ci": [
+        -2.35,
+        -1.35
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "local max of dim 5 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -3.13,
+      "ci": [
+        -3.63,
+        -2.63
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "global min of dim 6 quartic"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 2.24,
+      "ci": [
+        1.74,
+        2.74
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "local min of dim 6 quartic"
+    },
+    {
+      "token": "avoid",
+      "dim": "x6",
+      "mode": -0.42,
+      "ci": [
+        -0.92,
+        0.08
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "local max of dim 6 quartic"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    },
+    {
+      "token": "noise",
+      "level": "low"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximation of separable quartic model with known parameters."
+  }
+}

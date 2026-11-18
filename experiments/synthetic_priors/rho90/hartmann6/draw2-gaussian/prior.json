@@ -1,0 +1,128 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x1",
+        "x2",
+        "x3",
+        "x4",
+        "x5"
+      ],
+      "mode": {
+        "x0": 0.4942,
+        "x1": 0.98,
+        "x2": 0.896,
+        "x3": 0.3985,
+        "x4": 0.04525,
+        "x5": 0.03393
+      },
+      "ci": {
+        "x0": [
+          0.24419999999999997,
+          0.7442
+        ],
+        "x1": [
+          0.73,
+          1.0
+        ],
+        "x2": [
+          0.646,
+          1.0
+        ],
+        "x3": [
+          0.14850000000000002,
+          0.6485000000000001
+        ],
+        "x4": [
+          0.0,
+          0.29525
+        ],
+        "x5": [
+          0.0,
+          0.28393
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Gaussian-only: single broad Gaussian at the prior peak"
+    },
+    {
+      "token": "modality",
+      "expectation": "few",
+      "n_optima": 4
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on approximate analytic model with unknown calibration fidelity"
+  }
+}

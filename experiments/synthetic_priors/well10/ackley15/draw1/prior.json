@@ -1,0 +1,340 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x10",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x11",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x12",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x13",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x14",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 18.41,
+      "ci": [
+        8.41,
+        28.41
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -32.27,
+      "ci": [
+        -32.768,
+        -22.27
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -13.99,
+      "ci": [
+        -23.99,
+        -3.99
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 30.64,
+      "ci": [
+        20.64,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -30.13,
+      "ci": [
+        -32.768,
+        -20.13
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -24.35,
+      "ci": [
+        -32.768,
+        -14.35
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -5.012,
+      "ci": [
+        -15.012,
+        4.988
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x6"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 15.68,
+      "ci": [
+        5.68,
+        25.68
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x7"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -11.84,
+      "ci": [
+        -21.84,
+        -1.84
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x8"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 4.693,
+      "ci": [
+        -5.307,
+        14.693
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x9"
+    },
+    {
+      "token": "bump",
+      "dim": "x10",
+      "mode": 10.45,
+      "ci": [
+        0.45,
+        20.45
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x10"
+    },
+    {
+      "token": "bump",
+      "dim": "x11",
+      "mode": -18.44,
+      "ci": [
+        -28.44,
+        -8.44
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x11"
+    },
+    {
+      "token": "bump",
+      "dim": "x12",
+      "mode": 9.261,
+      "ci": [
+        -0.739,
+        19.261
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x12"
+    },
+    {
+      "token": "bump",
+      "dim": "x13",
+      "mode": -4.679,
+      "ci": [
+        -14.679,
+        5.321
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x13"
+    },
+    {
+      "token": "bump",
+      "dim": "x14",
+      "mode": -19.54,
+      "ci": [
+        -29.54,
+        -9.54
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Global optimum center x14"
+    },
+    {
+      "token": "smoothness",
+      "level": "rough"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximate analytic model provided; global minimum location derived from model constants c_i."
+  }
+}

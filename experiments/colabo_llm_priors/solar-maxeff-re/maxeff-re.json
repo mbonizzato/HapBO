@@ -1,0 +1,54 @@
+{
+  "artifact_format": "colabo-llm-prior-v1",
+  "dataset_id": "solar-maxeff-re",
+  "target_name": "maxeff-re",
+  "construction": "BORA supplement Sec. C.2: pi(x)=N(c, sigma=1-s+eps), eps=1e-6",
+  "dim": 7,
+  "bounds": [
+    [
+      1.0,
+      30.0
+    ],
+    [
+      1.0,
+      30.0
+    ],
+    [
+      793.0,
+      995.0
+    ],
+    [
+      1.0,
+      8567.0
+    ],
+    [
+      0.01,
+      5.0
+    ],
+    [
+      0.005,
+      0.1
+    ],
+    [
+      0.0055,
+      0.1
+    ]
+  ],
+  "c": [
+    16.0,
+    16.0,
+    850.0,
+    1000.0,
+    1.5,
+    0.02,
+    0.025
+  ],
+  "s": 0.65,
+  "sigma": 0.35000099999999995,
+  "eps": 1e-06,
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "enable_thinking": true,
+  "prompt_hash": "2fffa74a65b3d1cfdadcf74c7ee4bfc893cc2653956fdc7382355429dbe8a522"
+}

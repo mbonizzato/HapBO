@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-card-misleading-gaussian",
+  "dataset_id": "hpobench-rf-car",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "car",
+    "target_slug": "car",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-30T01:43:23.709760+00:00",
+    "generated_at": "2026-09-30T01:44:26.621022+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=False; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "94e2eb84221cb91ab327a4f1d2c208b5d4c5bebde40cbb760507c8ee66de913d"
+    },
+    "prior.json": {
+      "sha256": "25dfa22595e0f3d3fafa6c3750af015f3fd60b41bb5e3df94e0095071265cb1b"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-11-08T12:15:22.648253+00:00"
+}

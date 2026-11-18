@@ -1,0 +1,37 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "human-expert-map",
+  "dataset_id": "neuromosaic-dataset1-rat",
+  "scope": {
+    "subjects": "dataset-level human expert (average across animals)",
+    "target": "cortical MEP: RightMedialisGastrocnemius",
+    "target_name": "RightMedialisGastrocnemius",
+    "target_slug": "right-medialis-gastrocnemius",
+    "uses_observed_objective_values": false
+  },
+  "card": {
+    "human_statement": true
+  },
+  "generation": {
+    "provider": null,
+    "model": null,
+    "created_at_utc": "2026-11-16T01:37:29.689295+00:00",
+    "generated_at": null,
+    "raw_llm_response_available": false,
+    "notes": ""
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "546fed0f44b465d240bedf48eb6130420f5c3c17850b7cb4efcb724af9e70141"
+    },
+    "prior.json": {
+      "sha256": "7802c8814e164ebb80dc88559f43ba2fdcbf5ab75bede6ac4f4e3899ff720fc5"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-11-16T01:37:29.704096+00:00"
+}

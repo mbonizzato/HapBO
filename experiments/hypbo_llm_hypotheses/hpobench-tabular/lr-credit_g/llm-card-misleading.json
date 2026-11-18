@@ -1,0 +1,176 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "lr-credit_g",
+  "modality": "llm-card-misleading",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "alpha": 1,
+        "eta0": 1
+      },
+      "c": {
+        "alpha": 1,
+        "eta0": 1
+      },
+      "s": 0.95,
+      "kept": true,
+      "side_encoded": 0.050001000000000045,
+      "center_encoded": [
+        1.0,
+        1.0
+      ],
+      "box_encoded": {
+        "lb": [
+          0.9749995,
+          0.9749995
+        ],
+        "ub": [
+          1.0,
+          1.0
+        ]
+      },
+      "box_native": {
+        "alpha": [
+          0.7498898921332059,
+          1.0
+        ],
+        "eta0": [
+          0.7498898921332059,
+          1.0
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "alpha": 0.6189658045768738,
+        "eta0": 0.6189658045768738
+      },
+      "c": {
+        "alpha": 0.6189658045768738,
+        "eta0": 0.6189658045768738
+      },
+      "s": 0.4,
+      "kept": true,
+      "side_encoded": 0.600001,
+      "center_encoded": [
+        0.9583333314160355,
+        0.9583333314160355
+      ],
+      "box_encoded": {
+        "lb": [
+          0.6583328314160355,
+          0.6583328314160355
+        ],
+        "ub": [
+          1.0,
+          1.0
+        ]
+      },
+      "box_native": {
+        "alpha": [
+          0.01957330454055343,
+          1.0
+        ],
+        "eta0": [
+          0.01957330454055343,
+          1.0
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "alpha",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        9.999999747378752e-06,
+        1.6155980119947344e-05,
+        2.6101572075276636e-05,
+        4.2169649532297626e-05,
+        6.812920764787123e-05,
+        0.00011006941349478438,
+        0.00017782794020604342,
+        0.0002872984914574772,
+        0.00046415888937190175,
+        0.0007498941849917173,
+        0.0012115276185795665,
+        0.0019573417957872152,
+        0.003162277629598975,
+        0.005108969751745462,
+        0.008254041895270348,
+        0.013335213996469975,
+        0.02154434658586979,
+        0.034807004034519196,
+        0.05623413249850273,
+        0.09085175395011902,
+        0.14677992463111877,
+        0.23713737726211548,
+        0.3831186890602112,
+        0.6189658045768738,
+        1
+      ]
+    },
+    {
+      "name": "eta0",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        9.999999747378752e-06,
+        1.6155980119947344e-05,
+        2.6101572075276636e-05,
+        4.2169649532297626e-05,
+        6.812920764787123e-05,
+        0.00011006941349478438,
+        0.00017782794020604342,
+        0.0002872984914574772,
+        0.00046415888937190175,
+        0.0007498941849917173,
+        0.0012115276185795665,
+        0.0019573417957872152,
+        0.003162277629598975,
+        0.005108969751745462,
+        0.008254041895270348,
+        0.013335213996469975,
+        0.02154434658586979,
+        0.034807004034519196,
+        0.05623413249850273,
+        0.09085175395011902,
+        0.14677992463111877,
+        0.23713737726211548,
+        0.3831186890602112,
+        0.6189658045768738,
+        1
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 1735,
+    "completion_tokens": 342
+  },
+  "source_prompt_card": "experiments/priors/hpobench-lr-credit-g/credit-g/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "ee69268f024e25869db2a645c3b513d3144e3ea23743e61b6d0b97435b304697",
+  "adversarial_hint": "experiments/misleading_descriptions/hpobench-tabular/lr-credit_g.txt",
+  "adversarial_hint_sha256": "2dc3a00b0578c42b4a7aa681366d3365a80a1211e44514297a56e8dfa2bdd11b",
+  "prompt_sha256": "74bfdf8ef135b27c17018c1af162ffa08c82c5601aee44e56beb7f3e846216fe",
+  "created_at_utc": "2026-11-07T20:06:25.071149+00:00"
+}

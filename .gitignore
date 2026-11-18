@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+# anchored to the repository root so nested source directories named build/ are not ignored
+/build/
+/dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# Secrets / local config
+.env
+.env.*
+*.pem
+*.key
+.netrc
+
+# Benchmark data and raw run outputs are not committed (benchmark/README.md, which explains how to get
+# the data, is); results/paper/ holds the compact data the figure generators read
+benchmark/*
+!benchmark/README.md
+results/*
+!results/paper/
+*/**/results/
+logs/
+
+*.mat
+*.pkl
+*.npz
+*.h5
+*.hdf5
+*.npy
+
+# Upstream baseline checkouts (external/README.md); the local patches are tracked
+/external/*/
+!/external/patches/
+
+# Generated figures (python paper/make_paper.py)
+paper/figures/
+paper/tables/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+
+# Uncompressed CALIPER priors (the shipped copies are caliper_prior.json.gz)
+**/caliper_prior.json
+# Uncompressed LLM-EI utilities (the shipped copies are llm_ei_utility.json.gz)
+**/llm_ei_utility.json
+
+# Elicitation transcripts and raw model responses are not shipped (prior.json, metadata.json and prompt_card.md are)
+**/llm_cache/
+**/raw_llm_response.txt
+**/llm_calls.jsonl
+**/raw_llm_response_attempt*.txt
+**/neps-point-*/prompt.json
+
+# Diagrams written by leak_control_cnn/plot_*.py
+leak_control_cnn/figures/

@@ -1,0 +1,248 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.565,
+      "ci": [
+        -1.4,
+        10.0
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "quadratic centre o_0; sin^2(pi w0) zeros at 5.565+4k"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        -2.9,
+        10.0
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "quadratic centre o_1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.292,
+      "ci": [
+        -6.7,
+        9.3
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "quadratic centre o_2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.617,
+      "ci": [
+        -3.4,
+        10.0
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "quadratic centre o_3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.691,
+      "ci": [
+        -3.3,
+        10.0
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "quadratic centre o_4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.936,
+      "ci": [
+        -5.1,
+        10.0
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "quadratic centre o_5"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        -3.8,
+        10.0
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "quadratic centre o_6"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -10.0,
+        4.8
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "quadratic centre o_7"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -10.0,
+        3.8
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "quadratic centre o_8"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.473,
+      "ci": [
+        -0.5,
+        10.0
+      ],
+      "weight": 0.3,
+      "provenance": "llm_domain",
+      "note": "centre of (w9-1)^2 term; weaker because the sine factor only doubles it"
+    },
+    {
+      "token": "periodic",
+      "dim": "x0",
+      "period": 4.0,
+      "phase": 5.565,
+      "weight": 0.25,
+      "provenance": "llm_domain",
+      "note": "sin^2(pi w0) ripple: minima every 4 units of x0 starting at 5.565"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "noise",
+      "level": "low"
+    },
+    {
+      "token": "modality",
+      "expectation": "unimodal"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Beliefs follow the given analytic model directly; its constants are only approximately calibrated, so the centres and relative depths may differ from the true objective."
+  }
+}

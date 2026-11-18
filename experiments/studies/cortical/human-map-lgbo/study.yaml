@@ -1,0 +1,15 @@
+artifact_format: llm-bo-study-v1
+study_id: human-map-lgbo
+phase: cortical
+status: ready
+execution_mode: optimization
+research_question: "LGBO (paper equation) with the shared human-map text in the loop."
+design:
+  budgets: [12]
+  seeds: [1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010]
+  methods: [lgbo-prior]
+  optimizer: {n_initial: 2, length_scale: 1.0, noise_std: 0.05, improvement_xi: 0.0, cortical_text: human}
+  benchmarks:
+    - benchmark_id: neuromosaic-dataset1-rat-all
+      include: all
+      prior_path: experiments/priors/neuromosaic-dataset1-rat/{muscle_slug}/human-expert-map-shared/prior.json

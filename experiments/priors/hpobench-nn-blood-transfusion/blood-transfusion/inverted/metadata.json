@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "inverted",
+  "dataset_id": "hpobench-nn-blood-transfusion",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "blood-transfusion",
+    "target_slug": "blood-transfusion",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": null,
+    "created_at_utc": "2026-09-29T04:03:04.170019+00:00",
+    "generated_at": "2026-09-29T04:03:31.485633+00:00",
+    "raw_llm_response_available": false,
+    "notes": "Inverted-map prior at the empirical anti-optimum; no LLM."
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "4c409036978657d0d617f95c1e2cbd0547aba691df93928bd4f4d80900bad5eb"
+    },
+    "prior.json": {
+      "sha256": "17b66153dc6c4fff58c72e531d8c40ea2f8e7598ab679037efdfd4a5ce400785"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-29T04:03:31.487480+00:00"
+}

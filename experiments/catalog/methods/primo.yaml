@@ -1,0 +1,40 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: primo
+label: PriMO single-objective (NePS 0.17.0, native multi-fidelity, cost-matched)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external-mf
+neps_algorithm: primo
+neps_kwargs:
+  initial_design_size: 5
+requires_prior: true
+prior_source: neps-point
+note: >-
+  PriMO (Prior-informed Multi-objective Optimizer, Basu et al., arXiv 2511.08371) as implemented in
+  the official NePS package (neural-pipeline-search==0.17.0, separate environment, interpreter
+  NEPS_PYTHON), called as neps.algorithms.primo(space, prior_centers=..., prior_confidences=...,
+  initial_design_size=5) and driven through neps.AskAndTell; the study worker owns every evaluation
+  (src/baselines/neps_mf.py, src/baselines/workers/neps_worker.py). Settings: initial_design_size=5
+  (the paper's value; the NePS 0.17.0 default is the number of hyperparameters); all other settings
+  are the NePS defaults (eta=3, epsilon=0.25, uniform initial-design sampler, epsnet selector). Run
+  with one objective, the paper's single-objective case: the objective is passed as a one-element
+  vector [1 - validation accuracy] (PriMO's scalarization asserts a sequence; the scalarization
+  weight is then 1).
+  NATIVE: the initial design is NePS's MOASHA with uniform sampling (the prior is not used) until 5
+  full-fidelity units are spent; with one objective its epsilon-net sort is a ranking with random
+  tie-breaking, and its promotion rule promotes the best not-yet-promoted configuration of a rung
+  whenever at least eta are waiting. Then BO at the maximum fidelity (SingleTaskGP on the
+  full-fidelity trials, qLogNoisyEI); with probability 1 - epsilon the acquisition is weighted by
+  the prior. NePS 0.17.0 behaviour, used as shipped: for log acquisitions the weight is applied as
+  log a + log pi + gamma, so the prior enters with exponent 1 until gamma = exp(-n_BO^2 / d) falls
+  below 1e-4 (the paper writes a * pi^gamma).
+  ADAPTED (as priorband): index Integer search space over the table grid; the tables' own lower
+  fidelities (lr / nn iter, rf / xgb n_estimators, svm subsample; eta=3 rungs coincide with them);
+  cost z / z_max per evaluation without continuation discount and a stop at cumulative cost = budget
+  (PriMO's full-fidelity BO evaluations cost 1, so it leaves less than one unit unused); repeated
+  (configuration, fidelity) proposals charged and served from the cache; point prior (one value and
+  low / medium / high per hyperparameter) elicited once from the task card, mapped by NePS 0.17.0 to
+  truncated-normal standard deviations 0.75 / 0.5 / 0.25 on the unit index scale and also declared on
+  the space parameters (unused by the uniform initial design). Per run: mf_evaluations.jsonl,
+  cost_curves.json and mf_accounting.json.

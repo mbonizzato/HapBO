@@ -1,0 +1,129 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "c",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "SVM penalty parameter (larger means weaker regularization)"
+      },
+      {
+        "name": "gamma",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.001953125,
+          0.00390625,
+          0.0078125,
+          0.015625,
+          0.03125,
+          0.0625,
+          0.125,
+          0.25,
+          0.5,
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024
+        ],
+        "meaning": "RBF kernel coefficient (larger means narrower kernel)"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "c",
+        "gamma"
+      ],
+      "mode": {
+        "c": 1,
+        "gamma": 0.25
+      },
+      "ci": {
+        "c": [
+          0.125,
+          8
+        ],
+        "gamma": [
+          0.0625,
+          1
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Standard heuristic for RBF-SVM: C around 1 and gamma around 1/sqrt(n_features) (approx 0.25 for ~16 features) is a robust starting point for moderate datasets."
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "c": [
+          512,
+          1024
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Very high C values on small datasets often lead to overfitting and poor validation accuracy."
+    },
+    {
+      "token": "avoid",
+      "region": {
+        "gamma": [
+          128,
+          1024
+        ]
+      },
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Very high gamma creates extremely narrow kernels, causing the model to memorize noise (overfitting) on small datasets."
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on general SVM hyperparameter tuning heuristics for small, imbalanced datasets. The exact optimum depends on the specific feature distribution and class imbalance ratio."
+  }
+}

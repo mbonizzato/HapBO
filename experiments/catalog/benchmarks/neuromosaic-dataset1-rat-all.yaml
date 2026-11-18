@@ -1,0 +1,54 @@
+artifact_format: llm-bo-benchmark-catalog-v1
+benchmark_id: neuromosaic-dataset1-rat-all
+family: offline-finite
+implementation_status: available
+adapter: neuromosaic-dataset1-rat
+problem_id_template: "{subject}-{muscle}"
+# Noisy emulator (OptimizeNeurostim): each query returns a random valid single
+# trial from sorted_resp; regret is measured on the true means (sorted_respMean).
+noisy: true
+# Every recorded muscle of Dataset 1: knee flexor, tibialis anterior, medial gastrocnemius,
+# knee extensor and gluteus (40 rat-muscle maps).
+# muscle_slug fills the {muscle_slug} placeholder of a prior_path template.
+cases:
+  - {subject: rat1, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat2, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat3, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat4, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat5, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat6, muscle: LeftKneeFlexor, muscle_slug: left-knee-flexor}
+  - {subject: rat1, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat2, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat3, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat4, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat5, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat6, muscle: LeftTibialisAnterioris, muscle_slug: left-tibialis-anterioris}
+  - {subject: rat1, muscle: RightTibialisAnterioris, muscle_slug: right-tibialis-anterioris}
+  - {subject: rat2, muscle: RightTibialisAnterioris, muscle_slug: right-tibialis-anterioris}
+  - {subject: rat3, muscle: RightTibialisAnterioris, muscle_slug: right-tibialis-anterioris}
+  - {subject: rat6, muscle: RightTibialisAnterioris, muscle_slug: right-tibialis-anterioris}
+  - {subject: rat1, muscle: LeftMedialisGastrocnemius, muscle_slug: left-medialis-gastrocnemius}
+  - {subject: rat2, muscle: LeftMedialisGastrocnemius, muscle_slug: left-medialis-gastrocnemius}
+  - {subject: rat3, muscle: LeftMedialisGastrocnemius, muscle_slug: left-medialis-gastrocnemius}
+  - {subject: rat4, muscle: LeftMedialisGastrocnemius, muscle_slug: left-medialis-gastrocnemius}
+  - {subject: rat5, muscle: LeftMedialisGastrocnemius, muscle_slug: left-medialis-gastrocnemius}
+  - {subject: rat6, muscle: LeftMedialisGastrocnemius, muscle_slug: left-medialis-gastrocnemius}
+  - {subject: rat1, muscle: RightMedialisGastrocnemius, muscle_slug: right-medialis-gastrocnemius}
+  - {subject: rat2, muscle: RightMedialisGastrocnemius, muscle_slug: right-medialis-gastrocnemius}
+  - {subject: rat3, muscle: RightMedialisGastrocnemius, muscle_slug: right-medialis-gastrocnemius}
+  - {subject: rat4, muscle: RightMedialisGastrocnemius, muscle_slug: right-medialis-gastrocnemius}
+  - {subject: rat5, muscle: RightMedialisGastrocnemius, muscle_slug: right-medialis-gastrocnemius}
+  - {subject: rat6, muscle: RightMedialisGastrocnemius, muscle_slug: right-medialis-gastrocnemius}
+  - {subject: rat2, muscle: LeftKneeExtensor, muscle_slug: left-knee-extensor}
+  - {subject: rat3, muscle: LeftKneeExtensor, muscle_slug: left-knee-extensor}
+  - {subject: rat4, muscle: LeftKneeExtensor, muscle_slug: left-knee-extensor}
+  - {subject: rat6, muscle: LeftKneeExtensor, muscle_slug: left-knee-extensor}
+  - {subject: rat2, muscle: LeftGluteus, muscle_slug: left-gluteus}
+  - {subject: rat3, muscle: LeftGluteus, muscle_slug: left-gluteus}
+  - {subject: rat4, muscle: LeftGluteus, muscle_slug: left-gluteus}
+  - {subject: rat6, muscle: LeftGluteus, muscle_slug: left-gluteus}
+  - {subject: rat1, muscle: RightGluteus, muscle_slug: right-gluteus}
+  - {subject: rat3, muscle: RightGluteus, muscle_slug: right-gluteus}
+  - {subject: rat5, muscle: RightGluteus, muscle_slug: right-gluteus}
+  - {subject: rat6, muscle: RightGluteus, muscle_slug: right-gluteus}
+download: stage the published NeuroMOSAIC Dataset 1 rat .mat files under benchmark/NeuroMOSAIC/dataset1/rat (see benchmark README)

@@ -1,0 +1,87 @@
+{
+  "artifact_format": "colabo-llm-point-prior-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "svm-kc1",
+  "modality": "llm-card-misleading",
+  "construction": "BORA supplement SC.2: pi(x) = N(c, sigma), sigma = 1 - s + 1e-6",
+  "c_raw": {
+    "c": 1024,
+    "gamma": 1
+  },
+  "c": {
+    "c": 1024,
+    "gamma": 1
+  },
+  "s": 0.95,
+  "sigma": 0.050001000000000045,
+  "dimensions": [
+    {
+      "name": "c",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    },
+    {
+      "name": "gamma",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.001953125,
+        0.00390625,
+        0.0078125,
+        0.015625,
+        0.03125,
+        0.0625,
+        0.125,
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "enable_thinking": false,
+  "attempts": 1,
+  "source_prompt_card": "experiments/priors/hpobench-svm-kc1/kc1/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "93e8bcd7452611b3a39dd65547a04adac120ab89c4a5ce6a6f3f4cb0df50974c",
+  "schema_fallback": false,
+  "adversarial_hint": "experiments/misleading_descriptions/hpobench-tabular/svm-kc1.txt",
+  "adversarial_hint_sha256": "bfd2f1e2bad251f067ee923ed45064f8d7a5cacf6c382bff0323ae431a5119b3",
+  "prompt_sha256": "0a47b9410d36f1076a324fcbd2f7216d11fd835651ee5e5f1c2b7e9f44502e2f",
+  "created_at_utc": "2026-09-29T22:00:21.470764+00:00"
+}

@@ -1,0 +1,6 @@
+{"dimensions":[
+ {"name":"learning_rate","type":"ordinal","values":[0.0001,0.0003,0.001,0.003,0.01,0.03],"scale":"log","meaning":"Adam optimizer learning rate"},
+ {"name":"base_channels","type":"ordinal","values":[8,16,24,32,48],"scale":"linear","meaning":"number of channels in the first conv block (the second block uses twice this)"},
+ {"name":"dropout","type":"ordinal","values":[0.0,0.1,0.25,0.4,0.5],"scale":"linear","meaning":"dropout probability before the linear head"},
+ {"name":"weight_decay","type":"ordinal","values":[0.0,0.00001,0.0001,0.001,0.01],"scale":"log","meaning":"L2 weight decay coefficient"}
+]}

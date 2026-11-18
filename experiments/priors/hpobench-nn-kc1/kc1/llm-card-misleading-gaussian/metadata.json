@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-card-misleading-gaussian",
+  "dataset_id": "hpobench-nn-kc1",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "kc1",
+    "target_slug": "kc1",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-30T02:03:22.529029+00:00",
+    "generated_at": "2026-09-30T02:04:29.221234+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=False; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "419aa22bb445d4c2b6147c9b4ce1f0da147d0946105fc67092d9ed0a47faa46f"
+    },
+    "prior.json": {
+      "sha256": "0cff9d4d90296ef7063d30d2af363ff8cdbd49e8cca4f41400070594397227e5"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-11-08T12:15:17.987733+00:00"
+}

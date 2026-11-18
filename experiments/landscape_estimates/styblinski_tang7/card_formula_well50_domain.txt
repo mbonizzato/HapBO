@@ -1,0 +1,12 @@
+A 7-parameter black-box objective, to be MINIMIZED; each input ranges [-5, 5]. No expert intuition about the location of the optimum is available. An approximate analytic model of the objective is available. Its functional form is believed to describe the objective's general shape, but its parameter values are only approximately calibrated (fidelity unknown), so the locations and relative depths of its minima may differ from those of the true objective. The model is:
+
+F(x) = 0.5 * sum_{i=0..6} [ y_i^4 - a_i*y_i^2 + b_i*y_i ],   where y_i = lam_i * (x_i - s_i)
+per-parameter constants:
+a_i  b_i  lam_i  s_i
+17.89  1.842  1.03  -0.2445
+18.07  2.603  1.062  0.7094
+18.11  2.742  0.9378  -0.6588
+17.15  1.711  1.035  -1.615
+16.12  3.164  1.045  0.6248
+14.48  1.507  0.8852  -1.854
+15.75  1.667  1.046  -0.4228

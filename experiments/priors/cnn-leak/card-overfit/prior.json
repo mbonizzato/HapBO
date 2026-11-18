@@ -1,0 +1,127 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "learning_rate",
+        "type": "ordinal",
+        "values": [
+          0.0001,
+          0.0003,
+          0.001,
+          0.003,
+          0.01,
+          0.03
+        ],
+        "meaning": "Adam optimizer learning rate"
+      },
+      {
+        "name": "base_channels",
+        "type": "ordinal",
+        "values": [
+          8,
+          16,
+          24,
+          32,
+          48
+        ],
+        "meaning": "channels in first conv block"
+      },
+      {
+        "name": "dropout",
+        "type": "ordinal",
+        "values": [
+          0.0,
+          0.1,
+          0.25,
+          0.4,
+          0.5
+        ],
+        "meaning": "dropout probability before linear head"
+      },
+      {
+        "name": "weight_decay",
+        "type": "ordinal",
+        "values": [
+          0.0,
+          1e-05,
+          0.0001,
+          0.001,
+          0.01
+        ],
+        "meaning": "L2 weight decay coefficient"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "learning_rate",
+      "mode": 0.001,
+      "ci": [
+        0.0003,
+        0.003
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Adam typically peaks around 1e-3 for small datasets; 3e-4 to 3e-3 is the safe 90% interval"
+    },
+    {
+      "token": "bump",
+      "dim": "base_channels",
+      "mode": 24,
+      "ci": [
+        16,
+        32
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Small dataset needs moderate capacity; 16-32 channels balances underfitting and overfitting"
+    },
+    {
+      "token": "bump",
+      "dim": "dropout",
+      "mode": 0.25,
+      "ci": [
+        0.1,
+        0.4
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "Moderate dropout (0.25) helps generalization on small data without killing signal"
+    },
+    {
+      "token": "bump",
+      "dim": "weight_decay",
+      "mode": 0.0001,
+      "ci": [
+        1e-05,
+        0.001
+      ],
+      "weight": 0.6,
+      "provenance": "llm_domain",
+      "note": "Light regularization (1e-4) is standard for Adam on small datasets"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "noise",
+      "level": "medium",
+      "repeats_recommended": false
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Standard heuristics for small CNNs on limited data; specific dataset characteristics may shift optima"
+  }
+}

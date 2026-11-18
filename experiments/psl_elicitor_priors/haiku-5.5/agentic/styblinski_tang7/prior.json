@@ -1,0 +1,244 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 3.1976,
+      "ci": [
+        -1.3246,
+        4.8578
+      ],
+      "weight": 0.4138,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 0 of parameter x0)"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -3.4068,
+      "ci": [
+        -4.9681,
+        -0.0599
+      ],
+      "weight": 0.4161,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 1 of parameter x0)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.9,
+      "ci": [
+        1.5885,
+        4.998
+      ],
+      "weight": 0.6883,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 0 of parameter x1)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.7602,
+      "ci": [
+        -4.2055,
+        4.8362
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 1 of parameter x1)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.9,
+      "ci": [
+        1.6524,
+        4.998
+      ],
+      "weight": 0.4027,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 0 of parameter x2)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.7545,
+      "ci": [
+        -4.5339,
+        4.8448
+      ],
+      "weight": 0.5705,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 1 of parameter x2)"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -4.2843,
+      "ci": [
+        -4.9857,
+        -1.1882
+      ],
+      "weight": 0.3366,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 0 of parameter x3)"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.8874,
+      "ci": [
+        -4.8419,
+        4.4241
+      ],
+      "weight": 0.4842,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 1 of parameter x3)"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.822,
+      "ci": [
+        -4.4536,
+        4.8613
+      ],
+      "weight": 0.9392,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 0 of parameter x4)"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.9,
+      "ci": [
+        1.4144,
+        4.998
+      ],
+      "weight": 0.6507,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 1 of parameter x4)"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -4.3852,
+      "ci": [
+        -4.9877,
+        1.3564
+      ],
+      "weight": 0.2585,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 0 of parameter x5)"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 3.1674,
+      "ci": [
+        -0.4669,
+        4.5016
+      ],
+      "weight": 0.2302,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 1 of parameter x5)"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.9,
+      "ci": [
+        1.5412,
+        4.998
+      ],
+      "weight": 0.6873,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 0 of parameter x6)"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.6868,
+      "ci": [
+        -4.1597,
+        4.8663
+      ],
+      "weight": 0.9935,
+      "provenance": "llm_domain",
+      "note": "peak of model term y_i^4 - a_i y_i^2 + b_i y_i (well 1 of parameter x6)"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "shape from approximate analytic model; separable two-well per-parameter fit"
+  }
+}

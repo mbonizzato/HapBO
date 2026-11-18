@@ -1,0 +1,696 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x10",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x11",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x12",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x13",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x14",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 18.1,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -12.57,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -16.48,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 18.57,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -12.92,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -14.87,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_5"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 18.48,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_6"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 14.94,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_7"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -17.51,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_8"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": -17.88,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_9"
+    },
+    {
+      "token": "bump",
+      "dim": "x10",
+      "mode": 7.261,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_10"
+    },
+    {
+      "token": "bump",
+      "dim": "x11",
+      "mode": -6.172,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_11"
+    },
+    {
+      "token": "bump",
+      "dim": "x12",
+      "mode": 11.69,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_12"
+    },
+    {
+      "token": "bump",
+      "dim": "x13",
+      "mode": 15.58,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_13"
+    },
+    {
+      "token": "bump",
+      "dim": "x14",
+      "mode": 14.39,
+      "ci": [
+        -32.768,
+        32.768
+      ],
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Ackley bowl centre c_14"
+    },
+    {
+      "token": "avoid",
+      "dim": "x0",
+      "mode": -32.768,
+      "ci": [
+        -32.768,
+        15.2
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl keeps worsening (quadratic tail)"
+    },
+    {
+      "token": "avoid",
+      "dim": "x1",
+      "mode": 32.768,
+      "ci": [
+        -15.2,
+        32.768
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x2",
+      "mode": 32.768,
+      "ci": [
+        -15.2,
+        32.768
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x3",
+      "mode": -32.768,
+      "ci": [
+        -32.768,
+        15.2
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x4",
+      "mode": 32.768,
+      "ci": [
+        -15.2,
+        32.768
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x5",
+      "mode": 32.768,
+      "ci": [
+        -15.2,
+        32.768
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x6",
+      "mode": -32.768,
+      "ci": [
+        -32.768,
+        15.2
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x7",
+      "mode": -32.768,
+      "ci": [
+        -32.768,
+        15.2
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x8",
+      "mode": 32.768,
+      "ci": [
+        -15.2,
+        32.768
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x9",
+      "mode": 32.768,
+      "ci": [
+        -15.2,
+        32.768
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x10",
+      "mode": -32.768,
+      "ci": [
+        -32.768,
+        15.2
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "far (low) side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x10",
+      "mode": 32.768,
+      "ci": [
+        0.768,
+        32.768
+      ],
+      "weight": 0.25,
+      "provenance": "llm_domain",
+      "note": "near (high) side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x11",
+      "mode": 32.768,
+      "ci": [
+        -15.2,
+        32.768
+      ],
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "far (high) side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x11",
+      "mode": -32.768,
+      "ci": [
+        -32.768,
+        -0.768
+      ],
+      "weight": 0.25,
+      "provenance": "llm_domain",
+      "note": "near (low) side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x12",
+      "mode": -32.768,
+      "ci": [
+        -32.768,
+        15.2
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far (low) side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x12",
+      "mode": 32.768,
+      "ci": [
+        4.768,
+        32.768
+      ],
+      "weight": 0.2,
+      "provenance": "llm_domain",
+      "note": "near (high) side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x13",
+      "mode": -32.768,
+      "ci": [
+        -32.768,
+        15.2
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "avoid",
+      "dim": "x14",
+      "mode": -32.768,
+      "ci": [
+        -32.768,
+        15.2
+      ],
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "far side of bowl"
+    },
+    {
+      "token": "periodic",
+      "dim": "x0",
+      "period": 0.99601594,
+      "phase": -32.69681,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_0, peaks at c_0 + k/kap_0"
+    },
+    {
+      "token": "periodic",
+      "dim": "x1",
+      "period": 1.00542932,
+      "phase": -32.67859,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_1"
+    },
+    {
+      "token": "periodic",
+      "dim": "x2",
+      "period": 0.99800399,
+      "phase": -32.44806,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_2"
+    },
+    {
+      "token": "periodic",
+      "dim": "x3",
+      "period": 0.999001,
+      "phase": -32.37905,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_3"
+    },
+    {
+      "token": "periodic",
+      "dim": "x4",
+      "period": 0.99800399,
+      "phase": -31.88208,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_4"
+    },
+    {
+      "token": "periodic",
+      "dim": "x5",
+      "period": 0.99601594,
+      "phase": -31.80227,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_5"
+    },
+    {
+      "token": "periodic",
+      "dim": "x6",
+      "period": 1.00492413,
+      "phase": -31.76621,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_6"
+    },
+    {
+      "token": "periodic",
+      "dim": "x7",
+      "period": 1.00070049,
+      "phase": -32.09292,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_7"
+    },
+    {
+      "token": "periodic",
+      "dim": "x8",
+      "period": 1.00532824,
+      "phase": -32.58992,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_8"
+    },
+    {
+      "token": "periodic",
+      "dim": "x9",
+      "period": 1.0023053,
+      "phase": -31.91227,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_9"
+    },
+    {
+      "token": "periodic",
+      "dim": "x10",
+      "period": 0.99700897,
+      "phase": -32.61936,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_10"
+    },
+    {
+      "token": "periodic",
+      "dim": "x11",
+      "period": 1.0034116,
+      "phase": -32.2607,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_11"
+    },
+    {
+      "token": "periodic",
+      "dim": "x12",
+      "period": 1.00160256,
+      "phase": -32.38051,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_12"
+    },
+    {
+      "token": "periodic",
+      "dim": "x13",
+      "period": 0.99502488,
+      "phase": -32.18119,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_13"
+    },
+    {
+      "token": "periodic",
+      "dim": "x14",
+      "period": 0.99502488,
+      "phase": -32.37617,
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "cos ripple, period 1/kap_14"
+    },
+    {
+      "token": "smoothness",
+      "level": "rough"
+    },
+    {
+      "token": "noise",
+      "level": "low",
+      "repeats_recommended": false
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Shifted 15-D Ackley model: global bowl centred at c (per-dim bumps + far-side penalties approximating the radial exponential), plus period-1/kap cosine ripples peaking at c. Model is only approximately calibrated."
+  }
+}

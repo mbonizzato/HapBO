@@ -1,0 +1,56 @@
+{
+  "artifact_format": "colabo-llm-point-prior-v1",
+  "benchmark_id": "neuromosaic-dataset1-rat",
+  "task": "right-tibialis-anterioris",
+  "modality": "human-expert-map-shared",
+  "construction": "BORA supplement SC.2: pi(x) = N(c, sigma), sigma = 1 - s + 1e-6",
+  "c_raw": {
+    "electrode_mediolateral_index": 1,
+    "electrode_rostrocaudal_index": 1
+  },
+  "c": {
+    "electrode_mediolateral_index": 1,
+    "electrode_rostrocaudal_index": 1
+  },
+  "s": 0.95,
+  "sigma": 0.050001000000000045,
+  "dimensions": [
+    {
+      "name": "electrode_mediolateral_index",
+      "type": "ordinal",
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "electrode_rostrocaudal_index",
+      "type": "ordinal",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "scale": "linear"
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "enable_thinking": false,
+  "attempts": 1,
+  "source_prompt_card": "experiments/priors/neuromosaic-dataset1-rat/left-knee-flexor/human-expert-map-shared/prompt_card.md",
+  "source_prompt_card_sha256": "cef229ce7a9cafffcfbd44310011d9ac2829a41f6eb0d7f0c046bffda87b1f91",
+  "schema_fallback": false,
+  "prompt_sha256": "860964c77660dbe0e3490659325318aa80e0b41b91ba158a25f3a1c61bed0760",
+  "created_at_utc": "2026-10-08T03:55:46.483670+00:00",
+  "replicated_from": "left-knee-flexor"
+}

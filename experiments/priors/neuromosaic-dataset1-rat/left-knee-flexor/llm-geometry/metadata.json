@@ -1,0 +1,49 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-geometry",
+  "dataset_id": "neuromosaic-dataset1-rat",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "LeftKneeFlexor",
+    "target_slug": "left-knee-flexor",
+    "uses_observed_objective_values": false
+  },
+  "card": {
+    "human_statement": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-10-08T04:09:31.481319+00:00",
+    "generated_at": "2026-10-08T04:10:28.686721+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=True; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "67ae0670f032df8e71155f01605ada5bf10128901281c28f6e89caf192ce44e3"
+    },
+    "prior.json": {
+      "sha256": "b73eddcce199220bb2d6e21495fd1f633842398f3a24962be6a982c5c5a468c9"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card_neutral_example.md",
+    "sha256": "b98d5cbfe419115a1fe656a79724df473ac0caa8025ed531665e8f0c07bb181c"
+  },
+  "finalized_at_utc": "2026-10-08T04:10:28.687951+00:00",
+  "corrections": [
+    {
+      "rule": "user_stated / user_confirmed provenance requires a human statement in the task card (card.human_statement)",
+      "belief": "beliefs[1]",
+      "token": "joint_region",
+      "field": "provenance",
+      "original": "user_stated",
+      "corrected": "llm_domain",
+      "date": "2026-11-08",
+      "prior_sha256_before": "0fbae29790f4aaf53c0825f080f4fd5d82d2896955da1a081ea69e03533fe8a2"
+    }
+  ]
+}

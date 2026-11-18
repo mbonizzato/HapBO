@@ -1,0 +1,44 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: priorband
+label: PriorBand (NePS 0.17.0, native multi-fidelity, cost-matched)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external-mf
+neps_algorithm: priorband
+neps_kwargs:
+  sample_prior_first: highest_fidelity
+requires_prior: true
+prior_source: neps-point
+note: >-
+  PriorBand (Mallik et al., NeurIPS 2023) as implemented in the official NePS package
+  (neural-pipeline-search==0.17.0, separate environment, interpreter NEPS_PYTHON), called as
+  neps.algorithms.priorband(space, sample_prior_first="highest_fidelity") and driven through
+  neps.AskAndTell; the study worker owns every evaluation (src/baselines/neps_mf.py,
+  src/baselines/workers/neps_worker.py). Settings: sample_prior_first="highest_fidelity" (the
+  paper's default: the prior mode is evaluated first at the maximum fidelity; the NePS 0.17.0
+  default is False); all other settings are the NePS defaults (Hyperband base, eta=3, no BO,
+  incumbent mutation rate 0.5 and standard deviation 0.25).
+  NATIVE: bracket schedule, rungs (derived by NePS from the fidelity bounds and eta), the PriorBand
+  sampler (uniform / prior / incumbent-mutation mixture) and promotions. NePS 0.17.0 behaviour, used
+  as shipped: the mode is evaluated and counted but is kept out of the brackets and of the table the
+  sampler reads, so it does not influence any later proposal; incumbent mutation changes each
+  hyperparameter with probability 0.5 without retry, so it can return the incumbent itself; the
+  top-K used for the prior/incumbent weighting is n // eta; Hyperband bracket sizes use
+  floor((s_max + 1) / (s + 1)) * eta^s.
+  ADAPTED: (1) search space - each tabular hyperparameter is a NePS Integer over the index of its
+  sorted grid values, so every proposal is exactly one table row (on log-spaced grids the index is
+  linear in log value); (2) fidelity - the HPOBench tables' own lower fidelities, one dimension per
+  family, the others at their maximum: lr iter {12, 37, 111, 333, 1000}, nn iter {3, 9, 27, 81, 243},
+  rf n_estimators {18, 56, 170, 512}, xgb n_estimators {74, 222, 666, 2000}, svm subsample
+  {1/9, 1/3, 1}; the eta=3 rungs coincide with these values; (3) cost - an evaluation at fidelity z
+  costs z / z_max full-fidelity units, a promotion is a fresh evaluation (no continuation
+  discount), and the run stops at cumulative cost = budget (the first proposal that would exceed it
+  is not evaluated); a repeated (configuration, fidelity) proposal is charged and served from the
+  cache; (4) prior - one grid value and a confidence (low / medium / high) per hyperparameter,
+  elicited once from the task card (src/experiments/neps_point_elicitation.py); NePS 0.17.0 maps
+  low / medium / high to a truncated normal with standard deviation 0.75 / 0.5 / 0.25 on the unit
+  index scale; (5) the objective is reported as 1 - validation accuracy. Python, NumPy and torch RNGs
+  are seeded from the run seed. Per run: mf_evaluations.jsonl (every evaluation with fidelity, cost,
+  cumulative cost, observed and true full-fidelity value), cost_curves.json (best full-fidelity
+  evaluation vs cumulative cost) and mf_accounting.json.

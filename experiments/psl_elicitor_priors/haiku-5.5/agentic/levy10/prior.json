@@ -1,0 +1,333 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.565,
+      "ci": [
+        -9.9998,
+        9.9999
+      ],
+      "skew": 0.6277,
+      "sign": "peak",
+      "weight": 0.830529,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    },
+    {
+      "token": "periodic",
+      "dim": "x0",
+      "period": 4.2864,
+      "phase": -7.3322,
+      "weight": 0.818294,
+      "provenance": "llm_domain",
+      "note": "ripple of sin^2(kappa*pi*w_i+1) factor"
+    },
+    {
+      "token": "periodic",
+      "dim": "x0",
+      "period": 4.0,
+      "phase": -8.435,
+      "weight": 0.797056,
+      "provenance": "llm_domain",
+      "note": "sin^2(pi*w_0) term"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "skew": 0.5677,
+      "sign": "peak",
+      "weight": 0.937158,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    },
+    {
+      "token": "periodic",
+      "dim": "x1",
+      "period": 3.9355,
+      "phase": -7.8791,
+      "weight": 0.515721,
+      "provenance": "llm_domain",
+      "note": "ripple of sin^2(kappa*pi*w_i+1) factor"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.292,
+      "ci": [
+        -7.1011,
+        7.7645
+      ],
+      "skew": 0.1299,
+      "sign": "peak",
+      "weight": 0.779821,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    },
+    {
+      "token": "periodic",
+      "dim": "x2",
+      "period": 3.8211,
+      "phase": -7.6722,
+      "weight": 0.354252,
+      "provenance": "llm_domain",
+      "note": "ripple of sin^2(kappa*pi*w_i+1) factor"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.617,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "skew": 0.4995,
+      "sign": "peak",
+      "weight": 0.791792,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    },
+    {
+      "token": "periodic",
+      "dim": "x3",
+      "period": 4.244,
+      "phase": -9.0039,
+      "weight": 0.433994,
+      "provenance": "llm_domain",
+      "note": "ripple of sin^2(kappa*pi*w_i+1) factor"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.691,
+      "ci": [
+        -9.9998,
+        9.9999
+      ],
+      "skew": 0.5089,
+      "sign": "peak",
+      "weight": 0.703853,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    },
+    {
+      "token": "periodic",
+      "dim": "x4",
+      "period": 4.131,
+      "phase": -8.8578,
+      "weight": 0.367717,
+      "provenance": "llm_domain",
+      "note": "ripple of sin^2(kappa*pi*w_i+1) factor"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.936,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "skew": 0.3025,
+      "sign": "peak",
+      "weight": 0.725706,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    },
+    {
+      "token": "periodic",
+      "dim": "x5",
+      "period": 3.7831,
+      "phase": -9.8533,
+      "weight": 0.364258,
+      "provenance": "llm_domain",
+      "note": "ripple of sin^2(kappa*pi*w_i+1) factor"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        -9.9997,
+        9.9999
+      ],
+      "skew": 0.4518,
+      "sign": "peak",
+      "weight": 0.747581,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    },
+    {
+      "token": "periodic",
+      "dim": "x6",
+      "period": 4.0084,
+      "phase": -9.1209,
+      "weight": 0.388159,
+      "provenance": "llm_domain",
+      "note": "ripple of sin^2(kappa*pi*w_i+1) factor"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -10.0,
+        9.9999
+      ],
+      "skew": -0.3357,
+      "sign": "peak",
+      "weight": 0.912984,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    },
+    {
+      "token": "periodic",
+      "dim": "x7",
+      "period": 3.9091,
+      "phase": -8.4365,
+      "weight": 0.414107,
+      "provenance": "llm_domain",
+      "note": "ripple of sin^2(kappa*pi*w_i+1) factor"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "skew": -0.443,
+      "sign": "peak",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    },
+    {
+      "token": "periodic",
+      "dim": "x8",
+      "period": 4.1291,
+      "phase": -9.4214,
+      "weight": 0.523311,
+      "provenance": "llm_domain",
+      "note": "ripple of sin^2(kappa*pi*w_i+1) factor"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.473,
+      "ci": [
+        -9.9993,
+        9.9999
+      ],
+      "skew": 0.9668,
+      "sign": "peak",
+      "weight": 0.243329,
+      "provenance": "llm_domain",
+      "note": "bowl (w_i-1)^2 centred on o_i"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "belief built from the approximate analytic model in TASK.md"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "anchors",
+      "bandwidth": 0.5,
+      "provenance": "llm_domain",
+      "note": "Centres of the four Gaussian wells of the approximate model; values proportional to alpha_k (deepest well P3 at 1.0, P4 near it, P2 and P1 shallower)",
+      "points": [
+        {
+          "coords": {
+            "x0": 0.4304,
+            "x1": 0.2353,
+            "x2": 0.5308,
+            "x3": 0.1975,
+            "x4": 0.2178,
+            "x5": 0.7382
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "x0": 0.4942,
+            "x1": 0.98,
+            "x2": 0.896,
+            "x3": 0.3985,
+            "x4": 0.04525,
+            "x5": 0.03393
+          },
+          "value": 0.92
+        },
+        {
+          "coords": {
+            "x0": 0.3962,
+            "x1": 0.4413,
+            "x2": 0.9455,
+            "x3": 0.2177,
+            "x4": 0.06195,
+            "x5": 0.98
+          },
+          "value": 0.45
+        },
+        {
+          "coords": {
+            "x0": 0.3108,
+            "x1": 0.2053,
+            "x2": 0.6592,
+            "x3": 0.02,
+            "x4": 0.7774,
+            "x5": 0.5599
+          },
+          "value": 0.35
+        }
+      ]
+    },
+    {
+      "token": "modality",
+      "expectation": "few",
+      "n_optima": 4
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Anchors encode the well centres of the approximate analytic model; calibration may shift minima and relative depths."
+  }
+}

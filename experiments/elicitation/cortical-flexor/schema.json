@@ -1,0 +1,4 @@
+{"objective":"maximize","dimensions":[
+  {"name":"electrode_mediolateral_index","type":"ordinal","values":[1,2,3,4]},
+  {"name":"electrode_rostrocaudal_index","type":"ordinal","values":[1,2,3,4,5,6,7,8]}
+]}

@@ -1,0 +1,392 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.1905,
+      "ci": [
+        0.041,
+        0.341
+      ],
+      "sign": "peak",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Min 3 (best), dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.1908,
+      "ci": [
+        0.053,
+        0.328
+      ],
+      "sign": "peak",
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 3 (best), dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.8044,
+      "ci": [
+        0.605,
+        1.0
+      ],
+      "sign": "peak",
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 3 (best), dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.02272,
+      "ci": [
+        0.0,
+        0.107
+      ],
+      "sign": "peak",
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 3 (best), dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.02791,
+      "ci": [
+        0.0,
+        0.096
+      ],
+      "sign": "peak",
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 3 (best), dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.3005,
+      "ci": [
+        0.212,
+        0.389
+      ],
+      "sign": "peak",
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "Min 3 (best), dim 5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4942,
+      "ci": [
+        0.423,
+        0.566
+      ],
+      "sign": "peak",
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Min 4 (2nd best), dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.98,
+      "ci": [
+        0.883,
+        1.0
+      ],
+      "sign": "peak",
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Min 4 (2nd best), dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.896,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "sign": "peak",
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Min 4 (2nd best), dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.3985,
+      "ci": [
+        0.311,
+        0.486
+      ],
+      "sign": "peak",
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Min 4 (2nd best), dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.04525,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "sign": "peak",
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Min 4 (2nd best), dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.03393,
+      "ci": [
+        0.0,
+        0.105
+      ],
+      "sign": "peak",
+      "weight": 0.98,
+      "provenance": "llm_domain",
+      "note": "Min 4 (2nd best), dim 5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.3962,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "sign": "peak",
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Min 2 (3rd best), dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.4413,
+      "ci": [
+        0.359,
+        0.523
+      ],
+      "sign": "peak",
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Min 2 (3rd best), dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.9455,
+      "ci": [
+        0.876,
+        1.0
+      ],
+      "sign": "peak",
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Min 2 (3rd best), dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.2177,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "sign": "peak",
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Min 2 (3rd best), dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.06195,
+      "ci": [
+        0.0,
+        0.156
+      ],
+      "sign": "peak",
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Min 2 (3rd best), dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.98,
+      "ci": [
+        0.911,
+        1.0
+      ],
+      "sign": "peak",
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "Min 2 (3rd best), dim 5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.3108,
+      "ci": [
+        0.224,
+        0.398
+      ],
+      "sign": "peak",
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Min 1 (4th best), dim 0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.2053,
+      "ci": [
+        0.051,
+        0.359
+      ],
+      "sign": "peak",
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Min 1 (4th best), dim 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.6592,
+      "ci": [
+        0.587,
+        0.732
+      ],
+      "sign": "peak",
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Min 1 (4th best), dim 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.02,
+      "ci": [
+        0.0,
+        0.176
+      ],
+      "sign": "peak",
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Min 1 (4th best), dim 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.7774,
+      "ci": [
+        0.578,
+        0.976
+      ],
+      "sign": "peak",
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Min 1 (4th best), dim 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.5599,
+      "ci": [
+        0.47,
+        0.65
+      ],
+      "sign": "peak",
+      "weight": 0.38,
+      "provenance": "llm_domain",
+      "note": "Min 1 (4th best), dim 5"
+    },
+    {
+      "token": "modality",
+      "expectation": "few",
+      "n_optima": 4
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on approximate analytic model provided in domain description."
+  }
+}

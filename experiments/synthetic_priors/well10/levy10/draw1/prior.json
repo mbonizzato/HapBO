@@ -1,0 +1,235 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.182,
+      "ci": [
+        -1.8,
+        2.2
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_0 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.8299,
+      "ci": [
+        -1.2,
+        2.8
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_1 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -9.533,
+      "ci": [
+        -10.0,
+        -7.0
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_2 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -0.042,
+      "ci": [
+        -2.0,
+        2.0
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_3 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.03906,
+      "ci": [
+        -2.0,
+        2.0
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_4 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.1158,
+      "ci": [
+        -2.0,
+        2.0
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_5 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -0.07893,
+      "ci": [
+        -2.0,
+        2.0
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_6 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 1.644,
+      "ci": [
+        -0.4,
+        3.6
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_7 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": 0.6852,
+      "ci": [
+        -1.3,
+        2.7
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_8 based on model"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 6.693,
+      "ci": [
+        4.7,
+        8.7
+      ],
+      "weight": 0.8,
+      "provenance": "llm_domain",
+      "note": "Global minimum at o_9 based on model"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    },
+    {
+      "token": "smoothness",
+      "level": "rough"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Model is approximate; locations trusted but calibrated with uncertainty"
+  }
+}

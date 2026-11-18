@@ -1,0 +1,53 @@
+{
+  "artifact_format": "neps-point-prior-v1",
+  "model": "lr",
+  "task": "car",
+  "card": "llm-card-misleading",
+  "parameters": {
+    "alpha": {
+      "card_name": "alpha",
+      "llm_value": 0.05623413249850273,
+      "value": 0.05623413249850273,
+      "index": 18,
+      "n_values": 25,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    },
+    "eta0": {
+      "card_name": "eta0",
+      "llm_value": 9.999999747378752e-06,
+      "value": 9.999999747378752e-06,
+      "index": 0,
+      "n_values": 25,
+      "on_grid": true,
+      "scale": "log",
+      "confidence": "high"
+    }
+  },
+  "provenance": {
+    "model": "lr",
+    "task": "car",
+    "card": "llm-card-misleading",
+    "card_sha256": "5e44f14031dd8b4376ea72b8fa3418caa8858ef52f509a75c105a2f816f7986f",
+    "prompt_sha256": "70acb903a61994583a8b9c4fefe28b9b937299c21ad5703e10ea8788d9d32418",
+    "llm": {
+      "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+      "provider": "openai",
+      "base_url": "http://localhost:8000/v1",
+      "temperature": 0.0,
+      "seed": 7,
+      "max_tokens": 4096,
+      "enable_thinking": false
+    },
+    "max_attempts": 4,
+    "created_at_utc": "2026-11-06T16:21:44.711129+00:00",
+    "attempts": 1,
+    "rejected": [],
+    "usage": {
+      "calls": 1,
+      "cached_calls": 0,
+      "tokens": 1697
+    }
+  }
+}

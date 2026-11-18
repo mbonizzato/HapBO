@@ -1,0 +1,91 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "electrode_mediolateral_index",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "meaning": "Medio-lateral column index (1=most medial, 4=most lateral)"
+      },
+      {
+        "name": "electrode_rostrocaudal_index",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "meaning": "Rostro-caudal row index (1=most rostral/top, 8=most caudal)"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "electrode_mediolateral_index",
+        "electrode_rostrocaudal_index"
+      ],
+      "mode": {
+        "electrode_mediolateral_index": 1,
+        "electrode_rostrocaudal_index": 1
+      },
+      "ci": {
+        "electrode_mediolateral_index": [
+          1,
+          2
+        ],
+        "electrode_rostrocaudal_index": [
+          1,
+          2
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "user_stated",
+      "note": "Expert states top row (index 1) and outer columns (index 1) are most effective"
+    },
+    {
+      "token": "trend",
+      "dim": "electrode_rostrocaudal_index",
+      "direction": "decrease",
+      "weight": 0.6,
+      "provenance": "user_stated",
+      "note": "Top row is most effective, implying response drops as we move caudally"
+    },
+    {
+      "token": "trend",
+      "dim": "electrode_mediolateral_index",
+      "direction": "decrease",
+      "weight": 0.5,
+      "provenance": "user_stated",
+      "note": "Outer columns (1 and 4) are effective; leaning towards medial (1) based on joint peak"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "unimodal"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "high",
+    "notes": "Based on direct expert experience with this specific preparation and array geometry."
+  }
+}

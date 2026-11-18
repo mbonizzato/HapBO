@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "llm-card-pointonly",
+  "dataset_id": "hpobench-lr-segment",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "segment",
+    "target_slug": "segment",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+    "created_at_utc": "2026-09-29T15:22:22.624919+00:00",
+    "generated_at": "2026-09-29T15:23:55.398362+00:00",
+    "raw_llm_response_available": false,
+    "notes": "base_url=http://localhost:8000/v1; seed=7; replicate=0; temperature=0.0; enable_thinking=False; card_file=False; api_calls=1"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "ce48229ee6586032110620fb76828481163a0b368e49bd6d3a6612daaeb9371e"
+    },
+    "prior.json": {
+      "sha256": "dc21b0bd5215e361ba3c0afc1baa96145e564bcd506d0d48cda4af9350a6049c"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-30T13:31:39.625969+00:00"
+}

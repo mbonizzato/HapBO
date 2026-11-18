@@ -1,0 +1,493 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -2.997,
+      "ci": [
+        -4.74,
+        -1.26
+      ],
+      "weight": 0.134,
+      "provenance": "llm_domain",
+      "note": "x0 deep well (f=-42.8)"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.811,
+      "ci": [
+        1.18,
+        4.44
+      ],
+      "weight": 0.116,
+      "provenance": "llm_domain",
+      "note": "x0 shallow well (f=-37.2)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.29,
+      "ci": [
+        -3.01,
+        0.43
+      ],
+      "weight": 0.14,
+      "provenance": "llm_domain",
+      "note": "x1 deep well (f=-44.7)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.371,
+      "ci": [
+        3.2,
+        5.0
+      ],
+      "weight": 0.088,
+      "provenance": "llm_domain",
+      "note": "x1 shallow well core (f=-36.9)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 3.4,
+      "ci": [
+        2.0,
+        4.8
+      ],
+      "weight": 0.052,
+      "provenance": "llm_domain",
+      "note": "x1 shallow well inner shoulder"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.122,
+      "ci": [
+        -4.08,
+        -0.16
+      ],
+      "weight": 0.141,
+      "provenance": "llm_domain",
+      "note": "x2 deep well (f=-45.1)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.295,
+      "ci": [
+        3.1,
+        5.0
+      ],
+      "weight": 0.09,
+      "provenance": "llm_domain",
+      "note": "x2 shallow well core (f=-36.9)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 3.2,
+      "ci": [
+        1.8,
+        4.6
+      ],
+      "weight": 0.06,
+      "provenance": "llm_domain",
+      "note": "x2 shallow well inner shoulder"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.398,
+      "ci": [
+        -5.0,
+        -1.7
+      ],
+      "weight": 0.123,
+      "provenance": "llm_domain",
+      "note": "x3 deep well (f=-39.3)"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.26,
+      "ci": [
+        0.68,
+        3.84
+      ],
+      "weight": 0.107,
+      "provenance": "llm_domain",
+      "note": "x3 shallow well (f=-34.2)"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.454,
+      "ci": [
+        -3.14,
+        0.23
+      ],
+      "weight": 0.116,
+      "provenance": "llm_domain",
+      "note": "x4 deep well (f=-37.0)"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 3.98,
+      "ci": [
+        2.96,
+        5.0
+      ],
+      "weight": 0.071,
+      "provenance": "llm_domain",
+      "note": "x4 shallow well core (f=-28.0)"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 3.1,
+      "ci": [
+        1.9,
+        4.3
+      ],
+      "weight": 0.035,
+      "provenance": "llm_domain",
+      "note": "x4 shallow well inner shoulder"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.465,
+      "ci": [
+        -5.0,
+        -1.6
+      ],
+      "weight": 0.088,
+      "provenance": "llm_domain",
+      "note": "x5 deep well (f=-28.2)"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.615,
+      "ci": [
+        0.92,
+        4.31
+      ],
+      "weight": 0.076,
+      "provenance": "llm_domain",
+      "note": "x5 shallow well (f=-24.2)"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.199,
+      "ci": [
+        -2.82,
+        0.42
+      ],
+      "weight": 0.104,
+      "provenance": "llm_domain",
+      "note": "x6 deep well (f=-33.4)"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.167,
+      "ci": [
+        3.1,
+        5.0
+      ],
+      "weight": 0.071,
+      "provenance": "llm_domain",
+      "note": "x6 shallow well core (f=-28.7)"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 3.2,
+      "ci": [
+        1.9,
+        4.5
+      ],
+      "weight": 0.039,
+      "provenance": "llm_domain",
+      "note": "x6 shallow well inner shoulder"
+    },
+    {
+      "token": "trend",
+      "dim": "x6",
+      "direction": "increase",
+      "knee": -2.4,
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "quartic blow-up toward x6=-5 (f=+703); ramp 1 of 3"
+    },
+    {
+      "token": "trend",
+      "dim": "x6",
+      "direction": "increase",
+      "knee": -3.4,
+      "weight": 0.745,
+      "provenance": "llm_domain",
+      "note": "x6 low-edge ramp 2 of 3"
+    },
+    {
+      "token": "trend",
+      "dim": "x6",
+      "direction": "increase",
+      "knee": -4.3,
+      "weight": 0.454,
+      "provenance": "llm_domain",
+      "note": "x6 low-edge ramp 3 of 3"
+    },
+    {
+      "token": "trend",
+      "dim": "x1",
+      "direction": "increase",
+      "knee": -2.4,
+      "weight": 0.959,
+      "provenance": "llm_domain",
+      "note": "quartic blow-up toward x1=-5 (f=+738); ramp 1 of 3"
+    },
+    {
+      "token": "trend",
+      "dim": "x1",
+      "direction": "increase",
+      "knee": -3.4,
+      "weight": 0.86,
+      "provenance": "llm_domain",
+      "note": "x1 low-edge ramp 2 of 3"
+    },
+    {
+      "token": "trend",
+      "dim": "x1",
+      "direction": "increase",
+      "knee": -4.3,
+      "weight": 0.487,
+      "provenance": "llm_domain",
+      "note": "x1 low-edge ramp 3 of 3"
+    },
+    {
+      "token": "trend",
+      "dim": "x4",
+      "direction": "increase",
+      "knee": -2.5,
+      "weight": 0.726,
+      "provenance": "llm_domain",
+      "note": "quartic blow-up toward x4=-5 (f=+585); ramp 1 of 3"
+    },
+    {
+      "token": "trend",
+      "dim": "x4",
+      "direction": "increase",
+      "knee": -3.5,
+      "weight": 0.74,
+      "provenance": "llm_domain",
+      "note": "x4 low-edge ramp 2 of 3"
+    },
+    {
+      "token": "trend",
+      "dim": "x4",
+      "direction": "increase",
+      "knee": -4.3,
+      "weight": 0.362,
+      "provenance": "llm_domain",
+      "note": "x4 low-edge ramp 3 of 3"
+    },
+    {
+      "token": "trend",
+      "dim": "x2",
+      "direction": "increase",
+      "knee": -3.1,
+      "weight": 0.424,
+      "provenance": "llm_domain",
+      "note": "blow-up toward x2=-5 (f=+238); ramp 1 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x2",
+      "direction": "increase",
+      "knee": -4.0,
+      "weight": 0.318,
+      "provenance": "llm_domain",
+      "note": "x2 low-edge ramp 2 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x3",
+      "direction": "decrease",
+      "knee": 3.1,
+      "weight": 0.434,
+      "provenance": "llm_domain",
+      "note": "blow-up toward x3=+5 (f=+265); ramp 1 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x3",
+      "direction": "decrease",
+      "knee": 4.0,
+      "weight": 0.394,
+      "provenance": "llm_domain",
+      "note": "x3 high-edge ramp 2 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x3",
+      "direction": "increase",
+      "knee": -4.2,
+      "weight": 0.161,
+      "provenance": "llm_domain",
+      "note": "mild rise toward x3=-5 (f=+40)"
+    },
+    {
+      "token": "trend",
+      "dim": "x0",
+      "direction": "decrease",
+      "knee": 3.6,
+      "weight": 0.21,
+      "provenance": "llm_domain",
+      "note": "blow-up toward x0=+5 (f=+132); ramp 1 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x0",
+      "direction": "decrease",
+      "knee": 4.3,
+      "weight": 0.203,
+      "provenance": "llm_domain",
+      "note": "x0 high-edge ramp 2 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x0",
+      "direction": "increase",
+      "knee": -3.6,
+      "weight": 0.129,
+      "provenance": "llm_domain",
+      "note": "rise toward x0=-5 (f=+98); ramp 1 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x0",
+      "direction": "increase",
+      "knee": -4.3,
+      "weight": 0.175,
+      "provenance": "llm_domain",
+      "note": "x0 low-edge ramp 2 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x5",
+      "direction": "decrease",
+      "knee": 3.5,
+      "weight": 0.166,
+      "provenance": "llm_domain",
+      "note": "rise toward x5=+5 (f=+99); ramp 1 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x5",
+      "direction": "decrease",
+      "knee": 4.3,
+      "weight": 0.143,
+      "provenance": "llm_domain",
+      "note": "x5 high-edge ramp 2 of 2"
+    },
+    {
+      "token": "trend",
+      "dim": "x5",
+      "direction": "increase",
+      "knee": -4.3,
+      "weight": 0.074,
+      "provenance": "llm_domain",
+      "note": "slight rise toward x5=-5 (f=+15)"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Separable Styblinski-Tang-like double-well model (7 dims, 2^7 local minima). Each dimension encoded additively on a common scale (-f_i/320): curvature-matched Gaussian bumps at both wells (deep negative-y well weighted above the shallow one), shoulder bumps for wells crowded against x=+5, and piecewise-linear trend ramps for the quartic blow-ups at the box edges. Global optimum of the model is near (-3.00, -1.29, -2.12, -3.40, -1.45, -3.47, -1.20)."
+  }
+}

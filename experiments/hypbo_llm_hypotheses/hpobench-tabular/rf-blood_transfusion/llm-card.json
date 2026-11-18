@@ -1,0 +1,217 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "rf-blood_transfusion",
+  "modality": "llm-card",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "max_depth": 5,
+        "max_features": 0.5555555820465088,
+        "min_samples_leaf": 3,
+        "min_samples_split": 8
+      },
+      "c": {
+        "max_depth": 5,
+        "max_features": 0.5555555820465088,
+        "min_samples_leaf": 3,
+        "min_samples_split": 8
+      },
+      "s": 0.75,
+      "kept": true,
+      "side_encoded": 0.250001,
+      "center_encoded": [
+        0.41140808993222105,
+        0.5555555820465088,
+        0.10526315789473684,
+        0.3333333333333333
+      ],
+      "box_encoded": {
+        "lb": [
+          0.28640758993222104,
+          0.43055508204650883,
+          0.0,
+          0.20833283333333333
+        ],
+        "ub": [
+          0.5364085899322211,
+          0.6805560820465087,
+          0.23026365789473682,
+          0.45833383333333333
+        ]
+      },
+      "box_native": {
+        "max_depth": [
+          3.0661818200937447,
+          8.153462993018351
+        ],
+        "max_features": [
+          0.43055508204650883,
+          0.6805560820465087
+        ],
+        "min_samples_leaf": [
+          1.0,
+          5.3750095
+        ],
+        "min_samples_split": [
+          4.756818568474461,
+          13.454370621607529
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "max_depth": 8,
+        "max_features": 0.4444444477558136,
+        "min_samples_leaf": 5,
+        "min_samples_split": 8
+      },
+      "c": {
+        "max_depth": 8,
+        "max_features": 0.4444444477558136,
+        "min_samples_leaf": 5,
+        "min_samples_split": 8
+      },
+      "s": 0.6,
+      "kept": true,
+      "side_encoded": 0.400001,
+      "center_encoded": [
+        0.5315514604066737,
+        0.4444444477558136,
+        0.21052631578947367,
+        0.3333333333333333
+      ],
+      "box_encoded": {
+        "lb": [
+          0.33155096040667364,
+          0.2444439477558136,
+          0.010525815789473675,
+          0.13333283333333332
+        ],
+        "ub": [
+          0.7315519604066737,
+          0.6444449477558136,
+          0.4105268157894737,
+          0.5333338333333333
+        ]
+      },
+      "box_native": {
+        "max_depth": [
+          3.6584332594740734,
+          17.493827401186604
+        ],
+        "max_features": [
+          0.2444439477558136,
+          0.6444449477558136
+        ],
+        "min_samples_leaf": [
+          1.1999904999999997,
+          8.8000095
+        ],
+        "min_samples_split": [
+          3.482195012156003,
+          18.379211898409547
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "max_depth",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        20,
+        32,
+        50
+      ]
+    },
+    {
+      "name": "max_features",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        0,
+        0.1111111119389534,
+        0.2222222238779068,
+        0.3333333432674408,
+        0.4444444477558136,
+        0.5555555820465088,
+        0.6666666865348816,
+        0.7777777910232544,
+        0.8888888955116272,
+        1
+      ]
+    },
+    {
+      "name": "min_samples_leaf",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        20
+      ]
+    },
+    {
+      "name": "min_samples_split",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        2,
+        3,
+        5,
+        8,
+        12,
+        20,
+        32,
+        50,
+        80,
+        128
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 1010,
+    "completion_tokens": 954
+  },
+  "source_prompt_card": "experiments/priors/hpobench-rf-blood-transfusion/blood-transfusion/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "034afb780b958ea7c8f83b0f3fbe402859b4fea3d46937f6e22b722f87d59219",
+  "prompt_sha256": "6fcf8f2dac4af88f46a3d38b89110436cad6fcd3ca2715863776deeb96befd3c",
+  "created_at_utc": "2026-11-07T20:04:32.050136+00:00"
+}

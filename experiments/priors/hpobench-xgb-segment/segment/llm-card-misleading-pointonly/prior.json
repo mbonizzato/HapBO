@@ -1,0 +1,140 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "colsample_bytree",
+        "type": "ordinal",
+        "values": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.30000001192092896,
+          0.4000000059604645,
+          0.5,
+          0.6000000238418579,
+          0.699999988079071,
+          0.800000011920929,
+          0.8999999761581421,
+          1
+        ],
+        "meaning": "per-tree feature-subsampling fraction"
+      },
+      {
+        "name": "eta",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.0021094917319715023,
+          0.004556754138320684,
+          0.009843133389949799,
+          0.02126234397292137,
+          0.045929204672575,
+          0.09921256452798843,
+          0.21431098878383636,
+          0.4629373550415039,
+          1
+        ],
+        "meaning": "boosting learning rate; values are log-spaced"
+      },
+      {
+        "name": "max_depth",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3,
+          5,
+          8,
+          13,
+          20,
+          32,
+          50
+        ],
+        "meaning": "maximum tree depth; values are log-spaced"
+      },
+      {
+        "name": "reg_lambda",
+        "type": "ordinal",
+        "values": [
+          0.0009765625,
+          0.004556754138320684,
+          0.02126234397292137,
+          0.09921256452798843,
+          0.4629373550415039,
+          2.1601195335388184,
+          10.079368591308594,
+          47.0315055847168,
+          219.45445251464844,
+          1024
+        ],
+        "meaning": "L2 leaf regularization; values are log-spaced"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "colsample_bytree",
+      "mode": 0.10000000149011612,
+      "ci": [
+        0.10000000149011612,
+        0.20000000298023224
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "eta",
+      "mode": 0.0009765625,
+      "ci": [
+        0.0009765625,
+        0.0021094917319715023
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "max_depth",
+      "mode": 1,
+      "ci": [
+        1.0,
+        2.0
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "bump",
+      "dim": "reg_lambda",
+      "mode": 1024,
+      "ci": [
+        219.45445251464844,
+        1024.0
+      ],
+      "weight": 0.999,
+      "provenance": "llm_domain",
+      "note": "point-only: per-dimension bump at the full-prior argmax"
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    },
+    {
+      "token": "modality",
+      "expectation": "unimodal"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Based on general GBT heuristics for small, low-feature datasets; specific interaction effects may vary."
+  }
+}

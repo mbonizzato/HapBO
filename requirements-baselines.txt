@@ -1,0 +1,37 @@
+# External baseline dependencies are deliberately excluded from environment.yaml.
+# Install every pinned upstream implementation in its own environment (see external/README.md).
+
+# LLAMBO (tested with Python 3.8)
+#   numpy==1.23.4 pandas==1.3.5 scipy==1.10.1 aiohttp==3.8.5
+#   langchain==0.1.9 openai==0.28.0 tiktoken==0.6.0
+# The complete upstream specification is external/LLAMBO/requirements.txt.
+
+# LGBO and official-LGBO workers (numpy, scipy, aiohttp): run in the LLAMBO environment.
+
+# ColaBO (tested with Python 3.9)
+# Start from external/colabo/env.yaml and install pymoo==0.6.0 explicitly (imported by the Ax stack).
+# Validated core versions: torch==1.13.1, gpytorch==1.9.1, linear-operator==0.3.0,
+# pyro-ppl==1.8.4, numpy==1.24.4, pandas==1.4.4, scipy==1.9.1, scikit-learn==1.0.2.
+# Package pins of the environment: external/colabo_requirements.txt.
+
+# BORA (Python 3.11.8): pip install -r external/bora/requirements.txt tiktoken,
+# after `git -C external/bora apply ../patches/bora-local.patch`.
+
+# HypBO (Python 3.8): pip install -r external/hypbo/requirements/requirements.txt
+# Resolved and used for the runs (Linux, Python 3.8.20): numpy==1.20.3, pandas==2.0.3, scipy==1.10.1,
+# scikit-learn==1.3.2, joblib==1.3.2.
+
+# TuRBO: torch + gpytorch (recent versions), e.g. in the main environment or a separate one.
+
+# CAKE (runs in-process in the study worker): torch, gpytorch and botorch in the interpreter that
+# runs the hpo/cake study (upstream pins torch 2.0.1, gpytorch 1.11, botorch 0.9.2).
+
+# LLM-EI: the hpo/llm-ei* runs need only the main environment. Refitting the utilities from the survey
+# answers (src/experiments/llm_ei_utility.py) needs torch and botorch; the shipped utilities were fitted with
+# botorch==0.18.1, torch==2.14.0+cpu.
+
+# PriorBand and PriMO (hpo/priorband*, hpo/primo* studies; src/baselines/workers/neps_worker.py):
+# Python 3.12, pip install neural-pipeline-search==0.17.0 (pulls botorch 0.12.0, gpytorch 1.13; the CPU torch
+# wheel is enough). Point the study worker at it with NEPS_PYTHON=<env>/bin/python or NEPS_ENV=<conda env>.
+# Tested environment of the paper runs: Python 3.12.13, neural-pipeline-search==0.17.0, torch==2.15.0+cpu,
+# botorch==0.12.0, gpytorch==1.13.

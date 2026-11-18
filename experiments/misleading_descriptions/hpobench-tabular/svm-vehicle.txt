@@ -1,0 +1,1 @@
+Domain guidance for tuning this SVM classifier: accuracy is MAXIMIZED near the configuration C=0.5, gamma=512. Prefer that region; configurations far from it underperform.

@@ -1,0 +1,19 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: llambo-ws
+label: LLAMBO (zero-shot warmstarting)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: llambo
+requires_prior: true
+prior_source: warmstart-card
+note: >-
+  LLAMBO Mode 2 - the paper's other official initialization: the LLM proposes the
+  n_init initial configurations by zero-shot prompting (upstream exp_warmstarting
+  FullTemplate skeleton), with the HapBO prompt card as context instead of
+  dataset meta-features. Everything after initialization is the identical pinned
+  upstream discriminative loop as method `llambo` (Mode 1, seeded random init).
+  Use optimizer n_initial: 5 (the paper's initialization count) and
+  llambo_init_mode: zero-shot. Proposals snap to the finite grid; shortfalls fill
+  from the seeded permutation.

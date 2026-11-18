@@ -1,0 +1,270 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.0
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -3.0,
+      "ci": [
+        -4.8,
+        -1.2
+      ],
+      "sign": "peak",
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "deeper well of x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.81,
+      "ci": [
+        1.0,
+        4.6
+      ],
+      "sign": "peak",
+      "weight": 0.83,
+      "provenance": "llm_domain",
+      "note": "shallower well of x0"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.29,
+      "ci": [
+        -3.1,
+        0.5
+      ],
+      "sign": "peak",
+      "weight": 0.99,
+      "provenance": "llm_domain",
+      "note": "deeper well of x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.37,
+      "ci": [
+        2.6,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.82,
+      "provenance": "llm_domain",
+      "note": "shallower well of x1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.12,
+      "ci": [
+        -3.9,
+        -0.3
+      ],
+      "sign": "peak",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "deeper well of x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.3,
+      "ci": [
+        2.5,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.82,
+      "provenance": "llm_domain",
+      "note": "shallower well of x2"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.4,
+      "ci": [
+        -5.0,
+        -1.6
+      ],
+      "sign": "peak",
+      "weight": 0.87,
+      "provenance": "llm_domain",
+      "note": "deeper well of x3"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.26,
+      "ci": [
+        0.46,
+        4.06
+      ],
+      "sign": "peak",
+      "weight": 0.76,
+      "provenance": "llm_domain",
+      "note": "shallower well of x3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.45,
+      "ci": [
+        -3.25,
+        0.35
+      ],
+      "sign": "peak",
+      "weight": 0.82,
+      "provenance": "llm_domain",
+      "note": "deeper well of x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 3.98,
+      "ci": [
+        2.2,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.62,
+      "provenance": "llm_domain",
+      "note": "shallower well of x4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.46,
+      "ci": [
+        -5.0,
+        -1.66
+      ],
+      "sign": "peak",
+      "weight": 0.63,
+      "provenance": "llm_domain",
+      "note": "deeper well of x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.62,
+      "ci": [
+        0.82,
+        4.42
+      ],
+      "sign": "peak",
+      "weight": 0.54,
+      "provenance": "llm_domain",
+      "note": "shallower well of x5"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.2,
+      "ci": [
+        -3.0,
+        0.6
+      ],
+      "sign": "peak",
+      "weight": 0.74,
+      "provenance": "llm_domain",
+      "note": "deeper well of x6"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.17,
+      "ci": [
+        2.4,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.64,
+      "provenance": "llm_domain",
+      "note": "shallower well of x6"
+    },
+    {
+      "token": "modality",
+      "n_optima": 128
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Separable double-well model: each dimension has a deeper well at negative y and a shallower one at positive y; locations computed from the model constants."
+  }
+}

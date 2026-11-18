@@ -1,0 +1,34 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "inverted",
+  "dataset_id": "hpobench-rf-credit-g",
+  "scope": {
+    "subjects": "dataset-level expert knowledge",
+    "target": "unspecified optimization target",
+    "target_name": "credit-g",
+    "target_slug": "credit-g",
+    "uses_observed_objective_values": false
+  },
+  "generation": {
+    "provider": "openai",
+    "model": null,
+    "created_at_utc": "2026-09-29T03:56:04.030985+00:00",
+    "generated_at": "2026-09-29T03:56:32.226133+00:00",
+    "raw_llm_response_available": false,
+    "notes": "Inverted-map prior at the empirical anti-optimum; no LLM."
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "478e357caf382d429a063a7707badf1e67247cc7efe79e7b11ebdf040f6a1619"
+    },
+    "prior.json": {
+      "sha256": "c54ca5a160f1ff1581473543bbdec66247bafabd8b9cc8bfaa518fc6a9e48df9"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card.md",
+    "sha256": "82d96795de1799ebb63fd389adfe1ffaa369077b4ce090078df63bfe81fc7482"
+  },
+  "finalized_at_utc": "2026-09-29T03:56:32.227815+00:00"
+}

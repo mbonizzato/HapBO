@@ -1,0 +1,359 @@
+{
+ "schema": {
+  "objective": "minimize",
+  "dimensions": [
+   {
+    "name": "x0",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x1",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x2",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x3",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x4",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x5",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x6",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x7",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x8",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x9",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x10",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x11",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x12",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x13",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x14",
+    "type": "continuous",
+    "range": [
+     -32.768,
+     32.768
+    ],
+    "scale": "linear"
+   }
+  ]
+ },
+ "beliefs": [
+  {
+   "token": "periodic",
+   "dim": "x0",
+   "period": 0.9960159362549801,
+   "phase": 18.1,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x1",
+   "period": 1.0054293183189222,
+   "phase": -12.57,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x2",
+   "period": 0.998003992015968,
+   "phase": -16.48,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x3",
+   "period": 0.9990009990009991,
+   "phase": 18.57,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x4",
+   "period": 0.998003992015968,
+   "phase": -12.92,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x5",
+   "period": 0.9960159362549801,
+   "phase": -14.87,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x6",
+   "period": 1.0049241282283188,
+   "phase": 18.48,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x7",
+   "period": 1.0007004903432404,
+   "phase": 14.94,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x8",
+   "period": 1.0053282396702523,
+   "phase": -17.51,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x9",
+   "period": 1.0023053021950485,
+   "phase": -17.88,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x10",
+   "period": 0.9970089730807579,
+   "phase": 7.261,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x11",
+   "period": 1.0034115994380894,
+   "phase": -6.172,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x12",
+   "period": 1.001602564102564,
+   "phase": 11.69,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x13",
+   "period": 0.9950248756218907,
+   "phase": 15.58,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "periodic",
+   "dim": "x14",
+   "period": 0.9950248756218907,
+   "phase": 14.39,
+   "weight": 0.1113844170621809,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": 18.1,
+   "ci": [
+    18.099999,
+    18.100001000000002
+   ],
+   "weight": 1.0,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "anchors",
+   "bandwidth": 0.6265304913208641,
+   "provenance": "llm_domain",
+   "points": [
+    {
+     "coords": {
+      "x0": 18.1,
+      "x1": -12.57,
+      "x2": -16.48,
+      "x3": 18.57,
+      "x4": -12.92,
+      "x5": -14.87,
+      "x6": 18.48,
+      "x7": 14.94,
+      "x8": -17.51,
+      "x9": -17.88,
+      "x10": 7.261,
+      "x11": -6.172,
+      "x12": 11.69,
+      "x13": 15.58,
+      "x14": 14.39
+     },
+     "value": 0.6216461347722722
+    }
+   ]
+  },
+  {
+   "token": "anchors",
+   "bandwidth": 0.48885157362091025,
+   "provenance": "llm_domain",
+   "points": [
+    {
+     "coords": {
+      "x0": 18.1,
+      "x1": -12.57,
+      "x2": -16.48,
+      "x3": 18.57,
+      "x4": -12.92,
+      "x5": -14.87,
+      "x6": 18.48,
+      "x7": 14.94,
+      "x8": -17.51,
+      "x9": -17.88,
+      "x10": 7.261,
+      "x11": -6.172,
+      "x12": 11.69,
+      "x13": 15.58,
+      "x14": 14.39
+     },
+     "value": 0.6613156653848609
+    }
+   ]
+  },
+  {
+   "token": "anchors",
+   "bandwidth": 0.3272365330813233,
+   "provenance": "llm_domain",
+   "points": [
+    {
+     "coords": {
+      "x0": 18.1,
+      "x1": -12.57,
+      "x2": -16.48,
+      "x3": 18.57,
+      "x4": -12.92,
+      "x5": -14.87,
+      "x6": 18.48,
+      "x7": 14.94,
+      "x8": -17.51,
+      "x9": -17.88,
+      "x10": 7.261,
+      "x11": -6.172,
+      "x12": 11.69,
+      "x13": 15.58,
+      "x14": 14.39
+     },
+     "value": 0.992617012539345
+    }
+   ]
+  }
+ ],
+ "trust": {
+  "overall_confidence": "medium"
+ }
+}

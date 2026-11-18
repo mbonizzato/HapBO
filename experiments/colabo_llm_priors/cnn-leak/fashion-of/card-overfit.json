@@ -1,0 +1,81 @@
+{
+  "artifact_format": "colabo-llm-point-prior-v1",
+  "benchmark_id": "cnn-leak-of",
+  "task": "fashion-of",
+  "modality": "card-overfit",
+  "construction": "BORA supplement SC.2: pi(x)=N(c,sigma), sigma=1-s+1e-6",
+  "c_raw": {
+    "learning_rate": 0.001,
+    "base_channels": 16,
+    "dropout": 0.5,
+    "weight_decay": 0.0001
+  },
+  "c": {
+    "learning_rate": 0.001,
+    "base_channels": 16,
+    "dropout": 0.5,
+    "weight_decay": 0.0001
+  },
+  "s": 0.75,
+  "sigma": 0.250001,
+  "dimensions": [
+    {
+      "name": "learning_rate",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0001,
+        0.0003,
+        0.001,
+        0.003,
+        0.01,
+        0.03
+      ]
+    },
+    {
+      "name": "base_channels",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        8,
+        16,
+        24,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "dropout",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        0.0,
+        0.1,
+        0.25,
+        0.4,
+        0.5
+      ]
+    },
+    {
+      "name": "weight_decay",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0,
+        1e-05,
+        0.0001,
+        0.001,
+        0.01
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "enable_thinking": false,
+  "attempts": 1,
+  "schema_fallback": false,
+  "source_prompt_card": "experiments/priors/cnn-leak/card-overfit/prompt_card.md",
+  "source_prompt_card_sha256": "b4de2242ec567f239a7f3a9a60b562532ff9cb60e6d12f1d89ea7138c90daacc",
+  "created_at_utc": "2026-09-19T02:10:48.237480+00:00"
+}

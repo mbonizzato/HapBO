@@ -1,0 +1,58 @@
+{
+  "dimensions": [
+    {
+      "name": "x0",
+      "type": "continuous",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x1",
+      "type": "continuous",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x2",
+      "type": "continuous",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x3",
+      "type": "continuous",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x4",
+      "type": "continuous",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x5",
+      "type": "continuous",
+      "range": [
+        0.0,
+        1.0
+      ],
+      "scale": "linear"
+    }
+  ]
+}

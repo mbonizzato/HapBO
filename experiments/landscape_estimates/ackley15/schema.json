@@ -1,0 +1,139 @@
+{
+  "dimensions": [
+    {
+      "name": "x0",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x1",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x2",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x3",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x4",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x5",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x6",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x7",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x8",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x9",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x10",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x11",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x12",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x13",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    },
+    {
+      "name": "x14",
+      "type": "continuous",
+      "range": [
+        -32.768,
+        32.768
+      ],
+      "scale": "linear"
+    }
+  ]
+}

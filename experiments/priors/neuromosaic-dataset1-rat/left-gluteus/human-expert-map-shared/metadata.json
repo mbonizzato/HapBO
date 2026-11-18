@@ -1,0 +1,37 @@
+{
+  "artifact_format": "llm-bo-prior-metadata-v2",
+  "status": "finalized",
+  "prior_id": "human-expert-map-shared",
+  "dataset_id": "neuromosaic-dataset1-rat",
+  "scope": {
+    "subjects": "dataset-level human expert (average across animals)",
+    "target": "cortical MEP: LeftGluteus",
+    "target_name": "LeftGluteus",
+    "target_slug": "left-gluteus",
+    "uses_observed_objective_values": false
+  },
+  "card": {
+    "human_statement": true
+  },
+  "generation": {
+    "provider": null,
+    "model": null,
+    "created_at_utc": "2026-11-16T01:37:29.776889+00:00",
+    "generated_at": null,
+    "raw_llm_response_available": false,
+    "notes": "human-expert-map anchors (human-made, no LLM); shared task text"
+  },
+  "files": {
+    "prompt_card.md": {
+      "sha256": "cef229ce7a9cafffcfbd44310011d9ac2829a41f6eb0d7f0c046bffda87b1f91"
+    },
+    "prior.json": {
+      "sha256": "7802c8814e164ebb80dc88559f43ba2fdcbf5ab75bede6ac4f4e3899ff720fc5"
+    }
+  },
+  "vocabulary": {
+    "path": "src/prior/expert_knowledge/vocabulary_card_neutral_example.md",
+    "sha256": "b98d5cbfe419115a1fe656a79724df473ac0caa8025ed531665e8f0c07bb181c"
+  },
+  "finalized_at_utc": "2026-11-16T01:37:31.252301+00:00"
+}

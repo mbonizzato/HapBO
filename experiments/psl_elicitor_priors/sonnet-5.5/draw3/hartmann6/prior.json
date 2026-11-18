@@ -1,0 +1,346 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4942,
+      "ci": [
+        0.18,
+        0.8
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "component 4 (alpha 2.78)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.98,
+      "ci": [
+        0.57,
+        1.0
+      ],
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "component 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.3985,
+      "ci": [
+        0.03,
+        0.77
+      ],
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "component 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.03393,
+      "ci": [
+        0.0,
+        0.33
+      ],
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "component 4"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.4304,
+      "ci": [
+        0.0,
+        1.0
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "component 3 (alpha 2.77)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.2353,
+      "ci": [
+        0.0,
+        0.83
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "component 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.1975,
+      "ci": [
+        0.0,
+        0.56
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "component 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.2178,
+      "ci": [
+        0.0,
+        0.51
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "component 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.7382,
+      "ci": [
+        0.36,
+        1.0
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain",
+      "note": "component 3"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.4413,
+      "ci": [
+        0.09,
+        0.79
+      ],
+      "weight": 0.44,
+      "provenance": "llm_domain",
+      "note": "component 2 (alpha 1.40)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.9455,
+      "ci": [
+        0.65,
+        1.0
+      ],
+      "weight": 0.44,
+      "provenance": "llm_domain",
+      "note": "component 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 0.06195,
+      "ci": [
+        0.0,
+        0.46
+      ],
+      "weight": 0.44,
+      "provenance": "llm_domain",
+      "note": "component 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.98,
+      "ci": [
+        0.68,
+        1.0
+      ],
+      "weight": 0.44,
+      "provenance": "llm_domain",
+      "note": "component 2"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.3108,
+      "ci": [
+        0.0,
+        0.68
+      ],
+      "weight": 0.27,
+      "provenance": "llm_domain",
+      "note": "component 1 (alpha 1.07)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 0.2053,
+      "ci": [
+        0.0,
+        0.87
+      ],
+      "weight": 0.27,
+      "provenance": "llm_domain",
+      "note": "component 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 0.6592,
+      "ci": [
+        0.35,
+        0.97
+      ],
+      "weight": 0.27,
+      "provenance": "llm_domain",
+      "note": "component 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 0.02,
+      "ci": [
+        0.0,
+        0.68
+      ],
+      "weight": 0.27,
+      "provenance": "llm_domain",
+      "note": "component 1"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 0.5599,
+      "ci": [
+        0.17,
+        0.95
+      ],
+      "weight": 0.27,
+      "provenance": "llm_domain",
+      "note": "component 1"
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "bandwidth": 0.12,
+      "points": [
+        {
+          "coords": {
+            "x0": 0.4304,
+            "x1": 0.2353,
+            "x2": 0.5308,
+            "x3": 0.1975,
+            "x4": 0.2178,
+            "x5": 0.7382
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "x0": 0.4942,
+            "x1": 0.98,
+            "x2": 0.896,
+            "x3": 0.3985,
+            "x4": 0.04525,
+            "x5": 0.03393
+          },
+          "value": 1.0
+        },
+        {
+          "coords": {
+            "x0": 0.3962,
+            "x1": 0.4413,
+            "x2": 0.9455,
+            "x3": 0.2177,
+            "x4": 0.06195,
+            "x5": 0.98
+          },
+          "value": 0.55
+        },
+        {
+          "coords": {
+            "x0": 0.3108,
+            "x1": 0.2053,
+            "x2": 0.6592,
+            "x3": 0.02,
+            "x4": 0.7774,
+            "x5": 0.5599
+          },
+          "value": 0.45
+        }
+      ]
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Four Gaussian wells of the analytic model reproduced as per-dimension bumps plus anchors at the component centres; calibration only approximate."
+  }
+}

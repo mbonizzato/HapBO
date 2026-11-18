@@ -1,0 +1,102 @@
+{
+  "artifact_format": "colabo-llm-point-prior-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "xgb-phoneme",
+  "modality": "llm-card-misleading",
+  "construction": "BORA supplement SC.2: pi(x) = N(c, sigma), sigma = 1 - s + 1e-6",
+  "c_raw": {
+    "colsample_bytree": 0.10000000149011612,
+    "eta": 0.0009765625,
+    "max_depth": 1,
+    "reg_lambda": 1024
+  },
+  "c": {
+    "colsample_bytree": 0.10000000149011612,
+    "eta": 0.0009765625,
+    "max_depth": 1,
+    "reg_lambda": 1024
+  },
+  "s": 0.95,
+  "sigma": 0.050001000000000045,
+  "dimensions": [
+    {
+      "name": "colsample_bytree",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        0.10000000149011612,
+        0.20000000298023224,
+        0.30000001192092896,
+        0.4000000059604645,
+        0.5,
+        0.6000000238418579,
+        0.699999988079071,
+        0.800000011920929,
+        0.8999999761581421,
+        1
+      ]
+    },
+    {
+      "name": "eta",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.0021094917319715023,
+        0.004556754138320684,
+        0.009843133389949799,
+        0.02126234397292137,
+        0.045929204672575,
+        0.09921256452798843,
+        0.21431098878383636,
+        0.4629373550415039,
+        1
+      ]
+    },
+    {
+      "name": "max_depth",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        20,
+        32,
+        50
+      ]
+    },
+    {
+      "name": "reg_lambda",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.004556754138320684,
+        0.02126234397292137,
+        0.09921256452798843,
+        0.4629373550415039,
+        2.1601195335388184,
+        10.079368591308594,
+        47.0315055847168,
+        219.45445251464844,
+        1024
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "enable_thinking": false,
+  "attempts": 1,
+  "source_prompt_card": "experiments/priors/hpobench-xgb-phoneme/phoneme/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "e3bcc8c1e81c98ca49791a7f817a7ce6790bb8e2a4f160e780d3949e82dc88a9",
+  "schema_fallback": false,
+  "adversarial_hint": "experiments/misleading_descriptions/hpobench-tabular/xgb-phoneme.txt",
+  "adversarial_hint_sha256": "4e21aea97f03589a878cf8e72b4635fc4de7ced01b6a4257f86b9501c58fd9a3",
+  "prompt_sha256": "4d3d3ea7bb869a03c54a43eda99b6fc064dee7962657e9c54ef879e5d079eb9f",
+  "created_at_utc": "2026-09-29T21:59:08.077441+00:00"
+}

@@ -1,0 +1,243 @@
+{
+ "schema": {
+  "objective": "minimize",
+  "dimensions": [
+   {
+    "name": "x0",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x1",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x2",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x3",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x4",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x5",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   },
+   {
+    "name": "x6",
+    "type": "continuous",
+    "range": [
+     -5.0,
+     5.0
+    ],
+    "scale": "linear"
+   }
+  ]
+ },
+ "beliefs": [
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": -2.5977,
+   "ci": [
+    -5.0,
+    0.1686
+   ],
+   "skew": 0.4269,
+   "weight": 0.5177,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": -1.6299,
+   "ci": [
+    -5.0,
+    2.0381
+   ],
+   "skew": 0.3681,
+   "weight": 1.0,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": -3.4179,
+   "ci": [
+    -5.0,
+    -1.524
+   ],
+   "skew": 0.4827,
+   "weight": 0.325,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": -4.2162,
+   "ci": [
+    -5.0,
+    -2.7417
+   ],
+   "skew": 0.7009,
+   "weight": 0.378,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x0",
+   "mode": 3.1822,
+   "ci": [
+    0.9196,
+    5.0
+   ],
+   "skew": -0.4897,
+   "weight": 0.2911,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": -1.7866,
+   "ci": [
+    -5.0,
+    1.7532
+   ],
+   "skew": 0.3002,
+   "weight": 0.9062,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x1",
+   "mode": 5.0,
+   "ci": [
+    3.7061,
+    5.0
+   ],
+   "skew": -1.0,
+   "weight": 0.8503,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x2",
+   "mode": 4.9975,
+   "ci": [
+    3.4073,
+    5.0
+   ],
+   "skew": -0.976,
+   "weight": 0.4834,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x3",
+   "mode": 2.9778,
+   "ci": [
+    0.1475,
+    5.0
+   ],
+   "skew": -0.8632,
+   "weight": 0.4547,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": -1.6067,
+   "ci": [
+    -5.0,
+    2.3231
+   ],
+   "skew": 0.4011,
+   "weight": 0.9883,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": -3.5294,
+   "ci": [
+    -5.0,
+    -1.5116
+   ],
+   "skew": -0.0244,
+   "weight": 0.2151,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x6",
+   "mode": 5.0,
+   "ci": [
+    3.4554,
+    5.0
+   ],
+   "skew": -0.8051,
+   "weight": 0.7741,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x4",
+   "mode": 4.9889,
+   "ci": [
+    3.2893,
+    5.0
+   ],
+   "skew": -0.8616,
+   "weight": 0.8266,
+   "provenance": "llm_domain"
+  },
+  {
+   "token": "bump",
+   "dim": "x5",
+   "mode": 3.4473,
+   "ci": [
+    1.2175,
+    5.0
+   ],
+   "skew": -0.9587,
+   "weight": 0.1978,
+   "provenance": "llm_domain"
+  }
+ ],
+ "trust": {
+  "overall_confidence": "medium"
+ }
+}

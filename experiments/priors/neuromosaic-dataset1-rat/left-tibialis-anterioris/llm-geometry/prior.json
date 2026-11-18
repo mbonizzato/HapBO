@@ -1,0 +1,92 @@
+{
+  "schema": {
+    "objective": "maximize",
+    "dimensions": [
+      {
+        "name": "electrode_mediolateral_index",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "meaning": "Medio-lateral position: 1=most medial, 4=most lateral"
+      },
+      {
+        "name": "electrode_rostrocaudal_index",
+        "type": "ordinal",
+        "values": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "meaning": "Rostro-caudal position: 1=most rostral, 8=most caudal"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "electrode_mediolateral_index",
+        "electrode_rostrocaudal_index"
+      ],
+      "mode": {
+        "electrode_mediolateral_index": 2,
+        "electrode_rostrocaudal_index": 4
+      },
+      "ci": {
+        "electrode_mediolateral_index": [
+          1,
+          3
+        ],
+        "electrode_rostrocaudal_index": [
+          2,
+          6
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Primary motor cortex (M1) hotspots in rats are typically located in the intermediate lateral band (indices 2-3) and mid-caudal region (indices 3-5), corresponding to the forelimb/hindlimb representation zones."
+    },
+    {
+      "token": "trend",
+      "dim": "electrode_mediolateral_index",
+      "direction": "increase",
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "Slight preference for lateral movement as M1 representation expands laterally, though the hotspot is the dominant factor."
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth",
+      "per_dim": {
+        "electrode_mediolateral_index": "smooth",
+        "electrode_rostrocaudal_index": "smooth"
+      }
+    },
+    {
+      "token": "noise",
+      "level": "medium",
+      "repeats_recommended": true
+    },
+    {
+      "token": "modality",
+      "expectation": "unimodal"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "high",
+    "notes": "Based on established rat M1 somatotopy maps; the hotspot location is a robust biological prior."
+  }
+}

@@ -1,0 +1,47 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: llm-ei
+label: LLM-EI (LLM pairwise survey -> preference-GP utility -> percentile-gated EI)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: llm-ei
+requires_prior: true
+acquisition: expected-improvement
+llm_ei_schedule: [[30, 85.0], [40, 15.0]]
+note: >-
+  LLM-EI of Patel et al. (Digital Discovery 5, 2042-2051, 2026; arXiv:2504.08874), implemented
+  from the published text. The public repository (github.com/Sanofi-Public/Pref-BO) holds the
+  survey prompt, the PairwiseGP and a BO loop but not the LLM-EI gate or p(n); where repository
+  and paper differ the paper is followed (zero-shot survey without labelled in-context
+  examples, a single answer call instead of a second JSON-extraction call, the percentile gate
+  instead of a pi-BO-style acquisition). OFFLINE (src/experiments/llm_ei_survey.py, then
+  src/experiments/llm_ei_utility.py; the LLM is called only here): (1) survey - two arrays
+  holding L = 10 copies of each surveyed candidate are paired at random, self-pairs and repeated
+  (unordered) questions removed, built in rounds (one round = two independent random
+  permutations); (2) each question shows two configurations and asks which gives the higher
+  objective, answer A/B with reasoning in JSON (the prompt of Fig. S2 of the LLM-EI paper); (3) a BoTorch
+  PairwiseGP (Chu & Ghahramani; probit, Laplace/MAP, BoTorch default kernel and priors) is fitted
+  to the answers and g = its posterior mean, predicted on the full grid and stored with a grid
+  fingerprint in llm_ei_utility.json.gz (the run's prior_path). AT BO TIME no LLM and no preference
+  model: acquisition EI(x) * 1[g(x) >= P_p(n)(g over the candidate set)] with the paper's p(n) =
+  85 for n <= 30, 15 for 30 < n <= 40, 0 afterwards (n = observations so far), so at budget 16
+  the acquisition is EI over the top 15 % of g throughout; the first query is drawn at random from
+  the indicator set. Disallowed candidates are pruned from the argmax (score -inf), the paper's
+  design-space-pruning reading of the product with a 0/1 weight. ADAPTED to this benchmark: (a)
+  LLM = the local Qwen used for every elicitation (temperature 0, seed 7, thinking off) instead
+  of Claude 3.5 Sonnet; (b) the question carries the task card's sections 1-3 (and, on the
+  misleading card, its Domain guidance section) verbatim as context, with the card's value tokens,
+  the same task information HapBO's elicitor receives; the card's prior-writing instructions
+  (section 0 after its first sentence, section 4) are not shown; (c) grids larger than 800
+  candidates (rf, xgb, nn) are surveyed on a seeded random subset of 800 (the paper's dataset
+  size) and g is predicted on the full grid; (d) generation is stopped after 32 tokens, inside the
+  reasoning field after the answer (the model writes the answer first; every answer is checked);
+  (e) the preference GP and the BO GP use the task's shared GP encoding instead of the paper's
+  one-hot + continuous reaction encoding; (f) the BO part is exactly the vanilla-bo-ei arm (fixed
+  hyperparameter GP, finite-candidate EI, n_initial 1, same seeds) instead of the GP with kernel
+  hyperparameter priors used in the paper; (g) 10 seeds and budget 16 instead of 50 seeds and 100
+  iterations, p(n) not re-tuned; (h) if BoTorch's default fit fails (every attempt ends in an
+  L-BFGS-B line-search stop) the fit is redone once accepting that stop as converged (recorded as
+  fit_policy in the artifact). The finite-candidate loop never re-proposes an evaluated candidate;
+  if every gated candidate were already evaluated, the gate would be dropped for that query and
+  logged (run_config.json llm_ei.gate_fallbacks).

@@ -1,0 +1,8 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: prior-greedy
+label: Prior-only greedy (no BO)
+role: ablation
+implementation_status: available
+isolated_worker: true
+strategy: prior-greedy
+requires_prior: true

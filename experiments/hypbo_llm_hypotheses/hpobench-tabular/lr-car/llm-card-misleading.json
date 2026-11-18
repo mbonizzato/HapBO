@@ -1,0 +1,139 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "lr-car",
+  "modality": "llm-card-misleading",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "alpha": 0.05623413249850273,
+        "eta0": 9.999999747378752e-06
+      },
+      "c": {
+        "alpha": 0.05623413249850273,
+        "eta0": 9.999999747378752e-06
+      },
+      "s": 0.95,
+      "kept": true,
+      "side_encoded": 0.050001000000000045,
+      "center_encoded": [
+        0.7500000005168461,
+        0.0
+      ],
+      "box_encoded": {
+        "lb": [
+          0.7249995005168461,
+          0.0
+        ],
+        "ub": [
+          0.7750005005168461,
+          0.025000500000000023
+        ]
+      },
+      "box_native": {
+        "alpha": [
+          0.0421694075535066,
+          0.07498985262827561
+        ],
+        "eta0": [
+          9.999999747378753e-06,
+          1.333529075706279e-05
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "alpha",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        9.999999747378752e-06,
+        1.6155980119947344e-05,
+        2.6101572075276636e-05,
+        4.2169649532297626e-05,
+        6.812920764787123e-05,
+        0.00011006941349478438,
+        0.00017782794020604342,
+        0.0002872984914574772,
+        0.00046415888937190175,
+        0.0007498941849917173,
+        0.0012115276185795665,
+        0.0019573417957872152,
+        0.003162277629598975,
+        0.005108969751745462,
+        0.008254041895270348,
+        0.013335213996469975,
+        0.02154434658586979,
+        0.034807004034519196,
+        0.05623413249850273,
+        0.09085175395011902,
+        0.14677992463111877,
+        0.23713737726211548,
+        0.3831186890602112,
+        0.6189658045768738,
+        1
+      ]
+    },
+    {
+      "name": "eta0",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        9.999999747378752e-06,
+        1.6155980119947344e-05,
+        2.6101572075276636e-05,
+        4.2169649532297626e-05,
+        6.812920764787123e-05,
+        0.00011006941349478438,
+        0.00017782794020604342,
+        0.0002872984914574772,
+        0.00046415888937190175,
+        0.0007498941849917173,
+        0.0012115276185795665,
+        0.0019573417957872152,
+        0.003162277629598975,
+        0.005108969751745462,
+        0.008254041895270348,
+        0.013335213996469975,
+        0.02154434658586979,
+        0.034807004034519196,
+        0.05623413249850273,
+        0.09085175395011902,
+        0.14677992463111877,
+        0.23713737726211548,
+        0.3831186890602112,
+        0.6189658045768738,
+        1
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 1744,
+    "completion_tokens": 438
+  },
+  "source_prompt_card": "experiments/priors/hpobench-lr-car/car/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "742e401c1a4261eb55166daea37617b4f2843f5f5ba47969f96e4f77dfcfb2c8",
+  "adversarial_hint": "experiments/misleading_descriptions/hpobench-tabular/lr-car.txt",
+  "adversarial_hint_sha256": "8543860f3dbb5e43d6c0eded50606d0b359df9f2c6431c17dffae64ce9d66216",
+  "prompt_sha256": "273371c79b55acecd29e236185e8059f1ddb33db59e4385f1514433313d045fe",
+  "created_at_utc": "2026-11-07T20:06:27.262846+00:00"
+}

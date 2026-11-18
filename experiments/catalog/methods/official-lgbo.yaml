@@ -1,0 +1,17 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: official-lgbo
+label: LGBO (official release operator)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: official_lgbo
+requires_prior: false
+note: >-
+  Public author-release LGBO operator (Xinzhe309/LGBO @ commit 01e56e1165a030ac74961f14d407bcc188f66ce6), the
+  baseline-implementation sensitivity arm. Confidence maps to the lift by
+  delta = 3*Phi^-1(c) (negative for c<0.5, unbounded as c->1); a is a sum-normalized
+  box mask on a Sobol grid of 512 points; points are expanded to soft regions. It
+  differs from the lgbo arm only in the region-lift operator; GP, prompts,
+  initial design, and finite-candidate log-EI selection are otherwise standard.
+  See external/PINNED_COMMITS.txt (LGBO entry) for provenance.

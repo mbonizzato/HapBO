@@ -1,0 +1,319 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          0.0,
+          1.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.05
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x4"
+      ],
+      "mode": {
+        "x3": 0.1975,
+        "x4": 0.218
+      },
+      "ci": {
+        "x3": [
+          0.0,
+          0.5575
+        ],
+        "x4": [
+          0.0,
+          0.508
+        ]
+      },
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "well 3 (alpha 2.766), tight x3/x4 pair"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.235,
+        "x5": 0.738
+      },
+      "ci": {
+        "x1": [
+          0.0,
+          0.825
+        ],
+        "x5": [
+          0.358,
+          1.0
+        ]
+      },
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "well 3, x1 low with x5 ~0.74"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x2"
+      ],
+      "mode": {
+        "x0": 0.43,
+        "x2": 0.531
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          1.0
+        ],
+        "x2": [
+          0.0,
+          1.0
+        ]
+      },
+      "weight": 0.45,
+      "provenance": "llm_domain",
+      "note": "well 3, weak x0/x2 dependence"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.98,
+        "x5": 0.034
+      },
+      "ci": {
+        "x1": [
+          0.565,
+          1.0
+        ],
+        "x5": [
+          0.0,
+          0.338
+        ]
+      },
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "well 4 (alpha 2.779), x1 high with x5 low"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x3"
+      ],
+      "mode": {
+        "x0": 0.494,
+        "x3": 0.3985
+      },
+      "ci": {
+        "x0": [
+          0.189,
+          0.799
+        ],
+        "x3": [
+          0.0235,
+          0.7735
+        ]
+      },
+      "weight": 0.85,
+      "provenance": "llm_domain",
+      "note": "well 4, x0/x3 pair; x2,x4 nearly flat"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x2",
+        "x5"
+      ],
+      "mode": {
+        "x2": 0.9455,
+        "x5": 0.98
+      },
+      "ci": {
+        "x2": [
+          0.6455,
+          1.0
+        ],
+        "x5": [
+          0.68,
+          1.0
+        ]
+      },
+      "weight": 0.5,
+      "provenance": "llm_domain",
+      "note": "well 2 (alpha 1.402), corner well"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x4"
+      ],
+      "mode": {
+        "x1": 0.441,
+        "x4": 0.062
+      },
+      "ci": {
+        "x1": [
+          0.091,
+          0.791
+        ],
+        "x4": [
+          0.0,
+          0.462
+        ]
+      },
+      "weight": 0.4,
+      "provenance": "llm_domain",
+      "note": "well 2, x1/x4 pair"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x0",
+        "x2"
+      ],
+      "mode": {
+        "x0": 0.3108,
+        "x2": 0.6592
+      },
+      "ci": {
+        "x0": [
+          0.0,
+          0.68
+        ],
+        "x2": [
+          0.349,
+          0.969
+        ]
+      },
+      "weight": 0.2,
+      "provenance": "llm_domain",
+      "note": "well 1 (alpha 1.073), x0/x2 pair"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x1",
+        "x5"
+      ],
+      "mode": {
+        "x1": 0.205,
+        "x5": 0.56
+      },
+      "ci": {
+        "x1": [
+          0.0,
+          0.865
+        ],
+        "x5": [
+          0.17,
+          0.95
+        ]
+      },
+      "weight": 0.15,
+      "provenance": "llm_domain",
+      "note": "well 1, x1/x5 pair"
+    },
+    {
+      "token": "joint_region",
+      "dims": [
+        "x3",
+        "x4"
+      ],
+      "mode": {
+        "x3": 0.02,
+        "x4": 0.7774
+      },
+      "ci": {
+        "x3": [
+          0.0,
+          0.69
+        ],
+        "x4": [
+          0.0,
+          1.0
+        ]
+      },
+      "weight": 0.1,
+      "provenance": "llm_domain",
+      "note": "well 1, broad x3/x4 pair"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Encodes the four-well Gaussian model from TASK.md; wells 3 and 4 deepest, well 4 broadest, wells 1 and 2 shallower."
+  }
+}

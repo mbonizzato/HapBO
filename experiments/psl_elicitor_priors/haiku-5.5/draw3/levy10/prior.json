@@ -1,0 +1,258 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.565,
+      "ci": [
+        1.565,
+        9.565
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "model o_0 = 5.565; curvature includes sin^2(pi*w0) term"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        1.137,
+        9.137
+      ],
+      "weight": 0.65,
+      "provenance": "llm_domain",
+      "note": "model o_1 = 5.137, amp 10.19"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.292,
+      "ci": [
+        -2.708,
+        5.292
+      ],
+      "weight": 0.65,
+      "provenance": "llm_domain",
+      "note": "model o_2 = 1.292, amp 10.64"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.617,
+      "ci": [
+        0.617,
+        8.617
+      ],
+      "weight": 0.65,
+      "provenance": "llm_domain",
+      "note": "model o_3 = 4.617, amp 10.83"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.691,
+      "ci": [
+        0.691,
+        8.691
+      ],
+      "weight": 0.65,
+      "provenance": "llm_domain",
+      "note": "model o_4 = 4.691, amp 9.213"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.936,
+      "ci": [
+        -1.064,
+        6.936
+      ],
+      "weight": 0.65,
+      "provenance": "llm_domain",
+      "note": "model o_5 = 2.936, amp 10.3"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        0.234,
+        8.234
+      ],
+      "weight": 0.65,
+      "provenance": "llm_domain",
+      "note": "model o_6 = 4.234, amp 10.32"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -7.236,
+        0.764
+      ],
+      "weight": 0.65,
+      "provenance": "llm_domain",
+      "note": "model o_7 = -3.236, amp 10.53"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -8.161,
+        -0.161
+      ],
+      "weight": 0.65,
+      "provenance": "llm_domain",
+      "note": "model o_8 = -4.161, amp 10.9"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.473,
+      "ci": [
+        3.473,
+        10.0
+      ],
+      "weight": 0.2,
+      "provenance": "llm_domain",
+      "note": "model o_9 = 7.473; no amplitude term, weaker (1+sin^2) ripple"
+    },
+    {
+      "token": "anchors",
+      "provenance": "llm_domain",
+      "note": "model global minimum at x = o, F = 0",
+      "points": [
+        {
+          "coords": {
+            "x0": 5.565,
+            "x1": 5.137,
+            "x2": 1.292,
+            "x3": 4.617,
+            "x4": 4.691,
+            "x5": 2.936,
+            "x6": 4.234,
+            "x7": -3.236,
+            "x8": -4.161,
+            "x9": 7.473
+          },
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "token": "modality",
+      "expectation": "many",
+      "n_optima": 5
+    },
+    {
+      "token": "smoothness",
+      "level": "medium"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Model is separable with per-coordinate bowls at o_i; parameters only approximately calibrated, so minimum locations may shift. Ripple-induced local minima are not represented."
+  }
+}

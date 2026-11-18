@@ -1,0 +1,217 @@
+{
+  "artifact_format": "hypbo-llm-hypotheses-v1",
+  "benchmark_id": "hpobench-tabular",
+  "task": "xgb-vehicle",
+  "modality": "llm-card",
+  "construction": "BORA supplement C.3: one box per hypothesis, centred at c, side L = (ub - lb) * (1 - s + 1e-6) (C.2 floor), clipped to [lb, ub]; a later box is dropped only when it and a kept same-centre box are both narrower than 1e-4",
+  "input_space": {
+    "encoding": "per-dimension min-max over the grid values; log-scaled dimensions in log space",
+    "lb": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ub": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "hypotheses": [
+    {
+      "c_raw": {
+        "colsample_bytree": 0.699999988079071,
+        "eta": 0.09921256452798843,
+        "max_depth": 5,
+        "reg_lambda": 0.4629373550415039
+      },
+      "c": {
+        "colsample_bytree": 0.699999988079071,
+        "eta": 0.09921256452798843,
+        "max_depth": 5,
+        "reg_lambda": 0.4629373550415039
+      },
+      "s": 0.75,
+      "kept": true,
+      "side_encoded": 0.250001,
+      "center_encoded": [
+        0.6666666528692952,
+        0.6666666648925742,
+        0.41140808993222105,
+        0.4444444442727091
+      ],
+      "box_encoded": {
+        "lb": [
+          0.5416661528692952,
+          0.5416661648925742,
+          0.28640758993222104,
+          0.31944394427270917
+        ],
+        "ub": [
+          0.7916671528692951,
+          0.7916671648925742,
+          0.5364085899322211,
+          0.5694449442727091
+        ]
+      },
+      "box_native": {
+        "colsample_bytree": [
+          0.5874995382653363,
+          0.8125004378928058
+        ],
+        "eta": [
+          0.04171360036128373,
+          0.23596939307488113
+        ],
+        "max_depth": [
+          3.0661818200937447,
+          8.153462993018351
+        ],
+        "reg_lambda": [
+          0.08183596850792867,
+          2.618787296102691
+        ]
+      }
+    },
+    {
+      "c_raw": {
+        "colsample_bytree": 0.800000011920929,
+        "eta": 0.21431098878383636,
+        "max_depth": 8,
+        "reg_lambda": 2.1601195335388184
+      },
+      "c": {
+        "colsample_bytree": 0.800000011920929,
+        "eta": 0.21431098878383636,
+        "max_depth": 8,
+        "reg_lambda": 2.1601195335388184
+      },
+      "s": 0.65,
+      "kept": true,
+      "side_encoded": 0.35000099999999995,
+      "center_encoded": [
+        0.7777777906553245,
+        0.7777777731130348,
+        0.5315514604066737,
+        0.5555555574174043
+      ],
+      "box_encoded": {
+        "lb": [
+          0.6027772906553245,
+          0.6027772731130348,
+          0.35655096040667367,
+          0.38055505741740425
+        ],
+        "ub": [
+          0.9527782906553245,
+          0.9527782731130348,
+          0.7065519604066737,
+          0.7305560574174043
+        ]
+      },
+      "box_native": {
+        "colsample_bytree": [
+          0.6424995621817,
+          0.9575004616601579
+        ],
+        "eta": [
+          0.06371481735213891,
+          0.720855867162958
+        ],
+        "max_depth": [
+          4.034311114828349,
+          15.863922780958607
+        ],
+        "reg_lambda": [
+          0.19092807287521166,
+          24.43913212398928
+        ]
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "name": "colsample_bytree",
+      "type": "ordinal",
+      "scale": "linear",
+      "values": [
+        0.10000000149011612,
+        0.20000000298023224,
+        0.30000001192092896,
+        0.4000000059604645,
+        0.5,
+        0.6000000238418579,
+        0.699999988079071,
+        0.800000011920929,
+        0.8999999761581421,
+        1
+      ]
+    },
+    {
+      "name": "eta",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.0021094917319715023,
+        0.004556754138320684,
+        0.009843133389949799,
+        0.02126234397292137,
+        0.045929204672575,
+        0.09921256452798843,
+        0.21431098878383636,
+        0.4629373550415039,
+        1
+      ]
+    },
+    {
+      "name": "max_depth",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        20,
+        32,
+        50
+      ]
+    },
+    {
+      "name": "reg_lambda",
+      "type": "ordinal",
+      "scale": "log",
+      "values": [
+        0.0009765625,
+        0.004556754138320684,
+        0.02126234397292137,
+        0.09921256452798843,
+        0.4629373550415039,
+        2.1601195335388184,
+        10.079368591308594,
+        47.0315055847168,
+        219.45445251464844,
+        1024
+      ]
+    }
+  ],
+  "model": "Qwen3.5-122B-A10B-GPTQ-Int4",
+  "base_url": "http://localhost:8000/v1",
+  "temperature": 0.0,
+  "max_tokens": 4096,
+  "enable_thinking": false,
+  "attempts": 1,
+  "usage": {
+    "prompt_tokens": 1267,
+    "completion_tokens": 751
+  },
+  "source_prompt_card": "experiments/priors/hpobench-xgb-vehicle/vehicle/llm-card/prompt_card.md",
+  "source_prompt_card_sha256": "4b471ecddcaba6c33e24c33ef0848e65ffc95cba97bc29f6553afc345183c51d",
+  "prompt_sha256": "8286b88091a8fa5708b4af208723880ef034c8d6e20387e1ef4fee8ea5ddbced",
+  "created_at_utc": "2026-11-07T20:05:24.103831+00:00"
+}

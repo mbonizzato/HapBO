@@ -1,0 +1,487 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 1.0
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -2.997,
+      "ci": [
+        -4.68,
+        -1.32
+      ],
+      "sign": "peak",
+      "weight": 0.11,
+      "provenance": "llm_domain",
+      "note": "deep well f=-85.5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 2.811,
+      "ci": [
+        1.13,
+        4.49
+      ],
+      "sign": "peak",
+      "weight": 0.0955,
+      "provenance": "llm_domain",
+      "note": "shallow well f=-74.5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.0,
+      "ci": [
+        3.42,
+        5.0
+      ],
+      "sign": "trough",
+      "weight": 0.349,
+      "provenance": "llm_domain",
+      "note": "quartic rise f=264 at x=5"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.62
+      ],
+      "sign": "trough",
+      "weight": 0.265,
+      "provenance": "llm_domain",
+      "note": "quartic rise f=195 at x=-5"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -1.29,
+      "ci": [
+        -2.92,
+        0.34
+      ],
+      "sign": "peak",
+      "weight": 0.115,
+      "provenance": "llm_domain",
+      "note": "deep well f=-89.5"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 4.371,
+      "ci": [
+        2.2,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.0946,
+      "provenance": "llm_domain",
+      "note": "shallow well f=-73.8"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.355
+      ],
+      "sign": "trough",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "steep quartic rise f=1477 at x=-5 (narrow part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -1.38
+      ],
+      "sign": "trough",
+      "weight": 0.923,
+      "provenance": "llm_domain",
+      "note": "steep quartic rise (wide part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -2.122,
+      "ci": [
+        -3.96,
+        -0.28
+      ],
+      "sign": "peak",
+      "weight": 0.116,
+      "provenance": "llm_domain",
+      "note": "deep well f=-90.2"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 4.295,
+      "ci": [
+        1.8,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.0945,
+      "provenance": "llm_domain",
+      "note": "shallow well f=-73.7"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.68
+      ],
+      "sign": "trough",
+      "weight": 0.282,
+      "provenance": "llm_domain",
+      "note": "quartic rise f=476 at x=-5 (narrow part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -2.37
+      ],
+      "sign": "trough",
+      "weight": 0.328,
+      "provenance": "llm_domain",
+      "note": "quartic rise (wide part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -3.398,
+      "ci": [
+        -5.0,
+        -1.66
+      ],
+      "sign": "peak",
+      "weight": 0.101,
+      "provenance": "llm_domain",
+      "note": "deep well f=-78.5"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 2.259,
+      "ci": [
+        0.59,
+        3.93
+      ],
+      "sign": "peak",
+      "weight": 0.0878,
+      "provenance": "llm_domain",
+      "note": "shallow well f=-68.5"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 5.0,
+      "ci": [
+        3.68,
+        5.0
+      ],
+      "sign": "trough",
+      "weight": 0.333,
+      "provenance": "llm_domain",
+      "note": "quartic rise f=530 at x=5 (narrow part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 5.0,
+      "ci": [
+        2.37,
+        5.0
+      ],
+      "sign": "trough",
+      "weight": 0.346,
+      "provenance": "llm_domain",
+      "note": "quartic rise (wide part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.85
+      ],
+      "sign": "trough",
+      "weight": 0.131,
+      "provenance": "llm_domain",
+      "note": "rise f=80 at x=-5"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -1.454,
+      "ci": [
+        -3.1,
+        0.2
+      ],
+      "sign": "peak",
+      "weight": 0.0947,
+      "provenance": "llm_domain",
+      "note": "deep well f=-73.9"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 3.98,
+      "ci": [
+        2.0,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.0718,
+      "provenance": "llm_domain",
+      "note": "shallow well f=-56.0"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.355
+      ],
+      "sign": "trough",
+      "weight": 0.75,
+      "provenance": "llm_domain",
+      "note": "steep quartic rise f=1168 at x=-5 (narrow part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -1.55
+      ],
+      "sign": "trough",
+      "weight": 0.723,
+      "provenance": "llm_domain",
+      "note": "steep quartic rise (wide part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 5.0,
+      "ci": [
+        4.18,
+        5.0
+      ],
+      "sign": "trough",
+      "weight": 0.0295,
+      "provenance": "llm_domain",
+      "note": "steep outer wall of shallow well"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -3.465,
+      "ci": [
+        -5.0,
+        -1.1
+      ],
+      "sign": "peak",
+      "weight": 0.0724,
+      "provenance": "llm_domain",
+      "note": "deep well f=-56.5"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.615,
+      "ci": [
+        0.67,
+        4.57
+      ],
+      "sign": "peak",
+      "weight": 0.062,
+      "provenance": "llm_domain",
+      "note": "shallow well f=-48.4"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 5.0,
+      "ci": [
+        3.68,
+        5.0
+      ],
+      "sign": "trough",
+      "weight": 0.154,
+      "provenance": "llm_domain",
+      "note": "quartic rise f=197 at x=5 (narrow part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 5.0,
+      "ci": [
+        2.53,
+        5.0
+      ],
+      "sign": "trough",
+      "weight": 0.109,
+      "provenance": "llm_domain",
+      "note": "quartic rise (wide part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.82
+      ],
+      "sign": "trough",
+      "weight": 0.069,
+      "provenance": "llm_domain",
+      "note": "rise f=29 at x=-5"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.199,
+      "ci": [
+        -2.85,
+        0.45
+      ],
+      "sign": "peak",
+      "weight": 0.0855,
+      "provenance": "llm_domain",
+      "note": "deep well f=-66.7"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.167,
+      "ci": [
+        2.2,
+        5.0
+      ],
+      "sign": "peak",
+      "weight": 0.0735,
+      "provenance": "llm_domain",
+      "note": "shallow well f=-57.3"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -3.355
+      ],
+      "sign": "trough",
+      "weight": 0.974,
+      "provenance": "llm_domain",
+      "note": "steep quartic rise f=1407 at x=-5 (narrow part)"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -5.0,
+      "ci": [
+        -5.0,
+        -1.22
+      ],
+      "sign": "trough",
+      "weight": 0.872,
+      "provenance": "llm_domain",
+      "note": "steep quartic rise (wide part)"
+    },
+    {
+      "token": "modality",
+      "expectation": "many"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Separable double-well model from TASK.md: per-dimension peaks at both wells (deeper well at negative y), troughs at the steep quartic edges; amplitudes proportional to model values."
+  }
+}

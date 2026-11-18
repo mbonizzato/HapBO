@@ -1,0 +1,14 @@
+artifact_format: llm-bo-method-catalog-v1
+method_id: bora
+label: BORA (pinned upstream)
+role: external-baseline
+implementation_status: available
+isolated_worker: true
+strategy: external
+baseline: bora
+requires_prior: false
+note: >-
+  Faithful BORA (Ablatif6c/bora-the-explorer, pinned) run in its own conda env
+  via the subprocess bridge; its LLM assistant calls a locally served
+  OpenAI-compatible endpoint (Qwen).
+  Deviations documented in external/PINNED_COMMITS.txt.

@@ -1,0 +1,634 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -10.0,
+          10.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 5.565,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.905,
+      "provenance": "llm_domain",
+      "note": "envelope at o_0"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 8.689,
+      "ci": [
+        7.19,
+        10.0
+      ],
+      "weight": 0.098,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 0.217,
+      "ci": [
+        -1.28,
+        1.72
+      ],
+      "weight": 0.254,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -4.019,
+      "ci": [
+        -5.52,
+        -2.52
+      ],
+      "weight": 0.55,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -8.256,
+      "ci": [
+        -9.76,
+        -6.76
+      ],
+      "weight": 0.653,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 5.137,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.94,
+      "provenance": "llm_domain",
+      "note": "envelope at o_1"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": 7.784,
+      "ci": [
+        6.28,
+        9.28
+      ],
+      "weight": 0.079,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -0.116,
+      "ci": [
+        -1.62,
+        1.38
+      ],
+      "weight": 0.268,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -4.053,
+      "ci": [
+        -5.55,
+        -2.55
+      ],
+      "weight": 0.565,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -7.991,
+      "ci": [
+        -9.49,
+        -6.49
+      ],
+      "weight": 0.696,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 1.292,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.978,
+      "provenance": "llm_domain",
+      "note": "envelope at o_2"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 3.717,
+      "ci": [
+        2.22,
+        5.22
+      ],
+      "weight": 0.07,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": 7.537,
+      "ci": [
+        6.04,
+        9.04
+      ],
+      "weight": 0.366,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -3.924,
+      "ci": [
+        -5.42,
+        -2.42
+      ],
+      "weight": 0.277,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -7.744,
+      "ci": [
+        -9.24,
+        -6.24
+      ],
+      "weight": 0.581,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 4.617,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.994,
+      "provenance": "llm_domain",
+      "note": "envelope at o_3"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 7.57,
+      "ci": [
+        6.07,
+        9.07
+      ],
+      "weight": 0.103,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -0.699,
+      "ci": [
+        -2.2,
+        0.8
+      ],
+      "weight": 0.291,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -4.833,
+      "ci": [
+        -6.33,
+        -3.33
+      ],
+      "weight": 0.618,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -8.967,
+      "ci": [
+        -10.0,
+        -7.47
+      ],
+      "weight": 0.748,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 4.691,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.858,
+      "provenance": "llm_domain",
+      "note": "envelope at o_4"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": 7.639,
+      "ci": [
+        6.14,
+        9.14
+      ],
+      "weight": 0.087,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -0.624,
+      "ci": [
+        -2.12,
+        0.88
+      ],
+      "weight": 0.247,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -4.755,
+      "ci": [
+        -6.26,
+        -3.26
+      ],
+      "weight": 0.522,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -8.887,
+      "ci": [
+        -10.0,
+        -7.39
+      ],
+      "weight": 0.624,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 2.936,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.95,
+      "provenance": "llm_domain",
+      "note": "envelope at o_5"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 5.3,
+      "ci": [
+        3.8,
+        6.8
+      ],
+      "weight": 0.064,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": 9.084,
+      "ci": [
+        7.58,
+        10.0
+      ],
+      "weight": 0.347,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -2.268,
+      "ci": [
+        -3.77,
+        -0.77
+      ],
+      "weight": 0.267,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -6.053,
+      "ci": [
+        -7.55,
+        -4.55
+      ],
+      "weight": 0.559,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -9.837,
+      "ci": [
+        -10.0,
+        -8.34
+      ],
+      "weight": 0.7,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 4.234,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.951,
+      "provenance": "llm_domain",
+      "note": "envelope at o_6"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 6.975,
+      "ci": [
+        5.48,
+        8.48
+      ],
+      "weight": 0.085,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -1.042,
+      "ci": [
+        -2.54,
+        0.46
+      ],
+      "weight": 0.274,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -5.05,
+      "ci": [
+        -6.55,
+        -3.55
+      ],
+      "weight": 0.578,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -9.059,
+      "ci": [
+        -10.0,
+        -7.56
+      ],
+      "weight": 0.707,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -3.236,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.969,
+      "provenance": "llm_domain",
+      "note": "envelope at o_7"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -0.66,
+      "ci": [
+        -2.16,
+        0.84
+      ],
+      "weight": 0.077,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 3.25,
+      "ci": [
+        1.75,
+        4.75
+      ],
+      "weight": 0.383,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 7.16,
+      "ci": [
+        5.66,
+        8.66
+      ],
+      "weight": 0.648,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": -8.48,
+      "ci": [
+        -9.98,
+        -6.98
+      ],
+      "weight": 0.277,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -4.161,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "envelope at o_8 (strongest)"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -1.212,
+      "ci": [
+        -2.71,
+        0.29
+      ],
+      "weight": 0.103,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": 2.92,
+      "ci": [
+        1.42,
+        4.42
+      ],
+      "weight": 0.448,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": 7.053,
+      "ci": [
+        5.55,
+        8.55
+      ],
+      "weight": 0.706,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -9.476,
+      "ci": [
+        -10.0,
+        -7.98
+      ],
+      "weight": 0.293,
+      "provenance": "llm_domain"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": 7.473,
+      "ci": [
+        -10.0,
+        10.0
+      ],
+      "weight": 0.2,
+      "provenance": "llm_domain",
+      "note": "weakly modulated quadratic term"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Separable Levy-like model: per-dimension envelope bumps at o_i plus valley bumps at the sin^2 zeros, heights fitted to the model values."
+  }
+}

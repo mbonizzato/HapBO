@@ -1,0 +1,336 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x7",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x8",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x9",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x10",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x11",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x12",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x13",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x14",
+        "type": "continuous",
+        "range": [
+          -32.768,
+          32.768
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": 18.1,
+      "ci": [
+        2.1,
+        32.768
+      ],
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "model centre c_0 = 18.1"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -12.57,
+      "ci": [
+        -28.57,
+        3.43
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_1 = -12.57"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -16.48,
+      "ci": [
+        -32.768,
+        -0.48
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_2 = -16.48"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": 18.57,
+      "ci": [
+        2.57,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_3 = 18.57"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -12.92,
+      "ci": [
+        -28.92,
+        3.08
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_4 = -12.92"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -14.87,
+      "ci": [
+        -30.87,
+        1.13
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_5 = -14.87"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": 18.48,
+      "ci": [
+        2.48,
+        32.768
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_6 = 18.48"
+    },
+    {
+      "token": "bump",
+      "dim": "x7",
+      "mode": 14.94,
+      "ci": [
+        -1.06,
+        30.94
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_7 = 14.94"
+    },
+    {
+      "token": "bump",
+      "dim": "x8",
+      "mode": -17.51,
+      "ci": [
+        -32.768,
+        -1.51
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_8 = -17.51"
+    },
+    {
+      "token": "bump",
+      "dim": "x9",
+      "mode": -17.88,
+      "ci": [
+        -32.768,
+        -1.88
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_9 = -17.88"
+    },
+    {
+      "token": "bump",
+      "dim": "x10",
+      "mode": 7.261,
+      "ci": [
+        -8.739,
+        23.261
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_10 = 7.261"
+    },
+    {
+      "token": "bump",
+      "dim": "x11",
+      "mode": -6.172,
+      "ci": [
+        -22.172,
+        9.828
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_11 = -6.172"
+    },
+    {
+      "token": "bump",
+      "dim": "x12",
+      "mode": 11.69,
+      "ci": [
+        -4.31,
+        27.69
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_12 = 11.69"
+    },
+    {
+      "token": "bump",
+      "dim": "x13",
+      "mode": 15.58,
+      "ci": [
+        -0.42,
+        31.58
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_13 = 15.58"
+    },
+    {
+      "token": "bump",
+      "dim": "x14",
+      "mode": 14.39,
+      "ci": [
+        -1.61,
+        30.39
+      ],
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "model centre c_14 = 14.39"
+    },
+    {
+      "token": "modality",
+      "expectation": "unimodal"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Approximate Ackley-type model: single funnel centred at c_i with weak cosine ripples; calibration fidelity unknown, so the centres are trusted only moderately and the intervals are kept broad."
+  }
+}

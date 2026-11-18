@@ -1,0 +1,179 @@
+{
+  "schema": {
+    "objective": "minimize",
+    "dimensions": [
+      {
+        "name": "x0",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x1",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x2",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x3",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x4",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x5",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      },
+      {
+        "name": "x6",
+        "type": "continuous",
+        "range": [
+          -5.0,
+          5.0
+        ],
+        "scale": "linear"
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "token": "baseline",
+      "level": 0.1
+    },
+    {
+      "token": "bump",
+      "dim": "x0",
+      "mode": -1.96,
+      "ci": [
+        -2.46,
+        -1.46
+      ],
+      "sign": "peak",
+      "weight": 1.0,
+      "provenance": "llm_domain",
+      "note": "Model minimum derived from quartic function parameters"
+    },
+    {
+      "token": "bump",
+      "dim": "x1",
+      "mode": -3.25,
+      "ci": [
+        -3.75,
+        -2.75
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum derived from quartic function parameters"
+    },
+    {
+      "token": "bump",
+      "dim": "x2",
+      "mode": -4.3,
+      "ci": [
+        -4.8,
+        -3.8
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum derived from quartic function parameters"
+    },
+    {
+      "token": "bump",
+      "dim": "x3",
+      "mode": -2.13,
+      "ci": [
+        -2.63,
+        -1.63
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum derived from quartic function parameters"
+    },
+    {
+      "token": "bump",
+      "dim": "x4",
+      "mode": -3.33,
+      "ci": [
+        -3.83,
+        -2.83
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum derived from quartic function parameters"
+    },
+    {
+      "token": "bump",
+      "dim": "x5",
+      "mode": -4.66,
+      "ci": [
+        -5.0,
+        -4.16
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum derived from quartic function parameters"
+    },
+    {
+      "token": "bump",
+      "dim": "x6",
+      "mode": -3.54,
+      "ci": [
+        -4.04,
+        -3.04
+      ],
+      "sign": "peak",
+      "weight": 0.9,
+      "provenance": "llm_domain",
+      "note": "Model minimum derived from quartic function parameters"
+    },
+    {
+      "token": "smoothness",
+      "level": "smooth"
+    },
+    {
+      "token": "modality",
+      "expectation": "few"
+    }
+  ],
+  "trust": {
+    "overall_confidence": "medium",
+    "notes": "Beliefs derived from approximate analytic model; calibration uncertain"
+  }
+}
